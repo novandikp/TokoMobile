@@ -12,6 +12,127 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AplikasiToko"
-        tools:targetApi="31" />
+        tools:targetApi="31">
+        <activity
+            android:name=".Form_Bayar_Hutang_Toko_Sepatu"
+            android:exported="false" />
+        <activity
+            android:name=".Daftar_Hutang_Toko_Sepatu"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Transaksi"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Master"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Utama"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Salon_Menu_Utillitas"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Salon_Menu_Laporan"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Salon_Menu_Transaksi"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Salon_Menu_Master"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Salon_Menu_Utama"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Bayar_Hutang_Kasir"
+            android:exported="false" />
+        <activity
+            android:name=".Tambah_Pelangggan_Kasir"
+            android:exported="false" />
+        <activity
+            android:name=".Tambah_Barang_Kasir"
+            android:exported="false" />
+        <activity
+            android:name=".Tambah_Kategori_Kasir"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Pengeluaran_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Pemasukan_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Pembayaran_Hutang_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Pembayaran_Piutang_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Penjualan_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Tambah_Supplier"
+            android:exported="false" />
+        <activity
+            android:name=".Cari_Supplier_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Tambah_Pelangan_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Cari_Pelangan_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Cari_Obat"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Cari_Kategori"
+            android:exported="false" />
+        <activity
+            android:name=".Identitas_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Apotek_Plus_Keuangan_Menu_Utama"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Konfirmasi_Restoran"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Pesan_Makanan"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Tambah_Meja"
+            android:exported="false" />
+        <activity
+            android:name=".Tambah_Meja"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_Pemesanan"
+            android:exported="false" />
+        <activity
+            android:name=".Struk_Belanja"
+            android:exported="false" />
+        <activity
+            android:name=".Laporan_Pendapatan_2"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Tambah_Janji"
+            android:exported="false" />
+        <activity
+            android:name=".Restore_Data"
+            android:exported="false" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Laporan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>

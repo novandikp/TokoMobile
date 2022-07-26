@@ -1,3 +1,56 @@
 <resources>
     <string name="app_name">Aplikasi Toko</string>
+
+    <string-array name="obat_apa">
+        <item>Titipan</item>
+        <item>Kulakan</item>
+    </string-array>
+
+    <string-array name="sp_satuan_obat">
+        <item>Pilih Satuan</item>
+    </string-array>
+
+    <string-array name="sp_kategori_obat">
+        <item>Pilih Kategori</item>
+    </string-array>
+
+    <string-array name="obat">
+        <item>Kosong</item>
+        <item>Parecetamol</item>
+        <item>Konidin</item>
+    </string-array>
+
+    <string-array name="pendapatan_teknisi">
+        <item>Kosong</item>
+    </string-array>
+
+    <string-array name="nama_pasien">
+        <item>Kosong</item>
+        <item>Rafi</item>
+        <item>Herdi</item>
+        <item>Agus</item>
+    </string-array>
+
+    <string-array name="kategori">
+        <item>Semua</item>
+        <item>Tidak Berhutang</item>
+        <item>Berhutang</item>
+    </string-array>
+
+    <string-array name="nama_barang">
+        <item>Semua</item>
+    </string-array>
+
+    <string-array name="jenis_kelamin">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="Menu">
+        <item>Makanan</item>
+        <item>Minuman</item>
+        <item>Snack</item>
+    </string-array>
+
+    <string name="title_restoran">Restoran</string>
 </resources>
