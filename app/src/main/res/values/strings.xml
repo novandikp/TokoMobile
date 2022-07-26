@@ -53,4 +53,25 @@
     </string-array>
 
     <string name="title_restoran">Restoran</string>
+
+    <string-array name="daftar_makanan">
+        <item>Pilih Merk</item>
+        <item>Inopa</item>
+        <item>Advansa</item>
+    </string-array>
+
+    <string-array name="Daftar_Jasa">
+        <item>Piece (Pc)</item>
+        <item>Kilo Gram(Kg)</item>
+        <item>Meter Persegi(M2)</item>
+    </string-array>
+
+    <string-array name="Daftar_Jasa2">
+        <item>Kategori</item>
+        <item>Piece (Pc)</item>
+        <item>Kilo Gram(Kg)</item>
+        <item>Meter Persegi(M2)</item>
+    </string-array>
+    <string name="title_dynamicfeature">Antrian Portable</string>
+
 </resources>
