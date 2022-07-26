@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Aplikasi Toko"
 include ':app'
-include ':app:dynamicfeature'
