@@ -11,7 +11,6 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-
             android:name=".Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="false" />
         <activity
@@ -122,11 +121,9 @@
         <activity
             android:name=".Restore_Data"
             android:exported="false" />
+        <activity android:name=".Aplikasi_Toko_Sepatu_Menu_Laporan" />
         <activity
-            android:name=".Aplikasi_Toko_Sepatu_Menu_Laporan"
-
-            android:name=".TokoSepatuLaporanPenjualan"
-
+            android:name=".Item_Supert_App2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
