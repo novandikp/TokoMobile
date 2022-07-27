@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemSuperAppRevisi">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:columnCount="1">
+
+            <TextView
+                android:id="@+id/textView341"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Toko Sepatu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView340" />
+
+            <TextView
+                android:id="@+id/textView340"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Cetak Kwitansi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView341"
+                app:layout_constraintStart_toEndOf="@+id/textView339" />
+
+            <TextView
+                android:id="@+id/textView339"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Antrian Portable"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView340"
+                app:layout_constraintStart_toEndOf="@+id/textView338" />
+
+            <TextView
+                android:id="@+id/textView338"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Toko Kredit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView339"
+                app:layout_constraintStart_toEndOf="@+id/textView337" />
+
+            <TextView
+                android:id="@+id/textView337"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Laundry"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView338"
+                app:layout_constraintStart_toEndOf="@+id/textView336" />
+
+            <TextView
+                android:id="@+id/textView335"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Rental Mobil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView336"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView336"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Tabungan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView337"
+                app:layout_constraintStart_toEndOf="@+id/textView335" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                app:layout_column="0"
+                app:layout_row="0">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#FA665B"
+                    app:cardCornerRadius="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#FFC0CB"
+                    app:cardCornerRadius="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#70C0FF"
+                    app:cardCornerRadius="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#F4F456"
+                    app:cardCornerRadius="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#FFCB70"
+                    app:cardCornerRadius="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#94D0FF"
+                    app:cardCornerRadius="16dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:backgroundTint="#5DFF6D"
+                    app:cardCornerRadius="16dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView85"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/mobil" />
+
+            <ImageView
+                android:id="@+id/imageView88"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="94dp"
+                android:layout_marginTop="12dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/tabungan" />
+
+            <ImageView
+                android:id="@+id/imageView89"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="174dp"
+                android:layout_marginTop="16dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/laundry2" />
+
+            <ImageView
+                android:id="@+id/imageView90"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="248dp"
+                android:layout_marginTop="16dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/toko2" />
+
+            <ImageView
+                android:id="@+id/imageView91"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="324dp"
+                android:layout_marginTop="18dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/antrian" />
+
+            <ImageView
+                android:id="@+id/imageView92"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="398dp"
+                android:layout_marginTop="16dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/printer" />
+
+            <ImageView
+                android:id="@+id/imageView93"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="462dp"
+                android:layout_marginTop="13dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/sepatu2" />
+
+        </androidx.gridlayout.widget.GridLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

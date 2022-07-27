@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
+        <entry key="../../../layout/custom_preview.xml" value="0.1270949720670391" />
         <entry key="..\:/File Android Studio/TokoMobile/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.182" />
         <entry key="..\:/File Android Studio/TokoMobile/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.182" />
         <entry key="..\:/File Android Studio/TokoMobile/app/src/main/res/drawable/ic_baseline_arrow_downward_24.xml" value="0.1785" />
@@ -196,8 +196,6 @@
         <entry key="..\:/File Android Studio/TokoMobile/app/src/main/res/layout/transaksi_kain.xml" value="0.22" />
         <entry key="..\:/File Android Studio/TokoMobile/app/src/main/res/xml/aplikasi.xml" value="0.13632246376811594" />
         <entry key="..\:/File Android Studio/TokoMobile/app/src/main/res/xml/aplikasimobile.xml" value="0.21046228710462286" />
-
-        <entry key="../../../layout/custom_preview.xml" value="0.1270949720670391" />
         <entry key="app/dynamicfeature/src/main/res/layout/activity_test.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/drawable/buttonthreepoint.xml" value="0.1575" />
         <entry key="app/src/main/res/drawable/cekbokbulat.xml" value="0.1405" />
@@ -245,10 +243,13 @@
         <entry key="app/src/main/res/layout/daftaranggota.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/daftarproseslaundry.xml" value="0.25" />
         <entry key="app/src/main/res/layout/detailpelanggan.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/item_super_app.xml" value="0.15192190359975594" />
+        <entry key="app/src/main/res/layout/item_super_app2.xml" value="0.4340382678751259" />
         <entry key="app/src/main/res/layout/itemkategori.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itemkendaraan.xml" value="0.18" />
         <entry key="app/src/main/res/layout/itemmerk.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itempelangganmobil.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/itemsuperapp.xml" value="0.42782426778242677" />
         <entry key="app/src/main/res/layout/jasa.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/jenissimpanan.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/kategorijasa.xml" value="0.22447916666666667" />
@@ -384,11 +385,12 @@
         <entry key="app/src/main/res/layout/pos_toko_kredit_menu_transaksi.xml" value="0.22" />
         <entry key="app/src/main/res/layout/postokokreditmenumaster.xml" value="0.25" />
         <entry key="app/src/main/res/layout/postokokreditmenumasterr.xml" value="0.17264957264957265" />
-        <entry key="app/src/main/res/layout/postokokreditmenumasterutama.xml" value="0.1841880341880342" />
+        <entry key="app/src/main/res/layout/postokokreditmenumasterutama.xml" value="0.25" />
         <entry key="app/src/main/res/layout/recycler_view_item.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/rentalmobil_menumaster.xml" value="0.22" />
         <entry key="app/src/main/res/layout/satuanactivity.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/stringarray.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/layout/super_app_menu_master_utama.xml" value="0.22" />
         <entry key="app/src/main/res/layout/tabungan_laporan_master.xml" value="0.1841880341880342" />
         <entry key="app/src/main/res/layout/tabunganitemdaftaranggota.xml" value="0.22" />
         <entry key="app/src/main/res/layout/tabunganitemjenissimpanan.xml" value="0.25" />
@@ -407,7 +409,6 @@
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_penjualan.xml" value="0.5" />
         <entry key="app/src/main/res/layout/toko_sepatu_master_menu.xml" value="0.17264957264957265" />
         <entry key="app/src/main/res/layout/toko_sepatu_menu_master.xml" value="0.25" />
-
       </map>
     </option>
   </component>
