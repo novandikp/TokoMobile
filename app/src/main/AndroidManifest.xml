@@ -11,6 +11,9 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+
+            android:name=".ItemSuperAppRevisi"/>
+  <activity
             android:name=".Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="false" />
         <activity
