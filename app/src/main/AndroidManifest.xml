@@ -11,9 +11,55 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-
-            android:name=".ItemSuperAppRevisi"/>
-  <activity
+            android:name=".MainApp"
+            android:exported="true"/>
+        <activity
+            android:name=".Aplikasi_Bengkel_Menu_Utama"
+            android:exported="false" />
+        <activity
+            android:name=".Super_App2"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Laundry"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Toko_Sepatu"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Rental_Mobil"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Antrian"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Salon"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Apotek"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Kasir"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Toko_Kredit"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Retoran"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Klinik_Dokter"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Bengkel_Mobil"
+            android:exported="false" />
+        <activity
+            android:name=".Item_Apk_Tabungan"
+            android:exported="false" />
+        <activity android:name=".ItemSuperAppRevisi" />
+        <activity
             android:name=".Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="false" />
         <activity
@@ -126,7 +172,7 @@
             android:exported="false" />
         <activity android:name=".Aplikasi_Toko_Sepatu_Menu_Laporan" />
         <activity
-            android:name=".Item_Supert_App2"
+            android:name=".Main_App"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
