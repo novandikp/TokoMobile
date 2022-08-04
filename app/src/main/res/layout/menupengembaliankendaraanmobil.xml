@@ -50,6 +50,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#000000"
+        android:onClick="CetakStruk"
         android:text="Export"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +62,7 @@
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/black"
+        android:background="#5C00FF"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,5 +148,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:listitem="@layout/mobil_item_pengembalian" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

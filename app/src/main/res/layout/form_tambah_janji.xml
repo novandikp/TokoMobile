@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp">
 
             <ImageView
-                android:id="@+id/imageView20"
+                android:id="@+id/imageView22"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="24dp"

@@ -54,30 +54,30 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView20"
+                    android:id="@+id/imageView22"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas"
+                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/orang" />
 
                 <TextView
-                    android:id="@+id/tvidentitas"
+                    android:id="@+id/tvidentitas2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:text="Identitas"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil"
-                    app:layout_constraintEnd_toEndOf="@+id/tvidentitasmobil"
-                    app:layout_constraintStart_toEndOf="@+id/tvidentitasmobil"
-                    app:layout_constraintStart_toStartOf="@+id/tvidentitasmobil" />
+                    app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil2"
+                    app:layout_constraintEnd_toEndOf="@+id/tvidentitasmobil2"
+                    app:layout_constraintStart_toEndOf="@+id/tvidentitasmobil2"
+                    app:layout_constraintStart_toStartOf="@+id/tvidentitasmobil2" />
 
                 <TextView
-                    android:id="@+id/tvidentitasmobil"
+                    android:id="@+id/tvidentitasmobil2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"

@@ -54,26 +54,26 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toTopOf="@id/tvidentitas"
+                    app:layout_constraintBottom_toTopOf="@id/tvidentitas2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/diamond" />
 
                 <TextView
-                    android:id="@+id/tvidentitas"
+                    android:id="@+id/tvidentitas2"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:text="Tingkatkan Versi"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil"
+                    app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView60" />
 
                 <TextView
-                    android:id="@+id/tvidentitasmobil"
+                    android:id="@+id/tvidentitasmobil2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"

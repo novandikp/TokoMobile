@@ -11,165 +11,243 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".MenuCetakStrukMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPengembalianKendaraanMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPembayaranUangMukaMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDetailPengembalianMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MenuRentalKendaraanMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MobilItemBayarDetailPengembalian"
+            android:exported="true" />
+        <activity
+            android:name=".MenuBayarPengembalianKendaraanMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MobilItemDetailPengembalian"
+            android:exported="true" />
+        <activity
+            android:name=".MobilItemPengembalian"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPengembalianKendaraanMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuUtilitas"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuLaporan"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuMerk"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuPegawai"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPelangganMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MenuIdentitasMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MenuKendaraanMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuMaster"
+            android:exported="true" />
+        <activity
+            android:name=".MobilMenuUtamaMaster"
+            android:exported="true" />
+        <activity
+            android:name=".TokoKreditMenuMasterUtama"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuMenuMaster"
+            android:exported="true" />
+        <activity
+            android:name=".TabunganMenuMasterUtama"
+            android:exported="true" />
+        <activity
+            android:name=".AntrianPortableMenuUtama"
+            android:exported="true" />
+        <activity
+            android:name=".LaundryMenuMaster"
+            android:exported="true" />
+        <activity
             android:name=".MainApp"
-            android:exported="true"/>
+            android:exported="true" />
+        <activity
+            android:name=".Menu_Riwayat_Transaksi_Super_App"
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Bengkel_Menu_Utama"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Super_App2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Laundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Toko_Sepatu"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Rental_Mobil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Antrian"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Salon"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Kasir"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Toko_Kain"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Toko_Kredit"
-            android:exported="false" />
-        <activity
-            android:name=".Item_Apk_Retoran"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Klinik_Dokter"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Bengkel_Mobil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Item_Apk_Tabungan"
-            android:exported="false" />
+            android:exported="true" />
         <activity android:name=".ItemSuperAppRevisi" />
         <activity
             android:name=".Form_Bayar_Hutang_Toko_Sepatu"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Daftar_Hutang_Toko_Sepatu"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Toko_Sepatu_Menu_Transaksi"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Toko_Sepatu_Menu_Master"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Toko_Sepatu_Menu_Utama"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Salon_Menu_Utillitas"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Salon_Menu_Laporan"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Salon_Menu_Transaksi"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Salon_Menu_Master"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Salon_Menu_Utama"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Bayar_Hutang_Kasir"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Tambah_Pelangggan_Kasir"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Tambah_Barang_Kasir"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Tambah_Kategori_Kasir"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Pengeluaran_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Pemasukan_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Pembayaran_Hutang_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Pembayaran_Piutang_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Penjualan_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Tambah_Supplier"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Cari_Supplier_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Tambah_Pelangan_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Cari_Pelangan_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Cari_Obat"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Cari_Kategori"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Identitas_Apotek"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Aplikasi_Apotek_Plus_Keuangan_Menu_Utama"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Konfirmasi_Restoran"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Pesan_Makanan"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Tambah_Meja"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Tambah_Meja"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Menu_Pemesanan"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Struk_Belanja"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Laporan_Pendapatan_2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Form_Tambah_Janji"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Restore_Data"
-            android:exported="false" />
+            android:exported="true" />
         <activity android:name=".Aplikasi_Toko_Sepatu_Menu_Laporan" />
         <activity
             android:name=".Main_App"

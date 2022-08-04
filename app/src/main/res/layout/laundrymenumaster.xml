@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#5C00FF"
-        android:backgroundTint="#000000"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginTop="14dp"
+        app:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />

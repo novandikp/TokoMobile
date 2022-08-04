@@ -493,10 +493,10 @@
                     app:layout_rowWeight="1">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="Tabungan"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="25dp">
-
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout13"
@@ -544,6 +544,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="RentalMobil"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="25dp">
@@ -593,6 +594,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="Kredit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="25dp">
@@ -642,6 +644,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="AntrianPortable"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="25dp">
@@ -691,6 +694,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="Kwitansi"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="25dp">
@@ -740,6 +744,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="TokoSepatu"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="25dp">
@@ -790,6 +795,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="Laundry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp">
@@ -1133,9 +1139,10 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageButton32"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.111" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

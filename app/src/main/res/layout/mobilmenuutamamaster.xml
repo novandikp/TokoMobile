@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#5C00FF"
-        android:backgroundTint="#000000"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +38,7 @@
         app:rowCount="3">
 
         <androidx.cardview.widget.CardView
+            android:onClick="MobilMenuMaster"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
@@ -48,7 +48,8 @@
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+            app:layout_rowWeight="1"
+            tools:ignore="OnClick">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -93,6 +94,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="MenuTransaksi"
             android:id="@+id/cardView5"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -145,6 +147,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="MenuLaporan"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
@@ -199,6 +202,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="MenuUtilitas"
             android:id="@+id/cardView3"
             android:layout_width="0dp"
             android:layout_height="0dp"

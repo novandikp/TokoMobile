@@ -15,7 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#5C00FF"
-        android:backgroundTint="#000000"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +51,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView20"
+                    android:id="@+id/imageView22"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="160dp"
