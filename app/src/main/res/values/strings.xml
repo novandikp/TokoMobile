@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aplikasi Toko</string>
+    <string name="app_name">Aplikasi Mobile</string>
 
     <string-array name="obat_apa">
         <item>Titipan</item>
