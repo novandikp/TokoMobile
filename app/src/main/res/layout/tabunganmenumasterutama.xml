@@ -54,8 +54,8 @@
 
                 <ImageView
                     android:id="@+id/imageView60"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
@@ -94,9 +94,10 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:layout_marginTop="100dp"
+            android:onClick="TabunganMaster"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
@@ -144,15 +145,17 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:layout_marginTop="100dp"
+            android:onClick="MenuTransaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="TabunganMenuTransaksi">
 
                 <ImageView
                     android:id="@+id/imageView6"
@@ -192,14 +195,16 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
+            android:onClick="MenuLaporan"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="TabunganMenuLaporan">
 
                 <ImageView
                     android:id="@+id/imageView7"
@@ -241,14 +246,16 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
+            android:onClick="MenuUtilitas"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="TabunganMenuUtilitas">
 
                 <ImageView
                     android:id="@+id/imageView9"

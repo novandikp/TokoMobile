@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#5C00FF"
-        android:backgroundTint="#000000"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,26 +25,28 @@
         android:id="@+id/tvMasterTabungan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
         android:text="Master"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView15" />
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="@color/white" />
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout6"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:paddingStart="10dp"
@@ -65,6 +66,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="MenuIdentitas"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1"
@@ -72,12 +74,15 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="MenuIdentitas"
+                android:padding="8dp">
 
                 <ImageView
                     android:id="@+id/imageView10"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="16dp"
@@ -91,10 +96,10 @@
                     android:id="@+id/tvAturIdentitas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
                     android:layout_marginTop="15dp"
                     android:text="Atur Identitas Di Aplikasi Ini"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tvIdentitas"
+                    app:layout_constraintStart_toStartOf="@+id/tvIdentitas"
                     app:layout_constraintTop_toBottomOf="@+id/tvIdentitas" />
 
                 <TextView
@@ -116,6 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="MenuAnggota"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1"
@@ -123,12 +129,15 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="MenuAnggota"
+                android:padding="8dp">
 
                 <ImageView
                     android:id="@+id/imageView60"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="16dp"
@@ -153,10 +162,10 @@
                     android:id="@+id/tvDataAnggota"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
                     android:layout_marginTop="15dp"
                     android:text="Simpan Data Anggotamu"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tvAnggota"
+                    app:layout_constraintStart_toStartOf="@+id/tvAnggota"
                     app:layout_constraintTop_toBottomOf="@+id/tvAnggota" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -167,6 +176,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="MenuJenisSimpanan"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1"
@@ -174,16 +184,17 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="8dp">
 
                 <TextView
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
                     android:layout_marginTop="15dp"
                     android:text="Atur Jenis Simpanan Tabunganmu"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tvJenisSimpanan"
+                    app:layout_constraintStart_toStartOf="@+id/tvJenisSimpanan"
                     app:layout_constraintTop_toBottomOf="@+id/tvJenisSimpanan" />
 
                 <TextView
@@ -201,6 +212,7 @@
                     android:id="@+id/imageView12"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="16dp"

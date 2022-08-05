@@ -10,6 +10,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,6 +19,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvKendaraan4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Jenis : Tabungan"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/TvKendaraan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvKendaraan3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text=" Tabungan"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/TvKendaraan"
+                app:layout_constraintStart_toEndOf="@+id/TvKendaraan"
+                app:layout_constraintTop_toTopOf="@+id/TvKendaraan" />
 
             <ImageView
                 android:id="@+id/imageView54"
@@ -44,12 +73,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Jenis : Tabungan"
+                android:text=":"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/tvKendaraan4"
+                app:layout_constraintStart_toEndOf="@+id/tvKendaraan4"
+                app:layout_constraintTop_toTopOf="@+id/tvKendaraan4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
