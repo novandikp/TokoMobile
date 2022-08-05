@@ -15,7 +15,7 @@ public class MenuPengembalianKendaraanMobil extends AppCompatActivity {
     }
 
     public void CetakStruk(View view) {
-        Intent intent = new Intent(MenuPengembalianKendaraanMobil.this, MenuCetakStrukMobil.class);
+        Intent intent = new Intent(MenuPengembalianKendaraanMobil.this, MenuCetakMobil.class);
         startActivity(intent);
     }
 }

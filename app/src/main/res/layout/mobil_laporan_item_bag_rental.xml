@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MobilLaporanItemBagRental">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TvKendaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="Pelanggan Umum"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTahunKeluaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Bis Bisan"
+                app:layout_constraintStart_toStartOf="@+id/TvKendaraan"
+                app:layout_constraintTop_toBottomOf="@+id/TvKendaraan" />
+
+            <TextView
+                android:id="@+id/tvPlat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="123"
+                app:layout_constraintStart_toStartOf="@+id/tvTahunKeluaran"
+                app:layout_constraintTop_toBottomOf="@+id/tvTahunKeluaran" />
+
+            <TextView
+                android:id="@+id/tvHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="04/08/2022"
+                app:layout_constraintStart_toStartOf="@+id/tvPlat"
+                app:layout_constraintTop_toBottomOf="@+id/tvPlat" />
+
+            <TextView
+                android:id="@+id/textView368"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="-"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPlat"
+                app:layout_constraintStart_toEndOf="@+id/tvPlat"
+                app:layout_constraintTop_toTopOf="@+id/tvPlat" />
+
+            <TextView
+                android:id="@+id/textView369"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="1945"
+                app:layout_constraintBottom_toBottomOf="@+id/textView368"
+                app:layout_constraintStart_toEndOf="@+id/textView368"
+                app:layout_constraintTop_toTopOf="@+id/textView368" />
+
+            <TextView
+                android:id="@+id/textView370"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="-"
+                app:layout_constraintBottom_toBottomOf="@+id/tvHarga"
+                app:layout_constraintStart_toEndOf="@+id/tvHarga"
+                app:layout_constraintTop_toTopOf="@+id/tvHarga" />
+
+            <TextView
+                android:id="@+id/textView371"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="04/08/2022"
+                app:layout_constraintBottom_toBottomOf="@+id/textView370"
+                app:layout_constraintStart_toEndOf="@+id/textView370"
+                app:layout_constraintTop_toTopOf="@+id/textView370" />
+
+            <TextView
+                android:id="@+id/textView372"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:text="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvHarga"
+                app:layout_constraintTop_toBottomOf="@+id/tvHarga" />
+
+            <TextView
+                android:id="@+id/textView373"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="hari"
+                app:layout_constraintBottom_toBottomOf="@+id/textView372"
+                app:layout_constraintStart_toEndOf="@+id/textView372"
+                app:layout_constraintTop_toTopOf="@+id/textView372" />
+
+            <TextView
+                android:id="@+id/textView374"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="x"
+                app:layout_constraintBottom_toBottomOf="@+id/textView373"
+                app:layout_constraintStart_toEndOf="@+id/textView373"
+                app:layout_constraintTop_toTopOf="@+id/textView373" />
+
+            <TextView
+                android:id="@+id/textView375"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="20.000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView374"
+                app:layout_constraintStart_toEndOf="@+id/textView374"
+                app:layout_constraintTop_toTopOf="@+id/textView374" />
+
+            <TextView
+                android:id="@+id/textView376"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="="
+                app:layout_constraintBottom_toBottomOf="@+id/textView375"
+                app:layout_constraintStart_toEndOf="@+id/textView375"
+                app:layout_constraintTop_toTopOf="@+id/textView375" />
+
+            <TextView
+                android:id="@+id/textView377"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="20.000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView376"
+                app:layout_constraintStart_toEndOf="@+id/textView376"
+                app:layout_constraintTop_toTopOf="@+id/textView376" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

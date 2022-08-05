@@ -12,6 +12,7 @@
     tools:context=".MobilMenuLaporan">
 
     <androidx.cardview.widget.CardView
+        android:onClick="LaporanKendaraan"
         android:id="@+id/cardView10"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -53,6 +54,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="LaporanPelanggan"
         android:id="@+id/cardView9"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -94,6 +96,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="LaporanPegawai"
         android:id="@+id/cardView8"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -135,6 +138,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="LaporanRental"
         android:id="@+id/cardView7"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -176,6 +180,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="LaporanPendapatan"
         android:id="@+id/cardView4"
         android:layout_width="match_parent"
         android:layout_height="100dp"
