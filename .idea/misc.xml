@@ -230,14 +230,20 @@
         <entry key="app/src/main/res/layout/cetakkwitansiitemlaporanbagpelanggan.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/cetakkwitansimenumaster.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/form_tambah_kain.xml" value="0.225" />
-        <entry key="app/src/main/res/layout/item_daftar_anggota_tabungan.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/item_cari_anggota_tabugan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_daftar_anggota_tabungan.xml" value="0.33" />
         <entry key="app/src/main/res/layout/main_app.xml" value="0.225" />
+        <entry key="app/src/main/res/layout/menu_cari_anggota_tabugan.xml" value="0.2" />
         <entry key="app/src/main/res/layout/menu_daftar_anggota_tabungan.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/menu_daftar_simpanan_tabungan.xml" value="0.5228215767634855" />
         <entry key="app/src/main/res/layout/menu_jenis_simpanan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_laporan_mobil_bag_kendaraan.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/menu_tambah_data_anggota.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menuanggotatabungan.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/menubuatsimpanantabungan.xml" value="0.18" />
         <entry key="app/src/main/res/layout/menucetakmobil.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/menucetakstrukmobil.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/menudetailkeuangantabungan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menuidentitastabungan.xml" value="0.225" />
         <entry key="app/src/main/res/layout/menujenissimpanantabungan.xml" value="0.33" />
         <entry key="app/src/main/res/layout/menukendaraanmobil.xml" value="0.2359375" />
@@ -245,7 +251,9 @@
         <entry key="app/src/main/res/layout/menulaporanmobilbagpegawai.xml" value="0.2" />
         <entry key="app/src/main/res/layout/menulaporanmobilbagpendapatan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menulaporanmobilbagrental.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/menupelangganmobil.xml" value="0.225" />
         <entry key="app/src/main/res/layout/menupengembaliankendaraanmobil.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/menuprosessimpantabungan.xml" value="0.2" />
         <entry key="app/src/main/res/layout/mobil_laporan_item_bag_rental.xml" value="0.33" />
         <entry key="app/src/main/res/layout/mobilitemkendaraan.xml" value="0.221875" />
         <entry key="app/src/main/res/layout/mobilmenulaporan.xml" value="0.2359375" />

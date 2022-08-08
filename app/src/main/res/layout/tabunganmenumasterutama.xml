@@ -96,7 +96,7 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_margin="10dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:onClick="TabunganMaster"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
@@ -147,7 +147,7 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_margin="10dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:onClick="MenuTransaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
