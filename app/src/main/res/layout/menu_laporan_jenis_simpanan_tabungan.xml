@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuLaporanAnggotaTabungan">
+    tools:context=".MenuLaporanJenisSimpananTabungan">
 
     <TextView
         android:id="@+id/textView29"
@@ -36,7 +36,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar30" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar27" />
 
     <Button
         android:id="@+id/button8"
@@ -54,45 +54,45 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29"
-        tools:listitem="@layout/tabunganitemdaftaranggota" />
+        tools:listitem="@layout/tabunganitemjenissimpanan" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar30"
+        android:id="@+id/toolbar27"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView398"
+        android:id="@+id/textView392"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Laporan Jenis Simpanan"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView133"
-        app:layout_constraintStart_toEndOf="@+id/imageView133"
-        app:layout_constraintTop_toTopOf="@+id/imageView133" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView130"
+        app:layout_constraintStart_toEndOf="@+id/imageView130"
+        app:layout_constraintTop_toTopOf="@+id/imageView130" />
 
     <ImageView
-        android:id="@+id/imageView133"
+        android:id="@+id/imageView130"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:rotation="90"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar30"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar27"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar30"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,42 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".ItemProsesSimpanTabungan2"
+            android:exported="true" />
+        <activity
+            android:name=".ItemProsesSimpanTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanExportExcelTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanKeuanganTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanTransaksiPerAnggotaTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanAnggotaTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenulaporanSimpananTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanJenisSimpananTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPengeluaranTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPemasukanTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuCariDataSimpananTabugan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuProsesSimpanTabungan"
+            android:exported="true" />
+        <activity
             android:name=".MenuTambahDataAnggotaTabungan"
             android:exported="true" />
         <activity
@@ -24,9 +60,6 @@
             android:exported="true" />
         <activity
             android:name=".MenuDetailKeuanganTabungan"
-            android:exported="true" />
-        <activity
-            android:name=".MenuProsesSimpanTabungan"
             android:exported="true" />
         <activity
             android:name=".MenuProsesAmbilTabungan"

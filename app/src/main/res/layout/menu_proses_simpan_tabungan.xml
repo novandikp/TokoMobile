@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuProsesAmbilTabungan">
+    tools:context=".MenuProsesSimpanTabungan">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout52"
@@ -63,7 +63,7 @@
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView8">
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView7">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Proses Ambil"
+            android:text="Proses Simpan"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -145,7 +145,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginEnd="16dp"
-            android:onClick="Pengeluaran"
+            android:onClick="Pemasukan"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView27"
@@ -167,7 +167,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout59"
+        android:id="@+id/textInputLayout58"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="#00FFFFFF"
@@ -204,22 +204,20 @@
         app:layout_constraintTop_toTopOf="@+id/textInputLayout54" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView8"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout58"
+        tools:listitem="@layout/item_prose_simpan_tabungan" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView7"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout52"
         tools:listitem="@layout/item_proses_simpan_tabungan2" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout59"
-        tools:listitem="@layout/item_prose_simpan_tabungan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
