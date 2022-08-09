@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ItemLaporanPendapatanLaundry">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView455"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Tunai"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView456"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="-"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView455"
+                app:layout_constraintStart_toEndOf="@+id/textView455"
+                app:layout_constraintTop_toTopOf="@+id/textView455" />
+
+            <TextView
+                android:id="@+id/textView457"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total :"
+                app:layout_constraintStart_toStartOf="@+id/textView455"
+                app:layout_constraintTop_toBottomOf="@+id/textView455" />
+
+            <TextView
+                android:id="@+id/textView458"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/textView457"
+                app:layout_constraintStart_toEndOf="@+id/textView457"
+                app:layout_constraintTop_toTopOf="@+id/textView457" />
+
+            <TextView
+                android:id="@+id/textView459"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bayar :"
+                app:layout_constraintStart_toStartOf="@+id/textView457"
+                app:layout_constraintTop_toBottomOf="@+id/textView457" />
+
+            <TextView
+                android:id="@+id/textView460"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Anwar"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView456"
+                app:layout_constraintStart_toEndOf="@+id/textView456"
+                app:layout_constraintTop_toTopOf="@+id/textView456" />
+
+            <TextView
+                android:id="@+id/textView461"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="8000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView458"
+                app:layout_constraintStart_toEndOf="@+id/textView458"
+                app:layout_constraintTop_toTopOf="@+id/textView458" />
+
+            <TextView
+                android:id="@+id/textView462"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/textView459"
+                app:layout_constraintStart_toEndOf="@+id/textView459"
+                app:layout_constraintTop_toTopOf="@+id/textView459" />
+
+            <TextView
+                android:id="@+id/textView463"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="8000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView462"
+                app:layout_constraintStart_toEndOf="@+id/textView462"
+                app:layout_constraintTop_toTopOf="@+id/textView462" />
+
+            <TextView
+                android:id="@+id/textView464"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Kembalii :"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView459"
+                app:layout_constraintTop_toBottomOf="@+id/textView459" />
+
+            <TextView
+                android:id="@+id/textView465"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/textView464"
+                app:layout_constraintStart_toEndOf="@+id/textView464"
+                app:layout_constraintTop_toTopOf="@+id/textView464" />
+
+            <TextView
+                android:id="@+id/textView466"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="8000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView465"
+                app:layout_constraintStart_toEndOf="@+id/textView465"
+                app:layout_constraintTop_toTopOf="@+id/textView465" />
+
+            <TextView
+                android:id="@+id/textView467"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                android:text="Tanggal :"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView468"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="18/07/2022"
+                app:layout_constraintStart_toStartOf="@+id/textView467"
+                app:layout_constraintTop_toBottomOf="@+id/textView467" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

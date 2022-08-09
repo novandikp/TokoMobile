@@ -14,15 +14,15 @@ public class LaundryMenuLaporan extends AppCompatActivity {
         setContentView(R.layout.laundrymenulaporan);
     }
     public void LaporanJasa(View view) {
-        Intent intent = new Intent(LaundryMenuLaporan.this, .class);
+        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanJasaLaundry.class);
         startActivity(intent);
     }
     public void LaporanPegawai(View view) {
-        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanLaundry.class);
+        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanPegawaiLaundry.class);
         startActivity(intent);
     }
     public void LaporanPelanggan(View view) {
-        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanLaundry.class);
+        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanPelangganLaundry.class);
         startActivity(intent);
     }
     public void LaporanLaundry(View view) {
@@ -30,11 +30,11 @@ public class LaundryMenuLaporan extends AppCompatActivity {
         startActivity(intent);
     }
     public void LaporanProsesLaundry(View view) {
-        Intent intent = new Intent(LaundryMenuLaporan.this, MenuBayarHutangLaundry.class);
+        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanProsesLaundry.class);
         startActivity(intent);
     }
     public void LaporanPendapatan(View view) {
-        Intent intent = new Intent(LaundryMenuLaporan.this, MenuBayarHutangLaundry.class);
+        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanPendapatanLaundry.class);
         startActivity(intent);
     }
 }

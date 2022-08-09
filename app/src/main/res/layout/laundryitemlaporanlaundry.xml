@@ -3,108 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".LaundryItemLaporanLaundry">
 
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:text="Jumlah Pendapatan : 12345"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView54" />
-
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Jumlah Pesanan Diterima : 4"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView51" />
-
-    <ImageView
-        android:id="@+id/imageView48"
-        android:layout_width="85dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15"
-        app:srcCompat="@drawable/garis" />
-
-    <TextView
-        android:id="@+id/textView49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" 17/07/2022"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView48"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#000000"
-        android:text="Ekspor Excel"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" 17/07/2022"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-    <ImageView
-        android:id="@+id/imageView47"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName15"
-        app:srcCompat="@drawable/ic_baseline_search_24" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName15"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="60dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Cari"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView53">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -116,7 +24,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
                 android:text="Rp.8000 * 1 Pcs = 8000"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView45" />
 

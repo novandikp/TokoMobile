@@ -11,6 +11,24 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".ItemLaporanPendapatanLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".MenuLaporanPendapatanLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".MenuLaporanProsesLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".MenuLaporanLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".MenuLaporanPelangganLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".MenuLaporanPegawaiLaundry"
+            android:exported="false" />
+        <activity
             android:name=".MenuLaporanExcelLaundry"
             android:exported="true" />
         <activity

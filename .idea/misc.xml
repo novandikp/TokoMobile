@@ -236,6 +236,7 @@
         <entry key="app/src/main/res/layout/item_daftar_proses_laundry.xml" value="0.15" />
         <entry key="app/src/main/res/layout/item_kategori.xml" value="0.225" />
         <entry key="app/src/main/res/layout/item_laporan_jasa_laundry.xml" value="0.225" />
+        <entry key="app/src/main/res/layout/item_laporan_pendapatan_laundry.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_prose_simpan_tabungan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_proses_simpan_tabungan.xml" value="0.225" />
         <entry key="app/src/main/res/layout/item_proses_simpan_tabungan2.xml" value="0.22" />
@@ -244,8 +245,10 @@
         <entry key="app/src/main/res/layout/laundryitemdaftarpegawai.xml" value="0.225" />
         <entry key="app/src/main/res/layout/laundryitemdaftarpelanggan.xml" value="0.225" />
         <entry key="app/src/main/res/layout/laundryitemlaporanjasa.xml" value="0.35032437442076" />
-        <entry key="app/src/main/res/layout/laundryitemlaporanproseslaundry.xml" value="0.225" />
-        <entry key="app/src/main/res/layout/laundrymenulaporan.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/laundryitemlaporanlaundry.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/laundryitemlaporanpendapatan.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/laundryitemlaporanproseslaundry.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/laundrymenulaporan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/laundrymenumaster.xml" value="0.18" />
         <entry key="app/src/main/res/layout/laundrymenutransaksi.xml" value="0.3312883435582822" />
         <entry key="app/src/main/res/layout/laundrymenuutamamaster.xml" value="0.22" />
@@ -263,9 +266,14 @@
         <entry key="app/src/main/res/layout/menu_kategori_laundry.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_laporan_excel_laundry.xml" value="0.2" />
         <entry key="app/src/main/res/layout/menu_laporan_excel_toko_sepatu.xml" value="0.225" />
-        <entry key="app/src/main/res/layout/menu_laporan_jasa_laundry.xml" value="0.225" />
+        <entry key="app/src/main/res/layout/menu_laporan_jasa_laundry.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_laporan_jenis_simpanan_tabungan.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/menu_laporan_laundry.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menu_laporan_mobil_bag_kendaraan.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/menu_laporan_pegawai_laundry.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/menu_laporan_pelanggan_laundry.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/menu_laporan_pendapatan_laundry.xml" value="0.32138442521631644" />
+        <entry key="app/src/main/res/layout/menu_laporan_proses_laundry.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_pemasukan_tabungan.xml" value="0.4672435105067985" />
         <entry key="app/src/main/res/layout/menu_pengeluaran_tabungan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menu_proses_simpan_tabungan.xml" value="0.22" />

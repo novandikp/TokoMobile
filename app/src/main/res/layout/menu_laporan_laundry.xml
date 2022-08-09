@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuLaporanJasaLaundry">
+    tools:context=".MenuLaporanLaundry">
 
     <ImageView
         android:id="@+id/imageView43"
@@ -23,7 +23,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Faktur"
+        android:hint="Cari"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Laporan Jasa"
+        android:text="Laporan Laundry"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView132"
@@ -80,18 +80,46 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="390dp"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner14"
-        tools:listitem="@layout/laundryitemlaporanjasa" />
+        app:layout_constraintTop_toBottomOf="@+id/textView438"
+        tools:listitem="@layout/laundryitemlaporanlaundry" />
 
-    <Spinner
-        android:id="@+id/spinner14"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView437"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="17/07/2022"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView438"
+        app:layout_constraintEnd_toStartOf="@+id/textView438"
+        app:layout_constraintTop_toTopOf="@+id/textView438" />
+
+    <TextView
+        android:id="@+id/textView438"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="-"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+
+    <TextView
+        android:id="@+id/textView439"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="17/07/2022"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView438"
+        app:layout_constraintStart_toEndOf="@+id/textView438"
+        app:layout_constraintTop_toTopOf="@+id/textView438" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

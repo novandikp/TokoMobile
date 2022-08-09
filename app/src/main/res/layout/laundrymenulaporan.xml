@@ -68,53 +68,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView10"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="10dp"
-                android:onClick="LaporanPelanggan"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView6">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="60dp"
-                        android:text="Digunakan Untuk Melihat Laporan Pegawai"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.appcompat.widget.Toolbar
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:background="#4CAF50"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="?attr/actionBarTheme"
-                    tools:layout_editor_absoluteX="17dp"
-                    tools:layout_editor_absoluteY="165dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="Laporan Pegawai"
-                    android:textColor="#FFFFFF" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
                 android:id="@+id/cardView9"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:onClick="LaporanLaundry"
+                android:onClick="LaporanPelanggan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView10">
@@ -240,7 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:onClick="LaporanProsesLaundry"
+                android:onClick="LaporanPendapatan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView7">

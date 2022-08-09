@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuLaporanJasaLaundry">
+    tools:context=".MenuLaporanPegawaiLaundry">
 
     <ImageView
         android:id="@+id/imageView43"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Laporan Jasa"
+        android:text="Laporan Pegawai"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView132"
@@ -83,15 +83,26 @@
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner14"
-        tools:listitem="@layout/laundryitemlaporanjasa" />
+        app:layout_constraintTop_toBottomOf="@+id/textView433"
+        tools:listitem="@layout/laundryitemdaftarpegawai" />
 
-    <Spinner
-        android:id="@+id/spinner14"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView433"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Jumlah Pegawai :"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+
+    <TextView
+        android:id="@+id/textView434"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView433"
+        app:layout_constraintStart_toEndOf="@+id/textView433"
+        app:layout_constraintTop_toTopOf="@+id/textView433" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

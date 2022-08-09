@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuLaporanJasaLaundry">
+    tools:context=".MenuLaporanPendapatanLaundry">
 
     <ImageView
         android:id="@+id/imageView43"
@@ -23,7 +23,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Faktur"
+        android:hint="Cari"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Laporan Jasa"
+        android:text="Laporan Pendapatan"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView132"
@@ -80,18 +80,98 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner14"
-        tools:listitem="@layout/laundryitemlaporanjasa" />
+        app:layout_constraintTop_toBottomOf="@+id/textView443"
+        tools:listitem="@layout/item_laporan_pendapatan_laundry" />
 
-    <Spinner
-        android:id="@+id/spinner14"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView440"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:text="17/07/2022"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView441"
+        app:layout_constraintEnd_toStartOf="@+id/textView441"
+        app:layout_constraintTop_toTopOf="@+id/textView441" />
+
+    <TextView
+        android:id="@+id/textView441"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+
+    <TextView
+        android:id="@+id/textView442"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:text="17/07/2022"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView441"
+        app:layout_constraintStart_toEndOf="@+id/textView441"
+        app:layout_constraintTop_toTopOf="@+id/textView441" />
+
+    <TextView
+        android:id="@+id/textView443"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Jumlah Pendapatan :"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textView445"
+        app:layout_constraintTop_toBottomOf="@+id/textView445" />
+
+    <TextView
+        android:id="@+id/textView444"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="Rp."
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView443"
+        app:layout_constraintStart_toEndOf="@+id/textView443"
+        app:layout_constraintTop_toTopOf="@+id/textView443" />
+
+    <TextView
+        android:id="@+id/textView445"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Jumlah Pesanan Diproses :"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView440" />
+
+    <TextView
+        android:id="@+id/textView446"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="4"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView445"
+        app:layout_constraintStart_toEndOf="@+id/textView445"
+        app:layout_constraintTop_toTopOf="@+id/textView445" />
+
+    <TextView
+        android:id="@+id/textView447"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="4000"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView444"
+        app:layout_constraintStart_toEndOf="@+id/textView444"
+        app:layout_constraintTop_toTopOf="@+id/textView444" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

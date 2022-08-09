@@ -9,10 +9,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView53">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,10 +21,9 @@
                 android:id="@+id/textView55"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
-                android:text="Kembali : Rp.0"
-                app:layout_constraintStart_toStartOf="parent"
+                android:text="Kembali :"
+                app:layout_constraintStart_toStartOf="@+id/textView45"
                 app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
             <TextView
@@ -44,20 +42,18 @@
                 android:id="@+id/textView43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
-                android:text="Total : Rp.8000"
-                app:layout_constraintStart_toStartOf="parent"
+                android:text="Total :"
+                app:layout_constraintStart_toStartOf="@+id/textView44"
                 app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
             <TextView
                 android:id="@+id/textView45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
-                android:text="Bayar : Rp.8000"
-                app:layout_constraintStart_toStartOf="parent"
+                android:text="Bayar :"
+                app:layout_constraintStart_toStartOf="@+id/textView43"
                 app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
             <TextView
@@ -81,99 +77,67 @@
                 android:text="18/07/2022"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+            <TextView
+                android:id="@+id/textView426"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/textView55"
+                app:layout_constraintStart_toEndOf="@+id/textView55"
+                app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+            <TextView
+                android:id="@+id/textView428"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/textView426"
+                app:layout_constraintStart_toEndOf="@+id/textView426"
+                app:layout_constraintTop_toTopOf="@+id/textView426" />
+
+            <TextView
+                android:id="@+id/textView429"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="8000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView430"
+                app:layout_constraintStart_toEndOf="@+id/textView430"
+                app:layout_constraintTop_toTopOf="@+id/textView430" />
+
+            <TextView
+                android:id="@+id/textView430"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/textView45"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toTopOf="@+id/textView45" />
+
+            <TextView
+                android:id="@+id/textView431"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp."
+                app:layout_constraintBottom_toBottomOf="@+id/textView43"
+                app:layout_constraintStart_toEndOf="@+id/textView43"
+                app:layout_constraintTop_toTopOf="@+id/textView43"
+                android:layout_marginLeft="2dp" />
+
+            <TextView
+                android:id="@+id/textView432"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="8000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView431"
+                app:layout_constraintStart_toEndOf="@+id/textView431"
+                app:layout_constraintTop_toTopOf="@+id/textView431" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:text="Jumlah Pendapatan : 0"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView54" />
-
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Jumlah Data Pendapatan : 0"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView51" />
-
-    <ImageView
-        android:id="@+id/imageView48"
-        android:layout_width="85dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15"
-        app:srcCompat="@drawable/garis" />
-
-    <TextView
-        android:id="@+id/textView49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" 17/07/2022"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView48"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#000000"
-        android:text="Ekspor Excel"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" 17/07/2022"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-    <ImageView
-        android:id="@+id/imageView47"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName15"
-        app:srcCompat="@drawable/ic_baseline_search_24" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName15"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="60dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Cari"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
