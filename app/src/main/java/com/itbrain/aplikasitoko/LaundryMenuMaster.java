@@ -20,22 +20,22 @@ public class LaundryMenuMaster extends AppCompatActivity {
     }
 
     public void Pegawai(View view) {
-        Intent intent = new Intent(LaundryMenuMaster.this, MenuIdentitasTabungan.class);
+        Intent intent = new Intent(LaundryMenuMaster.this, MenuDaftarPegawaiLaundry.class);
         startActivity(intent);
     }
 
     public void Pelanggan(View view) {
-        Intent intent = new Intent(LaundryMenuMaster.this, MenuIdentitasTabungan.class);
+        Intent intent = new Intent(LaundryMenuMaster.this, MenuDaftarPelangganLaundry.class);
         startActivity(intent);
     }
 
     public void Kategori(View view) {
-        Intent intent = new Intent(LaundryMenuMaster.this, MenuIdentitasTabungan.class);
+        Intent intent = new Intent(LaundryMenuMaster.this, MenukategoriLaundry.class);
         startActivity(intent);
     }
 
-    public void Laporan(View view) {
-    Intent intent = new Intent(LaundryMenuMaster.this, MenuIdentitasTabungan.class);
+    public void Jasa(View view) {
+    Intent intent = new Intent(LaundryMenuMaster.this, MenuDaftarJasaLaundry.class);
     startActivity(intent);
 }
 

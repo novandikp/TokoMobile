@@ -11,6 +11,63 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".MenuLaporanExcelLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".ItemLaporanJasaLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanJasaLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTerimaLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuBayarHutangLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".ItemDaftarProsesLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarProsesLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuUbahJasaLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".LaundryMenuUtamaMaster"
+            android:exported="true" />
+        <activity
+            android:name=".LaundryMenuLaporan"
+            android:exported="true" />
+        <activity
+            android:name=".LaundryMenuTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".LaundryMenuMaster"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarJasaLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPelangganLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPegawaiLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarPelangganLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarPegawaiLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenuKategoriJasaLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".MenukategoriLaundry"
+            android:exported="true" />
+        <activity
             android:name=".ItemProsesSimpanTabungan2"
             android:exported="true" />
         <activity
@@ -104,9 +161,6 @@
             android:name=".MobilLaporanItemBagRental"
             android:exported="true" />
         <activity
-            android:name=".MenuLaporanExportExcelTabungan"
-            android:exported="true" />
-        <activity
             android:name=".MenuLaporanMobilBagPegawai"
             android:exported="true" />
         <activity
@@ -186,9 +240,6 @@
             android:exported="true" />
         <activity
             android:name=".AntrianPortableMenuUtama"
-            android:exported="true" />
-        <activity
-            android:name=".LaundryMenuMaster"
             android:exported="true" />
         <activity
             android:name=".MainApp"

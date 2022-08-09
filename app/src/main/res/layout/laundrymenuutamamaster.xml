@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#5C00FF"
-        android:backgroundTint="#000000"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +95,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="10dp"
+            android:onClick="Master"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -109,7 +109,8 @@
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Backup Data"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="Kelola Data Menu Pelanggan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -118,7 +119,8 @@
                     android:id="@+id/tvMerk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Backup Data"
+                    android:layout_marginBottom="4dp"
+                    android:text="Master"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/textView22"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +135,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/backupdata" />
+                    app:srcCompat="@drawable/master" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -144,6 +146,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="10dp"
+            android:onClick="Transaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -157,7 +160,8 @@
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Restore Data"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="Menu Pesan Dan Pembayaran Laundry"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -166,7 +170,8 @@
                     android:id="@+id/tvTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Restore"
+                    android:layout_marginBottom="4dp"
+                    android:text="Transaksi"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/textView25"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -181,7 +186,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/restor" />
+                    app:srcCompat="@drawable/transaksi5" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -192,6 +197,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="80dp"
+            android:onClick="Laporan"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -210,13 +216,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/reset" />
+                    app:srcCompat="@drawable/laporan" />
 
                 <TextView
                     android:id="@+id/tvPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reset Data"
+                    android:layout_marginBottom="4dp"
+                    android:text="Laporan"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/tvDataPelanggan"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -226,7 +233,8 @@
                     android:id="@+id/tvDataPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reset Semua Data"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="Amati Laporan Proses Laundry"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -240,6 +248,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="80dp"
+            android:onClick="Utilitas"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -258,13 +267,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cara" />
+                    app:srcCompat="@drawable/utilitas" />
 
                 <TextView
                     android:id="@+id/tvPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cara Penggunaan"
+                    android:layout_marginBottom="4dp"
+                    android:text="Utilitas"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/tvDataPegawai"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -274,7 +284,8 @@
                     android:id="@+id/tvDataPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cara Penggunaan"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="Menu Utlitas Atur Data aplikasi"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />

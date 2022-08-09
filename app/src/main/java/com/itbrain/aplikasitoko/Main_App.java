@@ -41,7 +41,7 @@ public class Main_App extends AppCompatActivity {
     }
 
     public void Laundry(View view) {
-        Intent intent = new Intent(Main_App.this, LaundryMenuMaster.class);
+        Intent intent = new Intent(Main_App.this, LaundryMenuUtamaMaster.class);
         startActivity(intent);
     }
 

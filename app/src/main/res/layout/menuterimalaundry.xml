@@ -47,8 +47,8 @@
 
             <ImageView
                 android:id="@+id/imageView36"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textInputLayout6"
@@ -57,8 +57,9 @@
 
             <ImageView
                 android:id="@+id/imageView38"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="0dp"
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="19dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout6"
@@ -69,8 +70,9 @@
 
             <ImageView
                 android:id="@+id/imageView35"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="0dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout7"
@@ -81,8 +83,9 @@
 
             <ImageView
                 android:id="@+id/imageView34"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="0dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout8"
@@ -93,8 +96,9 @@
 
             <ImageView
                 android:id="@+id/imageView39"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="0dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="21dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout9"
@@ -325,7 +329,7 @@
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3A3A3A"
+        android:background="#4CAF50"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -336,12 +340,22 @@
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/toolbar3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/toolbar3" />
+
+    <TextView
+        android:id="@+id/textView418"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Bayar :"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="@+id/textView23" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
