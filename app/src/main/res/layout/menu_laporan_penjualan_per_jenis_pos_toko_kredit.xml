@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuLaporanPenjualanPerKategoriPosTokoKredit">
+    tools:context=".MenuLaporanPenjualanPerJenisPosTokoKredit">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar37"
@@ -107,7 +107,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView490"
+        app:layout_constraintTop_toBottomOf="@+id/spinner15"
         tools:listitem="@layout/pos_toko_kredit_item_barang" />
 
     <TextView
@@ -190,5 +190,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+
+    <Spinner
+        android:id="@+id/spinner15"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView490" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

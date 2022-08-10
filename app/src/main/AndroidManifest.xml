@@ -11,8 +11,32 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".MenuTransaksiPembayaranAngsuranKonfirmasiPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanLabaRugiPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiPenjualanTunaiPembayaranPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanTagihanPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanKreditPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanReturnPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanPenjualanPendapatanPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanPenjualanPerJenisPosTokoKredit"
+            android:exported="true" />
+        <activity
             android:name=".MenuLaporanPenjualanPerKategoriPosTokoKredit"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanPenjualanPerPelangganPosTokoKredit"
             android:exported="true" />

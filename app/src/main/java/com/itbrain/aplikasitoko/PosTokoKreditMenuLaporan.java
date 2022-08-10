@@ -30,31 +30,31 @@ public class PosTokoKreditMenuLaporan extends AppCompatActivity {
     }
 
     public void LaporanPenjualanPerKategori(View view) {
-        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, .class);
+        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPenjualanPerKategoriPosTokoKredit.class);
         startActivity(intent);
     }
 
     public void LaporanPenjualanPerJenis(View view) {
-        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPelangganPosTokoKredit.class);
+        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPenjualanPerJenisPosTokoKredit.class);
         startActivity(intent);
 
     }    public void LaporanPendapatan(View view) {
-        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPelangganPosTokoKredit.class);
+        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPenjualanPendapatanPosTokoKredit.class);
         startActivity(intent);
     }
 
     public void LaporanReturn(View view) {
-        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPelangganPosTokoKredit.class);
+        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanReturnPosTokoKredit.class);
         startActivity(intent);
     }
 
     public void LaporanLabaRugi(View view) {
-        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPelangganPosTokoKredit.class);
+        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanLabaRugiPosTokoKredit.class);
         startActivity(intent);
     }
 
     public void LaporanKredit(View view) {
-        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanPelangganPosTokoKredit.class);
+        Intent intent = new Intent(PosTokoKreditMenuLaporan.this, MenuLaporanKreditPosTokoKredit.class);
         startActivity(intent);
     }
 

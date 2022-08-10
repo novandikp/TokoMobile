@@ -15,7 +15,7 @@ public class MenuTransaksiPembayaranAngsuranPosTokoKredit extends AppCompatActiv
     }
 
     public void Informasi(View view) {
-        Intent intent = new Intent(MenuTransaksiPembayaranAngsuranPosTokoKredit.this, MenuInformasiPosTokoKredit.class);
+        Intent intent = new Intent(MenuTransaksiPembayaranAngsuranPosTokoKredit.this, MenuTransaksiPembayaranAngsuranKonfirmasiPosTokoKredit.class);
         startActivity(intent);
     }
 }

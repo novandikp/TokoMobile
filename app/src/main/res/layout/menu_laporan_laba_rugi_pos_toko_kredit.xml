@@ -4,29 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuLaporanPenjualanPerKategoriPosTokoKredit">
+    tools:context=".MenuLaporanLabaRugiPosTokoKredit">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar37"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:background="@color/hijaukonten"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar29" />
-
-    <TextView
-        android:id="@+id/textView485"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Total Penjualan :"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView454"
-        app:layout_constraintTop_toBottomOf="@+id/textView454" />
 
     <ImageView
         android:id="@+id/imageView43"
@@ -81,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Laporan Penjualan"
+        android:text="Laporan Laba Rugi"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView132"
@@ -109,54 +98,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView490"
         tools:listitem="@layout/pos_toko_kredit_item_barang" />
-
-    <TextView
-        android:id="@+id/textView454"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="46dp"
-        android:text="Jumlah Data :"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar37"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar29" />
-
-    <TextView
-        android:id="@+id/textView469"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView454"
-        app:layout_constraintStart_toEndOf="@+id/textView454"
-        app:layout_constraintTop_toTopOf="@+id/textView454" />
-
-    <TextView
-        android:id="@+id/textView488"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Rp."
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView485"
-        app:layout_constraintTop_toBottomOf="@+id/textView485" />
-
-    <TextView
-        android:id="@+id/textView489"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/textView488"
-        app:layout_constraintTop_toTopOf="@+id/textView488" />
 
     <TextView
         android:id="@+id/textView486"
@@ -190,5 +131,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+
+    <TextView
+        android:id="@+id/textView491"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Jumlah Laba:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar37" />
+
+    <TextView
+        android:id="@+id/textView494"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Rp."
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar37"
+        app:layout_constraintStart_toStartOf="@+id/textView491"
+        app:layout_constraintTop_toBottomOf="@+id/textView491" />
+
+    <TextView
+        android:id="@+id/textView497"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView494"
+        app:layout_constraintStart_toEndOf="@+id/textView494"
+        app:layout_constraintTop_toTopOf="@+id/textView494" />
+
+    <TextView
+        android:id="@+id/textView500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="Jumlah Data :"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView501"
+        app:layout_constraintEnd_toStartOf="@+id/textView501"
+        app:layout_constraintTop_toTopOf="@+id/textView501" />
+
+    <TextView
+        android:id="@+id/textView501"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar37" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
