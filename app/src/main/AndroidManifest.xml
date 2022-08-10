@@ -11,23 +11,86 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-            android:name=".ItemLaporanPendapatanLaundry"
+            android:name=".MenuLaporanPenjualanPerKategoriPosTokoKredit"
             android:exported="false" />
+        <activity
+            android:name=".MenuLaporanPenjualanPerPelangganPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanBarangPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiPenjualanKreditPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanExcelPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiReturnBarangPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiPembayaranAngsuranPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiPenjualanTunaiPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTambahPelangganPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTambahBarangPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTambahKategoriPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPelangganPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuBarangPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuKategoriPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".MenuIdentitasPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".PosTokoKreditMenuMaster"
+            android:exported="true" />
+        <activity
+            android:name=".TokoKreditMenuMasterUtama"
+            android:exported="true" />
+        <activity
+            android:name=".PosTokoKreditMenuTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanPelangganPosTokoKredit"
+            android:exported="true" />
+        <activity
+            android:name=".PosTokoKreditMenuUtilitas"
+            android:exported="true" />
+        <activity
+            android:name=".PosTokoKreditMenuLaporan"
+            android:exported="true" />
+        <activity
+            android:name=".ItemLaporanPendapatanLaundry"
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanPendapatanLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanProsesLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanPelangganLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanPegawaiLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanExcelLaundry"
             android:exported="true" />
@@ -246,9 +309,6 @@
             android:exported="true" />
         <activity
             android:name=".MobilMenuUtamaMaster"
-            android:exported="true" />
-        <activity
-            android:name=".TokoKreditMenuMasterUtama"
             android:exported="true" />
         <activity
             android:name=".TokoSepatuMenuMaster"

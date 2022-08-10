@@ -15,7 +15,7 @@ public class MenuLaporanPendapatanLaundry extends AppCompatActivity {
     }
 
     public void Excel(View view) {
-        Intent intent = new Intent(MenuLaporanPendapatanLaundry.this, ItemLaporanPendapatanLaundry.class);
+        Intent intent = new Intent(MenuLaporanPendapatanLaundry.this, MenuLaporanExcelLaundry.class);
         startActivity(intent);
     }
 }

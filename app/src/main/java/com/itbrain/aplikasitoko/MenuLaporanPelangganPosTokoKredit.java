@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MenuBarangPosTokoKredit extends AppCompatActivity {
+public class MenuLaporanPelangganPosTokoKredit extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_barang_pos_toko_kredit);
+        setContentView(R.layout.menu_laporan_pelanggan_pos_toko_kredit);
     }
 
-    public void TambahBarang(View view) {
-        Intent intent = new Intent(MenuBarangPosTokoKredit.this, MenuTambahBarangPosTokoKredit.class);
+    public void Excel(View view) {
+        Intent intent = new Intent(MenuLaporanPelangganPosTokoKredit.this, MenuLaporanExcelPosTokoKredit.class);
         startActivity(intent);
     }
 }

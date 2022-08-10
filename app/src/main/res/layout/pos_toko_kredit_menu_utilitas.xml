@@ -4,38 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PosTokoKreditMenuTransaksi">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar45"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout21"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar45">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".PosTokoKreditMenuUtilitas">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:onClick="Return"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView22">
@@ -50,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:text="Return"
+                android:text="Tentang Kami"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Digunakan Untuk Mereturn Barang"
+                android:text="Informasi Tentang Kami"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView125"
                 app:layout_constraintTop_toBottomOf="@+id/textView125" />
@@ -74,7 +50,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:onClick="PembayaranAngsuran"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView21">
@@ -89,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:text="Pembayaran Angsuran"
+                android:text="Reset Data"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Digunakan Untuk Mebayar Angsuran Kredit Pelanggan"
+                android:text="Digunakan Untuk Reset Data Aplikasi"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView123"
                 app:layout_constraintTop_toBottomOf="@+id/textView123" />
@@ -112,10 +87,10 @@
         android:id="@+id/cardView20"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:onClick="PenjualanTunai"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout21">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -127,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:text="Penjualan Tunai"
+                android:text="backup Database"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Digunakan Untuk Transaksi Penjualan Tunai"
+                android:text="Digunakan Untuk backup Data"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView115"
                 app:layout_constraintTop_toBottomOf="@+id/textView115" />
@@ -150,7 +125,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:onClick="PenjualanKredit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView20">
@@ -165,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:text="Penjualan Kredit"
+                android:text="Restore Database"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -175,35 +149,12 @@
                 android:id="@+id/textView120"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Digunakan Untuk Transaksi Penjualan Kredit"
+                android:text="Digunakan Untuk memulihkan Data Aplikasi Dari backup"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView121"
-                app:layout_constraintTop_toBottomOf="@+id/textView121" />
+                app:layout_constraintTop_toBottomOf="@+id/textView121"
+                android:layout_marginTop="4dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textView477"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Transaksi"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView149"
-        app:layout_constraintStart_toEndOf="@+id/imageView149"
-        app:layout_constraintTop_toTopOf="@+id/imageView149" />
-
-    <ImageView
-        android:id="@+id/imageView149"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:rotation="90"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

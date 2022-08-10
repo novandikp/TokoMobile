@@ -11,7 +11,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:onClick="Pelanggan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView22">
@@ -25,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:text="Pelanggan"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
@@ -36,6 +37,7 @@
                 android:id="@+id/textView124"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="Digunakan Untuk Memasukkan Daftar Pelanggan"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView125"
@@ -48,7 +50,8 @@
         android:id="@+id/cardView22"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:onClick="Barang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView21">
@@ -62,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:text="Barang"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
@@ -73,7 +76,7 @@
                 android:id="@+id/textView122"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="4dp"
                 android:text="Digunakan Untuk Memasukkan Barang Yang Dijual"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView123"
@@ -86,7 +89,8 @@
         android:id="@+id/cardView20"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:onClick="Identitas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -100,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:text="Identitas"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
@@ -110,6 +114,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="Digunakan Untuk Memasukan Identitas Toko"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView115"
@@ -122,7 +127,8 @@
         android:id="@+id/cardView21"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:onClick="Kategori"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView20">
@@ -136,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:text="Kategori"
                 android:textColor="#5C00FF"
                 android:textStyle="bold"
@@ -147,10 +153,11 @@
                 android:id="@+id/textView120"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="Digunakan Untuk Memasukkan Kategori Barang"
+                android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/textView121"
-                app:layout_constraintTop_toBottomOf="@+id/textView121"
-                android:textColor="#000000" />
+                app:layout_constraintTop_toBottomOf="@+id/textView121" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

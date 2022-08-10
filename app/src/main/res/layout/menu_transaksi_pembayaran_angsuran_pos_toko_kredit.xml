@@ -10,6 +10,7 @@
         android:id="@+id/textInputLayout34"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
         app:boxBackgroundColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,12 +27,12 @@
         android:id="@+id/toolbar7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:background="#4CAF50"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar48" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -50,6 +51,7 @@
             android:layout_height="wrap_content"
             android:text="1"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,6 +62,7 @@
             android:layout_marginEnd="4dp"
             android:text="Jumlah Data :"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView148"
             app:layout_constraintEnd_toStartOf="@+id/textView148"
             app:layout_constraintTop_toTopOf="@+id/textView148" />
@@ -70,6 +73,7 @@
             android:layout_marginStart="4dp"
             android:text="1.200"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView145"
             app:layout_constraintStart_toEndOf="@+id/textView145"
             app:layout_constraintTop_toTopOf="@+id/textView145" />
@@ -80,6 +84,7 @@
             android:layout_height="wrap_content"
             android:text="Saldo Kredit :"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/textView141"
             app:layout_constraintStart_toStartOf="@+id/textView141"
             app:layout_constraintTop_toBottomOf="@+id/textView141" />
@@ -91,6 +96,7 @@
             android:layout_marginStart="2dp"
             android:text="1.200"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/textView141"
             app:layout_constraintTop_toTopOf="@+id/textView141" />
 
@@ -100,6 +106,7 @@
             android:layout_height="wrap_content"
             android:text="Total Kredit :"
             android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -117,10 +124,45 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:onClick="Informasi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout34"
         tools:listitem="@layout/pos_toko_kredit_item_transaksi_pembayaran_angsuran" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView482"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Pembayaran Angsuran"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView152"
+        app:layout_constraintStart_toEndOf="@+id/imageView152"
+        app:layout_constraintTop_toTopOf="@+id/imageView152" />
+
+    <ImageView
+        android:id="@+id/imageView152"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
