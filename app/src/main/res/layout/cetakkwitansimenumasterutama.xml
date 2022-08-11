@@ -13,8 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#5C00FF"
-        android:backgroundTint="#000000"
+        android:background="@color/hijauprimari"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="Master"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
@@ -94,6 +94,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="Transaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -142,6 +143,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="Laporan"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -189,6 +191,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="Utilitas"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -235,6 +238,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_marginTop="10dp"
+            android:onClick="Master"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1">

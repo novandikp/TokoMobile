@@ -22,17 +22,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView511"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Jalan Wahing 10 gang baru Daerah Mojokerto"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView510"
+        app:layout_constraintStart_toStartOf="@+id/textView510"
+        app:layout_constraintTop_toBottomOf="@+id/textView510" />
+
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout7"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:padding="8dp"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="60dp"
         app:alignmentMode="alignMargins"
         app:columnCount="2"
         app:columnOrderPreserved="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView511"
         app:rowCount="3">
 
         <androidx.cardview.widget.CardView
@@ -41,6 +55,7 @@
             android:layout_height="0dp"
             android:layout_margin="8dp"
             android:layout_marginTop="30dp"
+            android:onClick="Identitas"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1"
@@ -86,6 +101,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="AmbilAntrian"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -128,6 +144,7 @@
             android:layout_height="0dp"
             android:layout_margin="8dp"
             android:layout_marginTop="8dp"
+            android:onClick="PanggilAntrian"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -254,6 +271,18 @@
         </androidx.cardview.widget.CardView>
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView510"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Toko berkah"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

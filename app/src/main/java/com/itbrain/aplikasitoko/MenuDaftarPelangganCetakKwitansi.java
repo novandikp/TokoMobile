@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MenuAmbilNomorAntrianPortable extends AppCompatActivity {
+public class MenuDaftarPelangganCetakKwitansi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menuambilnomorantrianportable);
+        setContentView(R.layout.menu_daftar_pelanggan_cetak_kwitansi);
     }
 
-    public void NomorMulai(View view) {
-        Intent intent = new Intent(MenuAmbilNomorAntrianPortable.this, MenuNomorMulaiAntrianPortable.class);
+    public void TambahPelanggan(View view) {
+        Intent intent = new Intent(MenuDaftarPelangganCetakKwitansi.this, MenuTambahPelangganCetakKwitansi.class);
         startActivity(intent);
     }
 }

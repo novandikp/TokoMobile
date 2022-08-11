@@ -11,6 +11,66 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".MenuCetakCetakKwitansi"
+            android:exported="false" />
+        <activity
+            android:name=".ItemTransaksiCetakkwitansi"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCetakKwitansiCetakkwitansi"
+            android:exported="false" />
+        <activity
+            android:name=".CetakKwitansiMenuTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiMenuLaporan"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiMenuMaster"
+            android:exported="true" />
+        <activity
+            android:name=".MenuIdentitasCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarPelangganCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiMenuMasterUtama"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTambahPelangganCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".ItemPelangganCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".ItemJasaCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarJasaCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTambahJasaAntrianPortable"
+            android:exported="true" />
+        <activity
+            android:name=".ItemJasaAntrianPortable"
+            android:exported="true" />
+        <activity
+            android:name=".MenuJasaAntrianPortable"
+            android:exported="true" />
+        <activity
+            android:name=".MenuNomorMulaiAntrianPortable"
+            android:exported="true" />
+        <activity
+            android:name=".NomorAntrian"
+            android:exported="true" />
+        <activity
+            android:name=".MenuIdentitasUsahaAntrianPortable"
+            android:exported="true" />
+        <activity
+            android:name=".MenuAmbilNomorAntrianPortable"
+            android:exported="true" />
+        <activity
             android:name=".MenuTransaksiPembayaranAngsuranKonfirmasiPosTokoKredit"
             android:exported="true" />
         <activity

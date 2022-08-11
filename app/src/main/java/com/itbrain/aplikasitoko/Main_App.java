@@ -31,7 +31,7 @@ public class Main_App extends AppCompatActivity {
     }
 
     public void Kwitansi(View view) {
-        Intent intent = new Intent(Main_App.this, MobilMenuMaster.class);
+        Intent intent = new Intent(Main_App.this, CetakKwitansiMenuMasterUtama.class);
         startActivity(intent);
     }
 

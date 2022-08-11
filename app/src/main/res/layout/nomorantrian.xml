@@ -7,36 +7,45 @@
     android:backgroundTint="#000000"
     tools:context=".NomorAntrian">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar54"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#000000"
-        android:text="Panggil Nomor"
-        android:textColor="#000000"
-        android:textStyle="bold"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView507"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Panggil Nomor"
-        android:text="1"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:text="Menu Ambil Antrian"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView158"
+        app:layout_constraintStart_toEndOf="@+id/imageView158"
+        app:layout_constraintTop_toTopOf="@+id/imageView158" />
+
+    <ImageView
+        android:id="@+id/imageView158"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar54"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="210dp"
         android:layout_height="52dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="#000000"
         android:text="08/07/2022"
         android:textColor="#000000"
@@ -44,7 +53,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout68" />
 
     <ImageView
         android:id="@+id/imageView49"
@@ -75,5 +84,29 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView50"
         app:layout_constraintStart_toEndOf="@+id/imageView49"
         app:srcCompat="@drawable/buttonplay" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout68"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar54">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Antrian"
+            android:paddingStart="0dp"
+            android:paddingLeft="4dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:textColorHint="#FF0000" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
