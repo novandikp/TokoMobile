@@ -18,4 +18,6 @@ public class MenuDaftarPelangganCetakKwitansi extends AppCompatActivity {
         Intent intent = new Intent(MenuDaftarPelangganCetakKwitansi.this, MenuTambahPelangganCetakKwitansi.class);
         startActivity(intent);
     }
+
+
 }

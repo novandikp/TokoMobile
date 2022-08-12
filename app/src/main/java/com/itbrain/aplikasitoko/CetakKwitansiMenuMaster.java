@@ -15,7 +15,7 @@ public class CetakKwitansiMenuMaster extends AppCompatActivity {
     }
 
     public void Identitas(View view) {
-        Intent intent = new Intent(CetakKwitansiMenuMaster.this, MenuIdentitasUsahaAntrianPortable.class);
+        Intent intent = new Intent(CetakKwitansiMenuMaster.this, MenuIdentitasCetakKwitansi.class);
         startActivity(intent);
     }
 

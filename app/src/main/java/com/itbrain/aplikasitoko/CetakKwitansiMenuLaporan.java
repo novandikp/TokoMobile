@@ -2,7 +2,9 @@ package com.itbrain.aplikasitoko;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class CetakKwitansiMenuLaporan extends AppCompatActivity {
 
@@ -10,5 +12,20 @@ public class CetakKwitansiMenuLaporan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cetakkwitansimenulaporan);
+    }
+
+    public void LaporanJasa(View view) {
+        Intent intent = new Intent(CetakKwitansiMenuLaporan.this, CetakKwitansiLaporanBagJasa.class);
+        startActivity(intent);
+    }
+
+    public void LaporanPelanggan(View view) {
+        Intent intent = new Intent(CetakKwitansiMenuLaporan.this, CetakKwitansiLaporanBagPelanggan.class);
+        startActivity(intent);
+    }
+
+    public void LaporanTransaksi(View view) {
+        Intent intent = new Intent(CetakKwitansiMenuLaporan.this, CetakKwitansiLaporanBagTransaksi.class);
+        startActivity(intent);
     }
 }

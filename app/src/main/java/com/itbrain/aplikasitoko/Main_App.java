@@ -36,7 +36,7 @@ public class Main_App extends AppCompatActivity {
     }
 
     public void TokoSepatu(View view) {
-        Intent intent = new Intent(Main_App.this, TokoSepatuMenuMaster.class);
+        Intent intent = new Intent(Main_App.this, Aplikasi_Toko_Sepatu_Menu_Utama.class);
         startActivity(intent);
     }
 

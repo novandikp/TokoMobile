@@ -14,43 +14,44 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#03A9F4"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="Priview"
+        android:text="Bagikan"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button61" />
 
     <Button
         android:id="@+id/button61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#673AB7"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="Priview"
+        android:text="Cetak"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button62" />
+        app:layout_constraintEnd_toStartOf="@+id/button62"
+        app:layout_constraintStart_toEndOf="@+id/button60" />
 
     <Button
         android:id="@+id/button60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#F44336"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="Priview"
+        android:text="Pdf"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button61"
         app:layout_constraintStart_toEndOf="@+id/button16" />
 
     <androidx.appcompat.widget.Toolbar
@@ -129,12 +130,13 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="96dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
         app:srcCompat="@drawable/ic_baseline_print_24"
-        app:tint="#F44336"
-        tools:layout_editor_absoluteY="224dp" />
+        app:tint="#F44336" />
 
     <Button
         android:id="@+id/button16"
@@ -149,6 +151,7 @@
         android:paddingBottom="0dp"
         android:text="Priview"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button60"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

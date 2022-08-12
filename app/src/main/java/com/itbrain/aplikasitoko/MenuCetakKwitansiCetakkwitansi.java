@@ -14,13 +14,13 @@ public class MenuCetakKwitansiCetakkwitansi extends AppCompatActivity {
         setContentView(R.layout.menu_cetak_kwitansi_cetakkwitansi);
     }
 
-    public void Cetak(View view) {
-        Intent intent = new Intent(MenuCetakKwitansiCetakkwitansi.this, CetakKwitansiMenuLaporan.class);
+    public void CetakKwitansi(View view) {
+        Intent intent = new Intent(MenuCetakKwitansiCetakkwitansi.this, CetakKwitansiMenuCetakKwitansi.class);
         startActivity(intent);
     }
 
-    public void Simpan(View view) {
-        Intent intent = new Intent(MenuCetakKwitansiCetakkwitansi.this, CetakKwitansiMenuLaporan.class);
+    public void CetakUlang(View view) {
+        Intent intent = new Intent(MenuCetakKwitansiCetakkwitansi.this, CetakKwitansiMenuCetakUlang.class);
         startActivity(intent);
     }
 }

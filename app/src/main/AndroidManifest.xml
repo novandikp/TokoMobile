@@ -11,14 +11,65 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-            android:name=".MenuCetakCetakKwitansi"
-            android:exported="false" />
+            android:name=".MenuTambahPelangganTokoSepatu"
+            android:exported="true" />
         <activity
-            android:name=".ItemTransaksiCetakkwitansi"
-            android:exported="false" />
+            android:name=".MenuTambahBarangTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPelangganTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuBarangTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuIdentitasTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTambahkategoriTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuKategoriTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Master"
+            android:exported="true" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Utama"
+            android:exported="true" />
+        <activity
+            android:name=".MenuIdentitasCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanExportExcelCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiMenuLaporanBagTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiLaporanBagTransaksi"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiLaporanBagPelanggan"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiLaporanBagJasa"
+            android:exported="true" />
         <activity
             android:name=".MenuCetakKwitansiCetakkwitansi"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiMenuCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".CetakKwitansiMenuCetakUlang"
+            android:exported="true" />
+        <activity
+            android:name=".MenuCetakCetakKwitansi"
+            android:exported="true" />
+        <activity
+            android:name=".ItemTransaksiCetakkwitansi"
+            android:exported="true" />
         <activity
             android:name=".CetakKwitansiMenuTransaksi"
             android:exported="true" />
