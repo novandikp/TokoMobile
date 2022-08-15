@@ -15,12 +15,12 @@ public class MobilMenuLaporan extends AppCompatActivity {
     }
 
     public void LaporanKendaraan(View view) {
-        Intent intent = new Intent(MobilMenuLaporan.this, MenuLaporanMobilBagKendaraan.class);
+        Intent intent = new Intent(MobilMenuLaporan.this, DaftarLaporanKendaraanMobil.class);
         startActivity(intent);
     }
 
     public void LaporanPelanggan(View view) {
-        Intent intent = new Intent(MobilMenuLaporan.this, MenuLaporanMobilBagPegawai.class);
+        Intent intent = new Intent(MobilMenuLaporan.this, MenuLaporanBagPelangganMobil.class);
         startActivity(intent);
     }
 

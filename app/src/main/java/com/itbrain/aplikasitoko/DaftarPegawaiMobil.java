@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MenuLaporanMobilBagPegawai extends AppCompatActivity {
+public class DaftarPegawaiMobil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menulaporanmobilbagpegawai);
+        setContentView(R.layout.daftar_pegawai_mobil);
     }
 
-    public void ExportExcel(View view) {
-        Intent intent = new Intent(MenuLaporanMobilBagPegawai.this, MenuLaporanExportExcelMobil.class);
+    public void Tambah(View view) {
+        Intent intent = new Intent(DaftarPegawaiMobil.this, MobilMenuPegawai.class);
         startActivity(intent);
     }
 }

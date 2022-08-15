@@ -20,22 +20,22 @@ public class MobilMenuMaster extends AppCompatActivity {
     }
 
     public void MenuMerk(View view) {
-        Intent intent = new Intent(MobilMenuMaster.this, MobilMenuMerk.class);
+        Intent intent = new Intent(MobilMenuMaster.this, DaftarMerkMobil.class);
         startActivity(intent);
     }
 
     public void MenuKendaraan(View view) {
-        Intent intent = new Intent(MobilMenuMaster.this, MenuKendaraanMobil.class);
+        Intent intent = new Intent(MobilMenuMaster.this, DaftarKendaraanMobil.class);
         startActivity(intent);
     }
 
     public void MenuPelanggan(View view) {
-        Intent intent = new Intent(MobilMenuMaster.this, MenuPelangganMobil.class);
+        Intent intent = new Intent(MobilMenuMaster.this, DaftarPelangganMobil.class);
         startActivity(intent);
     }
 
     public void MenuPegawai(View view) {
-        Intent intent = new Intent(MobilMenuMaster.this, MobilMenuPegawai.class);
+        Intent intent = new Intent(MobilMenuMaster.this, DaftarPegawaiMobil.class);
         startActivity(intent);
     }
 }

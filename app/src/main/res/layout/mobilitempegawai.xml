@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="8dp"
                 android:paddingTop="1dp"
-                android:paddingBottom="2dp"
+                android:paddingBottom="8dp"
                 android:text="Alamat:Mojoketo" />
         </LinearLayout>
 

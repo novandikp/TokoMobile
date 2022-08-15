@@ -11,6 +11,30 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".MenuLaporanBagPelangganMobil"
+            android:exported="false" />
+        <activity
+            android:name=".MenuLaporanExportExcelMobil"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarLaporanKendaraanMobil"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarPegawaiMobil"
+            android:exported="true" />
+        <activity
+            android:name=".DaftarPelangganMobil"
+            android:exported="true" />
+        <activity
+            android:name=".DaftarKendaraanMobil"
+            android:exported="true" />
+        <activity
+            android:name=".DaftarMerkMobil"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanExcelTokoSepatu"
+            android:exported="true" />
+        <activity
             android:name=".TokoSepatuLaporanPelanggan"
             android:exported="true" />
         <activity

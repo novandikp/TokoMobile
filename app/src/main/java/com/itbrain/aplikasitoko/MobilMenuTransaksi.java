@@ -14,12 +14,12 @@ public class MobilMenuTransaksi extends AppCompatActivity {
         setContentView(R.layout.mobilmenutransaksi);
     }
 
-    public void MenuRentalKendaraan(View view) {
+    public void RentalKendaraan(View view) {
         Intent intent = new Intent(MobilMenuTransaksi.this, MenuRentalKendaraanMobil.class);
         startActivity(intent);
     }
 
-    public void MenuPengembalianKendaraan(View view) {
+    public void PengembalianKendaraan(View view) {
         Intent intent = new Intent(MobilMenuTransaksi.this, MenuPengembalianKendaraanMobil.class);
         startActivity(intent);
     }

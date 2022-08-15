@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#5C00FF"
+        android:background="@color/hijauprimari"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,13 +38,13 @@
         app:rowCount="3">
 
         <androidx.cardview.widget.CardView
-            android:onClick="MobilMenuMaster"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
+            android:onClick="MobilMenuMaster"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
@@ -94,12 +94,12 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:onClick="MenuTransaksi"
             android:id="@+id/cardView5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="20dp"
+            android:onClick="MenuTransaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
@@ -311,6 +311,29 @@
         </androidx.cardview.widget.CardView>
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView552"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bapak Yadi"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView553"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Japan Raya"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/textView552"
+        app:layout_constraintTop_toBottomOf="@+id/textView552" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
