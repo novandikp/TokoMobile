@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MenuTambahBarangTokoSepatu extends AppCompatActivity {
+public class MenuReturnBarangTokoSepatu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_tambah_barang_toko_sepatu);
+        setContentView(R.layout.menu_return_barang_toko_sepatu);
     }
 }

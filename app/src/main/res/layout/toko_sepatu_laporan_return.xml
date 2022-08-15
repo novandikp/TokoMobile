@@ -4,30 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TokoSepatuLaporanPelanggan">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView11">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView11"
-            tools:listitem="@layout/toko_sepatu_item_pelanggan" />
-    </ScrollView>
+    tools:context=".TokoSepatuLaporanPenjualanPerKategori">
 
     <Button
         android:id="@+id/button4"
@@ -62,8 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Laporan Pelanggan
-"
+        android:text="Laporan Return"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView28"
@@ -86,14 +62,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
         app:cardCornerRadius="24sp"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28">
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <EditText
             android:id="@+id/editTextTextPersonName17"
@@ -123,5 +99,38 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView555"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:text="19/07/2022"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView191"
+        app:layout_constraintEnd_toStartOf="@+id/imageView191"
+        app:layout_constraintTop_toTopOf="@+id/imageView191" />
+
+    <TextView
+        android:id="@+id/textView556"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:text="19/07/2022"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView191"
+        app:layout_constraintStart_toEndOf="@+id/imageView191"
+        app:layout_constraintTop_toTopOf="@+id/imageView191" />
+
+    <ImageView
+        android:id="@+id/imageView191"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="16dp"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView11"
+        app:srcCompat="@drawable/buttonthreepoint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

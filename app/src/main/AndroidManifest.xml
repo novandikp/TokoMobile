@@ -11,6 +11,63 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".TokoSepatuLaporanPelanggan"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanReturn"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanDetailHutang"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanHutang"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanPendapatan"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanPenjualanPerUkuran"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanPenjualanPerKategori"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanPenjualanPerBarang"
+            android:exported="true" />
+        <activity
+            android:name=".Aplikasi_Toko_Sepatu_Menu_Master"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanPenjualanPerPelanggan"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuItemLaporanBarang"
+            android:exported="true" />
+        <activity
+            android:name=".TokoSepatuLaporanBarang"
+            android:exported="true" />
+        <activity
+            android:name=".MenuReturnBarangTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".ItemReturnBarangTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".Daftar_Hutang_Toko_Sepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiLanjutkanPembayaranTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiTentukanPenjualanDetailPembelianTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiPilihBarangTokoSepatu"
+            android:exported="true" />
+        <activity
+            android:name=".MenuTransaksiLakukanPenjualanTokoSepatu"
+            android:exported="true" />
+        <activity
             android:name=".MenuTambahPelangganTokoSepatu"
             android:exported="true" />
         <activity
@@ -30,9 +87,6 @@
             android:exported="true" />
         <activity
             android:name=".MenuKategoriTokoSepatu"
-            android:exported="true" />
-        <activity
-            android:name=".Aplikasi_Toko_Sepatu_Menu_Master"
             android:exported="true" />
         <activity
             android:name=".Aplikasi_Toko_Sepatu_Menu_Utama"
@@ -78,9 +132,6 @@
             android:exported="true" />
         <activity
             android:name=".CetakKwitansiMenuMaster"
-            android:exported="true" />
-        <activity
-            android:name=".MenuIdentitasCetakKwitansi"
             android:exported="true" />
         <activity
             android:name=".MenuDaftarPelangganCetakKwitansi"
@@ -507,16 +558,7 @@
             android:name=".Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="true" />
         <activity
-            android:name=".Daftar_Hutang_Toko_Sepatu"
-            android:exported="true" />
-        <activity
             android:name=".Aplikasi_Toko_Sepatu_Menu_Transaksi"
-            android:exported="true" />
-        <activity
-            android:name=".Aplikasi_Toko_Sepatu_Menu_Master"
-            android:exported="true" />
-        <activity
-            android:name=".Aplikasi_Toko_Sepatu_Menu_Utama"
             android:exported="true" />
         <activity
             android:name=".Aplikasi_Salon_Menu_Utillitas"

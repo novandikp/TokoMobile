@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".Daftar_Hutang_Toko_Sepatu">
+    tools:context=".DaftarBarangTokoSepatu">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
@@ -14,10 +14,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="ReturnBarang"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView318" />
+        app:layout_constraintTop_toBottomOf="@+id/textView318"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_return_barang_toko_sepatu" />
 
     <TextView
         android:id="@+id/textView318"
@@ -43,7 +46,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView17"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -93,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Daftar Hutang"
+        android:text="Daftar Barang"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView185"

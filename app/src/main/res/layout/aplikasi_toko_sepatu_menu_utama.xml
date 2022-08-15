@@ -21,8 +21,8 @@
     <TextView
         android:id="@+id/textView529"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
         android:text="Toko Berkah"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -39,16 +39,14 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView529"
         app:layout_constraintStart_toStartOf="@+id/textView529"
-        tools:layout_editor_absoluteY="56dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView529" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="70dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="70dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout4">

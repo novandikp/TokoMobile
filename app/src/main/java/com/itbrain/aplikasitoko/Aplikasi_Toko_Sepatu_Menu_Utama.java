@@ -15,7 +15,7 @@ public class Aplikasi_Toko_Sepatu_Menu_Utama extends AppCompatActivity {
     }
 
     public void Master(View view) {
-        Intent intent = new Intent(Aplikasi_Toko_Sepatu_Menu_Utama.this, TokoSepatuMenuMaster.class);
+        Intent intent = new Intent(Aplikasi_Toko_Sepatu_Menu_Utama.this, Aplikasi_Toko_Sepatu_Menu_Master.class);
         startActivity(intent);
     }
 

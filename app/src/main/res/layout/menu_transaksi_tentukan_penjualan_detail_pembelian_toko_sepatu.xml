@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MenuTransaksiTentukanPenjualanDetailPembelianTokoSepatu">
 
-    <View
-        android:id="@+id/view8"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="90dp"
-        android:background="#000000"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView162"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
-
-    <View
-        android:id="@+id/view9"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#000000"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/button24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar8"
         android:layout_width="match_parent"
@@ -41,11 +18,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        app:tint="@color/white"
         android:id="@+id/imageView79"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
@@ -54,9 +32,10 @@
         android:id="@+id/textView157"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="Detail Pembelian"
         android:textColor="#FFFFFF"
-        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView79"
         app:layout_constraintStart_toEndOf="@+id/imageView79"
         app:layout_constraintTop_toTopOf="@+id/imageView79" />
@@ -83,16 +62,16 @@
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +84,11 @@
         android:id="@+id/button24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#FF0000"
+        android:onClick="Tambah"
         android:padding="0dp"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
@@ -114,20 +97,21 @@
         android:text="Tambah"
         app:cornerRadius="0dp"
         app:iconPadding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/view8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view9" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
     <TextView
         android:id="@+id/textView162"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="32dp"
         android:text="Total Pembayaran"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button25"
-        app:layout_constraintStart_toStartOf="@+id/button25" />
+        app:layout_constraintStart_toStartOf="@+id/button24"
+        app:layout_constraintTop_toBottomOf="@+id/button24" />
 
     <TextView
         android:id="@+id/textView163"
@@ -147,7 +131,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="LanjutkanPembayaran"
         android:padding="0dp"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"

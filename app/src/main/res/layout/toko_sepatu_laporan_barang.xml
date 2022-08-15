@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TokoSepatuLaporanPelanggan">
+    tools:context=".TokoSepatuLaporanBarang">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,7 +26,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView11"
-            tools:listitem="@layout/toko_sepatu_item_pelanggan" />
+            tools:itemCount="1"
+            tools:listitem="@layout/toko_sepatu_item_laporan_barang" />
     </ScrollView>
 
     <Button
@@ -62,8 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Laporan Pelanggan
-"
+        android:text="Laporan Barang"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView28"
@@ -86,14 +86,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
         app:cardCornerRadius="24sp"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28">
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <EditText
             android:id="@+id/editTextTextPersonName17"
