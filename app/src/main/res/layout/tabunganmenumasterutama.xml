@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#5C00FF"
+        android:background="@color/hijaukonten"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="16dp"
         android:paddingTop="10dp"
@@ -148,7 +148,6 @@
             android:layout_height="200dp"
             android:layout_margin="10dp"
             android:layout_marginTop="20dp"
-            android:onClick="MenuTransaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
@@ -197,7 +196,6 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_margin="10dp"
-            android:onClick="MenuLaporan"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
@@ -248,7 +246,6 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_margin="10dp"
-            android:onClick="MenuUtilitas"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1">
 
@@ -295,6 +292,30 @@
         </androidx.cardview.widget.CardView>
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView564"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Toko Berkah"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView565"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Dinoyo Mojokerto"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView564"
+        app:layout_constraintStart_toStartOf="@+id/textView564"
+        app:layout_constraintTop_toBottomOf="@+id/textView564" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

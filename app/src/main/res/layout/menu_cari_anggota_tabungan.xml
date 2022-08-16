@@ -64,11 +64,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
         android:onClick="BuatSimpanan"
+        app:layout_constraintBottom_toTopOf="@+id/button48"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31"
+        tools:itemCount="1"
         tools:listitem="@layout/item_cari_anggota_tabugan" />
 
     <Button

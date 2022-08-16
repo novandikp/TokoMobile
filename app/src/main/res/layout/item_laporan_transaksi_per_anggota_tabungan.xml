@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ItemLaporanTransaksiPerAnggotaTabungan">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView594"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Tanggal Transaksi :"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView595"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/09/2022"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView594"
+                app:layout_constraintStart_toEndOf="@+id/textView594"
+                app:layout_constraintTop_toTopOf="@+id/textView594" />
+
+            <TextView
+                android:id="@+id/textView596"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Tanggal Transaksi :"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView594" />
+
+            <TextView
+                android:id="@+id/textView597"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/09/2022"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView596"
+                app:layout_constraintStart_toEndOf="@+id/textView596"
+                app:layout_constraintTop_toTopOf="@+id/textView596" />
+
+            <TextView
+                android:id="@+id/textView598"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Keterangan  :"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView596" />
+
+            <TextView
+                android:id="@+id/textView599"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaksi Tabungan"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView598"
+                app:layout_constraintStart_toEndOf="@+id/textView598"
+                app:layout_constraintTop_toTopOf="@+id/textView598" />
+
+            <TextView
+                android:id="@+id/textView600"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk :"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView601"
+                app:layout_constraintEnd_toStartOf="@+id/textView601"
+                app:layout_constraintTop_toTopOf="@+id/textView601" />
+
+            <TextView
+                android:id="@+id/textView601"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.000"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/textView603"
+                app:layout_constraintEnd_toEndOf="@+id/textView603" />
+
+            <TextView
+                android:id="@+id/textView602"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluar :"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView603"
+                app:layout_constraintEnd_toStartOf="@+id/textView603"
+                app:layout_constraintTop_toBottomOf="@+id/textView601" />
+
+            <TextView
+                android:id="@+id/textView603"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/textView605"
+                app:layout_constraintEnd_toEndOf="@+id/textView605" />
+
+            <TextView
+                android:id="@+id/textView604"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo :"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView605"
+                app:layout_constraintEnd_toStartOf="@+id/textView605"
+                app:layout_constraintTop_toTopOf="@+id/textView605" />
+
+            <TextView
+                android:id="@+id/textView605"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="4.000"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView598" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ItemDetailKeuanganTabungan">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView571"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Pemasukan :"
+                android:textColor="@color/hijaukonten"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView581"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="-"
+                app:layout_constraintBottom_toBottomOf="@+id/textView571"
+                app:layout_constraintStart_toEndOf="@+id/textView571"
+                app:layout_constraintTop_toTopOf="@+id/textView571" />
+
+            <TextView
+                android:id="@+id/textView582"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="08/09/2022"
+                app:layout_constraintBottom_toBottomOf="@+id/textView581"
+                app:layout_constraintStart_toEndOf="@+id/textView581"
+                app:layout_constraintTop_toTopOf="@+id/textView581" />
+
+            <TextView
+                android:id="@+id/textView583"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="No Transaksi :"
+                app:layout_constraintStart_toStartOf="@+id/textView571"
+                app:layout_constraintTop_toBottomOf="@+id/textView571" />
+
+            <TextView
+                android:id="@+id/textView584"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="Tabungan-02"
+                app:layout_constraintBottom_toTopOf="@+id/textView586"
+                app:layout_constraintStart_toEndOf="@+id/textView583"
+                app:layout_constraintTop_toBottomOf="@+id/textView571" />
+
+            <TextView
+                android:id="@+id/textView585"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="2.000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView589"
+                app:layout_constraintStart_toEndOf="@+id/textView589"
+                app:layout_constraintTop_toTopOf="@+id/textView589" />
+
+            <TextView
+                android:id="@+id/textView586"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Keterangan :"
+                app:layout_constraintStart_toStartOf="@+id/textView583"
+                app:layout_constraintTop_toBottomOf="@+id/textView583" />
+
+            <TextView
+                android:id="@+id/textView587"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="Simpanan"
+                app:layout_constraintBottom_toBottomOf="@+id/textView586"
+                app:layout_constraintStart_toEndOf="@+id/textView586"
+                app:layout_constraintTop_toBottomOf="@+id/textView583" />
+
+            <TextView
+                android:id="@+id/textView588"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="100.000"
+                app:layout_constraintBottom_toBottomOf="@+id/textView590"
+                app:layout_constraintStart_toEndOf="@+id/textView590"
+                app:layout_constraintTop_toTopOf="@+id/textView590" />
+
+            <TextView
+                android:id="@+id/textView589"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Masuk :"
+                app:layout_constraintStart_toStartOf="@+id/textView586"
+                app:layout_constraintTop_toBottomOf="@+id/textView586" />
+
+            <TextView
+                android:id="@+id/textView590"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Saldo Anda :"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView589"
+                app:layout_constraintTop_toBottomOf="@+id/textView589" />
+
+            <ImageView
+                app:tint="#F44336"
+                android:id="@+id/imageView202"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/trash" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,11 +10,11 @@
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Jumlah Data : 0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        android:layout_marginEnd="8dp"
+        android:text="Jumlah Data :"
+        app:layout_constraintBottom_toBottomOf="@+id/textView592"
+        app:layout_constraintEnd_toStartOf="@+id/textView592"
+        app:layout_constraintTop_toTopOf="@+id/textView592" />
 
     <ImageView
         android:id="@+id/imageView43"
@@ -42,10 +42,8 @@
         android:id="@+id/button8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#00FF0A"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/hijaukonten"
         android:onClick="Excel"
         android:text="Ekspor Ke Excel"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,6 +53,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_margin="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29"
@@ -94,5 +93,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar30"
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <TextView
+        android:id="@+id/textView592"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

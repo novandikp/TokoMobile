@@ -11,14 +11,29 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-            android:name=".MenuLaporanBagPelangganMobil"
+            android:name=".ItemTerimaLaundryTaruhKeranjangLaundry"
             android:exported="false" />
+        <activity
+            android:name=".ItemLaporanTransaksiPerAnggotaTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".ItemDetailKeuanganTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".ItemBuatSimpananTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuDaftarJenisSimpananTabungan"
+            android:exported="true" />
+        <activity
+            android:name=".MenuLaporanBagPelangganMobil"
+            android:exported="true" />
         <activity
             android:name=".MenuLaporanExportExcelMobil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".DaftarLaporanKendaraanMobil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".DaftarPegawaiMobil"
             android:exported="true" />

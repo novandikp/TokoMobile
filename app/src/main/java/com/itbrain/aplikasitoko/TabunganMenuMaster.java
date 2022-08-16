@@ -20,12 +20,12 @@ public class TabunganMenuMaster extends AppCompatActivity {
     }
 
     public void MenuAnggota(View view) {
-        Intent intent = new Intent(TabunganMenuMaster.this, MenuAnggotaTabungan.class);
+        Intent intent = new Intent(TabunganMenuMaster.this, MenuDaftarAnggotaTabungan.class);
         startActivity(intent);
     }
 
     public void MenuJenisSimpanan(View view) {
-        Intent intent = new Intent(TabunganMenuMaster.this, MenuJenisSimpananTabungan.class);
+        Intent intent = new Intent(TabunganMenuMaster.this, MenuDaftarJenisSimpananTabungan.class);
         startActivity(intent);
     }
 }

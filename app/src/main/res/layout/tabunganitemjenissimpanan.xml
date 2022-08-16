@@ -27,8 +27,7 @@
                 android:layout_weight="1"
                 android:text="Jenis : Tabungan"
                 android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold"
+                android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/TvKendaraan"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -41,8 +40,7 @@
                 android:layout_weight="1"
                 android:text=" Tabungan"
                 android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/TvKendaraan"
                 app:layout_constraintStart_toEndOf="@+id/TvKendaraan"
                 app:layout_constraintTop_toTopOf="@+id/TvKendaraan" />
@@ -50,7 +48,7 @@
             <ImageView
                 android:id="@+id/imageView54"
                 android:layout_width="30dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

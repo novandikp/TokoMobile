@@ -6,6 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MenuLaporanTransaksiPerAnggotaTabungan">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:itemCount="1"
+            tools:layout_editor_absoluteY="208dp"
+            tools:listitem="@layout/item_laporan_transaksi_per_anggota_tabungan" />
+    </ScrollView>
+
     <TextView
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
@@ -83,12 +103,10 @@
         android:id="@+id/button9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="16dp"
         android:backgroundTint="#4CAF50"
         android:onClick="Excel"
-        android:text="Export ke Excel"
+        android:text="Export Excel"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,4 +145,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
