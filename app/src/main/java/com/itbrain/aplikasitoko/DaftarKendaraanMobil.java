@@ -18,4 +18,11 @@ public class DaftarKendaraanMobil extends AppCompatActivity {
         Intent intent = new Intent(DaftarKendaraanMobil.this, MenuKendaraanMobil.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( DaftarKendaraanMobil.this, MobilMenuMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -18,4 +18,11 @@ public class MenuPengembalianKendaraanMobil extends AppCompatActivity {
         Intent intent = new Intent(MenuPengembalianKendaraanMobil.this, MenuCetakMobil.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuPengembalianKendaraanMobil.this, MobilMenuTransaksi.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

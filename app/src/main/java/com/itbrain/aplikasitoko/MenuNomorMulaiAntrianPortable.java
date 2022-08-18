@@ -2,7 +2,9 @@ package com.itbrain.aplikasitoko;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MenuNomorMulaiAntrianPortable extends AppCompatActivity {
 
@@ -10,5 +12,12 @@ public class MenuNomorMulaiAntrianPortable extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_nomor_mulai_antrian_portable);
+    }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuNomorMulaiAntrianPortable.this, MenuAmbilNomorAntrianPortable.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
     }
 }

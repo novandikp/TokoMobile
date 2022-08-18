@@ -18,4 +18,11 @@ public class DaftarMerkMobil extends AppCompatActivity {
         Intent intent = new Intent(DaftarMerkMobil.this, MobilMenuMerk.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( DaftarMerkMobil.this, MobilMenuMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

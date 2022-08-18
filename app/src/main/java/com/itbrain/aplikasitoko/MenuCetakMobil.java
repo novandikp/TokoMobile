@@ -18,4 +18,11 @@ public class MenuCetakMobil extends AppCompatActivity {
         Intent intent = new Intent(MenuCetakMobil.this, MenuCetakStrukMobil.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuCetakMobil.this, MobilMenuTransaksi.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

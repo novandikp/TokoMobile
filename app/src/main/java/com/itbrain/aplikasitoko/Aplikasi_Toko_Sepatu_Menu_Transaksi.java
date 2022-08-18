@@ -28,4 +28,11 @@ public class Aplikasi_Toko_Sepatu_Menu_Transaksi extends AppCompatActivity {
         Intent intent = new Intent(Aplikasi_Toko_Sepatu_Menu_Transaksi.this, MenuReturnBarangTokoSepatu.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( Aplikasi_Toko_Sepatu_Menu_Transaksi.this, Aplikasi_Toko_Sepatu_Menu_Master.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

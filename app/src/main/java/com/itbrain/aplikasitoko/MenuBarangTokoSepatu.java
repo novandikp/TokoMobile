@@ -18,4 +18,11 @@ public class MenuBarangTokoSepatu extends AppCompatActivity {
         Intent intent = new Intent(MenuBarangTokoSepatu.this, MenuTambahBarangTokoSepatu.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuBarangTokoSepatu.this, MenuBarangTokoSepatu.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

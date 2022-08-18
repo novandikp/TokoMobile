@@ -232,7 +232,7 @@
         <entry key="app/src/main/res/layout/antrianportablemenuutama.xml" value="0.22" />
         <entry key="app/src/main/res/layout/aplikasi_bengkel_menu_master.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout/aplikasi_toko_sepatu_menu_master.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/aplikasi_toko_sepatu_menu_transaksi.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/aplikasi_toko_sepatu_menu_transaksi.xml" value="0.22" />
         <entry key="app/src/main/res/layout/aplikasi_toko_sepatu_menu_utama.xml" value="0.22" />
         <entry key="app/src/main/res/layout/aplilkasi_toko_sepatu_menu_laporan.xml" value="0.30434782608695654" />
         <entry key="app/src/main/res/layout/cetakkwitansiitemcetakkwitansi.xml" value="0.21510416666666668" />
@@ -244,7 +244,7 @@
         <entry key="app/src/main/res/layout/cetakkwitansimenucetakulang.xml" value="0.25" />
         <entry key="app/src/main/res/layout/cetakkwitansimenulaporan.xml" value="0.33" />
         <entry key="app/src/main/res/layout/cetakkwitansimenulaporanbagtransaksi.xml" value="0.21510416666666668" />
-        <entry key="app/src/main/res/layout/cetakkwitansimenumaster.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/cetakkwitansimenumaster.xml" value="0.67" />
         <entry key="app/src/main/res/layout/cetakkwitansimenumasterutama.xml" value="0.16" />
         <entry key="app/src/main/res/layout/cetakkwitansimenutransaksi.xml" value="0.22" />
         <entry key="app/src/main/res/layout/daftar_barang_toko_sepatu.xml" value="0.18" />
@@ -252,8 +252,8 @@
         <entry key="app/src/main/res/layout/daftar_kendaraan_mobil.xml" value="0.25" />
         <entry key="app/src/main/res/layout/daftar_laporan_kendaraan_mobil.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout/daftar_merk_mobil.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/daftar_pegawai_mobil.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/daftar_pelanggan_mobil.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/daftar_pegawai_mobil.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/daftar_pelanggan_mobil.xml" value="0.33" />
         <entry key="app/src/main/res/layout/form_tambah_kain.xml" value="0.225" />
         <entry key="app/src/main/res/layout/item_buat_simpanan_tabungan.xml" value="0.305870236869207" />
         <entry key="app/src/main/res/layout/item_cari_anggota_tabugan.xml" value="0.25" />
@@ -315,7 +315,7 @@
         <entry key="app/src/main/res/layout/menu_kategori_laundry.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_kategori_pos_toko_kredit.xml" value="0.33" />
         <entry key="app/src/main/res/layout/menu_kategori_toko_sepatu.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/menu_laporan_bag_pelanggan_mobil.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/menu_laporan_bag_pelanggan_mobil.xml" value="0.1" />
         <entry key="app/src/main/res/layout/menu_laporan_barang_pos_toko_kredit.xml" value="0.2" />
         <entry key="app/src/main/res/layout/menu_laporan_excel_laundry.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_laporan_excel_pos_toko_kredit.xml" value="0.21510416666666668" />
@@ -328,6 +328,7 @@
         <entry key="app/src/main/res/layout/menu_laporan_laba_rugi_pos_toko_kredit.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menu_laporan_laundry.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menu_laporan_mobil_bag_kendaraan.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/menu_laporan_mobil_bag_pendapatan.xml" value="0.17395833333333333" />
         <entry key="app/src/main/res/layout/menu_laporan_pegawai_laundry.xml" value="0.33" />
         <entry key="app/src/main/res/layout/menu_laporan_pelanggan_laundry.xml" value="0.2" />
         <entry key="app/src/main/res/layout/menu_laporan_pelanggan_pos_toko_kredit.xml" value="0.33" />
@@ -341,14 +342,14 @@
         <entry key="app/src/main/res/layout/menu_laporan_tagihan_pos_toko_kredit.xml" value="0.21" />
         <entry key="app/src/main/res/layout/menu_nomor_mulai_antrian_portable.xml" value="0.2" />
         <entry key="app/src/main/res/layout/menu_pelanggan_pos_toko_kredit.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/menu_pelanggan_toko_sepatu.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/layout/menu_pelanggan_toko_sepatu.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_pemasukan_tabungan.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_pengeluaran_tabungan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menu_proses_simpan_tabungan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_proses_simpan_tabungann.xml" value="0.225" />
         <entry key="app/src/main/res/layout/menu_return_barang_toko_sepatu.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_tambah_barang_pos_toko_kredit.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/menu_tambah_barang_toko_sepatu.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/menu_tambah_barang_toko_sepatu.xml" value="0.75" />
         <entry key="app/src/main/res/layout/menu_tambah_data_anggota.xml" value="0.18" />
         <entry key="app/src/main/res/layout/menu_tambah_jasa_antrian_portable.xml" value="0.14" />
         <entry key="app/src/main/res/layout/menu_tambah_kategori_pos_toko_kredit.xml" value="0.22" />
@@ -383,7 +384,7 @@
         <entry key="app/src/main/res/layout/menujasacetakkwitansi.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menujenissimpanantabungan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menukategorijasalaundry.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/menukendaraanmobil.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/menukendaraanmobil.xml" value="0.18" />
         <entry key="app/src/main/res/layout/menulaporananggotatabungan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menulaporanexportexcelcetakkwitansi.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout/menulaporanexportexceltabungan.xml" value="0.22" />
@@ -391,8 +392,8 @@
         <entry key="app/src/main/res/layout/menulaporanmobilbagpegawai.xml" value="0.25" />
         <entry key="app/src/main/res/layout/menulaporanmobilbagpendapatan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menulaporanmobilbagrental.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/menulaporansimpanantabungan.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/menulaporantransaksiperanggotatabungan.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/menulaporansimpanantabungan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/menulaporantransaksiperanggotatabungan.xml" value="0.67" />
         <entry key="app/src/main/res/layout/menumerkmobil.xml" value="0.33" />
         <entry key="app/src/main/res/layout/menupegawailaundry.xml" value="0.35032437442076" />
         <entry key="app/src/main/res/layout/menupelangganlaundry.xml" value="0.22" />
@@ -407,7 +408,7 @@
         <entry key="app/src/main/res/layout/mobil_laporan_item_bag_rental.xml" value="0.33" />
         <entry key="app/src/main/res/layout/mobilitemkendaraan.xml" value="0.221875" />
         <entry key="app/src/main/res/layout/mobilitempegawai.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/mobilmenulaporan.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/mobilmenulaporan.xml" value="0.24467099165894346" />
         <entry key="app/src/main/res/layout/mobilmenumaster.xml" value="0.25" />
         <entry key="app/src/main/res/layout/mobilmenupegawai.xml" value="0.2" />
         <entry key="app/src/main/res/layout/mobilmenutransaksi.xml" value="0.25" />

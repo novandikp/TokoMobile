@@ -18,4 +18,11 @@ public class MenuKategoriTokoSepatu extends AppCompatActivity {
         Intent intent = new Intent(MenuKategoriTokoSepatu.this, MenuTambahkategoriTokoSepatu.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuKategoriTokoSepatu.this, Aplikasi_Toko_Sepatu_Menu_Master.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

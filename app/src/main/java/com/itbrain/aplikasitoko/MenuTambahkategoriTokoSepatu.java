@@ -13,4 +13,11 @@ public class MenuTambahkategoriTokoSepatu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_tambah_kategori_toko_sepatu);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuTambahkategoriTokoSepatu.this, MenuKategoriTokoSepatu.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -15,7 +15,7 @@ public class MenuLaporanExportExcelTabungan extends AppCompatActivity {
     }
 
     public void Kembali(View view) {
-        Intent intent = new Intent( MenuLaporanExportExcelTabungan.this, MenuLaporanKeuanganTabungan.class);
+        Intent intent = new Intent( MenuLaporanExportExcelTabungan.this, TabunganMenuLaporan.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();

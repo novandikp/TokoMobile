@@ -17,4 +17,11 @@ public class MenuRentalKendaraanMobil extends AppCompatActivity {
         Intent intent = new Intent(MenuRentalKendaraanMobil.this, MenuPembayaranUangMukaMobil.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuRentalKendaraanMobil.this, MobilMenuTransaksi.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

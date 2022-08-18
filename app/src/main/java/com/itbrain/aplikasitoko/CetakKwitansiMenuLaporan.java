@@ -28,4 +28,11 @@ public class CetakKwitansiMenuLaporan extends AppCompatActivity {
         Intent intent = new Intent(CetakKwitansiMenuLaporan.this, CetakKwitansiLaporanBagTransaksi.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( CetakKwitansiMenuLaporan.this, CetakKwitansiMenuMasterUtama.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

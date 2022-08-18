@@ -23,4 +23,11 @@ public class MobilMenuTransaksi extends AppCompatActivity {
         Intent intent = new Intent(MobilMenuTransaksi.this, MenuPengembalianKendaraanMobil.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MobilMenuTransaksi.this, MobilMenuUtamaMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

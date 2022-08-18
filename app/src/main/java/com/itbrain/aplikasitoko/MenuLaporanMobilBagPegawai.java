@@ -14,8 +14,15 @@ public class MenuLaporanMobilBagPegawai extends AppCompatActivity {
         setContentView(R.layout.menulaporanmobilbagpegawai);
     }
 
-    public void ExportExcel(View view) {
+    public void Export(View view) {
         Intent intent = new Intent(MenuLaporanMobilBagPegawai.this, MenuLaporanExportExcelMobil.class);
         startActivity(intent);
+    }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuLaporanMobilBagPegawai.this, MobilMenuLaporan.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
     }
 }

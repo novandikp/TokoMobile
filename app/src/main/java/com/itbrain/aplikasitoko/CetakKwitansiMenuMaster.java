@@ -28,4 +28,11 @@ public class CetakKwitansiMenuMaster extends AppCompatActivity {
         Intent intent = new Intent(CetakKwitansiMenuMaster.this, MenuDaftarPelangganCetakKwitansi.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( CetakKwitansiMenuMaster.this, CetakKwitansiMenuMasterUtama.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

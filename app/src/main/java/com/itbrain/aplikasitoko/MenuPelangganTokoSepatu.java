@@ -18,4 +18,11 @@ public class MenuPelangganTokoSepatu extends AppCompatActivity {
         Intent intent = new Intent(MenuPelangganTokoSepatu.this, MenuTambahPelangganTokoSepatu.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuPelangganTokoSepatu.this, Aplikasi_Toko_Sepatu_Menu_Master.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

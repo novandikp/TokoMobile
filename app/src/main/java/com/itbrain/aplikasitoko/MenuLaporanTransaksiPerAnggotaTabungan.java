@@ -23,4 +23,11 @@ public class MenuLaporanTransaksiPerAnggotaTabungan extends AppCompatActivity {
         Intent intent = new Intent(MenuLaporanTransaksiPerAnggotaTabungan.this, MenuCariDataSimpananTabugan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuLaporanTransaksiPerAnggotaTabungan.this, TabunganMenuLaporan.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

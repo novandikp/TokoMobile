@@ -30,7 +30,7 @@ public class TabunganMenuLaporan extends AppCompatActivity {
     }
 
     public void LaporanSimpanan(View view) {
-        Intent intent = new Intent(TabunganMenuLaporan.this, MenuLaporanKeuanganTabungan.class);
+        Intent intent = new Intent(TabunganMenuLaporan.this, MenulaporanSimpananTabungan.class);
         startActivity(intent);
     }
 

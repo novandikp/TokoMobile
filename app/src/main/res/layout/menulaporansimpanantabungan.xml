@@ -7,20 +7,32 @@
     tools:context=".MenulaporanSimpananTabungan">
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/textView619"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Jumlah Data : 0"
+        android:layout_marginEnd="32dp"
+        android:text="0"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+    <TextView
+        android:id="@+id/textView620"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Jumlah Data :"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView619"
+        app:layout_constraintEnd_toStartOf="@+id/textView619"
+        app:layout_constraintTop_toTopOf="@+id/textView619" />
 
     <Spinner
         android:id="@+id/spinner4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
@@ -51,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Cari"
         android:inputType="textPersonName"
@@ -65,7 +78,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#00FF0A"
+        android:backgroundTint="@color/hijaukonten"
+        android:onClick="Excel"
         android:text="Ekspor Ke Excel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,9 +110,10 @@
 
     <ImageView
         android:id="@+id/imageView131"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
+        android:onClick="Kembali"
         android:rotation="90"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar28"
         app:layout_constraintStart_toStartOf="parent"
