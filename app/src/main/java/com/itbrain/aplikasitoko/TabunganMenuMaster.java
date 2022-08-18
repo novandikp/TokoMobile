@@ -28,4 +28,11 @@ public class TabunganMenuMaster extends AppCompatActivity {
         Intent intent = new Intent(TabunganMenuMaster.this, MenuDaftarJenisSimpananTabungan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(TabunganMenuMaster.this, TabunganMenuMasterUtama.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

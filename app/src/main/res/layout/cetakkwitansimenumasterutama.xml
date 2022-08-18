@@ -287,5 +287,27 @@
 
     </androidx.gridlayout.widget.GridLayout>
 
+    <TextView
+        android:id="@+id/textView617"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Menggunakan Aplikasi Kami"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView618"
+        app:layout_constraintTop_toBottomOf="@+id/textView618" />
+
+    <TextView
+        android:id="@+id/textView618"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Cetak Kwitansi"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

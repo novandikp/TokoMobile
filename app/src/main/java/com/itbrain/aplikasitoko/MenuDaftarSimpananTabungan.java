@@ -18,4 +18,11 @@ public class MenuDaftarSimpananTabungan extends AppCompatActivity {
         Intent intent = new Intent(MenuDaftarSimpananTabungan.this, MenuBuatSimpanantabungan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuDaftarSimpananTabungan.this, TabunganMenuTransaksi.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

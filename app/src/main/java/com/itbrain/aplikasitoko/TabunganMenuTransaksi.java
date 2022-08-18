@@ -35,4 +35,10 @@ public class TabunganMenuTransaksi extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void Kembali(View view) {
+        Intent intent = new Intent( TabunganMenuTransaksi.this, TabunganMenuMasterUtama.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -18,4 +18,11 @@ public class MenuDaftarAnggotaTabungan extends AppCompatActivity {
         Intent intent = new Intent(MenuDaftarAnggotaTabungan.this, MenuAnggotaTabungan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuDaftarAnggotaTabungan.this, TabunganMenuMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

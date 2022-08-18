@@ -18,4 +18,11 @@ public class MenuProsesAmbilTabungan extends AppCompatActivity {
         Intent intent = new Intent(MenuProsesAmbilTabungan.this, MenuPengeluaranTabungan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuProsesAmbilTabungan.this, TabunganMenuTransaksi.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

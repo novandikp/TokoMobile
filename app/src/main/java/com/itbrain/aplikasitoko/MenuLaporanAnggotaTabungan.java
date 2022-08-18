@@ -18,4 +18,11 @@ public class MenuLaporanAnggotaTabungan extends AppCompatActivity {
         Intent intent = new Intent(MenuLaporanAnggotaTabungan.this, MenuLaporanExportExcelTabungan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuLaporanAnggotaTabungan.this, TabunganMenuLaporan.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

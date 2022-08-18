@@ -37,4 +37,8 @@ public class LaundryMenuLaporan extends AppCompatActivity {
         Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanPendapatanLaundry.class);
         startActivity(intent);
     }
+    public void LaporanHutang(View view) {
+        Intent intent = new Intent(LaundryMenuLaporan.this, MenuLaporanHutangLaundry.class);
+        startActivity(intent);
+    }
 }

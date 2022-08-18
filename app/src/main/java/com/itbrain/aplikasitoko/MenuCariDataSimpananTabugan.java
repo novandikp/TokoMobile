@@ -18,4 +18,11 @@ public class MenuCariDataSimpananTabugan extends AppCompatActivity {
         Intent intent = new Intent(MenuCariDataSimpananTabugan.this, MenuBuatSimpanantabungan.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuCariDataSimpananTabugan.this, MenuProsesSimpanTabungan.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }
