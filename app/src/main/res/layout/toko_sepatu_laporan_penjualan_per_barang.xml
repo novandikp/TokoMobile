@@ -77,15 +77,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView28" />
 
     <ImageView
-        app:tint="@color/white"
         android:id="@+id/imageView28"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:onClick="Kembali"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="@color/white" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView11"

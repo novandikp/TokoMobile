@@ -18,4 +18,11 @@ public class MenuPelangganPosTokoKredit extends AppCompatActivity {
         Intent intent = new Intent(MenuPelangganPosTokoKredit.this, MenuTambahPelangganPosTokoKredit.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( MenuPelangganPosTokoKredit.this, PosTokoKreditMenuMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

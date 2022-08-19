@@ -18,4 +18,11 @@ public class TokoSepatuLaporanPenjualanPerBarang extends AppCompatActivity {
         Intent intent = new Intent(TokoSepatuLaporanPenjualanPerBarang.this, MenuLaporanExcelTokoSepatu.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( TokoSepatuLaporanPenjualanPerBarang.this, Aplikasi_Toko_Sepatu_Menu_Laporan.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

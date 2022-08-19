@@ -37,6 +37,12 @@ public class LaundryMenuMaster extends AppCompatActivity {
     public void Jasa(View view) {
     Intent intent = new Intent(LaundryMenuMaster.this, MenuDaftarJasaLaundry.class);
     startActivity(intent);
-}
+    }
 
+    public void Kembali(View view) {
+        Intent intent = new Intent( LaundryMenuMaster.this, LaundryMenuUtamaMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }

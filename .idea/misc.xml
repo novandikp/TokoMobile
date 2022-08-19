@@ -286,7 +286,7 @@
         <entry key="app/src/main/res/layout/laundryitemlaporanpendapatan.xml" value="0.75" />
         <entry key="app/src/main/res/layout/laundryitemlaporanproseslaundry.xml" value="1.0" />
         <entry key="app/src/main/res/layout/laundrymenulaporan.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/laundrymenumaster.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/laundrymenumaster.xml" value="0.18" />
         <entry key="app/src/main/res/layout/laundrymenutransaksi.xml" value="0.22" />
         <entry key="app/src/main/res/layout/laundrymenuutamamaster.xml" value="0.5" />
         <entry key="app/src/main/res/layout/main_app.xml" value="0.25" />
@@ -348,7 +348,7 @@
         <entry key="app/src/main/res/layout/menu_proses_simpan_tabungan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_proses_simpan_tabungann.xml" value="0.225" />
         <entry key="app/src/main/res/layout/menu_return_barang_toko_sepatu.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/menu_tambah_barang_pos_toko_kredit.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/menu_tambah_barang_pos_toko_kredit.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_tambah_barang_toko_sepatu.xml" value="0.75" />
         <entry key="app/src/main/res/layout/menu_tambah_data_anggota.xml" value="0.18" />
         <entry key="app/src/main/res/layout/menu_tambah_jasa_antrian_portable.xml" value="0.14" />
@@ -433,10 +433,10 @@
         <entry key="app/src/main/res/layout/toko_sepatu_item_laporan_barang.xml" value="0.5653964984552008" />
         <entry key="app/src/main/res/layout/toko_sepatu_item_pilih_barang_panah_bawah.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_barang.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/toko_sepatu_laporan_detail_hutang.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/toko_sepatu_laporan_detail_hutang.xml" value="0.75" />
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_hutang.xml" value="0.22" />
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_pelanggan.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/toko_sepatu_laporan_pendapatan.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/toko_sepatu_laporan_pendapatan.xml" value="1.1" />
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_penjualan_per_barang.xml" value="0.5" />
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_penjualan_per_kategori.xml" value="0.25161987041036715" />
         <entry key="app/src/main/res/layout/toko_sepatu_laporan_penjualan_per_pelanggan.xml" value="0.4351949420442571" />

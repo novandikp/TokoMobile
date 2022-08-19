@@ -30,7 +30,7 @@ public class Aplikasi_Toko_Sepatu_Menu_Transaksi extends AppCompatActivity {
     }
 
     public void Kembali(View view) {
-        Intent intent = new Intent( Aplikasi_Toko_Sepatu_Menu_Transaksi.this, Aplikasi_Toko_Sepatu_Menu_Master.class);
+        Intent intent = new Intent( Aplikasi_Toko_Sepatu_Menu_Transaksi.this, Aplikasi_Toko_Sepatu_Menu_Utama.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();

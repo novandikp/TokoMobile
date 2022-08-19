@@ -33,4 +33,11 @@ public class PosTokoKreditMenuMaster extends AppCompatActivity {
         Intent intent = new Intent(PosTokoKreditMenuMaster.this, MenuPelangganPosTokoKredit.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent( PosTokoKreditMenuMaster.this, PosTokoKreditMenuMasterUtama.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
 }
