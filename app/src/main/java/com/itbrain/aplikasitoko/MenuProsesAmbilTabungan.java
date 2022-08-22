@@ -25,4 +25,9 @@ public class MenuProsesAmbilTabungan extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void CariDataSimpanan(View view) {
+        Intent intent = new Intent( MenuProsesAmbilTabungan.this, MenuCariDataSimpananTabugan.class);
+        startActivity(intent);
+    }
 }

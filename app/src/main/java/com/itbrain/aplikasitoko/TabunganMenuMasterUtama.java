@@ -13,8 +13,7 @@ public class TabunganMenuMasterUtama extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabunganmenumasterutama);
     }
-
-    public void TabunganMaster(View view) {
+    public void TabunganMenuMaster(View view) {
         Intent intent = new Intent(TabunganMenuMasterUtama.this, TabunganMenuMaster.class);
         startActivity(intent);
     }

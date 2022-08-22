@@ -15,7 +15,7 @@ public class LaundryMenuMaster extends AppCompatActivity {
     }
 
     public void IdentitasToko(View view) {
-        Intent intent = new Intent(LaundryMenuMaster.this, MenuIdentitasTabungan.class);
+        Intent intent = new Intent(LaundryMenuMaster.this, MenuIdentitasLaundry.class);
         startActivity(intent);
     }
 

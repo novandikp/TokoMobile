@@ -30,6 +30,7 @@
         android:text="Transaksi"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView24"
         app:layout_constraintStart_toEndOf="@+id/imageView24"
         app:layout_constraintTop_toTopOf="@+id/imageView24" />
@@ -83,25 +84,24 @@
                     android:id="@+id/imageView30"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="200dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="40dp"
                     android:layout_marginBottom="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/simpanan" />
 
                 <TextView
                     android:id="@+id/tvSimpanan"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:layout_marginStart="55dp"
                     android:layout_marginTop="50dp"
                     android:text="Buat Simpanan"
                     android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,15 +109,23 @@
                     android:id="@+id/tvDataSimpanan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginEnd="8dp"
                     android:foregroundGravity="center"
                     android:gravity="center"
                     android:text="Buat Data Simpanan Anggota Terdaftar"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView30"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvSimpanan" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.6" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -137,6 +145,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.62" />
+
                 <ImageView
                     android:id="@+id/imageView22"
                     android:layout_width="0dp"
@@ -145,7 +160,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvProseSimpan"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -156,10 +171,12 @@
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:gravity="center"
                     android:text="Proses Simpanan Anggota"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvProseSimpan" />
@@ -168,8 +185,10 @@
                     android:id="@+id/tvProseSimpan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Proses Simpan"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/textView22"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -193,26 +212,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.62" />
+
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:gravity="center"
                     android:text="Proses Pengambilan Simpanan Anggota"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTransaksi" />
 
                 <TextView
                     android:id="@+id/tvTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Proses Ambil"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/textView25"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 
                 <ImageView
                     android:id="@+id/imageView14"
@@ -222,7 +253,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvTransaksi"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -246,17 +277,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".60" />
+
                 <ImageView
                     android:id="@+id/imageView16"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="210dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/uang" />
 
@@ -264,10 +301,11 @@
                     android:id="@+id/tvKeuangan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="72dp"
                     android:layout_marginTop="50dp"
                     android:text="Keuangan"
                     android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -275,13 +313,14 @@
                     android:id="@+id/tvDataKeuangan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginEnd="16dp"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Atur Dan Tambah Data Keuanganmu"
                     android:textAlignment="gravity"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvKeuangan" />
             </androidx.constraintlayout.widget.ConstraintLayout>

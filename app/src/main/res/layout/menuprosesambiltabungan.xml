@@ -7,9 +7,30 @@
     tools:context=".MenuProsesAmbilTabungan">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout59"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout55">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masuk "
+            android:text="0" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout52"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="50dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +48,9 @@
         android:id="@+id/textInputLayout55"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +67,8 @@
         android:id="@+id/textInputLayout54"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="50dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +86,9 @@
         android:id="@+id/textInputLayout53"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +140,7 @@
             android:layout_marginStart="8dp"
             android:text="Proses Ambil"
             android:textColor="#FFFFFF"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView41"
             app:layout_constraintStart_toEndOf="@+id/imageView41"
@@ -136,7 +165,7 @@
             android:layout_marginTop="8dp"
             android:text="0"
             android:textColor="#FFFFFF"
-            android:textSize="20dp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/textView27"
             app:layout_constraintStart_toStartOf="@+id/textView27"
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
@@ -164,22 +193,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout59"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxBackgroundColor="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout55">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Masuk "
-            android:text="0" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageView124"
@@ -214,11 +227,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="1dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout59"
+        tools:itemCount="1"
         tools:listitem="@layout/item_prose_simpan_tabungan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
