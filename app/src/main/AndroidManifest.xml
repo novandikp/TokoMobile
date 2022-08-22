@@ -11,6 +11,9 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".MobilLaporanItemBagPendapatan"
+            android:exported="false" />
+        <activity
             android:name=".MenuIdentitasLaundry"
             android:exported="true" />
         <activity
@@ -505,7 +508,7 @@
         <activity
             android:name=".MenuRentalKendaraanMobil"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MobilItemBayarDetailPengembalian"
             android:exported="true" />

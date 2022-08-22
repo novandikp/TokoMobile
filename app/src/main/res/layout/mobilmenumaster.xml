@@ -63,6 +63,13 @@
                 android:layout_height="match_parent"
                 android:onClick="MenuIdentitas">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView22"
                     android:layout_width="0dp"
@@ -70,8 +77,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas2"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline19"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -81,22 +88,23 @@
                     android:id="@+id/tvidentitas2"
                     android:layout_width="58dp"
                     android:layout_height="25dp"
-                    android:layout_marginBottom="4dp"
                     android:text="Identitas"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil2"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
                 <TextView
                     android:id="@+id/tvidentitasmobil2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Kelola Identitas Rental Mobil"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvidentitas2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -115,15 +123,22 @@
                 android:layout_height="match_parent"
                 android:onClick="MenuMerk">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.6" />
+
                 <ImageView
                     android:id="@+id/imageView24"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvMerk"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline15"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -133,22 +148,27 @@
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:foregroundGravity="center_vertical|center|center_horizontal"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="Kelola Merk Mobil Yang Digunakan"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMerk" />
 
                 <TextView
                     android:id="@+id/tvMerk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Merk"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/textView22"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -167,26 +187,38 @@
                 android:layout_height="match_parent"
                 android:onClick="MenuKendaraan">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.6" />
+
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Kelola Kendaraan Yang Disediakan"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTransaksi" />
 
                 <TextView
                     android:id="@+id/tvTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Kendaraan"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/textView25"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
                 <ImageView
                     android:id="@+id/imageView14"
@@ -195,8 +227,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvTransaksi"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline16"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -219,6 +251,13 @@
                 android:layout_height="match_parent"
                 android:onClick="MenuPelanggan">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.6" />
+
                 <ImageView
                     android:id="@+id/imageView16"
                     android:layout_width="0dp"
@@ -226,7 +265,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvPelanggan"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline17"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -236,22 +276,23 @@
                     android:id="@+id/tvPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Pelanggan"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/tvDataPelanggan"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
                 <TextView
                     android:id="@+id/tvDataPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Kelola Data Pelanggan"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPelanggan" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -270,6 +311,13 @@
                 android:layout_height="match_parent"
                 android:onClick="MenuPegawai">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.6" />
+
                 <ImageView
                     android:id="@+id/imageView17"
                     android:layout_width="0dp"
@@ -277,8 +325,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvPegawai"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline18"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -288,22 +336,23 @@
                     android:id="@+id/tvPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Pegawai"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/tvDataPegawai"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
                 <TextView
                     android:id="@+id/tvDataPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Keloal Data Pegawai"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPegawai"
+                    android:textSize="13sp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -318,6 +367,7 @@
         android:text="Menu Master"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView193"
         app:layout_constraintStart_toEndOf="@+id/imageView193"
         app:layout_constraintTop_toTopOf="@+id/imageView193" />

@@ -15,7 +15,7 @@ public class MenuDaftarJenisSimpananTabungan extends AppCompatActivity {
     }
 
     public void Tambah(View view) {
-        Intent intent = new Intent(MenuDaftarJenisSimpananTabungan.this, MenuBuatSimpanantabungan.class);
+        Intent intent = new Intent(MenuDaftarJenisSimpananTabungan.this, MenuJenisSimpananTabungan.class);
         startActivity(intent);
     }
 
