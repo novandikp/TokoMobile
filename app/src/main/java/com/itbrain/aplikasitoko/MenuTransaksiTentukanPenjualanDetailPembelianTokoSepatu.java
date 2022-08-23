@@ -20,7 +20,7 @@ public class MenuTransaksiTentukanPenjualanDetailPembelianTokoSepatu extends App
     }
 
     public void LanjutkanPembayaran(View view) {
-        Intent intent = new Intent(MenuTransaksiTentukanPenjualanDetailPembelianTokoSepatu.this, MenuTransaksiPilihBarangTokoSepatu.class);
+        Intent intent = new Intent(MenuTransaksiTentukanPenjualanDetailPembelianTokoSepatu.this, MenuTransaksiLanjutkanPembayaranTokoSepatu.class);
         startActivity(intent);
     }
 

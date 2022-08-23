@@ -1,5 +1,7 @@
 package com.itbrain.aplikasitoko;
 
+import static com.itbrain.aplikasitoko.R.layout.menu_cetak_kwitansi_cetakkwitansi;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,7 +13,7 @@ public class CetakKwitansiMenuCetakKwitansi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_cetak_kwitansi_cetakkwitansi);
+        setContentView(menu_cetak_kwitansi_cetakkwitansi);
     }
 
     public void Cetak(View view) {

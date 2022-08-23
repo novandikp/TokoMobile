@@ -73,6 +73,7 @@
         android:text="Laporan Return"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/Kembali"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
         app:layout_constraintTop_toTopOf="@+id/Kembali" />

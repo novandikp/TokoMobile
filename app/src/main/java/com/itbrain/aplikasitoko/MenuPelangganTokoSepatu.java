@@ -14,7 +14,7 @@ public class MenuPelangganTokoSepatu extends AppCompatActivity {
         setContentView(R.layout.menu_pelanggan_toko_sepatu);
     }
 
-    public void Kategori(View view) {
+    public void TambahPelanggan(View view) {
         Intent intent = new Intent(MenuPelangganTokoSepatu.this, MenuTambahPelangganTokoSepatu.class);
         startActivity(intent);
     }

@@ -14,7 +14,7 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
         setContentView(R.layout.menu_daftar_jasa_laundry);
     }
 
-    public void UbahPelanggan(View view) {
+    public void UbahJasa(View view) {
         Intent intent = new Intent(MenuDaftarJasaLaundry.this, MenuUbahJasaLaundry.class);
         startActivity(intent);
     }

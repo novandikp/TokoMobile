@@ -62,6 +62,7 @@
         android:text="Laporan Barang"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/Kembali"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
         app:layout_constraintTop_toTopOf="@+id/Kembali" />
@@ -120,6 +121,7 @@
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView454"
         app:layout_constraintStart_toEndOf="@+id/textView454"
         app:layout_constraintTop_toTopOf="@+id/textView454" />

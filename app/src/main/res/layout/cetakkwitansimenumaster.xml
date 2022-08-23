@@ -53,12 +53,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
-                    android:id="@+id/imageView22"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas2"
+                    android:id="@+id/imageView202"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="32dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline7"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -68,23 +75,23 @@
                     android:id="@+id/tvidentitas2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Identitas"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil2"
-                    app:layout_constraintEnd_toEndOf="@+id/tvidentitasmobil2"
-                    app:layout_constraintStart_toEndOf="@+id/tvidentitasmobil2"
-                    app:layout_constraintStart_toStartOf="@+id/tvidentitasmobil2" />
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
                 <TextView
                     android:id="@+id/tvidentitasmobil2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Identitas perusahaan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvidentitas2"
+                    app:layout_constraintStart_toStartOf="@+id/tvidentitas2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvidentitas2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -104,12 +111,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView22"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvMerk"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="32dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline29"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -119,22 +133,23 @@
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Penyediaan Jasa"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvMerk"
+                    app:layout_constraintStart_toStartOf="@+id/tvMerk"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMerk" />
 
                 <TextView
                     android:id="@+id/tvMerk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Jasa"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/textView22"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -154,33 +169,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Semua Pelanggan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvTransaksi"
+                    app:layout_constraintStart_toStartOf="@+id/tvTransaksi"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTransaksi" />
 
                 <TextView
                     android:id="@+id/tvTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:text="Pelanggan"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toTopOf="@+id/textView25"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline28" />
 
                 <ImageView
                     android:id="@+id/imageView14"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvTransaksi"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="32dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline28"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -199,6 +222,7 @@
         android:text="Master"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView160"
         app:layout_constraintStart_toEndOf="@+id/imageView160"
         app:layout_constraintTop_toTopOf="@+id/imageView160" />

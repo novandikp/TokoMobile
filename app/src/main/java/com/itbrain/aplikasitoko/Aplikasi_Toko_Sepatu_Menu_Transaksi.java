@@ -15,7 +15,7 @@ public class Aplikasi_Toko_Sepatu_Menu_Transaksi extends AppCompatActivity {
     }
 
     public void LakukanPenjualan(View view) {
-        Intent intent = new Intent(Aplikasi_Toko_Sepatu_Menu_Transaksi.this, MenuTransaksiPilihBarangTokoSepatu.class);
+        Intent intent = new Intent(Aplikasi_Toko_Sepatu_Menu_Transaksi.this, MenuTransaksiLakukanPenjualanTokoSepatu.class);
         startActivity(intent);
     }
 

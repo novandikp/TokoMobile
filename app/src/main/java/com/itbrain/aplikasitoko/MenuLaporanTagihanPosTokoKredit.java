@@ -18,4 +18,9 @@ public class MenuLaporanTagihanPosTokoKredit extends AppCompatActivity {
         Intent intent = new Intent(MenuLaporanTagihanPosTokoKredit.this, MenuLaporanExcelPosTokoKredit.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuLaporanTagihanPosTokoKredit.this, PosTokoKreditMenuLaporan.class);
+        startActivity(intent);
+    }
 }
