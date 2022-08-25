@@ -17,7 +17,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar75"></Spinner>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Kendaraan"
+        android:id="@+id/edtKategori"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="8dp"
@@ -55,7 +55,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/tahunKeluaran2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Kendaraan" />
+        app:layout_constraintTop_toBottomOf="@+id/edtKategori" />
 
     <EditText
         android:id="@+id/tahunKeluaran2"
@@ -68,7 +68,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Kendaraan" />
+        app:layout_constraintTop_toBottomOf="@+id/edtKategori" />
 
     <EditText
         android:id="@+id/editText4"

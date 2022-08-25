@@ -10,6 +10,7 @@
         android:id="@+id/spkategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="200px"
         android:entries="@array/Daftar_Jasa2"
@@ -22,6 +23,7 @@
         android:id="@+id/listItem2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="200px"
         android:entries="@array/Daftar_Jasa"
@@ -31,9 +33,10 @@
         app:layout_constraintTop_toBottomOf="@+id/rp"></Spinner>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Kendaraan"
+        android:id="@+id/edtKategori"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Nama Jasa"
@@ -86,12 +89,13 @@
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="Biaya Jasa"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Kendaraan" />
+        app:layout_constraintTop_toBottomOf="@+id/edtKategori" />
 
     <ImageButton
         android:id="@+id/tambah"
@@ -101,7 +105,7 @@
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/spkategori"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Kendaraan"
+        app:layout_constraintStart_toEndOf="@+id/edtKategori"
         app:layout_constraintTop_toTopOf="@+id/spkategori"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 

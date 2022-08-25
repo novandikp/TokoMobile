@@ -344,14 +344,15 @@
         android:text="Penjualan"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView150"
         app:layout_constraintStart_toEndOf="@+id/imageView150"
         app:layout_constraintTop_toTopOf="@+id/imageView150" />
 
     <ImageView
         android:id="@+id/imageView150"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:rotation="90"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar46"

@@ -43,7 +43,7 @@
                 app:srcCompat="@drawable/ic_baseline_print_24" />
 
             <TextView
-                android:id="@+id/textView44"
+                android:id="@+id/edtDaftarKategori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -62,7 +62,7 @@
                 android:layout_marginTop="4dp"
                 android:text="17/07/2022"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarKategori" />
 
             <TextView
                 android:id="@+id/textView45"

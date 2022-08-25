@@ -12,7 +12,7 @@ public class Main_App extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_app);
+        setContentView(R.layout.backupan_main_app);
     }
 
     public void Tabungan(View view) {

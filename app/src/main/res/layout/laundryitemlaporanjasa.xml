@@ -39,7 +39,7 @@
                 app:layout_constraintTop_toTopOf="@+id/textView43" />
 
             <TextView
-                android:id="@+id/textView44"
+                android:id="@+id/edtDaftarKategori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -56,8 +56,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Rp."
-                app:layout_constraintStart_toStartOf="@+id/textView44"
-                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+                app:layout_constraintStart_toStartOf="@+id/edtDaftarKategori"
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarKategori" />
 
             <TextView
                 android:id="@+id/textView45"

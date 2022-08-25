@@ -14,7 +14,7 @@ public class MenukategoriLaundry extends AppCompatActivity {
         setContentView(R.layout.menu_kategori_laundry);
     }
 
-    public void UbahKategori(View view) {
+    public void Simpan(View view) {
         Intent intent = new Intent(MenukategoriLaundry.this, MenuKategoriJasaLaundry.class);
         startActivity(intent);
     }

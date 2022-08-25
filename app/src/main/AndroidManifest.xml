@@ -11,6 +11,9 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".BackupanMainApp"
+            android:exported="false" />
+        <activity
             android:name=".MobilLaporanItemBagPendapatan"
             android:exported="true" />
         <activity
@@ -21,7 +24,8 @@
             android:exported="true" />
         <activity
             android:name=".MenuLaporanHutangLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".ItemTerimaLaundryTaruhKeranjangLaundry"
             android:exported="true" />
@@ -38,7 +42,7 @@
         <activity
             android:name=".MenuDaftarJenisSimpananTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanBagPelangganMobil"
             android:exported="true" />
@@ -99,7 +103,8 @@
             android:exported="true" />
         <activity
             android:name=".TokoSepatuLaporanBarang"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuReturnBarangTokoSepatu"
             android:exported="true" />
@@ -211,7 +216,7 @@
         <activity
             android:name=".MenuDaftarJasaCetakKwitansi"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuTambahJasaAntrianPortable"
             android:exported="true" />
@@ -268,7 +273,8 @@
             android:exported="true" />
         <activity
             android:name=".MenuTransaksiPenjualanKreditPosTokoKredit"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanExcelPosTokoKredit"
             android:exported="true" />
@@ -277,10 +283,12 @@
             android:exported="true" />
         <activity
             android:name=".MenuTransaksiPembayaranAngsuranPosTokoKredit"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuTransaksiPenjualanTunaiPosTokoKredit"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuTambahPelangganPosTokoKredit"
             android:exported="true" />
@@ -292,13 +300,16 @@
             android:exported="true" />
         <activity
             android:name=".MenuPelangganPosTokoKredit"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuBarangPosTokoKredit"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuKategoriPosTokoKredit"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuIdentitasPosTokoKredit"
             android:exported="true" />
@@ -325,19 +336,24 @@
             android:exported="true" />
         <activity
             android:name=".MenuLaporanPendapatanLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanProsesLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanPelangganLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanPegawaiLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanExcelLaundry"
             android:exported="true" />
@@ -346,20 +362,23 @@
             android:exported="true" />
         <activity
             android:name=".MenuLaporanJasaLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuTerimaLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuBayarHutangLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".ItemDaftarProsesLaundry"
             android:exported="true" />
         <activity
             android:name=".MenuDaftarProsesLaundry"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuUbahJasaLaundry"
             android:exported="true" />
@@ -378,7 +397,7 @@
         <activity
             android:name=".MenuDaftarJasaLaundry"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuPelangganLaundry"
             android:exported="true" />
@@ -388,17 +407,18 @@
         <activity
             android:name=".MenuDaftarPelangganLaundry"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuDaftarPegawaiLaundry"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuKategoriJasaLaundry"
             android:exported="true" />
         <activity
             android:name=".MenukategoriLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".ItemProsesSimpanTabungan2"
             android:exported="true" />
@@ -411,23 +431,23 @@
         <activity
             android:name=".MenuLaporanKeuanganTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanTransaksiPerAnggotaTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanAnggotaTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenulaporanSimpananTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuLaporanJenisSimpananTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuPengeluaranTabungan"
             android:exported="true" />
@@ -440,11 +460,11 @@
         <activity
             android:name=".MenuProsesSimpanTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuTambahDataAnggotaTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".ItemCariAnggotaTabugan"
             android:exported="true" />
@@ -454,19 +474,19 @@
         <activity
             android:name=".MenuDaftarSimpananTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuDetailKeuanganTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuProsesAmbilTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuBuatSimpanantabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".TabunganMenuUtilitas"
             android:exported="true" />
@@ -479,7 +499,7 @@
         <activity
             android:name=".MenuAnggotaTabungan"
             android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuIdentitasTabungan"
             android:exported="true" />

@@ -102,6 +102,7 @@
                     android:layout_height="wrap_content"
                     android:text="Identitas Toko"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/tvIdentitasToko"
                     app:layout_constraintStart_toStartOf="@+id/tvIdentitasToko"
                     app:layout_constraintTop_toTopOf="@+id/guideline44" />
@@ -161,6 +162,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pegawai"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/textView12"
                     app:layout_constraintStart_toStartOf="@+id/textView12"
                     app:layout_constraintTop_toTopOf="@+id/guideline48" />
@@ -218,6 +220,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pelanggan"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/guideline49" />
@@ -226,10 +229,11 @@
                     android:id="@+id/tvkeloladatamobil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Kelola Data Mobil"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="143dp" />
+                    app:layout_constraintTop_toBottomOf="@+id/tvPelanggan2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -278,6 +282,7 @@
                     android:layout_height="wrap_content"
                     android:text="Kategori"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/guideline50" />
@@ -340,6 +345,7 @@
                     android:layout_height="wrap_content"
                     android:text="Jasa"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/guideline51" />

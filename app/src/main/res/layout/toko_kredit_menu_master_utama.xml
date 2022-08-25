@@ -74,15 +74,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView400"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas3"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline55"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -91,13 +95,14 @@
                 <TextView
                     android:id="@+id/tvidentitas3"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="56dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Cara Penggunaan"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline55" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -116,15 +121,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView300"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas2"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline56"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -133,13 +142,14 @@
                 <TextView
                     android:id="@+id/tvidentitas2"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="56dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Buka Versi Pro"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline56" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -158,15 +168,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView22"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvMerk"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline57"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -176,12 +190,13 @@
                     android:id="@+id/tvMerk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="43dp"
+                    android:layout_marginTop="8dp"
                     android:text="Master"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline57" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -200,30 +215,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <TextView
                     android:id="@+id/tvTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="43dp"
                     android:text="Transaksi"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline58"
+                    android:layout_marginTop="8dp" />
 
                 <ImageView
                     android:id="@+id/imageView14"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvTransaksi"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline58"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/transaksi" />
+                    app:srcCompat="@drawable/transaksi"
+                    android:layout_margin="24dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -241,14 +261,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView16"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvPelanggan"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline61"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -258,12 +283,13 @@
                     android:id="@+id/tvPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="43dp"
+                    android:layout_marginTop="8dp"
                     android:text="Laporan"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline61" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -282,15 +308,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.65" />
+
                 <ImageView
                     android:id="@+id/imageView17"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvPegawai"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline62"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -300,12 +330,13 @@
                     android:id="@+id/tvPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="43dp"
+                    android:layout_marginTop="8dp"
                     android:text="Utilitas"
                     android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline62" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
