@@ -18,6 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar34">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Pelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Pelanggan" />
@@ -35,6 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout61">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Nomor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nomer Pelanggan" />
@@ -52,6 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout60">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Alamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Alamat Pelanggan" />
@@ -93,7 +96,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <Button
-        android:id="@+id/button52"
+        android:id="@+id/Simpan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

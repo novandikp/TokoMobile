@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -17,8 +18,7 @@ public class MenuKategoriJasaLaundry extends AppCompatActivity {
 
     Button Simpan;
     EditText edtKategori;
-
-    private final String KEY_NAME = "NAMA";
+    DatabaseLaundry db;
 
 
     @Override
@@ -28,20 +28,21 @@ public class MenuKategoriJasaLaundry extends AppCompatActivity {
         Simpan = (Button) findViewById(R.id.Simpan);
         edtKategori = (EditText) findViewById(R.id.edtKategori);
 
-        edtKategori.setOnClickListener(view -> {
-            try {
-                String nama = Simpan.getText().toString();
-                if (nama != null && nama !=""){
-                    Intent intent = new Intent(MenuKategoriJasaLaundry.this, LaundryItemDaftarKategori.class);
-                    intent.putExtra(KEY_NAME, nama);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MenuKategoriJasaLaundry.this, "Tolong Diisi Slurr", Toast.LENGTH_SHORT).show();
-                }
-            } catch (Exception exception){
-                exception.printStackTrace();
-                Toast.makeText(MenuKategoriJasaLaundry.this, "Erorr, Coba Lagi", Toast.LENGTH_SHORT).show();
+        db = new DatabaseLaundry(this);
+        Simpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                add();
             }
         });
     }
+     public void add(){
+        String kategori = edtKategori.getText().toString();
+        if(TextUtils.isEmpty(kategori)){
+            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+        }else{
+            db.exc("insert into tblkategori (kategori) values ('"+ kategori +"')");
+            finish();
+        }
+     }
 }

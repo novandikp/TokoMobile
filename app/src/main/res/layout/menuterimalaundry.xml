@@ -136,6 +136,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout9">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/HargaJasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Harga Jasa" />
@@ -156,6 +157,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Jasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Jasa" />
@@ -176,6 +178,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NamaPegawai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Pegawai"
@@ -197,6 +200,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NamaPelanggan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Pelanggan"
@@ -218,6 +222,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TanggalKembali"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Tanggal Kembali"
@@ -239,6 +244,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TanggalMulai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Tanggal Mulai"
@@ -260,6 +266,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Faktur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
@@ -289,6 +296,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textInputLayout10">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Jumlah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Jumlah"
@@ -311,7 +319,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/Simpan"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -337,7 +345,7 @@
                 android:paddingRight="0dp"
                 android:text="Taruh Keranjang"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button7"
+                app:layout_constraintEnd_toStartOf="@+id/Simpan"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -100,6 +100,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama"
@@ -117,6 +118,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Alamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat"
@@ -154,6 +156,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/NomorTelepon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="55dp"
@@ -175,6 +178,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Caption1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Baris 1 (untuk struk)"
@@ -192,6 +196,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Caption2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Baris 2 (untuk struk)"
@@ -209,6 +214,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Caption3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Baris 3 (untuk struk)"

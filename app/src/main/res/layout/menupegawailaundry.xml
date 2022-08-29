@@ -22,6 +22,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar32">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NamaPegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,6 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AlamatPegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -73,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NomerKtp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -99,6 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NomorTeleponPegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -109,11 +113,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="403dp"
+        android:id="@+id/Simpan"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
-        android:backgroundTint="#00FF0A"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/hijaukonten"
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

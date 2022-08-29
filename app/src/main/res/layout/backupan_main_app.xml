@@ -19,8 +19,11 @@
         <androidx.gridlayout.widget.GridLayout
             android:id="@+id/gridLayout10"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="8dp"
+            android:layout_height="0dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
             app:columnCount="4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +33,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 app:cardBackgroundColor="#B3FFFF"
                 app:cardCornerRadius="20dp"
                 app:layout_columnSpan="2"
@@ -42,6 +48,17 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bengkel mobil"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline66" />
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline66"
@@ -54,7 +71,7 @@
                         android:id="@+id/imageView217"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline66"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +82,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#FFC0CB "
                 app:cardCornerRadius="20dp"
@@ -79,11 +99,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView627"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tabungan"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline68" />
+
                     <ImageView
                         android:id="@+id/imageView225"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline68"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -101,8 +132,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#D1BDA6"
                 app:cardCornerRadius="20dp"
@@ -115,6 +149,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView630"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Restoran"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline67" />
+
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline67"
                         android:layout_width="wrap_content"
@@ -126,7 +171,7 @@
                         android:id="@+id/imageView218"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline67"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -137,8 +182,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="RentalMobil"
                 app:cardBackgroundColor="#FF6464"
                 app:cardCornerRadius="20dp"
@@ -151,11 +199,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView632"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rental Mobil"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline69" />
+
                     <ImageView
                         android:id="@+id/imageView226"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline69"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -173,8 +232,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#E3E3E3"
                 app:cardCornerRadius="20dp"
@@ -187,11 +249,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView631"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Klinik"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline70" />
+
                     <ImageView
                         android:id="@+id/imageView219"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline70"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -209,8 +282,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#FFFF4D"
                 app:cardCornerRadius="20dp"
@@ -223,11 +299,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView633"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kredit"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline71" />
+
                     <ImageView
                         android:id="@+id/imageView227"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline71"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -245,8 +332,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#62FAFF"
                 app:cardCornerRadius="20dp"
@@ -259,11 +349,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView629"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toko kain"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline73" />
+
                     <ImageView
                         android:id="@+id/imageView220"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline73"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -281,8 +382,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="AntrianPortable"
                 app:cardBackgroundColor="#FFC967"
                 app:cardCornerRadius="20dp"
@@ -295,11 +399,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView635"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Antrian Portable"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline72" />
+
                     <ImageView
                         android:id="@+id/imageView228"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline72"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -317,8 +432,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#DDDDDD"
                 app:cardCornerRadius="20dp"
@@ -331,11 +449,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView637"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kasir"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline74" />
+
                     <ImageView
                         android:id="@+id/imageView222"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline74"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -353,8 +482,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Kwitansi"
                 app:cardBackgroundColor="#53ADF4"
                 app:cardCornerRadius="20dp"
@@ -367,11 +499,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView634"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Kwitansi"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline75" />
+
                     <ImageView
                         android:id="@+id/imageView229"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline75"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -389,8 +533,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#FF6464"
                 app:cardCornerRadius="20dp"
@@ -403,11 +550,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView638"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apotek"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline76" />
+
                     <ImageView
                         android:id="@+id/imageView223"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline76"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -425,8 +583,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="TokoSepatu"
                 app:cardBackgroundColor="#8CFF8C"
                 app:cardCornerRadius="20dp"
@@ -438,6 +599,17 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView639"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toko Sepatu"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline77" />
 
                     <ImageView
                         android:id="@+id/imageView230"
@@ -461,8 +633,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Tabungan"
                 app:cardBackgroundColor="#FFF766"
                 app:cardCornerRadius="20dp"
@@ -475,11 +650,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView640"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salon Desa"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline79" />
+
                     <ImageView
                         android:id="@+id/imageView224"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline79"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -497,8 +683,11 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="140dp"
-                android:layout_margin="8dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="Laundry"
                 app:cardBackgroundColor="#80C7FF"
                 app:cardCornerRadius="20dp"
@@ -511,11 +700,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView628"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laundry"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline78" />
+
                     <ImageView
                         android:id="@+id/imageView231"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_margin="16dp"
+                        android:layout_margin="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline78"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
