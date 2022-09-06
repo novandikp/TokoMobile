@@ -25,7 +25,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         TanggalMulai = (TextInputEditText) findViewById(R.id.TanggalMulai);
         TanggalKembali = (TextInputEditText) findViewById(R.id.TanggalKembali);
         NamaPelanggan = (TextInputEditText) findViewById(R.id.NamaPelanggan);
-        NamaPegawai = (TextInputEditText) findViewById(R.id.NamaPegawai);
+        NamaPegawai = (TextInputEditText) findViewById(R.id.namaPegawaiLaundry);
         HargaJasa = (TextInputEditText) findViewById(R.id.HargaJasa);
         Jumlah = (TextInputEditText) findViewById(R.id.Jumlah);
         db = new DatabaseLaundry(this);

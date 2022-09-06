@@ -19,7 +19,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/edtDaftarKategori"
+                android:id="@+id/edtDaftarPegawai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -31,22 +31,22 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/edtDaftarPegawai2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text=" 17/02/2022"
-                app:layout_constraintStart_toStartOf="@+id/edtDaftarKategori"
-                app:layout_constraintTop_toBottomOf="@+id/edtDaftarKategori" />
+                app:layout_constraintStart_toStartOf="@+id/edtDaftarPegawai"
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai" />
 
             <TextView
-                android:id="@+id/textView45"
+                android:id="@+id/edtDaftarPegawai3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="0895343428020"
-                app:layout_constraintStart_toStartOf="@+id/textView43"
-                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+                app:layout_constraintStart_toStartOf="@+id/edtDaftarPegawai2"
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai2" />
 
             <ImageView
                 android:id="@+id/imageView139"
@@ -84,9 +84,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:text="TextView"
-                app:layout_constraintBottom_toBottomOf="@+id/textView43"
-                app:layout_constraintStart_toEndOf="@+id/textView43"
-                app:layout_constraintTop_toTopOf="@+id/textView43" />
+                app:layout_constraintBottom_toBottomOf="@+id/edtDaftarPegawai2"
+                app:layout_constraintStart_toEndOf="@+id/edtDaftarPegawai2"
+                app:layout_constraintTop_toTopOf="@+id/edtDaftarPegawai2" />
 
             <TextView
                 android:id="@+id/textView420"

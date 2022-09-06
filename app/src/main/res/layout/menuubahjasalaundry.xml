@@ -7,7 +7,7 @@
     tools:context=".MenuUbahJasaLaundry">
 
     <Spinner
-        android:id="@+id/spkategori"
+        android:id="@+id/spinnerkategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar33"></Spinner>
 
     <Spinner
-        android:id="@+id/listItem2"
+        android:id="@+id/spinnersatuan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spkategori">
+        app:layout_constraintTop_toBottomOf="@+id/spinnerkategori">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/NamaJasa"
@@ -104,10 +104,10 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="200px"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/spkategori"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerkategori"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edtKategori"
-        app:layout_constraintTop_toTopOf="@+id/spkategori"
+        app:layout_constraintTop_toTopOf="@+id/spinnerkategori"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <Button

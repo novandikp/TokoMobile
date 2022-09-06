@@ -28,10 +28,10 @@
                 android:text="Rp.8000 * 1 Pcs = 8000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai3" />
 
             <ImageView
-                android:id="@+id/imageView44"
+                android:id="@+id/optMuncul"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
@@ -43,7 +43,7 @@
                 app:srcCompat="@drawable/ic_baseline_print_24" />
 
             <TextView
-                android:id="@+id/edtDaftarKategori"
+                android:id="@+id/edtDaftarPegawai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -55,24 +55,24 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/edtDaftarPegawai2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:text="17/07/2022"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtDaftarKategori" />
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai" />
 
             <TextView
-                android:id="@+id/textView45"
+                android:id="@+id/edtDaftarPegawai3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:text="Jasa : Tes"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

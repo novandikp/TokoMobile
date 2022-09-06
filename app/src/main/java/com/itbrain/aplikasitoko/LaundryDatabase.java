@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -317,6 +318,7 @@ public class LaundryDatabase extends SQLiteOpenHelper {
             db.delete("tblpelanggan","idpelanggan= ?",new String[]{String.valueOf(idPelanggan)});
             return true;
         }catch (Exception e){
+            Toast.makeText(ctx, e.getMessage(), Toast.LENGTH_SHORT).show();
             return  false;
         }
 

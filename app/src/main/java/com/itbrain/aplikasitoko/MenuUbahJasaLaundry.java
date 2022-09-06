@@ -7,11 +7,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MenuUbahJasaLaundry extends AppCompatActivity {
+    Spinner SpinnerKategori,SpinnerSatuan;
     EditText NamaJasa,BiayaJasa;
     Button Simpan;
     DatabaseLaundry db;
@@ -20,16 +22,30 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menuubahjasalaundry);
+        SpinnerKategori=findViewById(R.id.spinnerkategori);
+        SpinnerSatuan=findViewById(R.id.spinnersatuan);
         Simpan = (Button) findViewById(R.id.Simpan);
         NamaJasa = (TextInputEditText) findViewById(R.id.NamaJasa);
         BiayaJasa = findViewById(R.id.BiayaJasa);
         db = new DatabaseLaundry(this);
+        if(isUpdate()){
+            NamaJasa.setText(getIntent().getStringExtra("NamaJasa"));
+            Toast.makeText(this, "Update", Toast.LENGTH_SHORT).show();
+        }
         Simpan.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { add(); }
+            public void onClick(View view) {
+                if (isUpdate()){
+
+                }else{
+                    add();
+                }
+            }
         });
     }
-
+    public boolean isUpdate(){
+        return getIntent().getIntExtra("idjasa",-1) > -1;
+    }
     public void add(){
         String namajasa = NamaJasa.getText().toString();
         String biayajasa = BiayaJasa.getText().toString();

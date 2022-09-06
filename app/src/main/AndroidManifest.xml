@@ -11,6 +11,18 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".Eskperimen2"
+            android:exported="false" />
+        <activity
+            android:name=".MenuDaftarPegawaiLaundry"
+            android:exported="true" />
+        <activity
+            android:name=".ListItemDummyData"
+            android:exported="true" />
+        <activity
+            android:name=".TestingDummyData"
+            android:exported="true" />
+        <activity
             android:name=".BackupanMainApp"
             android:exported="true" />
         <activity
@@ -409,10 +421,6 @@
             android:exported="true"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".MenuDaftarPegawaiLaundry"
-            android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity
             android:name=".MenuKategoriJasaLaundry"
             android:exported="true" />
         <activity
@@ -611,7 +619,8 @@
             android:exported="true" />
         <activity
             android:name=".MainApp"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".Menu_Riwayat_Transaksi_Super_App"
             android:exported="true" />
@@ -763,7 +772,8 @@
         <activity android:name=".Aplikasi_Toko_Sepatu_Menu_Laporan" />
         <activity
             android:name=".Main_App"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

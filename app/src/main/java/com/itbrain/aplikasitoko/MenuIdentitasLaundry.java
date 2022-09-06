@@ -3,66 +3,161 @@ package com.itbrain.aplikasitoko;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
-
 public class MenuIdentitasLaundry extends AppCompatActivity {
     Button Simpan;
-    EditText Nama,Alamat,NomorTelepon,Caption1,Caption2,Caption3;
+    EditText namatoko,alamattoko,notelptoko;
+    Intent intent;
+    SharedPreferences sharedPreferences;
     DatabaseLaundry db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menuidentitaslaundry);
-        Simpan = (Button) findViewById(R.id.Simpan);
-        Nama = (TextInputEditText) findViewById(R.id.Nama);
-        Alamat = (TextInputEditText) findViewById(R.id.Alamat);
-        NomorTelepon = (TextInputEditText) findViewById(R.id.NomorTelepon);
-        Caption1 = (TextInputEditText) findViewById(R.id.Caption1);
-        Caption2 = (TextInputEditText) findViewById(R.id.Caption2);
-        Caption3 = (TextInputEditText) findViewById(R.id.Caption3);
-        db = new DatabaseLaundry(this);
-        Simpan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) { add(); }
-        });
+        Simpan = findViewById(R.id.Simpan);
+        namatoko = findViewById(R.id.NamaToko);
+        alamattoko = findViewById(R.id.AlamatToko);
+        notelptoko = findViewById(R.id.NotelpToko);
+//        sharedPreferences = getSharedPreferences("user_details", MODE_PRIVATE);
+//        sharedPreferences.contains("NamaToko");
+//        sharedPreferences.contains("AlamatToko");
+//        sharedPreferences.contains("NotelpToko");
+
+//        Simpan.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                String NamaToko = namatoko.getText().toString();
+//                String AlamatToko = alamattoko.getText().toString();
+//                String NotelpToko = notelptoko.getText().toString();
+//
+//                if (NamaToko.equals("") && AlamatToko.equals("") && NotelpToko.equals("")) {
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putString("NamaToko", NamaToko);
+//                    editor.putString("AlamatToko", AlamatToko);
+//                    editor.putString("NotelpToko", NotelpToko);
+//                    editor.apply();
+//                    intent = new Intent(MenuIdentitasLaundry.this, LaundryMenuUtamaMaster.class);
+//                    startActivity(intent);
+//                } else {
+//                    Toast.makeText(MenuIdentitasLaundry.this, "Data Tidak Ada", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
     }
-    public void add(){
-        String NamaToko = Nama.getText().toString();
-        String AlamatToko = Alamat.getText().toString();
-        String Nomor = NomorTelepon.getText().toString();
-        String CaptionSatu = Caption1.getText().toString();
-        String CaptionDua = Caption2.getText().toString();
-        String CaptionTiga = Caption3.getText().toString();
-        if(TextUtils.isEmpty(NamaToko)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(AlamatToko)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(Nomor)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(CaptionSatu)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(CaptionDua)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(CaptionTiga)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            db.exc("insert into tblidentitas (namatoko,alamattoko,notelptoko,caption_1,caption_2,caption_3) values ('"+ NamaToko +"','"+ AlamatToko +"','"+ Nomor +"','"+ CaptionSatu +"','"+ CaptionDua +"','"+ CaptionTiga +"')");
-            finish();
-        }
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        NamaToko=findViewById(R.id.NamaToko);
+//        AlamatToko=findViewById(R.id.AlamatToko);
+//        NomorTelepon=findViewById(R.id.NotelpToko);
+//    }
+//
+//    public void buttonSenderPressed(View v){
+//        Intent intent = new Intent(MenuIdentitasLaundry.this,LaundryMenuUtamaMaster.class);
+//        intent.putExtra("key_nama", NamaToko.getText().toString());
+//        intent.putExtra("key_alamat", AlamatToko.getText().toString());
+//        intent.putExtra("key_telp", NomorTelepon.getText().toString());
+//        startActivity(intent);
+//        finish();
+//    }
+//    public void buttonSenderPressed(View view) {
+//        Intent intent = new Intent( MenuIdentitasLaundry.this, LaundryMenuMaster.class);
+//        intent.putExtra("key_kirim", NamaToko.getText().toString());
+//        startActivity(intent);
+//        finish();
+//    }
+
+
+//        Simpan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try{
+//                    String nama = NamaToko.getText().toString();
+//                    if (NamaToko != null && nama != ""){
+//                        Intent i = new Intent(MenuIdentitasLaundry.this, LaundryMenuUtamaMaster.class);
+//                        i.putExtra(key_name, nama);
+//                        startActivity(i);
+//
+//                    } else {
+//                        Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
+//                    }
+//
+//                } catch (Exception e){
+//                    e.printStackTrace();
+//                    Toast.makeText(getApplication(), "ERROR, TRY AGAIN !",Toast.LENGTH_SHORT);
+//                }
+//
+//            }
+//        });
+//}
+//        Simpan = findViewById(R.id.Simpan);
+//        NamaToko = findViewById(R.id.NamaToko);
+//        AlamatToko = findViewById(R.id.AlamatToko);
+//        NomorTelepon = findViewById(R.id.NotelpToko);
+//        Caption1 = findViewById(R.id.Caption1);
+//        Caption2 = findViewById(R.id.Caption2);
+//        Caption3 = findViewById(R.id.Caption3);
+////        db = new DatabaseLaundry(this);
+//        Simpan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view){
+//                Intent i = new Intent(MenuIdentitasLaundry.this,LaundryMenuUtamaMaster.class);
+//                getIntent().putExtra("FOO", txtnamatoko);
+////                String CaptionSatu = Caption1.getText().toString();
+////                String CaptionDua = Caption2.getText().toString();
+////                String CaptionTiga = Caption3.getText().toString();
+//                startActivity(i);
+//                finish();
+//            }
+////            { add(); }
+//        });
+//    }
+//    public void add(){
+//        if(TextUtils.isEmpty(txtnamatoko)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+//        }
+//        else if(TextUtils.isEmpty(txtalamattoko)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+//        }
+//        else if(TextUtils.isEmpty(txtnomortelp)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+//        }
+//        else if(TextUtils.isEmpty(CaptionSatu)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+//        }
+//        else if(TextUtils.isEmpty(CaptionDua)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+//        }
+//        else if(TextUtils.isEmpty(CaptionTiga)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+//        }
+//        else{
+//            db.exc("insert into tblidentitas (namatoko,alamattoko,notelptoko,caption_1,caption_2,caption_3) values ('"+ txtnamatoko +"','"+ txtalamattoko +"','"+ txtnomortelp +"','"+ CaptionSatu +"','"+ CaptionDua +"','"+ CaptionTiga +"')");
+//            finish();
+//        }
+//    }
 
     public void Kembali(View view) {
         Intent intent = new Intent( MenuIdentitasLaundry.this, LaundryMenuMaster.class);
@@ -70,5 +165,4 @@ public class MenuIdentitasLaundry extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
 }

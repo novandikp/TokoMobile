@@ -23,11 +23,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Kembali :"
-                app:layout_constraintStart_toStartOf="@+id/textView45"
-                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+                app:layout_constraintStart_toStartOf="@+id/edtDaftarPegawai3"
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai3" />
 
             <TextView
-                android:id="@+id/edtDaftarKategori"
+                android:id="@+id/edtDaftarPegawai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -39,22 +39,22 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/edtDaftarPegawai2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Total :"
-                app:layout_constraintStart_toStartOf="@+id/edtDaftarKategori"
-                app:layout_constraintTop_toBottomOf="@+id/edtDaftarKategori" />
+                app:layout_constraintStart_toStartOf="@+id/edtDaftarPegawai"
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai" />
 
             <TextView
-                android:id="@+id/textView45"
+                android:id="@+id/edtDaftarPegawai3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Bayar :"
-                app:layout_constraintStart_toStartOf="@+id/textView43"
-                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+                app:layout_constraintStart_toStartOf="@+id/edtDaftarPegawai2"
+                app:layout_constraintTop_toBottomOf="@+id/edtDaftarPegawai2" />
 
             <TextView
                 android:id="@+id/textView57"
@@ -114,18 +114,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:text="Rp."
-                app:layout_constraintBottom_toBottomOf="@+id/textView45"
-                app:layout_constraintStart_toEndOf="@+id/textView45"
-                app:layout_constraintTop_toTopOf="@+id/textView45" />
+                app:layout_constraintBottom_toBottomOf="@+id/edtDaftarPegawai3"
+                app:layout_constraintStart_toEndOf="@+id/edtDaftarPegawai3"
+                app:layout_constraintTop_toTopOf="@+id/edtDaftarPegawai3" />
 
             <TextView
                 android:id="@+id/textView431"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rp."
-                app:layout_constraintBottom_toBottomOf="@+id/textView43"
-                app:layout_constraintStart_toEndOf="@+id/textView43"
-                app:layout_constraintTop_toTopOf="@+id/textView43"
+                app:layout_constraintBottom_toBottomOf="@+id/edtDaftarPegawai2"
+                app:layout_constraintStart_toEndOf="@+id/edtDaftarPegawai2"
+                app:layout_constraintTop_toTopOf="@+id/edtDaftarPegawai2"
                 android:layout_marginLeft="2dp" />
 
             <TextView

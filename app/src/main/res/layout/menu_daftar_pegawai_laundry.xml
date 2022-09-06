@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar29" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/Simpan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -79,10 +79,11 @@
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daftarPegawai"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/Simpan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11"
