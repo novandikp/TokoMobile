@@ -13,8 +13,8 @@ class LaundryItemDaftarJasa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.laundryitemdaftarjasa);
 
-        Jasa = findViewById(R.id.txtjasa);
-        Biaya = findViewById(R.id.txtbiaya);
+        Jasa = findViewById(R.id.edtJasa);
+        Biaya = findViewById(R.id.edtSatuan);
 
         Bundle extras = getIntent().getExtras();
         Jasa.setText(jasa);

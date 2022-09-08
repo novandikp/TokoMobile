@@ -2,7 +2,9 @@ package com.itbrain.aplikasitoko;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class LaundryItemDaftarKategori extends AppCompatActivity {
@@ -18,4 +20,5 @@ public class LaundryItemDaftarKategori extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         edtDaftarKategori.setText(nama);
     }
+
 }

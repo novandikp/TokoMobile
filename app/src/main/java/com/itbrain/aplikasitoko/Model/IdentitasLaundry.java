@@ -4,7 +4,7 @@ public class IdentitasLaundry {
     private int ididentitas;
     private String namatoko,alamattoko,notelptoko;
 
-    public IdentitasLaundry(int ididentitas, String namatoko,String notelptoko) {
+    public IdentitasLaundry(int ididentitas, String namatoko, String notelptoko, String string) {
     }
 
     public int getIdidentitas() {

@@ -82,7 +82,7 @@ public class MenukategoriLaundry extends AppCompatActivity {
 
     @SuppressLint("Range")
     public void getData(){
-        Cursor cursor = db.sq("select * from tblkategori");
+        Cursor cursor = db.sq("select * from tblkategori where idkategori != 0");
         if(cursor!=null){
             datakategori.clear();
             while(cursor.moveToNext()){
@@ -181,4 +181,5 @@ class KategoriLaundryAdapter extends RecyclerView.Adapter<KategoriLaundryAdapter
             optMuncul = itemView.findViewById(R.id.optMuncul);
         }
     }
+
 }

@@ -84,7 +84,7 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
 
 
     public void getData(){
-        Cursor cursor = db.sq("select * from tblpegawai where idpegawai !=0 ");
+        Cursor cursor = db.sq("select * from tblpegawai where idpegawai!=0 ");
         if(cursor!=null){
             datapegawai.clear();
             while(cursor.moveToNext()){

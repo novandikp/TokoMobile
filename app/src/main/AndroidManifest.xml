@@ -11,6 +11,9 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".LaundryItemIdentitas"
+            android:exported="false" />
+        <activity
             android:name=".Eskperimen2"
             android:exported="false" />
         <activity

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,20 +16,25 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.itbrain.aplikasitoko.Model.JasaLaundry;
-import com.itbrain.aplikasitoko.Model.PelangganLaundry;
+import com.itbrain.aplikasitoko.Model.Kategori;
 
 import java.util.ArrayList;
 
 public class MenuDaftarJasaLaundry extends AppCompatActivity {
+    Spinner SpinnerKategori;
     ArrayList<JasaLaundry> datajasa;
-    RecyclerView DaftarJasa;
-    JasaLaundryAdapater adapter;
+    ArrayList<String> listkategori;
+    ArrayList<String> listidkategori;
+    RecyclerView recyclerView;
+    JasaLaundryAdapter adapter;
     DatabaseLaundry db;
 //    implements PopupMenu.OnMenuItemClickListener
 
@@ -38,22 +44,37 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_daftar_jasa_laundry);
-        DaftarJasa = findViewById(R.id.DaftarJasa);
+        SpinnerKategori = findViewById(R.id.SpinnerKategori);
+        recyclerView = findViewById(R.id.DaftarJasa);
+        listidkategori = new ArrayList<>();
+        listkategori = new ArrayList<>();
         datajasa = new ArrayList<>();
         db = new DatabaseLaundry(this);
-
-        DaftarJasa.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new JasaLaundryAdapater(datajasa,this);
-        DaftarJasa.setAdapter(adapter);
+        getKategori();
+        adapter = new JasaLaundryAdapter(datajasa,this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
     }
-    public void UbahJasa(View view) {
-        Intent intent = new Intent(MenuDaftarJasaLaundry.this, MenuUbahJasaLaundry.class);
-        startActivity(intent);
+
+    public void getKategori() {
+        Cursor cursor=db.sq("select * from tblkategori");
+        if(cursor !=null ){
+            listkategori.clear();
+            listidkategori.clear();
+            listkategori.add("Semua Kategori");
+            while(cursor.moveToNext()){
+                listkategori.add(cursor.getString(cursor.getColumnIndex("kategori")));
+                listidkategori.add(cursor.getString(cursor.getColumnIndex("idkategori")));
+            }
+        }
+
+        ArrayAdapter adapterspinner=new ArrayAdapter(this, android.R.layout.simple_list_item_1,listkategori);
+        SpinnerKategori.setAdapter(adapterspinner);
     }
 
 //    public void popMenu(View v){
-//        datapelanggan.remove(recyclerView.getAdapter().toString());
-//        adapter = new PelangganLaundryAdapater(datapelanggan,this);
+//        datakategori.remove(recyclerView.getAdapter().toString());
+//        adapter = new KategoriLaundryAdapter(datakategori,this);
 //        PopupMenu popupMenu = new PopupMenu(this, v);
 //        PopupMenu.OnMenuItemClickListener popMenu;
 //        popupMenu.inflate(R.menu.option_item);
@@ -78,55 +99,37 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
     }
 
 //    public void dummy(){
-//        datapelanggan.clear();
-//        datapelanggan.add(new Pegawai(1,"Toyek","Mojokerto","12345"));
-//        datapelanggan.add(new Pegawai(1,"Toyek","Mojokerto","12345"));
-//        datapelanggan.add(new Pegawai(1,"Toyek","Mojokerto","12345"));
+//        datakategori.clear();
+//        datakategori.add(new Kategori(1, cursor.getString(cursor.getColumnIndex("pegawai")), cursor.getString(cursor.getColumnIndex("alamatpegawai")), "cucibasah"));
+//        datakategori.add(new Kategori(1, cursor.getString(cursor.getColumnIndex("pegawai")), cursor.getString(cursor.getColumnIndex("alamatpegawai")), "cucibasah"));
+//        datakategori.add(new Kategori(1, cursor.getString(cursor.getColumnIndex("pegawai")), cursor.getString(cursor.getColumnIndex("alamatpegawai")), "cucibasah"));
 //    }
 
     public void getData(){
-        Cursor cursor = db.sq("select * from tbljasa where jasa,biaya,satuan != 0");
+        Cursor cursor = db.sq("select * from tbljasa");
         if(cursor!=null){
             datajasa.clear();
             while(cursor.moveToNext()){
-                datajasa.add(new JasaLaundry(cursor.getInt(cursor.getColumnIndex("idjasa")), cursor.getString(cursor.getColumnIndex("jasa")), cursor.getDouble(cursor.getColumnIndex("biaya"))) {
-                    @NonNull
-                    @Override
-                    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        return null;
-                    }
-
-                    @Override
-                    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
-                    }
-
-                    @Override
-                    public int getItemCount() {
-                        return 0;
-                    }
-                });
+                datajasa.add(new JasaLaundry(cursor.getInt(cursor.getColumnIndex("idjasa")), cursor.getString(cursor.getColumnIndex("jasa")), cursor.getString(cursor.getColumnIndex("satuan"))));
             }
         }
-
         adapter.notifyDataSetChanged();
     }
 
     public void Simpan(View view) {
-        Intent intent = new Intent(MenuDaftarJasaLaundry.this, MenuPelangganLaundry.class);
+        Intent intent = new Intent(MenuDaftarJasaLaundry.this, MenuUbahJasaLaundry.class);
         startActivity(intent);
     }
 }
 
-class JasaLaundryAdapater extends RecyclerView.Adapter<JasaLaundryAdapater.ViewHolder>{
+class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHolder>{
 
-    ArrayList<JasaLaundry>Jasa;
+    ArrayList<JasaLaundry>jasas;
     Context context;
 
-    public JasaLaundryAdapater(ArrayList<JasaLaundry> Jasa, Context context) {
-        this.Jasa = Jasa;
+    public JasaLaundryAdapter(ArrayList<JasaLaundry> jasas, Context context) {
+        this.jasas = jasas;
         this.context = context;
-//        Toast.makeText(context, ""+Pelanggan.size(), Toast.LENGTH_SHORT).show();
     }
 
     @NonNull
@@ -136,10 +139,10 @@ class JasaLaundryAdapater extends RecyclerView.Adapter<JasaLaundryAdapater.ViewH
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder,int Position) {
-        final JasaLaundry jasa = Jasa.get(Position);
-        holder.jasa.setText(jasa.getJasa());
-        holder.biaya.setText((int) jasa.getBiaya());
+    public void onBindViewHolder(@NonNull ViewHolder holder,int Adapter) {
+        final JasaLaundry jasa = jasas.get(Adapter);
+        holder.edtJasa.setText(jasa.getJasa());
+        holder.edtSatuan.setText(jasa.getSatuan());
         holder.optMuncul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -150,13 +153,9 @@ class JasaLaundryAdapater extends RecyclerView.Adapter<JasaLaundryAdapater.ViewH
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()){
                             case R.id.ubah:
-//                                context.startActivity(new Intent(context, MenuPelangganLaundry.class).putExtra("idpelanggan",pelanggan.getIdpelanggan()));
-//                                ((MenuDaftarPelangganLaundry)context).finish();
-                                LaundryDatabase db = new LaundryDatabase(context);
-                                Intent intent = new Intent(context,MenuPelangganLaundry.class);
-                                intent.putExtra("idjasa",jasa.getIdjasa());
-                                intent.putExtra("jasa",jasa.getJasa());
-                                intent.putExtra("biaya",jasa.getBiaya());
+                                Intent intent = new Intent(context,MenuDaftarJasaLaundry.class);
+                                intent.putExtra("idjasa",jasa.getIdJasa());
+                                intent.putExtra("kategori",jasa.getJasa());
                                 context.startActivity(intent);
                                 break;
                             case R.id.hapus:
@@ -165,11 +164,10 @@ class JasaLaundryAdapater extends RecyclerView.Adapter<JasaLaundryAdapater.ViewH
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         LaundryDatabase db = new LaundryDatabase(context);
-                                        if (db.deleteJasa(jasa.getIdjasa())){
-                                            Jasa.remove(Position);
-                                            notifyItemChanged(Position);
-                                            Toast.makeText(context, "Delete Pelanggan"+ jasa.getJasa()+" berhasil", Toast.LENGTH_SHORT).show();
-
+                                        if (db.deleteJasa(jasa.getIdJasa())){
+                                            jasas.remove(Adapter);
+                                            notifyItemChanged(Adapter);
+                                            Toast.makeText(context, "Delete kategori "+ jasa.getJasa()+" berhasil", Toast.LENGTH_SHORT).show();
                                         }else {
                                             Toast.makeText(context, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
                                         }
@@ -181,7 +179,7 @@ class JasaLaundryAdapater extends RecyclerView.Adapter<JasaLaundryAdapater.ViewH
                                     }
                                 });
                                 builder.setTitle("Hapus "+jasa.getJasa());
-                                builder.setMessage("Anda yakin ingin menghapus "+jasa.getJasa()+" dari data Pelanggan");
+                                builder.setMessage("Anda yakin ingin menghapus "+jasa.getJasa()+" dari data jasa");
                                 builder.show();
                                 break;
                         }
@@ -195,16 +193,17 @@ class JasaLaundryAdapater extends RecyclerView.Adapter<JasaLaundryAdapater.ViewH
     }
 
     @Override
-    public int getItemCount() { return Jasa.size();
+    public int getItemCount() {
+        return jasas.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView jasa,biaya;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView edtJasa,edtBiaya,edtSatuan;
         ImageView optMuncul;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            jasa = itemView.findViewById(R.id.txtjasa);
-            biaya = itemView.findViewById(R.id.txtbiaya);
+            edtJasa = itemView.findViewById(R.id.edtDaftarKategori);
+            edtSatuan = itemView.findViewById(R.id.edtSatuan);
             optMuncul = itemView.findViewById(R.id.optMuncul);
         }
     }

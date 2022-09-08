@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerkategori">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/NamaJasa"
+            android:id="@+id/edtJasa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -68,10 +68,10 @@
         android:text="Rp."
         android:textColor="#000000"
         android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/BiayaJasa"
-        app:layout_constraintEnd_toStartOf="@+id/BiayaJasa"
+        app:layout_constraintBottom_toBottomOf="@+id/edtBiaya"
+        app:layout_constraintEnd_toStartOf="@+id/edtBiaya"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/BiayaJasa" />
+        app:layout_constraintTop_toTopOf="@+id/edtBiaya" />
 
     <TextView
         android:id="@+id/rp"
@@ -82,10 +82,10 @@
         android:textColor="#000000"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@+id/Rp"
-        app:layout_constraintTop_toBottomOf="@+id/BiayaJasa" />
+        app:layout_constraintTop_toBottomOf="@+id/edtBiaya" />
 
     <EditText
-        android:id="@+id/BiayaJasa"
+        android:id="@+id/edtBiaya"
         android:layout_width="match_parent"
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
