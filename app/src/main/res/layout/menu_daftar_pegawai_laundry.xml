@@ -38,7 +38,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#4CAF50"
         android:onClick="UbahPegawai"
-        android:text="Simpan"
+        android:text="Tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -51,6 +51,7 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,9 +70,10 @@
 
     <ImageView
         android:id="@+id/Kembali"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
+        android:onClick="Kembali"
         android:rotation="90"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar29"
         app:layout_constraintStart_toStartOf="parent"

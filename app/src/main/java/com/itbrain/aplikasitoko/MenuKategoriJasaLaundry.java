@@ -37,13 +37,19 @@ public class MenuKategoriJasaLaundry extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isUpdate()){
-
+                    update();
                 }else{
                     add();
                 }
             }
         });
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuKategoriJasaLaundry.this, MenukategoriLaundry.class);
+        startActivity(intent);
+    }
+
     public boolean isUpdate(){
         return getIntent().getIntExtra("idkategori",-1) > -1;
     }
@@ -56,4 +62,14 @@ public class MenuKategoriJasaLaundry extends AppCompatActivity {
             finish();
         }
      }
+    public void update(){
+        String idkategori = String.valueOf(getIntent().getIntExtra("idkategori",-1));
+        String kategori = edtKategori.getText().toString();
+        if(TextUtils.isEmpty(kategori)){
+            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+        }else{
+            db.exc("UPDATE tblkategori SET kategori='"+ kategori +"' where idkategori='"+ idkategori +"'");
+            finish();
+        }
+    }
 }

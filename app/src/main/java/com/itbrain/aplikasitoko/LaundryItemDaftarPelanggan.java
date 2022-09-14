@@ -13,9 +13,9 @@ class LaundryitemDaftarPelanggan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.laundryitemdaftarpelanggan);
 
-        NamaPelanggan = findViewById(R.id.NamaPelanggan);
-        Alamat = findViewById(R.id.AlamatToko);
-        NamaPelanggan = findViewById(R.id.NotelpToko);
+        NamaPelanggan = findViewById(R.id.txtNamaPelanggan);
+        Alamat = findViewById(R.id.txtAlamatPelanggan);
+        NamaPelanggan = findViewById(R.id.txtNomerPelanggan);
         Hutang = findViewById(R.id.txtHutang);
 
         Bundle extras = getIntent().getExtras();

@@ -148,6 +148,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView137" />
 
     <ImageView
+        android:onClick="Kembali"
         android:id="@+id/imageView137"
         android:layout_width="30dp"
         android:layout_height="30dp"

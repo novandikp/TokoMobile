@@ -15,7 +15,7 @@ class LaundryItemIdentitas extends AppCompatActivity {
 
         Nama = findViewById(R.id.NamaToko);
         Alamat = findViewById(R.id.AlamatToko);
-        Notelp = findViewById(R.id.NotelpToko);
+        Notelp = findViewById(R.id.nomorTeleponToko);
 
         Bundle extras = getIntent().getExtras();
         Nama.setText(nama);

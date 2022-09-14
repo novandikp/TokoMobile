@@ -96,6 +96,12 @@ public class MenukategoriLaundry extends AppCompatActivity {
         Intent intent = new Intent(MenukategoriLaundry.this, MenuKategoriJasaLaundry.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenukategoriLaundry.this, LaundryMenuMaster.class);
+        startActivity(intent);
+    }
+
 }
 
 class KategoriLaundryAdapter extends RecyclerView.Adapter<KategoriLaundryAdapter.ViewHolder>{
@@ -144,7 +150,7 @@ class KategoriLaundryAdapter extends RecyclerView.Adapter<KategoriLaundryAdapter
                                             notifyItemChanged(Adapter);
                                             Toast.makeText(context, "Delete kategori "+ kategori.getKategori()+" berhasil", Toast.LENGTH_SHORT).show();
                                         }else {
-                                            Toast.makeText(context, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Gagal menghapus "+ kategori.getKategori(), Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {

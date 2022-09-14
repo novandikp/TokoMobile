@@ -56,20 +56,9 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    public void getKategori() {
-        Cursor cursor=db.sq("select * from tblkategori");
-        if(cursor !=null ){
-            listkategori.clear();
-            listidkategori.clear();
-            listkategori.add("Semua Kategori");
-            while(cursor.moveToNext()){
-                listkategori.add(cursor.getString(cursor.getColumnIndex("kategori")));
-                listidkategori.add(cursor.getString(cursor.getColumnIndex("idkategori")));
-            }
-        }
-
-        ArrayAdapter adapterspinner=new ArrayAdapter(this, android.R.layout.simple_list_item_1,listkategori);
-        SpinnerKategori.setAdapter(adapterspinner);
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuDaftarJasaLaundry.this, LaundryMenuMaster.class);
+        startActivity(intent);
     }
 
 //    public void popMenu(View v){
@@ -110,10 +99,26 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
         if(cursor!=null){
             datajasa.clear();
             while(cursor.moveToNext()){
-                datajasa.add(new JasaLaundry(cursor.getInt(cursor.getColumnIndex("idjasa")), cursor.getString(cursor.getColumnIndex("jasa")), cursor.getString(cursor.getColumnIndex("satuan"))));
+                datajasa.add(new JasaLaundry(cursor.getInt(cursor.getColumnIndex("idjasa")),cursor.getInt(cursor.getColumnIndex("idkategori")), cursor.getString(cursor.getColumnIndex("jasa")), cursor.getString(cursor.getColumnIndex("satuan"))));
             }
         }
         adapter.notifyDataSetChanged();
+    }
+
+    public void getKategori() {
+        Cursor cursor=db.sq("select * from tblkategori");
+        if(cursor !=null ){
+            listkategori.clear();
+            listidkategori.clear();
+            listkategori.add("Semua Kategori");
+            while(cursor.moveToNext()){
+                listkategori.add(cursor.getString(cursor.getColumnIndex("kategori")));
+                listidkategori.add(cursor.getString(cursor.getColumnIndex("idkategori")));
+            }
+        }
+
+        ArrayAdapter adapterspinner=new ArrayAdapter(this, android.R.layout.simple_list_item_1,listkategori);
+        SpinnerKategori.setAdapter(adapterspinner);
     }
 
     public void Simpan(View view) {
@@ -153,9 +158,11 @@ class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHol
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()){
                             case R.id.ubah:
-                                Intent intent = new Intent(context,MenuDaftarJasaLaundry.class);
+                                Intent intent = new Intent(context,MenuUbahJasaLaundry.class);
                                 intent.putExtra("idjasa",jasa.getIdJasa());
-                                intent.putExtra("kategori",jasa.getJasa());
+                                intent.putExtra("jasa",jasa.getJasa());
+                                intent.putExtra("satuan",jasa.getSatuan());
+                                intent.putExtra("idkategori",jasa.getIdkategori());
                                 context.startActivity(intent);
                                 break;
                             case R.id.hapus:
@@ -169,17 +176,16 @@ class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHol
                                             notifyItemChanged(Adapter);
                                             Toast.makeText(context, "Delete kategori "+ jasa.getJasa()+" berhasil", Toast.LENGTH_SHORT).show();
                                         }else {
-                                            Toast.makeText(context, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Gagal menghapus "+ jasa.getJasa(), Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-
                                     }
                                 });
                                 builder.setTitle("Hapus "+jasa.getJasa());
-                                builder.setMessage("Anda yakin ingin menghapus "+jasa.getJasa()+" dari data jasa");
+                                builder.setMessage("Anda yakin ingin menghapus "+jasa.getJasa());
                                 builder.show();
                                 break;
                         }

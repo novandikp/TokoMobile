@@ -100,6 +100,11 @@ public class MenuDaftarPelangganLaundry extends AppCompatActivity {
         Intent intent = new Intent(MenuDaftarPelangganLaundry.this, MenuPelangganLaundry.class);
         startActivity(intent);
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuDaftarPelangganLaundry.this, LaundryMenuMaster.class);
+        startActivity(intent);
+    }
 }
 
 class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdapater.ViewHolder>{
@@ -159,7 +164,7 @@ class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdap
                                             Toast.makeText(context, "Delete Pelanggan"+ pelanggan.getPelanggan()+" berhasil", Toast.LENGTH_SHORT).show();
 
                                         }else {
-                                            Toast.makeText(context, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Gagal menghapus "+ pelanggan.getPelanggan(), Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {

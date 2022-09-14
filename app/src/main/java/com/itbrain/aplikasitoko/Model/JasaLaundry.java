@@ -1,13 +1,27 @@
 package com.itbrain.aplikasitoko.Model;
 
 public class JasaLaundry {
-    private int idjasa;
+    private int idjasa,idkategori;
     private String jasa,satuan;
 
-    public JasaLaundry(int idjasa, String jasa, String satuan) {
+
+    public JasaLaundry(int idjasa, int idkategori, String jasa, String satuan) {
         this.idjasa = idjasa;
+        this.idkategori = idkategori;
         this.jasa = jasa;
         this.satuan = satuan;
+    }
+
+    public int getIdjasa() {
+        return idjasa;
+    }
+
+    public int getIdkategori() {
+        return idkategori;
+    }
+
+    public void setIdkategori(int idkategori) {
+        this.idkategori = idkategori;
     }
 
     public int getIdJasa() {

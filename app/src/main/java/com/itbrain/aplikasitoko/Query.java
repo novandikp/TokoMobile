@@ -7,7 +7,7 @@ public class Query {
     public static String selectwhere(String table){
         return Modul.slct+table+" WHERE ";
     }
-    public static String sWhere(String PrimaryKey,String value){
+    public static String sWhere(String PrimaryKey, String value){
         return PrimaryKey+" = "+Modul.quote(value);
     }
     public static String quoteMirip(String w){

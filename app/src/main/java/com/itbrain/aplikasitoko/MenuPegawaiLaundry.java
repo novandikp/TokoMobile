@@ -1,5 +1,6 @@
 package com.itbrain.aplikasitoko;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -19,29 +20,39 @@ public class MenuPegawaiLaundry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menupegawailaundry);
         Simpan = findViewById(R.id.Simpan);
-        NamaPegawai = (EditText) findViewById(R.id.NamaPegawai);
-        AlamatPegawai = (EditText) findViewById(R.id.AlamatPegawai);
-        notelpPegawai = (EditText) findViewById(R.id.notelpPegawai);
+        NamaPegawai = findViewById(R.id.NamaPegawai);
+        AlamatPegawai = findViewById(R.id.AlamatPegawai);
+        notelpPegawai = findViewById(R.id.notelpPegawai);
         db = new DatabaseLaundry(this);
         if(isUpdate()){
-            NamaPegawai.setText(getIntent().getStringExtra("pelanggan"));
-            AlamatPegawai.setText(getIntent().getStringExtra("alamatpelanggan"));
-            notelpPegawai.setText(getIntent().getStringExtra("notelppelanggan"));
-            Toast.makeText(this, "Update", Toast.LENGTH_SHORT).show();
+//            set text edit pegawai
+            NamaPegawai.setText(getIntent().getStringExtra("pegawai"));
+            AlamatPegawai.setText(getIntent().getStringExtra("alamatpegawai"));
+            notelpPegawai.setText(getIntent().getStringExtra("notelppegawai"));
+//            Toast.makeText(this, "Update", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Update Pegawai", Toast.LENGTH_SHORT).show();
+        }else{
+
         }
         Simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isUpdate()){
-
+                    update();
                 }else{
                     add();
                 }
             }
         });
     }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuPegawaiLaundry.this, MenuDaftarPegawaiLaundry.class);
+        startActivity(intent);
+    }
+
     public boolean isUpdate(){
-        return getIntent().getIntExtra("idpelanggan",-1) > -1;
+        return getIntent().getIntExtra("idpegawai",-1) > -1;
     }
     public void add(){
         String txtNamaPegawai = NamaPegawai.getText().toString();
@@ -59,6 +70,18 @@ public class MenuPegawaiLaundry extends AppCompatActivity {
         else{
             db.exc("insert into tblpegawai (pegawai,alamatpegawai,notelppegawai) values ('"+ txtNamaPegawai +"','"+ txtalamatPegawai +"','"+ txtNotelpPegawai +"')");
             finish();
+        }
+    }
+
+    public void update(){
+        String txtidpegawai = String.valueOf(getIntent().getIntExtra("idpegawai",-1));
+        String txtpegawai = NamaPegawai.getText().toString();
+        String txtalamatpegawai = AlamatPegawai.getText().toString();
+        String txtnotelppegawai = notelpPegawai.getText().toString();
+        if (TextUtils.isEmpty(txtpegawai)){
+//            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
+        }else {
+            db.exc("update tblpegawai set pegawai='"+ txtpegawai +"',alamatpegawai='"+ txtalamatpegawai +"',notelppegawai='"+ txtnotelppegawai +"' where idpegawai ='"+ txtidpegawai +"'");
         }
     }
 }

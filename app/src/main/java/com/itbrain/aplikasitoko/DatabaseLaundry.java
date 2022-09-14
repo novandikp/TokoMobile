@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class DatabaseLaundry extends SQLiteOpenHelper {
             db.execSQL(query);
             return true;
         }catch (Exception e){
+//            Toast.makeText(ctx, e.getMessage(), Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -241,7 +243,8 @@ public class DatabaseLaundry extends SQLiteOpenHelper {
                     "SET hutang=hutang-NEW.bayarhutang " +
                     "WHERE tblpelanggan.idpelanggan=NEW.idpelanggan; " +
                     "END");
-            exc("INSERT INTO tblidentitas VALUES (1,'KomputerKit.com','Sidoarjo','0838 320 320 77','Terima Kasih','Sudah Berbelanja','Di Toko Kami')") ;
+//            exc("INSERT INTO tblidentitas VALUES (1,'KomputerKit.com','Sidoarjo','0838 320 320 77','Terima Kasih','Sudah Berbelanja','Di Toko Kami')") ;
+                        exc("INSERT INTO tblidentitas VALUES (1,'KomputerKit.com','Sidoarjo')") ;
             exc("INSERT INTO tblpegawai VALUES (0,'Pemilik',' ',' ')");
             exc("INSERT INTO tblpelanggan VALUES (0,'Umum',' ',' ',0)");
             exc("DELETE FROM tblkategori WHERE idkategori=0");

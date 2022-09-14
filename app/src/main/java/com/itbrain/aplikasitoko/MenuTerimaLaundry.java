@@ -45,24 +45,6 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         if(TextUtils.isEmpty(faktur)){
             Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
         }
-        else if(TextUtils.isEmpty(tanggalmulai)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(tanggalkembali)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(namapelanggan)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(namapegawai)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(hargajasa)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else if(TextUtils.isEmpty(jumlah)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
         else{
             db.exc("insert into qproses (faktur,tgllaundry,tglselesai,total,statuslaundry,statusbayar,pelanggan,alamat,notelp) values ('"+ faktur +"','"+ tanggalmulai +"','"+ tanggalkembali +"','"+ namapelanggan +"','"+ namapegawai +"','"+ hargajasa +"','"+ jumlah +"')");
             finish();
