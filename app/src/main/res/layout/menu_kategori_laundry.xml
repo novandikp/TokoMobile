@@ -18,13 +18,13 @@
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/Pencarian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Faktur"
+        android:hint="Pencarian"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11"
+        app:layout_constraintTop_toBottomOf="@+id/Pencarian"
         tools:listitem="@layout/laundryitemdaftarkategori">
 
     </androidx.recyclerview.widget.RecyclerView>

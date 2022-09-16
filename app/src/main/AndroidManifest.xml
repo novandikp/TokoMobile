@@ -11,6 +11,9 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".TransaksiCariLaundry"
+            android:exported="false" />
+        <activity
             android:name=".LaundryItemIdentitas"
             android:exported="false" />
         <activity
@@ -18,7 +21,8 @@
             android:exported="false" />
         <activity
             android:name=".MenuDaftarPegawaiLaundry"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".ListItemDummyData"
             android:exported="true" />

@@ -11,10 +11,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -29,6 +32,7 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
     RecyclerView DaftarPegawai;
     PegawaiLaundryAdapater adapter;
     DatabaseLaundry db;
+    EditText pencarian;
 //    implements PopupMenu.OnMenuItemClickListener
 
 
@@ -41,9 +45,27 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
         datapegawai = new ArrayList<>();
         db = new DatabaseLaundry(this);
 
+        pencarian = findViewById(R.id.Pencarian);
         DaftarPegawai.setLayoutManager(new LinearLayoutManager(this));
         adapter = new PegawaiLaundryAdapater(datapegawai,this);
         DaftarPegawai.setAdapter(adapter);
+
+        pencarian.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                getData();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
     public void UbahPegawai(View view) {
         Intent intent = new Intent(MenuDaftarPegawaiLaundry.this, MenuPegawaiLaundry.class);
@@ -89,7 +111,7 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
 //    }
 
     public void getData(){
-        Cursor cursor = db.sq("select * from tblpegawai where idpegawai != 0");
+        Cursor cursor = db.sq("select * from tblpegawai where idpegawai != 0 and pegawai like '%"+ pencarian.getText().toString() +"%'");
         if(cursor!=null){
             datapegawai.clear();
             while(cursor.moveToNext()){
@@ -158,7 +180,7 @@ class PegawaiLaundryAdapater extends RecyclerView.Adapter<PegawaiLaundryAdapater
                                         if (db.deletePegawai(pegawai.getIdpegawai())){
                                             Pegawai.remove(Position);
                                             notifyItemChanged(Position);
-                                            Toast.makeText(context, "Delete Pegawai"+ pegawai.getPegawai()+" berhasil", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Delete "+ pegawai.getPegawai()+" berhasil", Toast.LENGTH_SHORT).show();
 
                                         }else {
                                             Toast.makeText(context, "Gagal menghapus "+ pegawai.getPegawai(), Toast.LENGTH_SHORT).show();

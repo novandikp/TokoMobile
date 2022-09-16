@@ -26,11 +26,17 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
     Button Simpan;
     EditText edtJasa,edtBiaya;
     DatabaseLaundry db;
+//    String Biaya,Jasa;
     ArrayList<String> listkategori,listidkategori;
     Spinner SpinnerKategori,SpinnerSatuan;
+    Integer idKat,idJasa;
+    int spKatSelection=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
         setContentView(R.layout.menuubahjasalaundry);
         Simpan = (Button) findViewById(R.id.Simpan);
         edtJasa = (EditText) findViewById(R.id.edtJasa);
@@ -44,6 +50,28 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
             SpinnerKategori.setSelection(listidkategori.indexOf(""+getIntent().getIntExtra("idkategori",0)));
 //            Toast.makeText(this, "Update"+getIntent().getIntExtra("idkategori",0), Toast.LENGTH_SHORT).show();
         }
+
+        Bundle extra = getIntent().getExtras();
+        if (extra==null){
+            //Insert
+            idJasa=null;
+        }else {
+            idJasa = extra.getInt("idjasa");
+            edtJasa.setText(extra.getString("jasa"));
+            edtBiaya.setText(extra.getString("biaya"));
+            if (extra.getString("satuan").equals("pc")){
+                SpinnerSatuan.setSelection(0);
+            }else if (extra.getString("satuan").equals("kg")){
+                SpinnerSatuan.setSelection(1);
+            }else if (extra.getString("satuan").equals("m2")){
+                SpinnerSatuan.setSelection(2);
+            }
+            String qcount = "SELECT idkategori FROM tblkategori WHERE idkategori<"+String.valueOf(extra.getInt("idkategori"))+" ORDER BY idkategori ASC";
+            Cursor cKat=db.sq(qcount);
+            spKatSelection=cKat.getCount();
+            SpinnerKategori.setSelection(cKat.getCount());
+        }
+
         Simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +119,7 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
         String jasa = edtJasa.getText().toString();
         String biaya = edtBiaya.getText().toString();
         String idkat = listidkategori.get(SpinnerKategori.getSelectedItemPosition());
+//        String Biaya = Modul.unNumberFormat(edtBiaya.getText().toString());
         if(TextUtils.isEmpty(jasa) || idkat.equals("-1")){
             Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
         }else{

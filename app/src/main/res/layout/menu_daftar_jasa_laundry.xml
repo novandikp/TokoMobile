@@ -10,27 +10,28 @@
         android:id="@+id/imageView43"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName11"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
+        app:layout_constraintBottom_toBottomOf="@+id/Pencarian"
+        app:layout_constraintEnd_toStartOf="@+id/Pencarian"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName11"
+        app:layout_constraintTop_toTopOf="@+id/Pencarian"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/Pencarian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Faktur"
+        android:hint="Pencarian"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SpinnerKategori" />
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,6 +69,7 @@
         app:layout_constraintTop_toTopOf="@+id/Kembali" />
 
     <ImageView
+        android:onClick="Kembali"
         android:id="@+id/Kembali"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -83,10 +85,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/UbahJasa"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11"
+        app:layout_constraintTop_toBottomOf="@+id/Pencarian"
         tools:listitem="@layout/laundryitemdaftarjasa" />
 
     <Spinner

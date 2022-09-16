@@ -11,10 +11,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -30,6 +33,7 @@ public class MenuDaftarPelangganLaundry extends AppCompatActivity {
     RecyclerView DaftarPelanggan;
     PelangganLaundryAdapater adapter;
     DatabaseLaundry db;
+    EditText pencarian;
 //    implements PopupMenu.OnMenuItemClickListener
 
 
@@ -42,9 +46,27 @@ public class MenuDaftarPelangganLaundry extends AppCompatActivity {
         datapelanggan = new ArrayList<>();
         db = new DatabaseLaundry(this);
 
+        pencarian = findViewById(R.id.Pencarian);
         DaftarPelanggan.setLayoutManager(new LinearLayoutManager(this));
         adapter = new PelangganLaundryAdapater(datapelanggan,this);
         DaftarPelanggan.setAdapter(adapter);
+
+        pencarian.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                getData();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
     public void UbahPelanggan(View view) {
         Intent intent = new Intent(MenuDaftarPelangganLaundry.this, MenuPelangganLaundry.class);
@@ -85,7 +107,7 @@ public class MenuDaftarPelangganLaundry extends AppCompatActivity {
 //    }
 
     public void getData(){
-        Cursor cursor = db.sq("select * from tblpelanggan where idpelanggan != 0");
+        Cursor cursor = db.sq("select * from tblpelanggan where idpelanggan != 0 and pelanggan like '%"+ pencarian.getText().toString() +"%'");
         if(cursor!=null){
             datapelanggan.clear();
             while(cursor.moveToNext()){
@@ -153,7 +175,7 @@ class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdap
                                 context.startActivity(intent);
                                 break;
                             case R.id.hapus:
-                                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(context).setIcon(R.drawable.hapus);
                                 builder.setPositiveButton("Ya!", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -161,7 +183,7 @@ class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdap
                                         if (db.deletePelanggan(pelanggan.getIdpelanggan())){
                                             Pelanggan.remove(Position);
                                             notifyItemChanged(Position);
-                                            Toast.makeText(context, "Delete Pelanggan"+ pelanggan.getPelanggan()+" berhasil", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Delete "+ pelanggan.getPelanggan()+" berhasil", Toast.LENGTH_SHORT).show();
 
                                         }else {
                                             Toast.makeText(context, "Gagal menghapus "+ pelanggan.getPelanggan(), Toast.LENGTH_SHORT).show();
@@ -202,5 +224,32 @@ class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdap
             Hutang = itemView.findViewById(R.id.txtHutang);
             optMuncul = itemView.findViewById(R.id.optMuncul);
         }
+    }
+}
+class getterPelanggan{
+    private int idPelanggan;
+    private String namaPelanggan,alamatPelanggan,notelpPelanggan;
+
+    public getterPelanggan(int idPelanggan, String namaPelanggan, String alamatPelanggan, String notelpPelanggan) {
+        this.idPelanggan = idPelanggan;
+        this.namaPelanggan = namaPelanggan;
+        this.alamatPelanggan = alamatPelanggan;
+        this.notelpPelanggan = notelpPelanggan;
+    }
+
+    public int getIdPelanggan() {
+        return idPelanggan;
+    }
+
+    public String getNamaPelanggan() {
+        return namaPelanggan;
+    }
+
+    public String getAlamatPelanggan() {
+        return alamatPelanggan;
+    }
+
+    public String getNotelpPelanggan() {
+        return notelpPelanggan;
     }
 }

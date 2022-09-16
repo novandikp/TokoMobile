@@ -19,11 +19,14 @@ import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
 public class Modul {
 
 
     static String slct = "SELECT * FROM " ;
     //    static String produkid ="versipro";
+    static String produkid2 ="com.komputerkit.laundry.full";
+    static String produkid ="android.test.purchased";
     //
     public static int getCount(Cursor c){
         try {
@@ -370,26 +373,6 @@ public class Modul {
     public static String getDeviceID(ContentResolver c){
         return Settings.Secure.getString(c, Settings.Secure.ANDROID_ID);
     }
-    public static String getEncrypt(String teks){
-        try {
-            String key = "KomputerKit";
-            String salt = "KomputerKit";
-            byte[] iv = new byte[16];
-            return "";
-        } catch (Exception e){
-            return "" ;
-        }
-    }
-    public static String getDecrypt(String teks){
-        try {
-            String key = "KomputerKit";
-            String salt = "KomputerKit";
-            byte[] iv = new byte[16];
-            return "";
-        } catch (Exception e){
-            return "" ;
-        }
-    }
     public static String encrypt(String input) {
         // This is base64 encoding, which is not an encryption
         return Base64.encodeToString(input.getBytes(), Base64.DEFAULT);
@@ -399,6 +382,4 @@ public class Modul {
         return new String(Base64.decode(input, Base64.DEFAULT));
     }
 
-    public static void setText(int namaToko, String namatoko) {
-    }
 }

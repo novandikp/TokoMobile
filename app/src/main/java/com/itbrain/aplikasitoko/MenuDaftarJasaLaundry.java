@@ -6,17 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Spinner;
@@ -24,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.itbrain.aplikasitoko.Model.JasaLaundry;
-import com.itbrain.aplikasitoko.Model.Kategori;
 
 import java.util.ArrayList;
 
@@ -36,6 +37,7 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
     RecyclerView recyclerView;
     JasaLaundryAdapter adapter;
     DatabaseLaundry db;
+    EditText pencarian;
 //    implements PopupMenu.OnMenuItemClickListener
 
 
@@ -44,6 +46,7 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_daftar_jasa_laundry);
+        pencarian = findViewById(R.id.Pencarian);
         SpinnerKategori = findViewById(R.id.SpinnerKategori);
         recyclerView = findViewById(R.id.DaftarJasa);
         listidkategori = new ArrayList<>();
@@ -54,11 +57,23 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
         adapter = new JasaLaundryAdapter(datajasa,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-    }
 
-    public void Kembali(View view) {
-        Intent intent = new Intent(MenuDaftarJasaLaundry.this, LaundryMenuMaster.class);
-        startActivity(intent);
+        pencarian.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                getData();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
 //    public void popMenu(View v){
@@ -95,11 +110,11 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
 //    }
 
     public void getData(){
-        Cursor cursor = db.sq("select * from tbljasa");
+        Cursor cursor = db.sq("select * from tbljasa where idjasa != 0 and jasa like '%"+ pencarian.getText().toString() +"%'");
         if(cursor!=null){
             datajasa.clear();
             while(cursor.moveToNext()){
-                datajasa.add(new JasaLaundry(cursor.getInt(cursor.getColumnIndex("idjasa")),cursor.getInt(cursor.getColumnIndex("idkategori")), cursor.getString(cursor.getColumnIndex("jasa")), cursor.getString(cursor.getColumnIndex("satuan"))));
+                datajasa.add(new JasaLaundry(cursor.getInt(cursor.getColumnIndex("idjasa")),cursor.getInt(cursor.getColumnIndex("idkategori")),cursor.getString(cursor.getColumnIndex("jasa")),cursor.getString(cursor.getColumnIndex("biaya")), cursor.getString(cursor.getColumnIndex("satuan"))));
             }
         }
         adapter.notifyDataSetChanged();
@@ -123,6 +138,11 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
 
     public void Simpan(View view) {
         Intent intent = new Intent(MenuDaftarJasaLaundry.this, MenuUbahJasaLaundry.class);
+        startActivity(intent);
+    }
+
+    public void Kembali(View view) {
+        Intent intent = new Intent(MenuDaftarJasaLaundry.this, LaundryMenuMaster.class);
         startActivity(intent);
     }
 }
@@ -174,7 +194,7 @@ class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHol
                                         if (db.deleteJasa(jasa.getIdJasa())){
                                             jasas.remove(Adapter);
                                             notifyItemChanged(Adapter);
-                                            Toast.makeText(context, "Delete kategori "+ jasa.getJasa()+" berhasil", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Delete "+ jasa.getJasa()+" berhasil", Toast.LENGTH_SHORT).show();
                                         }else {
                                             Toast.makeText(context, "Gagal menghapus "+ jasa.getJasa(), Toast.LENGTH_SHORT).show();
                                         }

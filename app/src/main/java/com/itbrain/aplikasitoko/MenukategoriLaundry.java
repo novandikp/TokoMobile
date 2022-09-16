@@ -12,10 +12,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -30,6 +33,7 @@ public class MenukategoriLaundry extends AppCompatActivity {
     RecyclerView recyclerView;
     KategoriLaundryAdapter adapter;
     DatabaseLaundry db;
+    EditText pencarian;
 //    implements PopupMenu.OnMenuItemClickListener
 
 
@@ -38,12 +42,30 @@ public class MenukategoriLaundry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_kategori_laundry);
+        pencarian = findViewById(R.id.Pencarian);
         recyclerView = findViewById(R.id.DaftarKategori);
         datakategori = new ArrayList<>();
         db = new DatabaseLaundry(this);
         adapter = new KategoriLaundryAdapter(datakategori,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+        pencarian.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                getData();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
 //    public void popMenu(View v){
@@ -82,7 +104,7 @@ public class MenukategoriLaundry extends AppCompatActivity {
 
     @SuppressLint("Range")
     public void getData(){
-        Cursor cursor = db.sq("select * from tblkategori where idkategori != 0");
+        Cursor cursor = db.sq("select * from tblkategori where idkategori != 0 and kategori like '%"+ pencarian.getText().toString() +"%'");
         if(cursor!=null){
             datakategori.clear();
             while(cursor.moveToNext()){
@@ -148,7 +170,7 @@ class KategoriLaundryAdapter extends RecyclerView.Adapter<KategoriLaundryAdapter
                                         if (db.deleteKategori(kategori.getIdkategori())){
                                             kategoris.remove(Adapter);
                                             notifyItemChanged(Adapter);
-                                            Toast.makeText(context, "Delete kategori "+ kategori.getKategori()+" berhasil", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, "Delete "+ kategori.getKategori()+" berhasil", Toast.LENGTH_SHORT).show();
                                         }else {
                                             Toast.makeText(context, "Gagal menghapus "+ kategori.getKategori(), Toast.LENGTH_SHORT).show();
                                         }

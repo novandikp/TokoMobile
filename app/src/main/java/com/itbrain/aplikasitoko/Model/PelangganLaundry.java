@@ -15,6 +15,9 @@ public class PelangganLaundry {
         this.hutang = hutang;
     }
 
+    public PelangganLaundry(int idpelanggan, String pegawai, String alamatpegawai, String notelppegawai) {
+    }
+
     public static int size() {
         return 0;
     }

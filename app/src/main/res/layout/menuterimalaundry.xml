@@ -19,7 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView4">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recTransaksi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/cardView14"
@@ -60,17 +60,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout10" />
 
             <ImageView
-                android:id="@+id/imageView36"
+                android:id="@+id/ibtnTglTerima"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout5"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textInputLayout6"
+                app:layout_constraintStart_toEndOf="@+id/textInputLayout5"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout5"
                 app:srcCompat="@drawable/ic_baseline_date_range_24" />
 
             <ImageView
-                android:id="@+id/imageView38"
+                android:id="@+id/ibtnTglSelesai"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="0dp"
@@ -83,7 +84,7 @@
                 app:srcCompat="@drawable/ic_baseline_date_range_24" />
 
             <ImageView
-                android:id="@+id/imageView35"
+                android:id="@+id/ibtnCariPelanggan"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="0dp"
@@ -96,7 +97,7 @@
                 app:srcCompat="@drawable/ic_baseline_search_24" />
 
             <ImageView
-                android:id="@+id/imageView34"
+                android:id="@+id/ibtnCariPegawai"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="0dp"
@@ -109,7 +110,7 @@
                 app:srcCompat="@drawable/ic_baseline_search_24" />
 
             <ImageView
-                android:id="@+id/imageView39"
+                android:id="@+id/ibtnJasa"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="0dp"
@@ -139,7 +140,9 @@
                     android:id="@+id/HargaJasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Harga Jasa" />
+                    android:hint="Harga Jasa"
+                    android:enabled="false"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -160,7 +163,9 @@
                     android:id="@+id/Jasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Jasa" />
+                    android:hint="Jasa"
+                    android:enabled="false"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -182,7 +187,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Pegawai"
-                    android:text="Pemilik" />
+                    android:text="Pemilik"
+                    android:enabled="false"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -204,7 +211,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Pelanggan"
-                    android:text="Umum" />
+                    android:text="Umum"
+                    android:enabled="false"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -222,6 +231,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:enabled="false"
                     android:id="@+id/TanggalKembali"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -244,6 +254,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:enabled="false"
                     android:id="@+id/TanggalMulai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -266,11 +277,13 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Faktur"
+                    android:id="@+id/edtFaktur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
-                    android:hint="Faktur" />
+                    android:hint="Faktur"
+                    android:enabled="false"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -363,7 +376,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/tvTotalbayar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"

@@ -2,13 +2,15 @@ package com.itbrain.aplikasitoko.Model;
 
 public class JasaLaundry {
     private int idjasa,idkategori;
-    private String jasa,satuan;
+    private String jasa,satuan,kategori,biaya;
 
 
-    public JasaLaundry(int idjasa, int idkategori, String jasa, String satuan) {
+    public JasaLaundry(int idjasa, int idkategori, String kategori, String jasa, String biaya, String satuan) {
         this.idjasa = idjasa;
         this.idkategori = idkategori;
+        this.kategori = kategori;
         this.jasa = jasa;
+        this.biaya = biaya;
         this.satuan = satuan;
     }
 
@@ -47,4 +49,13 @@ public class JasaLaundry {
     public void setSatuan(String satuan) {
         this.satuan = satuan;
     }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
+
 }

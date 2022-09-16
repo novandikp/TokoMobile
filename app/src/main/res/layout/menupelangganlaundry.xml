@@ -19,6 +19,7 @@
             android:id="@+id/txtHutang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:cursorVisible="true"
             android:hint="Hutang" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -37,6 +38,7 @@
             android:id="@+id/NamaPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:cursorVisible="true"
             android:hint="Nama Pelanggan" />
     </com.google.android.material.textfield.TextInputLayout>
 
