@@ -20,6 +20,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+//import se.simbio.encryption.Encryption;
+
 public class Modul {
 
 
@@ -355,9 +357,9 @@ public class Modul {
     }
 
     public static ActionBar btnBack(String title, ActionBar bar){
-        bar.setDisplayShowHomeEnabled(true);
-        bar.setDisplayHomeAsUpEnabled(true);
-        bar.setTitle(title);
+//        bar.setDisplayShowHomeEnabled(true);
+//        bar.setDisplayHomeAsUpEnabled(true);
+//        bar.setTitle(title);
         return bar;
     }
 
@@ -373,6 +375,32 @@ public class Modul {
     public static String getDeviceID(ContentResolver c){
         return Settings.Secure.getString(c, Settings.Secure.ANDROID_ID);
     }
+//    public static String getEncrypt(String teks){
+//        try {
+//            String key = "KomputerKit";
+//            String salt = "KomputerKit";
+//            byte[] iv = new byte[16];
+//            Encryption encryption = Encryption.getDefault(key, salt, iv);
+//
+//            String hasil = encryption.encryptOrNull(teks);
+//            return hasil ;
+//        } catch (Exception e){
+//            return "" ;
+//        }
+//    }
+//    public static String getDecrypt(String teks){
+//        try {
+//            String key = "KomputerKit";
+//            String salt = "KomputerKit";
+//            byte[] iv = new byte[16];
+//            Encryption encryption = Encryption.getDefault(key, salt, iv);
+//
+//            String hasil = encryption.decryptOrNull(teks);
+//            return hasil ;
+//        } catch (Exception e){
+//            return "" ;
+//        }
+//    }
     public static String encrypt(String input) {
         // This is base64 encoding, which is not an encryption
         return Base64.encodeToString(input.getBytes(), Base64.DEFAULT);

@@ -57,9 +57,9 @@ public class LaundryMenuUtamaMaster extends AppCompatActivity {
         Modul.setText(v,R.id.NamaToko,Modul.upperCaseFirst(Modul.getString(c,"namatoko")));
         Modul.setText(v,R.id.AlamatToko,Modul.getString(c,"alamattoko"));
         Modul.setText(v,R.id.NomorToko,Modul.getString(c,"notelptoko"));
-        Modul.setText(v,R.id.Caption1,Modul.getString(c,"caption_1"));
-        Modul.setText(v,R.id.Caption2,Modul.getString(c,"caption_2"));
-        Modul.setText(v,R.id.Caption3,Modul.getString(c,"caption_3"));
+//        Modul.setText(v,R.id.Caption1,Modul.getString(c,"caption_1"));
+//        Modul.setText(v,R.id.Caption2,Modul.getString(c,"caption_2"));
+//        Modul.setText(v,R.id.Caption3,Modul.getString(c,"caption_3"));
     }
 
 public void Master(View view) {

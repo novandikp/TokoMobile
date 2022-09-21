@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+    package com.itbrain.aplikasitoko;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -12,11 +12,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,6 +30,7 @@ import android.widget.Toast;
 import com.itbrain.aplikasitoko.Model.JasaLaundry;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MenuDaftarJasaLaundry extends AppCompatActivity {
     Spinner SpinnerKategori;
@@ -54,10 +57,10 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
         datajasa = new ArrayList<>();
         db = new DatabaseLaundry(this);
         getKategori();
+        getKategoriData();
         adapter = new JasaLaundryAdapter(datajasa,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
         pencarian.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -74,6 +77,58 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
 
             }
         });
+
+        SpinnerKategori.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                db.getIdKategori().get(position);
+                getData();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    public  void getJasa(String keyword,String kategori){
+        datajasa = new ArrayList<>();
+        recyclerView = (RecyclerView) findViewById(R.id.DaftarJasa);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new JasaLaundryAdapter(this,datajasa,Boolean.TRUE);
+        recyclerView.setAdapter(adapter);
+        String q;
+
+        if (TextUtils.isEmpty(keyword)){
+            if (kategori.equals("0")){
+                q="SELECT * FROM qjasa";
+            }else {
+                q="SELECT * FROM qjasa WHERE idkategori="+kategori;
+            }
+        }else {
+            if (kategori.equals("0")){
+                q="SELECT * FROM qjasa WHERE jasa LIKE '%"+keyword+"%'";
+            }else {
+                q="SELECT * FROM qjasa WHERE jasa LIKE '%"+keyword+"%' AND idkategori="+kategori;
+            }
+        }
+        Cursor c=db.sq(q);
+        if (Modul.getCount(c)>0){
+            while(c.moveToNext()){
+                datajasa.add(new JasaLaundry(
+                        Modul.getInt(c,"idjasa"),
+                        Modul.getInt(c,"idkategori"),
+                        Modul.getString(c,"kategori"),
+                        Modul.getString(c,"jasa"),
+                        Modul.getString(c,"biaya")
+                ));
+            }
+        }
+        adapter.notifyDataSetChanged();
     }
 
 //    public void popMenu(View v){
@@ -121,7 +176,7 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
     }
 
     public void getKategori() {
-        Cursor cursor=db.sq("select * from tblkategori");
+        Cursor cursor = db.sq("select * from tblkategori where idkategori != 0 and kategori like '%"+ pencarian.getText().toString() +"%'");
         if(cursor !=null ){
             listkategori.clear();
             listidkategori.clear();
@@ -134,6 +189,15 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
 
         ArrayAdapter adapterspinner=new ArrayAdapter(this, android.R.layout.simple_list_item_1,listkategori);
         SpinnerKategori.setAdapter(adapterspinner);
+    }
+
+    private void getKategoriData(){
+        DatabaseLaundry db = new DatabaseLaundry(this);
+        List<String> labels = db.getKategori();
+
+        ArrayAdapter<String> data = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,labels);
+        data.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        SpinnerKategori.setAdapter(data);
     }
 
     public void Simpan(View view) {
@@ -155,6 +219,9 @@ class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHol
     public JasaLaundryAdapter(ArrayList<JasaLaundry> jasas, Context context) {
         this.jasas = jasas;
         this.context = context;
+    }
+
+    public JasaLaundryAdapter(MenuDaftarJasaLaundry menuDaftarJasaLaundry, ArrayList<JasaLaundry> datajasa, Boolean aTrue) {
     }
 
     @NonNull
@@ -182,7 +249,7 @@ class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHol
                                 intent.putExtra("idjasa",jasa.getIdJasa());
                                 intent.putExtra("jasa",jasa.getJasa());
                                 intent.putExtra("satuan",jasa.getSatuan());
-                                intent.putExtra("idkategori",jasa.getIdkategori());
+                                intent.putExtra("idkategori",jasa.getIdKategori());
                                 context.startActivity(intent);
                                 break;
                             case R.id.hapus:
@@ -224,7 +291,7 @@ class JasaLaundryAdapter extends RecyclerView.Adapter<JasaLaundryAdapter.ViewHol
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView edtJasa,edtBiaya,edtSatuan;
+        TextView edtJasa,edtSatuan;
         ImageView optMuncul;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

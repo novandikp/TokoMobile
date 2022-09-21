@@ -18,11 +18,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/tvKategoriJasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/edtSatuan"
+                app:layout_constraintTop_toBottomOf="@+id/edtSatuan" />
+
             <ImageView
                 android:id="@+id/optMuncul"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="16dp"
+                android:rotation="90"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -33,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:text="Daftar kategori"
                 android:textColor="#000000"
                 android:textStyle="bold"
@@ -46,11 +58,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="8000/rp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="8000"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtDaftarKategori" />
+
+            <TextView
+                android:id="@+id/edtjenisSatuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/edtSatuan"
+                app:layout_constraintStart_toEndOf="@+id/edtSatuan"
+                app:layout_constraintTop_toTopOf="@+id/edtSatuan" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

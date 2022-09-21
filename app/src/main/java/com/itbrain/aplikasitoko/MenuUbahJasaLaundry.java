@@ -20,6 +20,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.itbrain.aplikasitoko.Model.Kategori;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MenuUbahJasaLaundry extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
     Spinner SpinnerKategori,SpinnerSatuan;
     Integer idKat,idJasa;
     int spKatSelection=0;
+    List<String> getIdKat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +46,13 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
         db = new DatabaseLaundry(this);
         SpinnerSatuan = findViewById(R.id.spinnersatuan);
         getKategori();
+        getIdKat = db.getIdKategori();
+        getIdKat.remove(0);
         if(isUpdate()){
             edtJasa.setText(getIntent().getStringExtra("jasa"));
             edtBiaya.setText(getIntent().getStringExtra("satuan"));
             SpinnerKategori.setSelection(listidkategori.indexOf(""+getIntent().getIntExtra("idkategori",0)));
-//            Toast.makeText(this, "Update"+getIntent().getIntExtra("idkategori",0), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Update"+getIntent().getIntExtra("idkategori",0), Toast.LENGTH_SHORT).show();
         }
 
         Bundle extra = getIntent().getExtras();
@@ -120,12 +124,12 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
         String biaya = edtBiaya.getText().toString();
         String idkat = listidkategori.get(SpinnerKategori.getSelectedItemPosition());
 //        String Biaya = Modul.unNumberFormat(edtBiaya.getText().toString());
-        if(TextUtils.isEmpty(jasa) || idkat.equals("-1")){
+        if(TextUtils.isEmpty(jasa) || idkat.equals("-1") || Modul.strToDouble(biaya)<=0){
             Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
         }else{
             db.exc("insert into tbljasa (jasa,satuan,idkategori) values ('"+ jasa +"','"+ biaya +"','"+idkat +"')");
             finish();
-//            Toast.makeText(this, "Nambah", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
         }
     }
 

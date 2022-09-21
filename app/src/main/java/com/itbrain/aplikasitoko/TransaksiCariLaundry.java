@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.database.Cursor;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -25,13 +23,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.itbrain.aplikasitoko.DatabaseLaundry;
 import com.itbrain.aplikasitoko.Model.JasaLaundry;
 import com.itbrain.aplikasitoko.Model.Pegawai;
 import com.itbrain.aplikasitoko.Model.PelangganLaundry;
-import com.itbrain.aplikasitoko.Modul;
-import com.itbrain.aplikasitoko.Query;
-import com.itbrain.aplikasitoko.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -118,7 +112,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private void getKategoriData(){
-        DatabaseLaundry db = new DatabaseLaundry(this);
+        LaundryDatabase db = new LaundryDatabase(this);
         List<String> labels = db.getKategori();
 
         ArrayAdapter<String> data = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,labels);
@@ -219,8 +213,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
                         Modul.getInt(c,"idkategori"),
                         Modul.getString(c,"kategori"),
                         Modul.getString(c,"jasa"),
-                        Modul.removeE(Modul.getString(c,"biaya")),
-                        Modul.getString(c,"satuan")
+                        Modul.removeE(Modul.getString(c,"biaya"))
                 ));
             }
         }
@@ -229,11 +222,11 @@ public class TransaksiCariLaundry extends AppCompatActivity {
 
     public void tambahdata(View view) {
         if (a.equals("pegawai")){
-            startActivity(new Intent(this,MenuDaftarPegawaiLaundry.class));
+            startActivity(new Intent(this, MenuPegawaiLaundry.class));
         }else if (a.equals("pelanggan")){
-            startActivity(new Intent(this,MenuDaftarPelangganLaundry.class));
+            startActivity(new Intent(this, MenuPelangganLaundry.class));
         }else if (a.equals("jasa")){
-            startActivity(new Intent(this,MenuDaftarJasaLaundry.class));
+            startActivity(new Intent(this, MenuUbahJasaLaundry.class));
         }
     }
 
@@ -277,11 +270,11 @@ class AdapterListPegawaiCari extends RecyclerView.Adapter<AdapterListPegawaiCari
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent terima = new Intent(ctxAdapter,MenuTerimaLaundry.class);
+                Intent terima = new Intent(ctxAdapter, MenuTerimaLaundry.class);
                 terima.putExtra("idpegawai",getter.getIdpegawai());
                 terima.putExtra("namapegawai",getter.getPegawai());
-                ((MenuTerimaLaundry)ctxAdapter).setResult(1000,terima);
-                ((MenuTerimaLaundry)ctxAdapter).finish();
+                ((TransaksiCariLaundry)ctxAdapter).setResult(1000,terima);
+                ((TransaksiCariLaundry)ctxAdapter).finish();
             }
         });
     }
@@ -329,7 +322,7 @@ class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelanggan
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent terima = new Intent(ctxAdapter,.class);
+                Intent terima = new Intent(ctxAdapter,MenuTerimaLaundry.class);
                 terima.putExtra("idpelanggan",getter.getIdpelanggan());
                 terima.putExtra("namapelanggan",getter.getPelanggan());
                 ((TransaksiCariLaundry)ctxAdapter).setResult(2000,terima);
@@ -344,12 +337,13 @@ class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelanggan
     }
 
     class PelangganCariViewHolder extends RecyclerView.ViewHolder{
-        private TextView nama,alamat,telp;
+        private TextView nama,alamat,telp,hutang;
         public PelangganCariViewHolder(@NonNull View itemView) {
             super(itemView);
             nama= (TextView)itemView.findViewById(R.id.txtNamaPelanggan);
             alamat= (TextView)itemView.findViewById(R.id.txtAlamatPelanggan);
             telp= (TextView)itemView.findViewById(R.id.txtNomerPelanggan);
+            hutang= (TextView)itemView.findViewById(R.id.txtHutang);
         }
     }
 }
@@ -375,7 +369,7 @@ class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaC
     public void onBindViewHolder(@NonNull JasaCariViewHolder holder, int i) {
         final JasaLaundry getter=data.get(i);
         holder.nama.setText(getter.getJasa());
-        holder.biaya.setText("Rp."+getter.getSatuan());
+        holder.biaya.setText("Rp."+getter.getBiaya());
         if(getter.getSatuan().equals("pc")){
             holder.satuan.setText("/Pcs");
         }else if (getter.getSatuan().equals("kg")){
@@ -383,19 +377,19 @@ class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaC
         } else if (getter.getSatuan().equals("m2")) {
             holder.satuan.setText("/M²");
         }
-        holder.kategori.setText(getter.getIdkategori());
+        holder.kategori.setText(getter.getKategori());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent terima = new Intent(ctxAdapter,MenuTerimaLaundry.class);
                 terima.putExtra("idjasa",getter.getIdJasa());
-                terima.putExtra("idkategori",getter.get());
+                terima.putExtra("idkategori",getter.getIdKategori());
                 terima.putExtra("namajasa",getter.getJasa());
                 terima.putExtra("kategorijasa",getter.getKategori());
                 terima.putExtra("biayajasa",getter.getBiaya());
                 terima.putExtra("satuanjasa",getter.getSatuan());
-                ((ActivityTransaksiCari)ctxAdapter).setResult(3000,terima);
-                ((ActivityTransaksiCari)ctxAdapter).finish();
+                ((TransaksiCariLaundry)ctxAdapter).setResult(3000,terima);
+                ((TransaksiCariLaundry)ctxAdapter).finish();
             }
         });
     }
@@ -409,9 +403,9 @@ class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaC
         TextView nama,biaya,satuan,kategori;
         public JasaCariViewHolder(@NonNull View itemView) {
             super(itemView);
-            nama=(TextView)itemView.findViewById(R.id.tvNamaJasa);
-            biaya=(TextView)itemView.findViewById(R.id.tvBiayaJasa);
-            satuan=(TextView)itemView.findViewById(R.id.tvJenisSatuan);
+            nama=(TextView)itemView.findViewById(R.id.edtDaftarKategori);
+            biaya=(TextView)itemView.findViewById(R.id.edtSatuan);
+            satuan=(TextView)itemView.findViewById(R.id.edtjenisSatuan);
             kategori=(TextView)itemView.findViewById(R.id.tvKategoriJasa);
         }
     }

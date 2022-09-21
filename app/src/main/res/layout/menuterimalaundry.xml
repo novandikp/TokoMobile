@@ -48,7 +48,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/edtKeterangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -140,9 +140,8 @@
                     android:id="@+id/HargaJasa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Harga Jasa"
                     android:enabled="false"
-                    />
+                    android:hint="Harga Jasa" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -287,34 +286,54 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/isikeranjang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Isi Keranjang :"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
-
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout84"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginEnd="64dp"
                 app:boxBackgroundColor="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textInputLayout10">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Jumlah"
+                    android:id="@+id/edtJumlah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Jumlah"
                     android:text="0" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ibtnPlus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout84"
+                app:layout_constraintStart_toEndOf="@+id/textInputLayout84"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout84"
+                app:srcCompat="@drawable/tambah" />
+
+            <ImageView
+                android:id="@+id/ibtnMinus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout84"
+                app:layout_constraintEnd_toStartOf="@+id/textInputLayout84"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout84"
+                app:srcCompat="@drawable/kurang" />
+
+            <TextView
+                android:id="@+id/tvSatuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="kg"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout10"
+                app:layout_constraintStart_toEndOf="@+id/textInputLayout10"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout10" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -332,7 +351,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Simpan"
+                android:id="@+id/btnSimpan"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -344,21 +363,22 @@
                 android:text="Simpan"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button6" />
+                app:layout_constraintStart_toEndOf="@+id/btnTulis" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnTulis"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="4dp"
                 android:backgroundTint="#F44336"
+                android:onClick="insertTransaksi"
                 android:paddingLeft="0dp"
                 android:paddingTop="0dp"
                 android:paddingRight="0dp"
                 android:text="Taruh Keranjang"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/Simpan"
+                app:layout_constraintEnd_toStartOf="@+id/btnSimpan"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -393,8 +413,8 @@
         android:layout_height="wrap_content"
         android:text="Total Bayar :"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintEnd_toEndOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="@+id/textView23" />
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalbayar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

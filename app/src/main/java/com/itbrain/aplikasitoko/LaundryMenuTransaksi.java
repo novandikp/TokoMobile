@@ -8,9 +8,6 @@ import android.view.View;
 
 public class LaundryMenuTransaksi extends AppCompatActivity {
 
-    Boolean inAppStatus = false;
-    String status = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

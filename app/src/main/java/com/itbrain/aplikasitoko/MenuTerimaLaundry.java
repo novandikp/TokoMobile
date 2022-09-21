@@ -1,40 +1,45 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.material.textfield.TextInputEditText;
+import com.itbrain.aplikasitoko.NumberTextWatcher;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class MenuTerimaLaundry extends AppCompatActivity {
-
+    EditText edtJumlahJasa;
     ImageView btnTglTerima,btnTglSelesai,btnCariPelanggan,btnCariPegawai,btnCariJasa,btnAddJ,btnRemoveJ;
-    EditText Faktur,TanggalMulai,TanggalKembali,NamaPelanggan,NamaPegawai,HargaJasa,Jumlah;
-    DatabaseLaundry db;
-    Button Simpan;
+    TextView tvSatuan;
     View v;
+    DatabaseLaundry db;
 
     int year, month, day ;
     Calendar calendar ;
@@ -47,25 +52,8 @@ public class MenuTerimaLaundry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menuterimalaundry);
-        Simpan = (Button) findViewById(R.id.Simpan);
-        Faktur = (TextInputEditText) findViewById(R.id.edtFaktur);
-        TanggalMulai = (TextInputEditText) findViewById(R.id.TanggalMulai);
-        TanggalKembali = (TextInputEditText) findViewById(R.id.TanggalKembali);
-        NamaPelanggan = (TextInputEditText) findViewById(R.id.NamaPelanggan);
-        NamaPegawai = (TextInputEditText) findViewById(R.id.namaPegawaiLaundry);
-        HargaJasa = (TextInputEditText) findViewById(R.id.HargaJasa);
-        Jumlah = (TextInputEditText) findViewById(R.id.Jumlah);
-        btnTglTerima = findViewById(R.id.ibtnTglTerima);
-        btnTglSelesai = findViewById(R.id.ibtnTglSelesai);
-        btnCariPegawai = findViewById(R.id.ibtnCariPegawai);
-        btnCariPelanggan = findViewById(R.id.ibtnCariPelanggan);
-        btnCariJasa = findViewById(R.id.ibtnJasa);
 
-
-//        ImageButton btnTglTerima,btnTglSelesai,btnCariPelanggan,btnCariPegawai,btnCariJasa,btnAddJ,btnRemoveJ;
-
-
-        db = new DatabaseLaundry(this);
+        db=new DatabaseLaundry(this);
         v = this.findViewById(android.R.id.content);
 
         calendar = Calendar.getInstance();
@@ -73,44 +61,47 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        status = getIntent().getStringExtra("status");
-        updateFaktur = getIntent().getStringExtra("faktur");
-        if (status.equals("terima")){
-            getFaktur();
-            Modul.setText(v, R.id.TanggalMulai,Modul.getDate("dd/MM/yyyy"));
-            Modul.setText(v, R.id.TanggalKembali,Modul.getDate("dd/MM/yyyy"));
-            Cursor c1 = db.sq(Query.selectwhere("tblpegawai")+Query.sWhere("idpegawai","0"));
-            c1.moveToFirst();
-            Cursor c2 = db.sq(Query.selectwhere("tblpelanggan")+Query.sWhere("idpelanggan","0"));
-            c2.moveToFirst();
-            tIdpegawai=Modul.getInt(c1,"idpegawai");
-            tnPegawai=Modul.getString(c1,"pegawai");
-            tIdpelanggan=Modul.getInt(c2,"idpelanggan");
-            tnPelanggan=Modul.getString(c2,"pelanggan");
-        }else if (status.equals("update")){
-            Modul.setText(v,R.id.edtFaktur,updateFaktur);
-            loadCart();
-            String q="SELECT * FROM qlaundry WHERE faktur='"+updateFaktur+"'";
-            Cursor c=db.sq(q);
-            c.moveToNext();
-
-            Modul.setText(v,R.id.TanggalMulai,Modul.dateToNormal(Modul.getString(c,"tgllaundry")));
-            Modul.setText(v,R.id.TanggalKembali,Modul.dateToNormal(Modul.getString(c,"tglselesai")));
-            tIdpegawai=Modul.getInt(c,"idpegawai");
-            tnPegawai=Modul.getString(c,"pegawai");
-            tIdpelanggan=Modul.getInt(c,"idpelanggan");
-            tnPelanggan=Modul.getString(c,"pelanggan");
-            getTotal();
-        }
+//        status = getIntent().getStringExtra("status");
+//        updateFaktur = getIntent().getStringExtra("faktur");
+//
+//        if (status.equals("terima")){
+//            getFaktur();
+//            Modul.setText(v, R.id.TanggalMulai,Modul.getDate("dd/MM/yyyy"));
+//            Modul.setText(v, R.id.TanggalKembali,Modul.getDate("dd/MM/yyyy"));
+//            Cursor c1 = db.sq(Query.selectwhere("tblpegawai")+Query.sWhere("idpegawai","0"));
+//            c1.moveToFirst();
+//            Cursor c2 = db.sq(Query.selectwhere("tblpelanggan")+Query.sWhere("idpelanggan","0"));
+//            c2.moveToFirst();
+//            tIdpegawai=Modul.getInt(c1,"idpegawai");
+//            tnPegawai=Modul.getString(c1,"pegawai");
+//            tIdpelanggan=Modul.getInt(c2,"idpelanggan");
+//            tnPelanggan=Modul.getString(c2,"pelanggan");
+//        }else if (status.equals("update")){
+//            Modul.setText(v,R.id.edtFaktur,updateFaktur);
+//            loadCart();
+//            String q="SELECT * FROM qlaundry WHERE faktur='"+updateFaktur+"'";
+//            Cursor c=db.sq(q);
+//            c.moveToNext();
+//
+//            Modul.setText(v,R.id.TanggalMulai,Modul.dateToNormal(Modul.getString(c,"tgllaundry")));
+//            Modul.setText(v,R.id.TanggalKembali,Modul.dateToNormal(Modul.getString(c,"tglselesai")));
+//            tIdpegawai=Modul.getInt(c,"idpegawai");
+//            tnPegawai=Modul.getString(c,"pegawai");
+//            tIdpelanggan=Modul.getInt(c,"idpelanggan");
+//            tnPelanggan=Modul.getString(c,"pelanggan");
+//            getTotal();
+//        }
 
         btnCari();
 
+        btnTglTerima = findViewById(R.id.ibtnTglTerima);
         btnTglTerima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setDate(1);
             }
         });
+        btnTglSelesai = findViewById(R.id.ibtnTglSelesai);
         btnTglSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,46 +109,273 @@ public class MenuTerimaLaundry extends AppCompatActivity {
             }
         });
 
-        Simpan.setOnClickListener(new View.OnClickListener() {
+        btnAddJ= findViewById(R.id.ibtnPlus);
+        btnAddJ.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { add(); }
+            public void onClick(View v) {
+                tJumlah=tJumlah+1;
+                setJumlah(tJumlah,tBiaya);
+            }
         });
-    }
+        btnRemoveJ= findViewById(R.id.ibtnMinus);
+        btnRemoveJ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tJumlah=tJumlah-1;
+                setJumlah(tJumlah,tBiaya);
+            }
+        });
+        edtJumlahJasa=(EditText)findViewById(R.id.edtJumlah);
+        edtJumlahJasa.addTextChangedListener(new NumberTextWatcher(edtJumlahJasa,new Locale("in","ID"),2));
 
-    public void setDate(int i) {
-        showDialog(i);
     }
-
+    private void getFaktur(){
+//        db.exc("INSERT INTO tbllaundry (total) VALUES (0)");
+        List<Integer> idLaundry = new ArrayList<Integer>();
+        String q="SELECT idlaundry FROM tbllaundry";
+        Cursor c = db.sq(q);
+        if (c.moveToNext()){
+            do {
+                idLaundry.add(Modul.getIntFromCol(c,0));
+            }while (c.moveToNext());
+        }
+        String tempFaktur="";
+        int IdFaktur=0;
+        if (Modul.getCount(c)==0){
+            tempFaktur=faktur.substring(0,faktur.length()-1)+"1";
+        }else {
+            IdFaktur = idLaundry.get(Modul.getCount(c)-1)+1;
+            tempFaktur = faktur.substring(0,faktur.length()-String.valueOf(IdFaktur).length())+String.valueOf(IdFaktur);
+        }
+        Modul.setText(v,R.id.edtFaktur,tempFaktur);
+    }
+    private void setEdit(String pegawai,String pelanggan,String jasa,String biaya,String kategori,String satuan){
+        Modul.setText(v,R.id.namaPegawaiLaundry,pegawai);
+        Modul.setText(v,R.id.NamaPelanggan,pelanggan);
+        Modul.setText(v,R.id.Jasa,jasa);
+        Modul.setText(v,R.id.HargaJasa,biaya);
+        tvSatuan=(TextView) findViewById(R.id.tvSatuan);
+        if (tSatuan.equals("pc")){
+            tvSatuan.setText("/Pcs");
+//            tvSatuan.setVisibility(View.VISIBLE);
+        }else if (tSatuan.equals("kg")){
+            tvSatuan.setText("/Kg");
+//            tvSatuan.setVisibility(View.VISIBLE);
+        }else if (tSatuan.equals("m2")){
+            tvSatuan.setText("/M²");
+//            tvSatuan.setVisibility(View.VISIBLE);
+        }
+    }
     private void btnCari(){
         btnCariPegawai= findViewById(R.id.ibtnCariPegawai);
         btnCariPegawai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(MenuTerimaLaundry.this,ActivityTransaksiCari.class);
+                Intent i= new Intent(MenuTerimaLaundry.this,TransaksiCariLaundry.class);
                 i.putExtra("cari","pegawai");
                 startActivityForResult(i,1000);
             }
         });
-        btnCariPelanggan=(ImageButton)findViewById(R.id.ibtnNamaPelanggan);
+        btnCariPelanggan= findViewById(R.id.ibtnCariPelanggan);
         btnCariPelanggan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(ActivityTransaksiTerima.this,ActivityTransaksiCari.class);
+                Intent i= new Intent(MenuTerimaLaundry.this,TransaksiCariLaundry.class);
                 i.putExtra("cari","pelanggan");
                 startActivityForResult(i,2000);
             }
         });
-        btnCariJasa=(ImageButton)findViewById(R.id.ibtnJasa);
+        btnCariJasa= findViewById(R.id.ibtnJasa);
         btnCariJasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(ActivityTransaksiTerima.this,ActivityTransaksiCari.class);
+                Intent i= new Intent(MenuTerimaLaundry.this,TransaksiCariLaundry.class);
                 i.putExtra("cari","jasa");
                 startActivityForResult(i,3000);
             }
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode==1000){
+            tIdpegawai=data.getIntExtra("idpegawai",0);
+            tnPegawai=data.getStringExtra("namapegawai");
+        }else if (resultCode==2000){
+            tIdpelanggan=data.getIntExtra("idpelanggan",0);
+            tnPelanggan=data.getStringExtra("namapelanggan");
+        }else if (resultCode==3000){
+            tIdjasa=data.getIntExtra("idjasa",0);
+            tIdkategori=data.getIntExtra("idkategori",0);
+            tnJasa=data.getStringExtra("namajasa");
+            tKategori=data.getStringExtra("kategorijasa");
+            tBiaya=data.getStringExtra("biayajasa");
+            tSatuan=data.getStringExtra("satuanjasa");
+        }
+
+    }
+
+    public void setDate(int i) {
+        showDialog(i);
+    }
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        // TODO Auto-generated method stub
+        if (id == 1) {
+            return new DatePickerDialog(this, dTerima, year, month, day);
+        }else if (id==2){
+            return new DatePickerDialog(this, dSelesai, year, month, day);
+        }
+        return null;
+    }
+    private DatePickerDialog.OnDateSetListener dTerima = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker arg0, int thn, int bln, int day) {
+            Modul.setText(v, R.id.TanggalMulai, Modul.setDatePickerNormal(thn,bln+1,day)) ;
+        }
+    };
+    private DatePickerDialog.OnDateSetListener dSelesai = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker arg0, int thn, int bln, int day) {
+            Modul.setText(v, R.id.TanggalKembali, Modul.setDatePickerNormal(thn,bln+1,day)) ;
+        }
+    };
+
+    private void setJumlah(Integer jumlah, String biaya){
+        Modul.setText(v,R.id.edtJumlah,String.valueOf(jumlah));
+        if (biaya.equals("")){
+//            btnAddJ.setVisibility(View.INVISIBLE);
+        }else {
+//            btnAddJ.setVisibility(View.VISIBLE);
+        }
+        if (jumlah<1){
+//            btnRemoveJ.setVisibility(View.INVISIBLE);
+        }else {
+//            btnRemoveJ.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String kat="";
+        tJumlah=0;
+        Modul.setText(v,R.id.edtJumlah,"0");
+        kat=tKategori;
+        if (!kat.equals("")){
+            kat=tKategori+" - "+tnJasa;
+        }
+        if (!tBiaya.equals("")){
+            setJumlah(0,tBiaya);
+        }
+        setEdit(tnPegawai,tnPelanggan,kat,tBiaya,tKategori,tSatuan);
+    }
+    private void keluar(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.create();
+        builder.setTitle("Anda yakin ingin keluar?");
+        builder.setMessage("Setelah keluar data faktur ini akan hilang");
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String faktur=Modul.getText(v,R.id.edtFaktur);
+                db.exc("DELETE FROM tbllaundry WHERE idlaundry="+Integer.valueOf(faktur));
+                finish();
+            }
+        }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        }).show();
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (status.equals("terima")){
+            keluar();
+        }else if (status.equals("update")){
+            finish();
+        }
+    }
+
+    public String convertDate(String date){
+        String[] a = date.split("/") ;
+        return a[2]+a[1]+a[0];
+    }
+
+    public void insertTransaksi(View view) {
+        String eFaktur = Modul.getText(v,R.id.edtFaktur);
+        String eTglT = Modul.getText(v,R.id.TanggalMulai);
+        String eTglS = Modul.getText(v,R.id.TanggalKembali);
+        String eNPegawai = Modul.getText(v,R.id.namaPegawaiLaundry);
+        String eNPelanggan = Modul.getText(v,R.id.NamaPelanggan);
+        String eJasa = Modul.getText(v,R.id.edtJasa);
+        String eHarga = Modul.unNumberFormat(Modul.getText(v,R.id.HargaJasa));
+        String eJumlah = Modul.unNumberFormat(Modul.getText(v,R.id.edtJumlah));
+        String eKet = Modul.getText(v,R.id.edtKeterangan).replace("\n","  ");
+        if (TextUtils.isEmpty(eTglS) || TextUtils.isEmpty(eNPegawai) || TextUtils.isEmpty(eNPelanggan) || TextUtils.isEmpty(eJasa) || TextUtils.isEmpty(eJumlah) || Modul.strToDouble(eHarga)==0 || Modul.strToDouble(eJumlah)==0){
+            Toast.makeText(this, "Masukkan data dengan benar!", Toast.LENGTH_SHORT).show();
+        }else {
+            String idPelanggan=String.valueOf(tIdpelanggan);
+            String idPegawai=String.valueOf(tIdpegawai);
+            String idJasa=String.valueOf(tIdjasa);
+            Integer idlaundry = Integer.valueOf(eFaktur);
+            Double bay = Modul.strToDouble(eHarga) * Modul.strToDouble(eJumlah);
+            String qLaundryD,qLaundry ;
+            String[] detail ={
+                    idJasa,
+                    String.valueOf(idlaundry),
+                    eJumlah,
+                    String.valueOf(bay),
+                    eKet
+            };
+            String[] simpan = {
+                    String.valueOf(idlaundry),
+                    idPelanggan,
+                    idPegawai,
+                    eFaktur,
+                    convertDate(eTglT),
+                    convertDate(eTglS)
+            } ;
+
+            String q = Query.selectwhere("tbllaundry")+Query.sWhere("faktur",eFaktur);
+            Cursor c = db.sq(q);
+            if (Modul.getCount(c)==0){
+                qLaundry= Query.splitParam("INSERT INTO tbllaundry (idlaundry,idpelanggan,idpegawai,faktur,tgllaundry,tglselesai) VALUES (?,?,?,?,?,?)",simpan);
+                qLaundryD=Query.splitParam("INSERT INTO tbllaundrydetail (idjasa,idlaundry,jumlahlaundry,biayalaundry,keterangan) VALUES (?,?,?,?,?)",detail);
+            }
+            else {
+                qLaundry="UPDATE tbllaundry SET " +
+                        "idpelanggan=" +idPelanggan+","+
+                        "idpegawai=" +idPegawai+","+
+                        "tgllaundry="+convertDate(eTglT)+","+
+                        "tglselesai="+convertDate(eTglS)+
+                        " WHERE idlaundry=" +String.valueOf(idlaundry);
+                qLaundryD=Query.splitParam("INSERT INTO tbllaundrydetail (idjasa,idlaundry,jumlahlaundry,biayalaundry,keterangan) VALUES (?,?,?,?,?)",detail);
+            }
+
+            if (db.exc(qLaundry)&&db.exc(qLaundryD)){
+                Toast.makeText(this, "Sukses!", Toast.LENGTH_SHORT).show();
+                getTotal();
+                clearText();
+                loadCart();
+            }
+        }
+    }
+    public void getTotal(){
+        double total=0.0;
+        int idlaundry=Integer.valueOf(Modul.getText(v,R.id.edtFaktur));
+        Cursor c=db.sq("SELECT SUM(biayalaundry) FROM tbllaundrydetail WHERE idlaundry="+String.valueOf(idlaundry));
+        double sum=0.0;
+        if (c.moveToFirst()){
+            sum = c.getDouble(0);
+        }
+        total=total+sum;
+        totalbayar=String.valueOf(total);
+        Modul.setText(v,R.id.tvTotalbayar,"Rp. "+Modul.removeE(totalbayar));
+    }
     public void loadCart(){
         RecyclerView recyclerView=(RecyclerView) findViewById(R.id.recTransaksi);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -186,60 +404,73 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         }
         adapter.notifyDataSetChanged();
     }
-
-    public void getTotal(){
-        double total=0.0;
-        int idlaundry=Integer.valueOf(Modul.getText(v,R.id.edtFaktur));
-        Cursor c=db.sq("SELECT SUM(biayalaundry) FROM tbllaundrydetail WHERE idlaundry="+String.valueOf(idlaundry));
-        double sum=0.0;
-        if (c.moveToFirst()){
-            sum = c.getDouble(0);
-        }
-        total=total+sum;
-        totalbayar=String.valueOf(total);
-        Modul.setText(v,R.id.tvTotalbayar,"Rp. "+Modul.removeE(totalbayar));
+    private void clearText(){
+        Modul.setText(v,R.id.edtJasa,"");
+        Modul.setText(v,R.id.HargaJasa,"");
+        Modul.setText(v,R.id.edtJumlah,"");
+        Modul.setText(v,R.id.edtKeterangan,"");
+        setJumlah(0,"");
     }
 
-    private void getFaktur(){
-//        db.exc("INSERT INTO tbllaundry (total) VALUES (0)");
-        List<Integer> idLaundry = new ArrayList<Integer>();
-        String q="SELECT idlaundry FROM tbllaundry";
-        Cursor c = db.sq(q);
-        if (c.moveToNext()){
-            do {
-                idLaundry.add(Modul.getIntFromCol(c,0));
-            }while (c.moveToNext());
-        }
-        String tempFaktur="";
-        int IdFaktur=0;
-        if (Modul.getCount(c)==0){
-            tempFaktur=faktur.substring(0,faktur.length()-1)+"1";
+    public void simpan(View view) {
+        String eTglS = Modul.getText(v,R.id.TanggalKembali);
+        String eNPegawai = Modul.getText(v,R.id.namaPegawaiLaundry);
+        String eNPelanggan = Modul.getText(v,R.id.NamaPelanggan);
+        final String faktur=Modul.getText(v,R.id.edtFaktur);
+        String pelanggan=Modul.getText(v,R.id.NamaPelanggan);
+
+        Cursor c=db.sq("SELECT * FROM qcart WHERE faktur='"+faktur+"'");
+        isikeranjang=Modul.getCount(c);
+        if (TextUtils.isEmpty(eTglS) || TextUtils.isEmpty(eNPegawai) || TextUtils.isEmpty(eNPelanggan)||isikeranjang==0){
+            Toast.makeText(this, "Masukkan data dengan benar!", Toast.LENGTH_SHORT).show();
         }else {
-            IdFaktur = idLaundry.get(Modul.getCount(c)-1)+1;
-            tempFaktur = faktur.substring(0,faktur.length()-String.valueOf(IdFaktur).length())+String.valueOf(IdFaktur);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.create()
+                    .setTitle("Anda Yakin?");
+            builder.setMessage("Anda yakin ingin menyimpan pesanan \n"+faktur+" - "+pelanggan)
+                    .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            if (db.exc("UPDATE tbllaundry SET total="+totalbayar+" WHERE faktur='"+faktur+"'")){
+                                berhasil();
+                            }else {
+                                Toast.makeText(MenuTerimaLaundry.this, "Gagal", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    })
+                    .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    })
+                    .show();
         }
-        Modul.setText(v,R.id.edtFaktur,tempFaktur);
+
     }
-
-
-    public void add(){
-        String faktur = Faktur.getText().toString();
-        String tanggalmulai = TanggalMulai.getText().toString();
-        String tanggalkembali = TanggalKembali.getText().toString();
-        String namapelanggan = NamaPelanggan.getText().toString();
-        String namapegawai = NamaPegawai.getText().toString();
-        String hargajasa = HargaJasa.getText().toString();
-        String jumlah = Jumlah.getText().toString();
-        if(TextUtils.isEmpty(faktur)){
-            Toast.makeText(this, "Mohon Isi Dulu", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            db.exc("insert into qproses (faktur,tgllaundry,tglselesai,total,statuslaundry,statusbayar,pelanggan,alamat,notelp) values ('"+ faktur +"','"+ tanggalmulai +"','"+ tanggalkembali +"','"+ namapelanggan +"','"+ namapegawai +"','"+ hargajasa +"','"+ jumlah +"')");
-            finish();
-        }
+    private void berhasil(){
+        final Intent i = new Intent(this,TransaksiCariLaundry.class);
+        final String faktur=Modul.getText(v,R.id.edtFaktur);
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.create();
+        builder.setMessage("Simpan data berhasil");
+        builder.setPositiveButton("Cetak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                        i.putExtra("faktur",faktur);
+                        startActivity(i);
+                    }
+                }).setNegativeButton("Keluar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setCancelable(false)
+                .show();
     }
 }
-
 class AdapterTransaksi extends RecyclerView.Adapter<AdapterTransaksi.TransaksiViewHolder>{
     private Context ctxAdapter;
     private ArrayList<String> data;
@@ -275,7 +506,7 @@ class AdapterTransaksi extends RecyclerView.Adapter<AdapterTransaksi.TransaksiVi
         holder.hapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final DatabaseLaundry db=new DatabaseLaundry(ctxAdapter);
+                final LaundryDatabase db=new LaundryDatabase(ctxAdapter);
                 AlertDialog.Builder builder=new AlertDialog.Builder(ctxAdapter);
                 builder.create();
                 builder.setMessage("Anda yakin ingin menghapusnya?")
