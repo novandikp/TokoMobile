@@ -3,12 +3,7 @@ package com.itbrain.aplikasitoko;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -20,12 +15,14 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.itbrain.aplikasitoko.Model.JasaLaundry;
-import com.itbrain.aplikasitoko.Model.Pegawai;
-import com.itbrain.aplikasitoko.Model.PelangganLaundry;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,9 +30,9 @@ import java.util.List;
 public class TransaksiCariLaundry extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    List<Pegawai> DaftarPegawai;
-    List<PelangganLaundry> DaftarPelanggan;
-    List<JasaLaundry> DaftarJasa;
+    List<getterPegawai> DaftarPegawai;
+    List<getterPelanggan> DaftarPelanggan;
+    List<getterJasa> DaftarJasa;
     DatabaseLaundry db;
     AdapterListPegawaiCari adapterPegawai;
     AdapterListPelangganCari adapterPelanggan;
@@ -63,7 +60,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
             Modul.btnBack("Cari Jasa",getSupportActionBar());
             spinner = (Spinner)findViewById(R.id.spKatCari);
             getKategoriData();
-            spinner.setVisibility(View.VISIBLE);
+//            spinner.setVisibility(View.VISIBLE);
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -112,7 +109,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private void getKategoriData(){
-        LaundryDatabase db = new LaundryDatabase(this);
+        DatabaseLaundry db = new DatabaseLaundry(this);
         List<String> labels = db.getKategori();
 
         ArrayAdapter<String> data = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,labels);
@@ -131,14 +128,14 @@ public class TransaksiCariLaundry extends AppCompatActivity {
         recyclerView.setAdapter(adapterPegawai);
         String q;
         if (TextUtils.isEmpty(keyword)){
-            q="SELECT * FROM tblpegawai";
+            q="SELECT * FROM tblpegawai where idpegawai !=0";
         }else {
-            q="SELECT * FROM tblpegawai WHERE pegawai LIKE '%"+keyword+"%'"+ Query.sOrderASC("pegawai");
+            q="SELECT * FROM tblpegawai WHERE pegawai LIKE '%"+keyword+"%' "+Query.sOrderASC("pegawai");
         }
         Cursor c=db.sq(q);
         if (Modul.getCount(c)>0){
             while(c.moveToNext()){
-                DaftarPegawai.add(new Pegawai(
+                DaftarPegawai.add(new getterPegawai(
                         Modul.getInt(c,"idpegawai"),
                         Modul.getString(c,"pegawai"),
                         Modul.getString(c,"alamatpegawai"),
@@ -161,7 +158,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
 
         String q;
         if (TextUtils.isEmpty(keyword)){
-            q="SELECT * FROM tblpelanggan";
+            q="SELECT * FROM tblpelanggan where idpelanggan !=0";
         }else {
             q="SELECT * FROM tblpelanggan WHERE pelanggan LIKE '%"+keyword+"%'"+Query.sOrderASC("pelanggan");
         }
@@ -169,7 +166,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
         Cursor c = db.sq(q);
         if (Modul.getCount(c)>0){
             while(c.moveToNext()){
-                DaftarPelanggan.add(new PelangganLaundry(
+                DaftarPelanggan.add(new getterPelanggan(
                         Modul.getInt(c,"idpelanggan"),
                         Modul.getString(c,"pelanggan"),
                         Modul.getString(c,"alamat"),
@@ -208,12 +205,13 @@ public class TransaksiCariLaundry extends AppCompatActivity {
         Cursor c=db.sq(q);
         if (Modul.getCount(c)>0){
             while(c.moveToNext()){
-                DaftarJasa.add(new JasaLaundry(
+                DaftarJasa.add(new getterJasa(
                         Modul.getInt(c,"idjasa"),
                         Modul.getInt(c,"idkategori"),
                         Modul.getString(c,"kategori"),
                         Modul.getString(c,"jasa"),
-                        Modul.removeE(Modul.getString(c,"biaya"))
+                        Modul.removeE(Modul.getString(c,"biaya")),
+                        Modul.getString(c,"satuan")
                 ));
             }
         }
@@ -222,11 +220,11 @@ public class TransaksiCariLaundry extends AppCompatActivity {
 
     public void tambahdata(View view) {
         if (a.equals("pegawai")){
-            startActivity(new Intent(this, MenuPegawaiLaundry.class));
+            startActivity(new Intent(this,MenuPegawaiLaundry.class));
         }else if (a.equals("pelanggan")){
-            startActivity(new Intent(this, MenuPelangganLaundry.class));
+            startActivity(new Intent(this,MenuPelangganLaundry.class));
         }else if (a.equals("jasa")){
-            startActivity(new Intent(this, MenuUbahJasaLaundry.class));
+            startActivity(new Intent(this,MenuUbahJasaLaundry.class));
         }
     }
 
@@ -245,9 +243,9 @@ public class TransaksiCariLaundry extends AppCompatActivity {
 }
 class AdapterListPegawaiCari extends RecyclerView.Adapter<AdapterListPegawaiCari.PegawaiCariViewHolder>{
     private Context ctxAdapter;
-    private List<Pegawai> data;
+    private List<getterPegawai> data;
 
-    public AdapterListPegawaiCari(Context ctxAdapter, List<Pegawai> data) {
+    public AdapterListPegawaiCari(Context ctxAdapter, List<getterPegawai> data) {
         this.ctxAdapter = ctxAdapter;
         this.data = data;
     }
@@ -258,21 +256,21 @@ class AdapterListPegawaiCari extends RecyclerView.Adapter<AdapterListPegawaiCari
         View view = inflater.inflate(R.layout.laundryitemdaftarpegawai,viewGroup,false);
         return new PegawaiCariViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull PegawaiCariViewHolder holder, int i) {
-        final Pegawai getter = data.get(i);
-
-        holder.nama.setText(getter.getPegawai());
-        holder.alamat.setText(getter.getAlamatpegawai());
-        holder.telp.setText(getter.getNotelppegawai());
-
+        final getterPegawai getter = data.get(i);
+        holder.nama.setText(getter.getNamaPegawai());
+        holder.alamat.setText(getter.getAlamatPegawai());
+        holder.telp.setText(getter.getNotelpPegawai());
+//        holder.optMuncul.setVisibility(View.GONE);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent terima = new Intent(ctxAdapter, MenuTerimaLaundry.class);
-                terima.putExtra("idpegawai",getter.getIdpegawai());
-                terima.putExtra("namapegawai",getter.getPegawai());
+                Intent terima = new Intent(ctxAdapter,MenuTerimaLaundry.class);
+                terima.putExtra("idpegawai",getter.getIdPegawai());
+                terima.putExtra("namapegawai",getter.getNamaPegawai());
+                terima.putExtra("alamatpegawai",getter.getAlamatPegawai());
+                terima.putExtra("notelppegawai",getter.getNotelpPegawai());
                 ((TransaksiCariLaundry)ctxAdapter).setResult(1000,terima);
                 ((TransaksiCariLaundry)ctxAdapter).finish();
             }
@@ -286,19 +284,21 @@ class AdapterListPegawaiCari extends RecyclerView.Adapter<AdapterListPegawaiCari
 
     class PegawaiCariViewHolder extends RecyclerView.ViewHolder{
         private TextView nama,alamat,telp;
+        ImageView optMuncul;
         public PegawaiCariViewHolder(@NonNull View itemView) {
             super(itemView);
             nama=(TextView) itemView.findViewById(R.id.namaPegawai);
             alamat=(TextView) itemView.findViewById(R.id.alamatPegawai);
             telp=(TextView) itemView.findViewById(R.id.notelpPegawai);
+            optMuncul = itemView.findViewById(R.id.optMuncul);
         }
     }
 }
 class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelangganCari.PelangganCariViewHolder>{
     private Context ctxAdapter;
-    private List<PelangganLaundry> data;
+    private List<getterPelanggan> data;
 
-    public AdapterListPelangganCari(Context ctxAdapter, List<PelangganLaundry> data) {
+    public AdapterListPelangganCari(Context ctxAdapter, List<getterPelanggan> data) {
         this.ctxAdapter = ctxAdapter;
         this.data = data;
     }
@@ -306,7 +306,7 @@ class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelanggan
     @NonNull
     @Override
     public PelangganCariViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        final PelangganLaundry getter=data.get(i);
+        final getterPelanggan getter=data.get(i);
         LayoutInflater inflater = LayoutInflater.from(ctxAdapter);
         View view=inflater.inflate(R.layout.laundryitemdaftarpelanggan,viewGroup,false);
         return new PelangganCariViewHolder(view);
@@ -314,17 +314,21 @@ class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelanggan
 
     @Override
     public void onBindViewHolder(@NonNull PelangganCariViewHolder holder, int i) {
-        final PelangganLaundry getter=data.get(i);
+        final getterPelanggan getter=data.get(i);
 
-        holder.nama.setText(getter.getPelanggan());
-        holder.alamat.setText(getter.getAlamatpelanggan());
-        holder.telp.setText(getter.getNotelppelanggan());
+        holder.nama.setText(getter.getNamaPelanggan());
+        holder.alamat.setText(getter.getAlamatPelanggan());
+        holder.telp.setText(getter.getNotelpPelanggan());
+        holder.hutang.setVisibility(View.GONE);
+        holder.optMuncul.setVisibility(View.GONE);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent terima = new Intent(ctxAdapter,MenuTerimaLaundry.class);
-                terima.putExtra("idpelanggan",getter.getIdpelanggan());
-                terima.putExtra("namapelanggan",getter.getPelanggan());
+                terima.putExtra("idpelanggan",getter.getIdPelanggan());
+                terima.putExtra("namapelanggan",getter.getNamaPelanggan());
+                terima.putExtra("alamatpelanggan",getter.getAlamatPelanggan());
+                terima.putExtra("notelppelanggan",getter.getNotelpPelanggan());
                 ((TransaksiCariLaundry)ctxAdapter).setResult(2000,terima);
                 ((TransaksiCariLaundry)ctxAdapter).finish();
             }
@@ -338,20 +342,22 @@ class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelanggan
 
     class PelangganCariViewHolder extends RecyclerView.ViewHolder{
         private TextView nama,alamat,telp,hutang;
+        ImageView optMuncul;
         public PelangganCariViewHolder(@NonNull View itemView) {
             super(itemView);
             nama= (TextView)itemView.findViewById(R.id.txtNamaPelanggan);
             alamat= (TextView)itemView.findViewById(R.id.txtAlamatPelanggan);
             telp= (TextView)itemView.findViewById(R.id.txtNomerPelanggan);
-            hutang= (TextView)itemView.findViewById(R.id.txtHutang);
+            hutang = itemView.findViewById(R.id.txtHutang);
+            optMuncul = itemView.findViewById(R.id.optMuncul);
         }
     }
 }
 class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaCariViewHolder>{
     private Context ctxAdapter;
-    private List<JasaLaundry> data;
+    private List<getterJasa> data;
 
-    public AdapterListJasaCari(Context ctxAdapter, List<JasaLaundry> data) {
+    public AdapterListJasaCari(Context ctxAdapter, List<getterJasa> data) {
         this.ctxAdapter = ctxAdapter;
         this.data = data;
     }
@@ -359,7 +365,7 @@ class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaC
     @NonNull
     @Override
     public JasaCariViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        final JasaLaundry getter=data.get(i);
+        final getterJasa getter=data.get(i);
         LayoutInflater inflater = LayoutInflater.from(ctxAdapter);
         View view=inflater.inflate(R.layout.laundryitemdaftarjasa,viewGroup,false);
         return new JasaCariViewHolder(view);
@@ -367,9 +373,10 @@ class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaC
 
     @Override
     public void onBindViewHolder(@NonNull JasaCariViewHolder holder, int i) {
-        final JasaLaundry getter=data.get(i);
+        final getterJasa getter=data.get(i);
         holder.nama.setText(getter.getJasa());
         holder.biaya.setText("Rp."+getter.getBiaya());
+        holder.optMuncul.setVisibility(View.GONE);
         if(getter.getSatuan().equals("pc")){
             holder.satuan.setText("/Pcs");
         }else if (getter.getSatuan().equals("kg")){
@@ -401,12 +408,14 @@ class AdapterListJasaCari extends RecyclerView.Adapter<AdapterListJasaCari.JasaC
 
     class JasaCariViewHolder extends RecyclerView.ViewHolder{
         TextView nama,biaya,satuan,kategori;
+        ImageView optMuncul;
         public JasaCariViewHolder(@NonNull View itemView) {
             super(itemView);
             nama=(TextView)itemView.findViewById(R.id.edtDaftarKategori);
             biaya=(TextView)itemView.findViewById(R.id.edtSatuan);
             satuan=(TextView)itemView.findViewById(R.id.edtjenisSatuan);
             kategori=(TextView)itemView.findViewById(R.id.tvKategoriJasa);
+            optMuncul = itemView.findViewById(R.id.optMuncul);
         }
     }
 }
