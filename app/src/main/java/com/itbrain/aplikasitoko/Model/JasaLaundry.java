@@ -52,7 +52,7 @@ public class JasaLaundry{
         this.biaya = biaya;
     }
 
-    public JasaLaundry(int idJasa, int idKategori, String kategori, String jasa, String biaya) {
+    public JasaLaundry(int idJasa, int idKategori, String string, String kategori, String jasa, String biaya) {
         this.idJasa = idJasa;
         this.idKategori = idKategori;
         this.kategori = kategori;

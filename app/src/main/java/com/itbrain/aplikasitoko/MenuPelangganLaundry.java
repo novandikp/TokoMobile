@@ -1,9 +1,6 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuPelangganLaundry extends AppCompatActivity {
     EditText NamaPelanggan,AlamatPelanggan,NomerPelanggan,Hutang;
@@ -21,7 +18,7 @@ public class MenuPelangganLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getSupportActionBar().hide();
         setContentView(R.layout.menupelangganlaundry);
         Simpan = (Button) findViewById(R.id.Simpan);
         NamaPelanggan = (EditText) findViewById(R.id.NamaPelanggan);
@@ -52,7 +49,9 @@ public class MenuPelangganLaundry extends AppCompatActivity {
 
     public void Kembali(View view) {
         Intent intent = new Intent(MenuPelangganLaundry.this, MenuDaftarPelangganLaundry.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 
     public boolean isUpdate(){

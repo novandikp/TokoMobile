@@ -1,9 +1,9 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 class LaundryitemDaftarPelanggan extends AppCompatActivity {
     TextView NamaPelanggan,Alamat,NomorTelepon,Hutang;

@@ -2,11 +2,11 @@ package com.itbrain.aplikasitoko;
 
 import static com.itbrain.aplikasitoko.R.layout.menu_cetak_kwitansi_cetakkwitansi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CetakKwitansiMenuCetakKwitansi extends AppCompatActivity {
 

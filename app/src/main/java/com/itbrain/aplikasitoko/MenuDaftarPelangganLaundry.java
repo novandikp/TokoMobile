@@ -1,11 +1,5 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,7 +17,12 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.itbrain.aplikasitoko.Model.JasaLaundry;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.itbrain.aplikasitoko.Model.PelangganLaundry;
 
 import java.util.ArrayList;
@@ -41,6 +40,7 @@ public class MenuDaftarPelangganLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menu_daftar_pelanggan_laundry);
         DaftarPelanggan = findViewById(R.id.DaftarPelanggan);
         datapelanggan = new ArrayList<>();
@@ -165,7 +165,7 @@ class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdap
                             case R.id.ubah:
 //                                context.startActivity(new Intent(context, MenuPelangganLaundry.class).putExtra("idpelanggan",pelanggan.getIdpelanggan()));
 //                                ((MenuDaftarPelangganLaundry)context).finish();
-                                LaundryDatabase db = new LaundryDatabase(context);
+                                DatabaseLaundry db = new DatabaseLaundry(context);
                                 Intent intent = new Intent(context,MenuPelangganLaundry.class);
                                 intent.putExtra("idpelanggan",pelanggan.getIdpelanggan());
                                 intent.putExtra("pelanggan",pelanggan.getPelanggan());
@@ -179,7 +179,7 @@ class PelangganLaundryAdapater extends RecyclerView.Adapter<PelangganLaundryAdap
                                 builder.setPositiveButton("Ya!", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        LaundryDatabase db = new LaundryDatabase(context);
+                                        DatabaseLaundry db = new DatabaseLaundry(context);
                                         if (db.deletePelanggan(pelanggan.getIdpelanggan())){
                                             Pelanggan.remove(Position);
                                             notifyItemChanged(Position);

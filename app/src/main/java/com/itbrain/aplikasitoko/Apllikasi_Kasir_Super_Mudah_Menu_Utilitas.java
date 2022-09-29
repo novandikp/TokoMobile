@@ -1,8 +1,8 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Apllikasi_Kasir_Super_Mudah_Menu_Utilitas extends AppCompatActivity {
 

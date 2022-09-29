@@ -1,11 +1,5 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,6 +16,12 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.itbrain.aplikasitoko.Model.Pegawai;
 
@@ -40,6 +40,7 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menu_daftar_pegawai_laundry);
         DaftarPegawai = findViewById(R.id.daftarPegawai);
         datapegawai = new ArrayList<>();
@@ -74,7 +75,9 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
 
     public void Kembali(View view) {
         Intent intent = new Intent(MenuDaftarPegawaiLaundry.this, LaundryMenuMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 
 //    public void popMenu(View v){
@@ -163,7 +166,7 @@ class PegawaiLaundryAdapater extends RecyclerView.Adapter<PegawaiLaundryAdapater
                             case R.id.ubah:
 //                                context.startActivity(new Intent(context, MenuPelangganLaundry.class).putExtra("idpelanggan",pelanggan.getIdpelanggan()));
 //                                ((MenuDaftarPelangganLaundry)context).finish();
-//                                LaundryDatabase db = new LaundryDatabase(context);
+//                                DatabaseLaundry db = new DatabaseLaundry(context);
                                 Intent intent = new Intent(context,MenuPegawaiLaundry.class);
                                 intent.putExtra("idpegawai",pegawai.getIdpegawai());
                                 intent.putExtra("pegawai",pegawai.getPegawai());
@@ -176,7 +179,7 @@ class PegawaiLaundryAdapater extends RecyclerView.Adapter<PegawaiLaundryAdapater
                                 builder.setPositiveButton("Ya!", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        LaundryDatabase db = new LaundryDatabase(context);
+                                        DatabaseLaundry db = new DatabaseLaundry(context);
                                         if (db.deletePegawai(pegawai.getIdpegawai())){
                                             Pegawai.remove(Position);
                                             notifyItemChanged(Position);
@@ -220,5 +223,32 @@ class PegawaiLaundryAdapater extends RecyclerView.Adapter<PegawaiLaundryAdapater
             noTelpPegawai = itemView.findViewById(R.id.notelpPegawai);
             optMuncul = itemView.findViewById(R.id.optMuncul);
         }
+    }
+}
+class getterPegawai{
+    private int idPegawai;
+    private String namaPegawai,alamatPegawai,notelpPegawai;
+
+    public getterPegawai(int idPegawai, String namaPegawai, String alamatPegawai, String notelpPegawai) {
+        this.idPegawai = idPegawai;
+        this.namaPegawai = namaPegawai;
+        this.alamatPegawai = alamatPegawai;
+        this.notelpPegawai = notelpPegawai;
+    }
+
+    public int getIdPegawai() {
+        return idPegawai;
+    }
+
+    public String getNamaPegawai() {
+        return namaPegawai;
+    }
+
+    public String getAlamatPegawai() {
+        return alamatPegawai;
+    }
+
+    public String getNotelpPegawai() {
+        return notelpPegawai;
     }
 }

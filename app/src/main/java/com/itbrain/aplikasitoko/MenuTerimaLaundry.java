@@ -7,27 +7,23 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.Build;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.itbrain.aplikasitoko.NumberTextWatcher;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -51,8 +47,8 @@ public class MenuTerimaLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menuterimalaundry);
-
         db=new DatabaseLaundry(this);
         v = this.findViewById(android.R.id.content);
 
@@ -61,36 +57,37 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-//        status = getIntent().getStringExtra("status");
-//        updateFaktur = getIntent().getStringExtra("faktur");
-//
-//        if (status.equals("terima")){
-//            getFaktur();
-//            Modul.setText(v, R.id.TanggalMulai,Modul.getDate("dd/MM/yyyy"));
-//            Modul.setText(v, R.id.TanggalKembali,Modul.getDate("dd/MM/yyyy"));
-//            Cursor c1 = db.sq(Query.selectwhere("tblpegawai")+Query.sWhere("idpegawai","0"));
-//            c1.moveToFirst();
-//            Cursor c2 = db.sq(Query.selectwhere("tblpelanggan")+Query.sWhere("idpelanggan","0"));
-//            c2.moveToFirst();
-//            tIdpegawai=Modul.getInt(c1,"idpegawai");
-//            tnPegawai=Modul.getString(c1,"pegawai");
-//            tIdpelanggan=Modul.getInt(c2,"idpelanggan");
-//            tnPelanggan=Modul.getString(c2,"pelanggan");
-//        }else if (status.equals("update")){
-//            Modul.setText(v,R.id.edtFaktur,updateFaktur);
-//            loadCart();
-//            String q="SELECT * FROM qlaundry WHERE faktur='"+updateFaktur+"'";
-//            Cursor c=db.sq(q);
-//            c.moveToNext();
-//
-//            Modul.setText(v,R.id.TanggalMulai,Modul.dateToNormal(Modul.getString(c,"tgllaundry")));
-//            Modul.setText(v,R.id.TanggalKembali,Modul.dateToNormal(Modul.getString(c,"tglselesai")));
-//            tIdpegawai=Modul.getInt(c,"idpegawai");
-//            tnPegawai=Modul.getString(c,"pegawai");
-//            tIdpelanggan=Modul.getInt(c,"idpelanggan");
-//            tnPelanggan=Modul.getString(c,"pelanggan");
-//            getTotal();
-//        }
+        status = getIntent().getStringExtra("status");
+        updateFaktur = getIntent().getStringExtra("faktur");
+        String terima ="terima";
+        String update ="update";
+        if (terima.equals("terima")){
+            getFaktur();
+            Modul.setText(v, R.id.TanggalMulai,Modul.getDate("dd/MM/yyyy"));
+            Modul.setText(v, R.id.TanggalKembali,Modul.getDate("dd/MM/yyyy"));
+            Cursor c1 = db.sq(Query.selectwhere("tblpegawai")+Query.sWhere("idpegawai","0"));
+            c1.moveToFirst();
+            Cursor c2 = db.sq(Query.selectwhere("tblpelanggan")+Query.sWhere("idpelanggan","0"));
+            c2.moveToFirst();
+            tIdpegawai=Modul.getInt(c1,"idpegawai");
+            tnPegawai=Modul.getString(c1,"pegawai");
+            tIdpelanggan=Modul.getInt(c2,"idpelanggan");
+            tnPelanggan=Modul.getString(c2,"pelanggan");
+        }else if (update.equals("update")){
+            Modul.setText(v,R.id.edtFaktur,updateFaktur);
+            loadCart();
+            String q="SELECT * FROM qlaundry WHERE faktur='"+updateFaktur+"'";
+            Cursor c=db.sq(q);
+            c.moveToNext();
+
+            Modul.setText(v,R.id.TanggalMulai,Modul.dateToNormal(Modul.getString(c,"tgllaundry")));
+            Modul.setText(v,R.id.TanggalKembali,Modul.dateToNormal(Modul.getString(c,"tglselesai")));
+            tIdpegawai=Modul.getInt(c,"idpegawai");
+            tnPegawai=Modul.getString(c,"pegawai");
+            tIdpelanggan=Modul.getInt(c,"idpelanggan");
+            tnPelanggan=Modul.getString(c,"pelanggan");
+            getTotal();
+        }
 
         btnCari();
 
@@ -157,17 +154,17 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         tvSatuan=(TextView) findViewById(R.id.tvSatuan);
         if (tSatuan.equals("pc")){
             tvSatuan.setText("/Pcs");
-//            tvSatuan.setVisibility(View.VISIBLE);
+            tvSatuan.setVisibility(View.VISIBLE);
         }else if (tSatuan.equals("kg")){
             tvSatuan.setText("/Kg");
-//            tvSatuan.setVisibility(View.VISIBLE);
+            tvSatuan.setVisibility(View.VISIBLE);
         }else if (tSatuan.equals("m2")){
             tvSatuan.setText("/M²");
-//            tvSatuan.setVisibility(View.VISIBLE);
+            tvSatuan.setVisibility(View.VISIBLE);
         }
     }
     private void btnCari(){
-        btnCariPegawai= findViewById(R.id.ibtnCariPegawai);
+        btnCariPegawai=findViewById(R.id.ibtnCariPegawai);
         btnCariPegawai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -176,7 +173,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
                 startActivityForResult(i,1000);
             }
         });
-        btnCariPelanggan= findViewById(R.id.ibtnCariPelanggan);
+        btnCariPelanggan=findViewById(R.id.ibtnCariPelanggan);
         btnCariPelanggan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,7 +182,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
                 startActivityForResult(i,2000);
             }
         });
-        btnCariJasa= findViewById(R.id.ibtnJasa);
+        btnCariJasa=findViewById(R.id.ibtnJasa);
         btnCariJasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -245,14 +242,14 @@ public class MenuTerimaLaundry extends AppCompatActivity {
     private void setJumlah(Integer jumlah, String biaya){
         Modul.setText(v,R.id.edtJumlah,String.valueOf(jumlah));
         if (biaya.equals("")){
-//            btnAddJ.setVisibility(View.INVISIBLE);
+            btnAddJ.setVisibility(View.INVISIBLE);
         }else {
-//            btnAddJ.setVisibility(View.VISIBLE);
+            btnAddJ.setVisibility(View.VISIBLE);
         }
         if (jumlah<1){
-//            btnRemoveJ.setVisibility(View.INVISIBLE);
+            btnRemoveJ.setVisibility(View.INVISIBLE);
         }else {
-//            btnRemoveJ.setVisibility(View.VISIBLE);
+            btnRemoveJ.setVisibility(View.VISIBLE);
         }
     }
 
@@ -293,9 +290,11 @@ public class MenuTerimaLaundry extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (status.equals("terima")){
+        String terima ="terima";
+        String update ="update";
+        if (terima.equals("terima")){
             keluar();
-        }else if (status.equals("update")){
+        }else if (update.equals("update")){
             finish();
         }
     }
@@ -311,7 +310,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         String eTglS = Modul.getText(v,R.id.TanggalKembali);
         String eNPegawai = Modul.getText(v,R.id.namaPegawaiLaundry);
         String eNPelanggan = Modul.getText(v,R.id.NamaPelanggan);
-        String eJasa = Modul.getText(v,R.id.edtJasa);
+        String eJasa = Modul.getText(v,R.id.Jasa);
         String eHarga = Modul.unNumberFormat(Modul.getText(v,R.id.HargaJasa));
         String eJumlah = Modul.unNumberFormat(Modul.getText(v,R.id.edtJumlah));
         String eKet = Modul.getText(v,R.id.edtKeterangan).replace("\n","  ");
@@ -405,7 +404,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
     private void clearText(){
-        Modul.setText(v,R.id.edtJasa,"");
+        Modul.setText(v,R.id.Jasa,"");
         Modul.setText(v,R.id.HargaJasa,"");
         Modul.setText(v,R.id.edtJumlah,"");
         Modul.setText(v,R.id.edtKeterangan,"");
@@ -431,7 +430,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
                     .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            if (db.exc("UPDATE tbllaundry SET total="+totalbayar+" WHERE faktur='"+faktur+"'")){
+                            if (db.exc("UPDATE tbllaundry SET total=" +totalbayar+ " WHERE faktur='"+faktur+"'")){
                                 berhasil();
                             }else {
                                 Toast.makeText(MenuTerimaLaundry.this, "Gagal", Toast.LENGTH_SHORT).show();
@@ -449,7 +448,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
 
     }
     private void berhasil(){
-        final Intent i = new Intent(this,TransaksiCariLaundry.class);
+        final Intent i = new Intent(this,MenuCetaklaundry.class);
         final String faktur=Modul.getText(v,R.id.edtFaktur);
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.create();
@@ -506,7 +505,7 @@ class AdapterTransaksi extends RecyclerView.Adapter<AdapterTransaksi.TransaksiVi
         holder.hapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final LaundryDatabase db=new LaundryDatabase(ctxAdapter);
+                final DatabaseLaundry db=new DatabaseLaundry(ctxAdapter);
                 AlertDialog.Builder builder=new AlertDialog.Builder(ctxAdapter);
                 builder.create();
                 builder.setMessage("Anda yakin ingin menghapusnya?")
@@ -572,7 +571,7 @@ class AdapterTransaksi extends RecyclerView.Adapter<AdapterTransaksi.TransaksiVi
             satuan=(TextView)itemView.findViewById(R.id.tvSatuan);
             harga=(TextView)itemView.findViewById(R.id.tvHargaJumlah);
             keterangan=(TextView)itemView.findViewById(R.id.tvKeterangan);
-            hapus=(ImageButton)itemView.findViewById(R.id.ibtnHapus);
+            hapus=itemView.findViewById(R.id.ibtnHapus);
         }
     }
 }

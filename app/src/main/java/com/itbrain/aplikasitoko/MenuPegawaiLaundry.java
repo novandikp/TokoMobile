@@ -18,6 +18,7 @@ public class MenuPegawaiLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menupegawailaundry);
         Simpan = findViewById(R.id.Simpan);
         NamaPegawai = findViewById(R.id.NamaPegawai);
@@ -48,7 +49,9 @@ public class MenuPegawaiLaundry extends AppCompatActivity {
 
     public void Kembali(View view) {
         Intent intent = new Intent(MenuPegawaiLaundry.this, MenuDaftarPegawaiLaundry.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 
     public boolean isUpdate(){

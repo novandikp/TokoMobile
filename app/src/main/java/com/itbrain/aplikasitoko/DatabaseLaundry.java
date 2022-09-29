@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import androidx.annotation.Nullable;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -383,7 +382,7 @@ public class DatabaseLaundry extends SQLiteOpenHelper {
 
     }
 
-    public Boolean insertToJasa(Integer idKat,String jasa,String biaya,String satuan){
+    public Boolean insertToJasa(Integer idKat, String jasa, String biaya, String satuan){
         ContentValues cv = new ContentValues();
         cv.put("idkategori",idKat);
         cv.put("jasa",jasa);
@@ -396,7 +395,7 @@ public class DatabaseLaundry extends SQLiteOpenHelper {
             return true;
         }
     }
-    public Boolean updateJasa(Integer idJasa,Integer idKat,String jasa,String biaya,String satuan){
+    public Boolean updateJasa(Integer idJasa, Integer idKat, String jasa, String biaya, String satuan){
         ContentValues cv = new ContentValues();
         cv.put("idkategori",idKat);
         cv.put("jasa",jasa);

@@ -1,36 +1,14 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.provider.MediaStore;
-import android.util.Base64;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuIdentitasLaundry extends AppCompatActivity {
 
@@ -42,6 +20,7 @@ public class MenuIdentitasLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menuidentitaslaundry);
         db=new DatabaseLaundry(this);
         v = this.findViewById(android.R.id.content);
@@ -68,7 +47,9 @@ public class MenuIdentitasLaundry extends AppCompatActivity {
 
     public void Keluar(View view) {
         Intent intent = new Intent(MenuIdentitasLaundry.this, LaundryMenuMaster.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 
     public void setText(){

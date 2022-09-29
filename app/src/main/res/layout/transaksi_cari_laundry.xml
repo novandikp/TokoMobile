@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".TransaksiCariLaundry">
 
+    <Spinner
+        android:id="@+id/spKatCari"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/ibtnCari"
         android:layout_width="40dp"
@@ -21,14 +33,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="Cari..."
         android:inputType="text"
         app:layout_constraintEnd_toStartOf="@+id/ibtnCari"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spKatCari" />
+        app:layout_constraintTop_toTopOf="@id/spKatCari" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recListCari"
@@ -40,22 +52,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCari" />
 
-    <Spinner
-        android:id="@+id/spKatCari"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnTambahData"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/hijaukonten"
         android:onClick="tambahdata"
         android:text="Tambah Data Baru"
-        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

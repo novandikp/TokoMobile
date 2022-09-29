@@ -60,7 +60,7 @@ public class TransaksiCariLaundry extends AppCompatActivity {
             Modul.btnBack("Cari Jasa",getSupportActionBar());
             spinner = (Spinner)findViewById(R.id.spKatCari);
             getKategoriData();
-//            spinner.setVisibility(View.VISIBLE);
+            spinner.setVisibility(View.VISIBLE);
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -128,9 +128,9 @@ public class TransaksiCariLaundry extends AppCompatActivity {
         recyclerView.setAdapter(adapterPegawai);
         String q;
         if (TextUtils.isEmpty(keyword)){
-            q="SELECT * FROM tblpegawai where idpegawai !=0";
+            q="SELECT * FROM tblpegawai where idpegawai !=0 ";
         }else {
-            q="SELECT * FROM tblpegawai WHERE pegawai LIKE '%"+keyword+"%' "+Query.sOrderASC("pegawai");
+            q="SELECT * FROM tblpegawai WHERE pegawai LIKE '%"+keyword+"%'"+Query.sOrderASC("pegawai");
         }
         Cursor c=db.sq(q);
         if (Modul.getCount(c)>0){
@@ -249,6 +249,7 @@ class AdapterListPegawaiCari extends RecyclerView.Adapter<AdapterListPegawaiCari
         this.ctxAdapter = ctxAdapter;
         this.data = data;
     }
+
     @NonNull
     @Override
     public PegawaiCariViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -262,7 +263,7 @@ class AdapterListPegawaiCari extends RecyclerView.Adapter<AdapterListPegawaiCari
         holder.nama.setText(getter.getNamaPegawai());
         holder.alamat.setText(getter.getAlamatPegawai());
         holder.telp.setText(getter.getNotelpPegawai());
-//        holder.optMuncul.setVisibility(View.GONE);
+        holder.optMuncul.setVisibility(View.GONE);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

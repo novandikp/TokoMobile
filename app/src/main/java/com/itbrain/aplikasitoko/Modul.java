@@ -3,11 +3,12 @@ package com.itbrain.aplikasitoko;
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.provider.Settings;
-import androidx.appcompat.app.ActionBar;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -357,9 +358,9 @@ public class Modul {
     }
 
     public static ActionBar btnBack(String title, ActionBar bar){
-//        bar.setDisplayShowHomeEnabled(true);
-//        bar.setDisplayHomeAsUpEnabled(true);
-//        bar.setTitle(title);
+        bar.setDisplayShowHomeEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
+        bar.setTitle(title);
         return bar;
     }
 

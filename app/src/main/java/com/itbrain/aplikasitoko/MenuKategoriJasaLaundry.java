@@ -1,19 +1,14 @@
 package com.itbrain.aplikasitoko;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-import com.itbrain.aplikasitoko.Model.Kategori;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuKategoriJasaLaundry extends AppCompatActivity {
 
@@ -25,6 +20,7 @@ public class MenuKategoriJasaLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.menukategorijasalaundry);
         Simpan = (Button) findViewById(R.id.Simpan);
         edtKategori = (EditText) findViewById(R.id.edtKategori);
@@ -47,7 +43,9 @@ public class MenuKategoriJasaLaundry extends AppCompatActivity {
 
     public void Kembali(View view) {
         Intent intent = new Intent(MenuKategoriJasaLaundry.this, MenukategoriLaundry.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 
     public boolean isUpdate(){

@@ -11,14 +11,23 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-            android:name=".TransaksiCariLaundry"
+            android:name=".TransaksiCetaLaundry"
             android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".BeckupanMenuDaftarJasaLaundry" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".BekupanJasaLaundry" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".TransaksiCariLaundry"
+            android:exported="true" />
         <activity
             android:name=".LaundryItemIdentitas"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Eskperimen2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuDaftarPegawaiLaundry"
             android:exported="true"

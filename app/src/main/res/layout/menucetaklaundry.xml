@@ -72,7 +72,7 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/viewNamaPrinter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -87,32 +87,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView45"
+        android:id="@+id/simbol"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName14"
-        app:layout_constraintEnd_toStartOf="@+id/imageView46"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName14"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNamaPrinter"
+        app:layout_constraintEnd_toStartOf="@+id/btnCariPerangkat"
+        app:layout_constraintStart_toEndOf="@+id/viewNamaPrinter"
         app:srcCompat="@drawable/lingkaran" />
 
     <ImageView
-        android:id="@+id/imageView46"
+        android:id="@+id/btnCariPerangkat"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName14"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNamaPrinter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView45"
+        app:layout_constraintStart_toEndOf="@+id/simbol"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="18dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14"
+        app:layout_constraintTop_toBottomOf="@+id/viewNamaPrinter"
         tools:listitem="@layout/menucetakstruklaundry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

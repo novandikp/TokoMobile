@@ -6,14 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".MenuTerimaLaundry">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnSimpan"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/hijaukonten"
+        android:onClick="simpan"
+        android:text="simpan"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTulis" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnTulis"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="#F44336"
+        android:onClick="insertTransaksi"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4">
@@ -55,6 +111,7 @@
                 android:ems="10"
                 android:hint="Keterangan"
                 android:inputType="textPersonName"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout10" />
@@ -128,7 +185,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="170dp"
+                android:layout_marginEnd="250dp"
                 android:background="#FFFFFF"
                 android:backgroundTint="#FFFFFF"
                 app:boxBackgroundColor="#FFFFFF"
@@ -141,7 +198,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:hint="Harga Jasa" />
+                    android:hint="Harga Jasa"
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -290,8 +348,8 @@
                 android:id="@+id/textInputLayout84"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
-                android:layout_marginEnd="64dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="65dp"
                 app:boxBackgroundColor="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout10"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -301,88 +359,51 @@
                     android:id="@+id/edtJumlah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
                     android:hint="Jumlah"
                     android:text="0" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
                 android:id="@+id/ibtnPlus"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="16dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout84"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textInputLayout84"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout84"
-                app:srcCompat="@drawable/tambah" />
+                app:srcCompat="@drawable/tambah2"
+                app:tint="@color/hijaukonten" />
 
             <ImageView
                 android:id="@+id/ibtnMinus"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="13dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout84"
                 app:layout_constraintEnd_toStartOf="@+id/textInputLayout84"
+                app:layout_constraintStart_toEndOf="@+id/tvSatuan"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout84"
-                app:srcCompat="@drawable/kurang" />
+                app:srcCompat="@drawable/hapus2"
+                app:tint="@color/hijaukonten" />
 
             <TextView
                 android:id="@+id/tvSatuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textSize="24sp"
                 android:text="kg"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout10"
                 app:layout_constraintStart_toEndOf="@+id/textInputLayout10"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout10" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btnSimpan"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/hijaukonten"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:text="Simpan"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnTulis" />
-
-            <Button
-                android:id="@+id/btnTulis"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="4dp"
-                android:backgroundTint="#F44336"
-                android:onClick="insertTransaksi"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:text="Taruh Keranjang"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btnSimpan"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
