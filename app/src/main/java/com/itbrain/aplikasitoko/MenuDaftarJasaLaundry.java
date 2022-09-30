@@ -198,7 +198,7 @@ public class MenuDaftarJasaLaundry extends AppCompatActivity {
         Cursor kategori  = db.sq(Query.select("tblkategori"));
 
         if (Modul.getCount(kategori) == 0 ){
-            Toast.makeText(this, "Kategori masih kosong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Mohon Mengisi Kategori Terlebih Dahulu", Toast.LENGTH_SHORT).show();
             return;
         }
 

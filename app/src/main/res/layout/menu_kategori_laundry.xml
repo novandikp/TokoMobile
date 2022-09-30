@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MenukategoriLaundry">
 
-
-    <ImageView
-        android:id="@+id/imageView43"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName11"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName11"
-        app:srcCompat="@drawable/ic_baseline_search_24" />
-
     <EditText
         android:id="@+id/Pencarian"
         android:layout_width="match_parent"
@@ -40,6 +29,7 @@
         android:backgroundTint="#4CAF50"
         android:onClick="Simpan"
         android:text="Simpan"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

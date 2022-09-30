@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.itbrain.aplikasitoko">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,7 +14,13 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
-            android:name=".TransaksiCetaLaundry"
+            android:name=".UtilsLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".CariPrinterLaundry"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCetaklaundry"
             android:exported="false" />
         <!-- <activity -->
         <!-- android:name=".BeckupanMenuDaftarJasaLaundry" -->

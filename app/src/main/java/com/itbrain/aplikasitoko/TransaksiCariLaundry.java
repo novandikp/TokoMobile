@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -219,10 +220,13 @@ public class TransaksiCariLaundry extends AppCompatActivity {
     }
 
     public void tambahdata(View view) {
+        Cursor kategori  = db.sq(Query.select("tblkategori"));
         if (a.equals("pegawai")){
             startActivity(new Intent(this,MenuPegawaiLaundry.class));
         }else if (a.equals("pelanggan")){
             startActivity(new Intent(this,MenuPelangganLaundry.class));
+        }else if (Modul.getCount(kategori) == 0 ){
+            Toast.makeText(this, "Mohon Mengisi Kategori Terlebih Dahulu", Toast.LENGTH_SHORT).show();
         }else if (a.equals("jasa")){
             startActivity(new Intent(this,MenuUbahJasaLaundry.class));
         }
@@ -316,7 +320,6 @@ class AdapterListPelangganCari extends RecyclerView.Adapter<AdapterListPelanggan
     @Override
     public void onBindViewHolder(@NonNull PelangganCariViewHolder holder, int i) {
         final getterPelanggan getter=data.get(i);
-
         holder.nama.setText(getter.getNamaPelanggan());
         holder.alamat.setText(getter.getAlamatPelanggan());
         holder.telp.setText(getter.getNotelpPelanggan());

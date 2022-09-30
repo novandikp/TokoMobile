@@ -108,6 +108,7 @@ public class MenuUbahJasaLaundry extends AppCompatActivity {
             public void onClick(View v) {
                 Nama = edtNama.getText().toString();
                 Biaya = Modul.unNumberFormat(edtBiaya.getText().toString());
+//                Integer idKat = 0;
                 if (TextUtils.isEmpty(Nama)||TextUtils.isEmpty(Biaya)||Modul.strToDouble(Biaya)<=0){
                     Toast.makeText(MenuUbahJasaLaundry.this, "Isi data terlebih dahulu!", Toast.LENGTH_SHORT).show();
                 }else {

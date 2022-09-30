@@ -240,8 +240,8 @@ public class DatabaseLaundry extends SQLiteOpenHelper {
                     "SET hutang=hutang-NEW.bayarhutang " +
                     "WHERE tblpelanggan.idpelanggan=NEW.idpelanggan; " +
                     "END");
-            exc("INSERT INTO tblidentitas VALUES (1,'KomputerKit.com','Sidoarjo','0838 320 320 77','Terima Kasih','Sudah Berbelanja','Di Toko Kami')") ;
-            exc("INSERT INTO tblpegawai VALUES (0,'Pemilik',' ',' ')");
+            exc("INSERT INTO tblidentitas VALUES (1,'Toko Berkah','Mojokerto','0985 764 321 123','Maturnuwun','Sampun Dateng','Ing Toko Mriki')") ;
+            exc("INSERT INTO tblpegawai VALUES (0,'Pegawai',' ',' ')");
             exc("INSERT INTO tblpelanggan VALUES (0,'Umum',' ',' ',0)");
             exc("DELETE FROM tblkategori WHERE idkategori=0");
             return true;
