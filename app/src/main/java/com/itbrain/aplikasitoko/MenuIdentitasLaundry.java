@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,6 +25,10 @@ public class MenuIdentitasLaundry extends AppCompatActivity {
         setContentView(R.layout.menuidentitaslaundry);
         db=new DatabaseLaundry(this);
         v = this.findViewById(android.R.id.content);
+//        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+//        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         Cursor c = db.sq(Query.select("tblidentitas")) ;
         if(Modul.getCount(c)==1){
@@ -41,6 +46,9 @@ public class MenuIdentitasLaundry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 db.exc("delete from tblidentitas where ididentitas =0");
+                nama.setText("");alamat.setText("");telp.setText("");Caption1.setText("");Caption2.setText("");Caption3.setText("");
+                nama.getText().clear();alamat.getText().clear();telp.getText().clear();Caption1.getText().clear();Caption2.getText().clear();Caption3.getText().clear();
+                Toast.makeText(MenuIdentitasLaundry.this, "Berhasil Dihapus", Toast.LENGTH_SHORT).show();
             }
         });
     }

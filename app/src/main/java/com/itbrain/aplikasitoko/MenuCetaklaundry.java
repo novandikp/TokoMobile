@@ -76,7 +76,7 @@ public class MenuCetaklaundry extends AppCompatActivity {
         device = pref.getString("Printer", "");
         faktur = getIntent().getStringExtra("faktur");
         v = this.findViewById(android.R.id.content);
-        Modul.btnBack("Cetak", getSupportActionBar());
+        Modul.btnBack("Menu Cetak Laundry", getSupportActionBar());
 
         try {
             findBT();

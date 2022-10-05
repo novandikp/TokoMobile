@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
@@ -47,7 +48,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        Modul.btnBack("Menu Terima Laundry",getSupportActionBar());
         setContentView(R.layout.menuterimalaundry);
         db=new DatabaseLaundry(this);
         v = this.findViewById(android.R.id.content);
@@ -124,8 +125,16 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         });
         edtJumlahJasa=(EditText)findViewById(R.id.edtJumlah);
         edtJumlahJasa.addTextChangedListener(new NumberTextWatcher(edtJumlahJasa,new Locale("in","ID"),2));
-
     }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent = new Intent (MenuTerimaLaundry.this, LaundryMenuTransaksi.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+        return true;
+    }
+
     private void getFaktur(){
 //        db.exc("INSERT INTO tbllaundry (total) VALUES (0)");
         List<Integer> idLaundry = new ArrayList<Integer>();
@@ -277,7 +286,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String faktur=Modul.getText(v,R.id.edtFaktur);
-                db.exc("DELETE FROM tbllaundry WHERE idlaundry="+Integer.valueOf(faktur));
+                db.exc("SELECT * FROM tbllaundry WHERE idlaundry="+Integer.valueOf(faktur));
                 finish();
             }
         }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {

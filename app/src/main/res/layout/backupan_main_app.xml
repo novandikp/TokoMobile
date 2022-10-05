@@ -81,6 +81,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Tabungan"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -181,6 +182,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/RentalMobil"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -281,6 +283,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Kredit"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -381,6 +384,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/AntrianPortable"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -481,6 +485,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Kwitansi"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -582,6 +587,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/TokoSepatu"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -682,6 +688,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Laundry"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="8dp"
@@ -772,33 +779,32 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageButton
+            <SearchView
                 android:id="@+id/imageButton32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="4dp"
                 android:background="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName26"
+                android:id="@+id/Pencarian"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="16dp"
                 android:background="#00FFFFFF"
-                android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="Cari Aplikasi"
                 android:inputType="textPersonName"
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageButton32"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

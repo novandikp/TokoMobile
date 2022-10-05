@@ -3,16 +3,20 @@ package com.itbrain.aplikasitoko;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Main_App extends AppCompatActivity {
+    EditText pencarian;
+    DatabaseLaundry db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.backupan_main_app);
+        pencarian = findViewById(R.id.Pencarian);
     }
 
     public void Tabungan(View view) {

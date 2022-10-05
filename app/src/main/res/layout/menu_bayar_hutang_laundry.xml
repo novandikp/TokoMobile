@@ -15,7 +15,7 @@
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar36">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -27,44 +27,11 @@
         android:id="@+id/imageView142"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout63"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout63"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar36"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView424"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Daftar Hutang"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView143"
-        app:layout_constraintStart_toEndOf="@+id/imageView143"
-        app:layout_constraintTop_toTopOf="@+id/imageView143" />
-
-    <ImageView
-        android:id="@+id/imageView143"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:rotation="90"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar36"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

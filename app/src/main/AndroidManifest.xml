@@ -13,21 +13,28 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/searchable" />
+
+        <activity
+            android:name=".MenuDaftarProsesTotalBayarLaundry"
+            android:exported="true" />
+
         <activity
             android:name=".UtilsLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CariPrinterLaundry"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MenuCetaklaundry"
-            android:exported="false" />
-        <!-- <activity -->
+            android:exported="true" /> <!-- <activity -->
         <!-- android:name=".BeckupanMenuDaftarJasaLaundry" -->
-        <!-- android:exported="false" /> -->
+        <!-- android:exported="true" /> -->
         <!-- <activity -->
         <!-- android:name=".BekupanJasaLaundry" -->
-        <!-- android:exported="false" /> -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".TransaksiCariLaundry"
             android:exported="true" />

@@ -8,36 +8,42 @@
 
     <ImageView
         android:id="@+id/imageView63"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:onClick="kopiNoTelp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout22"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout22"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout27"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout27"
         app:srcCompat="@drawable/copy" />
 
     <ImageView
         android:id="@+id/imageView64"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:onClick="kopiAlamat"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout20"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout20"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout26"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout26"
         app:srcCompat="@drawable/copy" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout22"
+        android:id="@+id/textInputLayout27"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="55dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout20">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout26">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNomorTelepon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nomer Telepon"
@@ -45,9 +51,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout20"
+        android:id="@+id/textInputLayout26"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="55dp"
         app:boxBackgroundColor="#00FFFFFF"
@@ -56,6 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout19">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAlamatPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Alamat Pelanggan"
@@ -66,6 +74,7 @@
         android:id="@+id/textInputLayout19"
         android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="55dp"
         app:boxBackgroundColor="#00FFFFFF"
@@ -74,6 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout18">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNamaPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Pelanggan"
@@ -84,13 +94,16 @@
         android:id="@+id/textInputLayout18"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout17">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNamaPegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Pegawai"
@@ -101,13 +114,16 @@
         android:id="@+id/textInputLayout17"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout15">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTanggalSelesai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal Selesai"
@@ -118,12 +134,15 @@
         android:id="@+id/textInputLayout14"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar35">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtFaktur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nomor Faktur"
@@ -135,12 +154,15 @@
         android:id="@+id/textInputLayout15"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout14">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTanggalTerima"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal Terima"
@@ -168,8 +190,10 @@
 
     <ImageView
         android:id="@+id/imageView62"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:onClick="kopiNama"
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout19"
@@ -185,15 +209,7 @@
         android:text="Isi Keranjang :"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout22" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView98" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout27" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar35"
@@ -207,34 +223,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView423"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:text="8000"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/textView422"
-        app:layout_constraintStart_toEndOf="@+id/textView422"
-        app:layout_constraintTop_toTopOf="@+id/textView422" />
-
-    <TextView
-        android:id="@+id/textView422"
+        android:id="@+id/tvTotalBayar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Rp ."
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar35"
-        tools:layout_editor_absoluteX="154dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView421"
+        app:layout_constraintStart_toStartOf="@+id/textView421" />
 
     <TextView
         android:id="@+id/textView421"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
+        android:layout_marginTop="8dp"
         android:text="Total Bayar :"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView422"
-        app:layout_constraintStart_toStartOf="@+id/textView422" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView98">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Reclist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_daftar_proses_laundry" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

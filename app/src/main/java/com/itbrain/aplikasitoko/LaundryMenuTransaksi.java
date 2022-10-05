@@ -9,11 +9,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LaundryMenuTransaksi extends AppCompatActivity {
 
+    DatabaseLaundry db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Modul.btnBack("Menu Transaksi",getSupportActionBar());
         setContentView(R.layout.laundrymenutransaksi);
+        db=new DatabaseLaundry(this);
+//        Masuk = findViewById(R.id.Terima);
+//        Masuk.setOnClickListener(new View.OnClickListener() {
+//            Intent intent = new Intent(LaundryMenuTransaksi.this, MenuTerimaLaundry.class);
+//            @Override
+//            public void onClick(View v) {
+//                db.exc("SELECT * FROM tbllaundry WHERE idlaundry");
+//                startActivity(intent);
+//            }
+//        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
@@ -23,6 +35,8 @@ public class LaundryMenuTransaksi extends AppCompatActivity {
         finish();
         return true;
     }
+
+
 
     public void TerimaLaundry(View view) {
         Intent intent = new Intent(LaundryMenuTransaksi.this, MenuTerimaLaundry.class);
