@@ -77,7 +77,7 @@ public class MenuTerimaLaundry extends AppCompatActivity {
         }else if (update.equals("update")){
             Modul.setText(v,R.id.edtFaktur,updateFaktur);
             loadCart();
-            String q="SELECT * FROM qlaundry WHERE faktur='"+updateFaktur+"'";
+            String q="DELETE * FROM qlaundry WHERE faktur='"+updateFaktur+"'";
             Cursor c=db.sq(q);
             c.moveToNext();
 
