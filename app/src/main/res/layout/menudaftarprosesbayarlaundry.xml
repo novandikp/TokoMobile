@@ -22,6 +22,7 @@
             android:padding="8dp">
 
             <Button
+                android:onClick="bayar"
                 android:id="@+id/button13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -30,7 +31,6 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/hijaukonten"
-                android:onClick="bayar"
                 android:paddingLeft="0dp"
                 android:paddingTop="0dp"
                 android:paddingRight="0dp"
@@ -69,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
+                android:entries="@array/metodeBayar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout14" />
@@ -122,7 +123,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/SpinnerBayar">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtTotalHarga"
+                    android:id="@+id/edtTotalBayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Total Harga" />

@@ -22,6 +22,10 @@
             android:resource="@xml/searchable" />
 
         <activity
+            android:name=".MenuDaftarProsesBayarLaundry"
+            android:exported="true" />
+
+        <activity
             android:name=".MenuDaftarProsesTotalBayarLaundry"
             android:exported="true" />
         <activity

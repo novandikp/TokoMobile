@@ -173,6 +173,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:onClick="bayar"
         android:id="@+id/button13"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -72,6 +72,10 @@
         <item>Kilo Gram(Kg)</item>
         <item>Meter Persegi(M2)</item>
     </string-array>
+    <string-array name="metodeBayar">
+        <item>Tunai</item>
+        <item>Hutang</item>
+    </string-array>
     <string name="title_dynamicfeature">Antrian Portable</string>
 
 </resources>

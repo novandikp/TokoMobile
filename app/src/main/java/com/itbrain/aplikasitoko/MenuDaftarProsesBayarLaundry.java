@@ -39,8 +39,8 @@ public class MenuDaftarProsesBayarLaundry extends AppCompatActivity {
         c.moveToNext();
         Modul.setText(v,R.id.edtFaktur,faktur);
 //        Modul.setText(v,R.id.edtJumlahBayar,"0");
-        Modul.setText(v,R.id.edtBayar,Modul.removeE(Modul.getString(c,"total")));
-        double kembali=0.0-Modul.strToDouble(Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalHarga)));
+        Modul.setText(v,R.id.edtTotalBayar,Modul.removeE(Modul.getString(c,"total")));
+        double kembali=0.0-Modul.strToDouble(Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalBayar)));
         Modul.setText(v,R.id.edtKembali,Modul.removeE(Modul.doubleToStr(kembali)));
         idpelanggan=Modul.getInt(c,"idpelanggan");
 
@@ -56,7 +56,7 @@ public class MenuDaftarProsesBayarLaundry extends AppCompatActivity {
 
             }
         });
-        final TextInputEditText eJumlahBayar=(TextInputEditText)findViewById(R.id.edtJumlah);
+        final TextInputEditText eJumlahBayar=(TextInputEditText)findViewById(R.id.edtBayar);
 //        eJumlahBayar.addTextChangedListener(new TextWatcher() {
 //            @Override
 //            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -71,7 +71,7 @@ public class MenuDaftarProsesBayarLaundry extends AppCompatActivity {
 //
 //            @Override
 //            public void afterTextChanged(Editable s) {
-//                double kembali=Modul.strToDouble(Modul.getText(v,R.id.edtJumlahBayar))-Modul.strToDouble(Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalBayar)));
+//                double kembali=Modul.strToDouble(Modul.getText(v,R.id.edtBayar))-Modul.strToDouble(Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalBayar)));
 //                Modul.setText(v,R.id.edtKembali,Modul.removeE(Modul.doubleToStr(kembali)));
 //            }
 //        });
@@ -79,26 +79,18 @@ public class MenuDaftarProsesBayarLaundry extends AppCompatActivity {
         eJumlahBayar.addTextChangedListener(new NumberTextWatcherKembali(eJumlahBayar,new Locale("in","ID"),2,Modul.justRemoveE(Modul.getString(c,"total")),edtKembali));
     }
 
-    public boolean onOptionsItemSelected(MenuItem item){
-        Intent intent = new Intent (MenuDaftarProsesBayarLaundry.this, MenuDaftarProsesTotalBayarLaundry.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
-        return true;
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if(item.getItemId()==android.R.id.home){
-//            finish();
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
     public void bayar(View view) {
         final String faktur=Modul.getText(v,R.id.edtFaktur);
         final String mBayar=metodeBayar;
-        String total=Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalHarga));
+        String total=Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalBayar));
         String jBayar=Modul.unNumberFormat(Modul.getText(v,R.id.edtBayar));
         final String kembali=Modul.unNumberFormat(Modul.getText(v,R.id.edtKembali));
         String tglbayar=Modul.getDate("yyyyMMdd");

@@ -50,7 +50,7 @@ public class MenuHasilBayarHutangLaundry extends AppCompatActivity {
         Cursor cKembali=db.sq("SELECT * FROM tblpelanggan WHERE idpelanggan="+idpelanggan);
         cKembali.moveToNext();
         EditText edtKembalian=(EditText) findViewById(R.id.edtKembalian);
-        edtBayar.addTextChangedListener(new NumberTextWatcherKembali(edtBayar,new Locale("in","ID"),2,Modul.justRemoveE(Modul.getString(cKembali,"hutang")),edtKembalian));
+        edtBayar.addTextChangedListener(new NumberTextWatcherKembali(edtBayar,new Locale("in",""),2,Modul.justRemoveE(Modul.getString(cKembali,"hutang")),edtKembalian));
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -69,7 +69,7 @@ public class MenuHasilBayarHutangLaundry extends AppCompatActivity {
     }
 
     public void bayar(View view) {
-        String nominal=Modul.unNumberFormat(Modul.getText(v,R.id.edtBayar));
+        String nominal=Modul.unNumberFormat(Modul.getText(v,R.id.edtJumlahBayar));
         String hutang=Modul.removeRp(Modul.unNumberFormat(Modul.getText(v,R.id.txtHutang)));
         String kembali=Modul.unNumberFormat(Modul.getText(v,R.id.edtKembalian));
         String[] input={idpelanggan,Modul.getDate("yyyyMMdd"),hutang,nominal,nominal,kembali,Modul.getText(v,R.id.edtKeterangan)};
