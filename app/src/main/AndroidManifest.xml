@@ -14,6 +14,9 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
         <activity
+            android:name=".LaundryItemLaporan"
+            android:exported="false" />
+        <activity
             android:name=".MenuHasilBayarHutangLaundry"
             android:exported="true" />
 
@@ -24,7 +27,6 @@
         <activity
             android:name=".MenuDaftarProsesBayarLaundry"
             android:exported="true" />
-
         <activity
             android:name=".MenuDaftarProsesTotalBayarLaundry"
             android:exported="true" />
@@ -417,8 +419,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".MenuTerimaLaundry"
-            android:exported="true"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
+            android:exported="true" />
         <activity
             android:name=".MenuBayarHutangLaundry"
             android:exported="true"

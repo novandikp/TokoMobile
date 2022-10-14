@@ -34,7 +34,7 @@
         app:layout_goneMarginRight="11dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/edtPencarian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -66,7 +66,7 @@
         app:boxBackgroundColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11">
+        app:layout_constraintTop_toBottomOf="@+id/edtPencarian">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

@@ -56,26 +56,8 @@ public class MenuDaftarProsesBayarLaundry extends AppCompatActivity {
 
             }
         });
-        final TextInputEditText eJumlahBayar=(TextInputEditText)findViewById(R.id.edtBayar);
-//        eJumlahBayar.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                double kembali=Modul.strToDouble(Modul.getText(v,R.id.edtBayar))-Modul.strToDouble(Modul.unNumberFormat(Modul.getText(v,R.id.edtTotalBayar)));
-//                Modul.setText(v,R.id.edtKembali,Modul.removeE(Modul.doubleToStr(kembali)));
-//            }
-//        });
-        EditText edtKembali=(EditText)findViewById(R.id.edtKembali);
+        final TextInputEditText eJumlahBayar= findViewById(R.id.edtBayar);
+        EditText edtKembali= findViewById(R.id.edtKembali);
         eJumlahBayar.addTextChangedListener(new NumberTextWatcherKembali(eJumlahBayar,new Locale("in","ID"),2,Modul.justRemoveE(Modul.getString(c,"total")),edtKembali));
     }
 

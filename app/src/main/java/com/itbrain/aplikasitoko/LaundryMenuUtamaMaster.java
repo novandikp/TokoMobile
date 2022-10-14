@@ -44,10 +44,10 @@ public void Master(View view) {
         startActivity(intent);
     }
 
-    public void Laporan(View view) {
-        Intent intent = new Intent(LaundryMenuUtamaMaster.this, LaundryMenuLaporan.class);
-        startActivity(intent);
-    }
+//    public void Laporan(View view) {
+//        Intent intent = new Intent(LaundryMenuUtamaMaster.this, LaundryMenuLaporan.class);
+//        startActivity(intent);
+//    }
 
     public void Utilitas(View view) {
         Intent intent = new Intent(LaundryMenuUtamaMaster.this, MenuUtilitasLaundry.class);

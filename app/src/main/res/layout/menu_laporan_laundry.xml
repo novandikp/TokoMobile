@@ -6,18 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".MenuLaporanLaundry">
 
-    <ImageView
-        android:id="@+id/imageView43"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/konstretTanggal"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName11"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName11"
+        app:layout_constraintTop_toBottomOf="@+id/edtPencarian">
+
+        <TextView
+            android:id="@+id/textView438"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtPencarian" />
+
+        <Button
+            android:id="@+id/btnTanggalAwal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="64dp"
+            android:background="@android:color/transparent"
+            android:text="Tanggal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView438"
+            app:layout_constraintEnd_toStartOf="@+id/textView438"
+            app:layout_constraintTop_toTopOf="@+id/textView438" />
+
+        <Button
+            android:id="@+id/btnTanggalAkhir"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="64dp"
+            android:background="@android:color/transparent"
+            android:text="Tanggal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView438"
+            app:layout_constraintStart_toEndOf="@+id/textView438"
+            app:layout_constraintTop_toTopOf="@+id/textView438" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:id="@+id/imageView43"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPencarian"
+        app:layout_constraintEnd_toStartOf="@+id/edtPencarian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtPencarian"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/edtPencarian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -27,7 +72,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar29" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button8"
@@ -39,6 +84,7 @@
         android:backgroundTint="#4CAF50"
         android:onClick="Excel"
         android:text="Excel"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,6 +96,7 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -62,6 +109,7 @@
         android:text="Laporan Laundry"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/Kembali"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
         app:layout_constraintTop_toTopOf="@+id/Kembali" />
@@ -72,54 +120,45 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:rotation="90"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recLaporan"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="390dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView438"
+        app:layout_constraintTop_toBottomOf="@+id/txtPendapatan"
         tools:listitem="@layout/laundryitemlaporanlaundry" />
 
     <TextView
-        android:id="@+id/textView437"
+        android:id="@+id/txtJumlahData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:text="17/07/2022"
+        android:layout_margin="16dp"
+        android:text="Jumlah Data : "
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/textView438"
-        app:layout_constraintEnd_toStartOf="@+id/textView438"
-        app:layout_constraintTop_toTopOf="@+id/textView438" />
-
-    <TextView
-        android:id="@+id/textView438"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="-"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/konstretTanggal" />
 
     <TextView
-        android:id="@+id/textView439"
+        android:id="@+id/txtPendapatan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="17/07/2022"
+        android:layout_marginTop="8dp"
+        android:text="Pendapatan : "
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/textView438"
-        app:layout_constraintStart_toEndOf="@+id/textView438"
-        app:layout_constraintTop_toTopOf="@+id/textView438" />
+        app:layout_constraintStart_toStartOf="@+id/txtJumlahData"
+        app:layout_constraintTop_toBottomOf="@+id/txtJumlahData" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

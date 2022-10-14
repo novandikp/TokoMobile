@@ -133,13 +133,14 @@ public class MenuDaftarPegawaiLaundry extends AppCompatActivity {
 
 class PegawaiLaundryAdapater extends RecyclerView.Adapter<PegawaiLaundryAdapater.ViewHolder>{
 
-    ArrayList<Pegawai>Pegawai;
     Context context;
+    ArrayList<Pegawai>Pegawai;
+//    Boolean showopt;
 
     public PegawaiLaundryAdapater(ArrayList<Pegawai> Pegawai, Context context) {
         this.Pegawai = Pegawai;
         this.context = context;
-//        Toast.makeText(context, ""+Pelanggan.size(), Toast.LENGTH_SHORT).show();
+//        this.showopt=showopt;
     }
 
     @NonNull

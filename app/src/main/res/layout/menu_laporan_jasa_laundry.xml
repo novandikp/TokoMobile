@@ -10,24 +10,24 @@
         android:id="@+id/imageView43"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName11"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPencarian"
+        app:layout_constraintEnd_toStartOf="@+id/edtPencarian"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName11"
+        app:layout_constraintTop_toTopOf="@+id/edtPencarian"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/edtPencarian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Faktur"
+        android:hint="Pencarian"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar29" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button8"
@@ -50,6 +50,7 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -62,6 +63,7 @@
         android:text="Laporan Jasa"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/Kembali"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
         app:layout_constraintTop_toTopOf="@+id/Kembali" />
@@ -72,26 +74,39 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:rotation="90"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recLaporan"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner14"
+        app:layout_constraintTop_toBottomOf="@+id/spKategori"
         tools:listitem="@layout/laundryitemlaporanjasa" />
 
     <Spinner
-        android:id="@+id/spinner14"
+        android:id="@+id/spKategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/txtJumlahJasa" />
+
+    <TextView
+        android:id="@+id/txtJumlahJasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Jumlah Jasa :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".LaundryitemDaftarPelanggan">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,61 +16,62 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/optMuncul"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/buttonthreepoint" />
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground">
 
             <TextView
-                android:id="@+id/txtNamaPelanggan"
+                android:id="@+id/tvFaktur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:text="Anwar"
-                android:textColor="#000000"
-                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="00000001-Budi"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtAlamatPelanggan"
+                android:id="@+id/tvTanggalTerima"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:text="Sidoarjo"
+                android:layout_marginStart="8dp"
+                android:text="20-11-2018"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtNamaPelanggan" />
+                app:layout_constraintTop_toBottomOf="@+id/tvFaktur" />
 
             <TextView
-                android:id="@+id/txtNomerPelanggan"
+                android:id="@+id/tvJasa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:text="0895343428020"
+                android:layout_marginStart="8dp"
+                android:text="Kategori - jasa"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtAlamatPelanggan" />
+                app:layout_constraintTop_toBottomOf="@+id/tvTanggalTerima" />
 
             <TextView
-                android:id="@+id/txtHutang"
+                android:id="@+id/tvHarga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="TextView"
-                android:visibility="gone"
+                android:text="harga"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/txtNomerPelanggan"
-                app:layout_constraintTop_toBottomOf="@+id/txtNomerPelanggan" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJasa" />
+
+            <ImageView
+                android:id="@+id/ibtnPrint"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvHarga"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvFaktur"
+                app:srcCompat="@drawable/printer" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
