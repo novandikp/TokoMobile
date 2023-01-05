@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class TambahPasien extends AppCompatActivity {
 
@@ -14,7 +15,16 @@ public class TambahPasien extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tambah_pasien);
 
-        Button button = findViewById(R.id.btn8);
+        ImageButton imageButton = findViewById(R.id.Kembali);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        Button button = findViewById(R.id.TambahPasien);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

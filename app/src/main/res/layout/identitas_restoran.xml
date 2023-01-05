@@ -4,18 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     tools:context=".Identitas_Restoran">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar46"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView408"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <TextView
+        android:id="@+id/textView408"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ubah Identitas"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar46"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
             android:id="@+id/textView39"
@@ -28,7 +66,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/edtPpn"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -45,7 +83,7 @@
             android:layout_marginStart="8dp"
             android:text="%"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editTextPhone"
+            app:layout_constraintStart_toEndOf="@+id/edtPpn"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
@@ -53,6 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:backgroundTint="@color/white"
+            android:onClick="infoPpn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView40"
             app:layout_constraintTop_toTopOf="parent"
@@ -70,6 +109,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:onClick="clear"
             android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -84,6 +124,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:onClick="simpan"
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -100,11 +141,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="10dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar46">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -114,9 +159,11 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNamaToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Restoran"
+                android:inputType="text"
                 android:paddingTop="30dp"
                 android:text=" Herdijaya.com"
                 android:textSize="14sp" />
@@ -130,30 +177,55 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAlamatToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat Restoran"
+                android:inputType="text"
                 android:paddingTop="30dp"
                 android:text="Mojokerto, Jawa Tmur"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:counterEnabled="true"
-            app:counterMaxLength="25">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/countryCode"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Nomor Telepon Restoran"
-                android:inputType="number"
-                android:paddingTop="30dp"
-                android:text="+62"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginStart="8dp"
+                android:text="62"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:boxBackgroundColor="@color/white"
+                app:counterEnabled="true"
+                app:counterMaxLength="25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/countryCode"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNomorTlpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nomor Telepon Restoran"
+                    android:inputType="number"
+                    android:paddingStart="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="30dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -163,9 +235,11 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCaption1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Baris 1 (untuk struk)"
+                android:inputType="text"
                 android:paddingTop="30dp"
                 android:text="Terima Kasih"
                 android:textSize="14sp" />
@@ -179,9 +253,11 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCaption2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Baris 2 (untuk struk)"
+                android:inputType="text"
                 android:paddingTop="30dp"
                 android:text="Sudah Datang"
                 android:textSize="14sp" />
@@ -195,9 +271,11 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCaption3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Baris 3 (untuk struk)"
+                android:inputType="text"
                 android:paddingTop="30dp"
                 android:text="Di Tempat Kami"
                 android:textSize="14sp" />

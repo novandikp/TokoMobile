@@ -7,20 +7,56 @@
     android:background="#F3F3F3"
     tools:context=".Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master">
 
-    <androidx.gridlayout.widget.GridLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar68"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_height="150dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView482"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Menu Master"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView482"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:padding="20dp"
         app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView482"
         app:rowCount="3">
 
 
@@ -29,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:background="#fff"
+            android:onClick="PindahIdentitas"
             android:text="Button"
             android:textSize="18sp"
             app:cardCornerRadius="5dp"
@@ -78,6 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:background="#fff"
+            android:onClick="PindahKategori"
             android:text="Button"
             android:textSize="18sp"
             app:cardCornerRadius="5dp"
@@ -91,27 +129,27 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kategori"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kelola Kategori Barang"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView5"
                     android:layout_width="95dp"
                     android:layout_height="113dp"
                     android:layout_marginTop="16dp"
@@ -128,6 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:background="#fff"
+            android:onClick="PindahSatuan"
             android:text="Button"
             android:textSize="18sp"
             app:cardCornerRadius="5dp"
@@ -141,27 +180,27 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Satuan"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kelola Data Satuan"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView6"
                     android:layout_width="95dp"
                     android:layout_height="113dp"
                     android:layout_marginTop="16dp"
@@ -178,6 +217,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:background="#fff"
+            android:onClick="PindahObat"
             android:text="Button"
             android:textSize="18sp"
             app:cardCornerRadius="5dp"
@@ -191,27 +231,27 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Obat"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kelola Data Obat"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView7"
                     android:layout_width="95dp"
                     android:layout_height="113dp"
                     android:layout_marginTop="16dp"
@@ -228,6 +268,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:background="#fff"
+            android:onClick="PindahPelanggan"
             android:text="Button"
             android:textSize="18sp"
             app:cardCornerRadius="5dp"
@@ -241,27 +282,27 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pelanggan"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kelola Data Pelanggan"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView8"
                     android:layout_width="95dp"
                     android:layout_height="113dp"
                     android:layout_marginTop="16dp"
@@ -278,6 +319,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:background="#fff"
+            android:onClick="PindahSupplier"
             android:text="Button"
             android:textSize="18sp"
             app:cardCornerRadius="5dp"
@@ -291,14 +333,14 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Supplier"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -308,10 +350,10 @@
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView10"
                     android:layout_width="95dp"
                     android:layout_height="113dp"
                     android:layout_marginTop="16dp"

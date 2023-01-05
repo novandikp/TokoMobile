@@ -7,17 +7,55 @@
     android:background="#F3F3F3"
     tools:context=".AplikasiRetoran_Menu_Transaksi">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar52"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView414"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Transaksi"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView414"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView414">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -34,6 +72,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:onClick="PindahKauangan"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -87,11 +126,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:onClick="TerimaPesanan"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/textView15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="32dp"
@@ -100,24 +140,24 @@
                         android:textSize="12sp"
                         android:textStyle="normal"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView7"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/textView111"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Terima Pesanan"
                         android:textColor="@color/agakhitam"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView14"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                        app:layout_constraintBottom_toTopOf="@+id/textView15"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView7"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/imageView7"
                         android:layout_width="86dp"
                         android:layout_height="84dp"
                         android:layout_margin="20dp"

@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="#EAEAEA"
     android:backgroundTint="#EAEAEA"
-    tools:context=".MainApp">
+    tools:context=".Aplikasi_Bengkel_Menu_Utama_">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#5C00FF"
+        android:layout_height="150dp"
+        android:background="#25A244"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,76 +20,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <TextView
+        android:id="@+id/tvAlamatBengkel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="MOJOKERTO"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout">
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaBengkel" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_margin="20dp"
-                android:layout_marginEnd="32dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView19"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/diamond" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginBottom="16dp"
-                android:text="Untuk mendapatkan fasilitas lengkap"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Tingkatkan Versi Pro"
-                android:textColor="@color/agakhitam"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tvNamaBengkel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="SMKN 2 MOJOKERTO"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="125dp"
-        app:alignmentMode="alignMargins"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         app:columnCount="2"
-        app:columnOrderPreserved="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardView26"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="2">
+        app:layout_constraintTop_toBottomOf="@+id/tvAlamatBengkel">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
@@ -101,7 +69,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="PindahMaster">
 
                 <ImageView
                     android:id="@+id/imageView9"
@@ -153,44 +122,47 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="PindahTransaksi">
 
                 <ImageView
+                    android:id="@+id/imageView11"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView17"
+                    app:layout_constraintBottom_toTopOf="@+id/textView100"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/car" />
+                    app:srcCompat="@drawable/maintenance" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView100"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Transaksi"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView20"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="55dp"
-                    android:text="Lakukan penjualan atau penbelian"
+                    android:text="Lakukan penjualan atau pembelian"
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -203,36 +175,37 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="PindahLaporan">
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/imageView101"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView17"
+                    app:layout_constraintBottom_toTopOf="@+id/textView21"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/planner" />
+                    app:srcCompat="@drawable/category" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Laporan"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView30"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/textView30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="55dp"
@@ -242,6 +215,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -254,36 +228,37 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="PindahUtilitas">
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/imageView102"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView17"
+                    app:layout_constraintBottom_toTopOf="@+id/textView22"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/cog" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Utilitas"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView31"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/textView31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="55dp"
@@ -295,7 +270,62 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
-
     </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="PindahUtilitas">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/diamond" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:text="Untuk mendapatkan fasilitas lengkap"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tingkatkan Versi Pro"
+                android:textColor="@color/agakhitam"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

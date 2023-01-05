@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Laporan_Pendapatan_Toko_Kain_">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar68"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView482"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laporan Pendapatan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar68"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView482"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName57"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Pencarian"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/imageView135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar68" />
+
+    <ImageView
+        android:id="@+id/imageView135"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName57"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName57"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName58"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/textView487"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView487"
+        app:layout_constraintTop_toTopOf="@+id/textView487" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button65"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView490">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button65"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="export exel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView487"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="---"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName57" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName59"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/textView487"
+        app:layout_constraintEnd_toStartOf="@+id/textView487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView487" />
+
+    <TextView
+        android:id="@+id/textView488"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Rp."
+        android:textColor="@color/agakhitam"
+        app:layout_constraintBottom_toBottomOf="@+id/textView490"
+        app:layout_constraintStart_toEndOf="@+id/textView490"
+        app:layout_constraintTop_toTopOf="@+id/textView490" />
+
+    <TextView
+        android:id="@+id/textView489"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Rp."
+        android:textColor="@color/agakhitam"
+        app:layout_constraintBottom_toBottomOf="@+id/textView491"
+        app:layout_constraintStart_toEndOf="@+id/textView491"
+        app:layout_constraintTop_toTopOf="@+id/textView491" />
+
+    <TextView
+        android:id="@+id/textView492"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="0"
+        android:textColor="@color/agakhitam"
+        app:layout_constraintBottom_toBottomOf="@+id/textView488"
+        app:layout_constraintStart_toEndOf="@+id/textView488"
+        app:layout_constraintTop_toTopOf="@+id/textView488" />
+
+    <TextView
+        android:id="@+id/textView493"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="0"
+        android:textColor="@color/agakhitam"
+        app:layout_constraintBottom_toBottomOf="@+id/textView489"
+        app:layout_constraintStart_toEndOf="@+id/textView489"
+        app:layout_constraintTop_toTopOf="@+id/textView489" />
+
+    <TextView
+        android:id="@+id/textView490"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:text="Jumlah Pendapatan :"
+        android:textColor="@color/agakhitam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView491" />
+
+    <TextView
+        android:id="@+id/textView491"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Jumlah Data Pendapatan :"
+        android:textColor="@color/agakhitam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView487" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class TambahDokter extends AppCompatActivity {
 
@@ -14,7 +15,8 @@ public class TambahDokter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tambah_dokter);
 
-        Button button = findViewById(R.id.btn6);
+        Button button = findViewById(R.id.TambahDokter);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -22,5 +24,15 @@ public class TambahDokter extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton imageButton = findViewById(R.id.Kembali);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 }

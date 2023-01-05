@@ -8,7 +8,7 @@
     tools:context=".AplikasiBengkel_Menu_Utilitas">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar5"
+        android:id="@+id/toolbar40"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -18,17 +18,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView393"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Menu Utilitas"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar40"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView393"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView393"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <TextView
+        android:id="@+id/textView392"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Versi 1.8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_margin="10dp"
         android:padding="15dp"
         app:alignmentMode="alignMargins"
         app:columnCount="2"
         app:columnOrderPreserved="false"
+        app:layout_constraintBottom_toTopOf="@+id/textView392"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar40"
         app:rowCount="3">
 
         <androidx.cardview.widget.CardView
@@ -95,7 +133,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="Backup">
 
                 <TextView
                     android:id="@+id/textView22"
@@ -147,7 +186,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="Restore">
 
                 <TextView
                     android:id="@+id/textView25"
@@ -190,6 +230,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+
+            android:onClick="Reset"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
@@ -242,6 +284,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="CaraPenggunaan"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"

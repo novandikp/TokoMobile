@@ -19,7 +19,7 @@ public class TambahBarang extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TambahBarang.this, FormTambahBarang.class);
+                Intent intent = new Intent(TambahBarang.this, Form_Tambah_Barang_Bengkel_.class);
                 startActivity(intent);
             }
         });

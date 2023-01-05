@@ -5,18 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EAEAEA"
-    android:padding="10dp"
     tools:context=".Aplikasi_Toko_Kain_Menu_Laporan">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView477"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laporan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView477"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
         android:overScrollMode="never"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="15dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -29,8 +74,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="Laporan Pelanggan"
@@ -55,6 +99,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanBarang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -67,8 +112,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="Laporan Barang"
@@ -94,6 +138,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanPendapatan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -106,8 +151,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="Laporan Pendapatan"
@@ -132,6 +176,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -144,11 +189,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Laporan Oeder"
+                    android:text="Laporan Order"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -7,18 +7,56 @@
     android:layout_height="match_parent"
     tools:context=".FormTambahPasien">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView381"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Tambah Pasien"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView381"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
     <LinearLayout
+        android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:orientation="horizontal"
         android:paddingLeft="11dp"
         android:paddingRight="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout56">
 
         <TextView
             android:id="@+id/textView"
@@ -45,7 +83,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/agakhitam"
+        android:backgroundTint="@color/hijau_gojek"
         android:text="simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number|textPersonName"
@@ -66,7 +104,7 @@
         app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/edtNikPasien">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -80,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number|textPersonName"
@@ -90,7 +128,7 @@
         app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout61">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -100,10 +138,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout61"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -113,7 +152,7 @@
         app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout60">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtGolDarahPasien"
@@ -124,10 +163,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout60"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number|textPersonName"
@@ -137,7 +177,7 @@
         app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout59">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtNoTelpPasien"
@@ -148,10 +188,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout59"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -161,7 +202,7 @@
         app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtAlamatPasien"
@@ -172,15 +213,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
         android:layout_width="369dp"
         android:layout_height="41dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="11dp"
         android:orientation="horizontal"
         android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
         <TextView
             android:id="@+id/textView4"
@@ -227,10 +269,11 @@
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout56"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="11dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -240,7 +283,7 @@
         app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar29">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtTambahPasien"

@@ -7,23 +7,11 @@
     android:background="#F3F3F3"
     tools:context=".Laporan_Bengkel_Laporan_Pendapatan">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
-        tools:listitem="@layout/item_bengkel_hutang" />
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar44"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#C8C8C8"
+        android:background="@color/hijau_gojek"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,68 +19,140 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView51"
+        android:id="@+id/textView397"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="0"
-        android:textColor="@color/agakhitam"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView50"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif"
-        android:text="Rp."
-        android:textColor="@color/agakhitam"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laporan Pendapatan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view28"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#CACACA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar44" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName31"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Pencarian"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/imageView111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view28" />
+
+    <ImageView
+        android:id="@+id/imageView111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName31"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName31"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/view28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar44">
+
+        <TextView
+            android:id="@+id/textView407"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Rp."
+            android:textColor="@color/agakhitam"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView406"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView406"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="1.000.000"
+            android:textColor="@color/agakhitam"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView35"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txTanggalAwal"
+        tools:listitem="@layout/item_bengkel_hutang" />
 
     <EditText
         android:id="@+id/txTanggalAwal"
         android:layout_width="132dp"
         android:layout_height="44dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:focusable="false"
         android:gravity="center"
         android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
         app:layout_constraintEnd_toStartOf="@+id/textView17"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
 
     <EditText
         android:id="@+id/txTanggalAkhir"
         android:layout_width="132dp"
         android:layout_height="44dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:focusable="false"
         android:gravity="center"
         android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="---"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31" />
 
     <Button
         android:id="@+id/button4"
@@ -108,54 +168,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView11"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        app:cardCornerRadius="70px"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/editTextTextPersonName10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="1dp"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:hint="Pencarian"
-                android:inputType="textPersonName"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

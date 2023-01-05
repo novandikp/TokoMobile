@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">Aplikasi Mobile</string>
+    <string name="bawapulang">Bawa Pulang</string>
+    <string name="tamu">Tamu</string>
+    <string name="tanpaketerangan">Tanpa Keterangan</string>
+    <string name="perbarui">Perbarui</string>
+    <string name="datapelanggan">Data Pelanggan</string>
+    <string name="tambah">Tambah</string>
+    <string name="batal">Batal</string>
+    <string name="formnull">Isi semua form terlebih dahulu</string>
+    <string name="successAdd">Data berhasil ditambahkan</string>
+    <string name="semuakategori">Semua Kategori</string>
+    <string name="kosong">Data Kosong</string>
+    <string name="gagal">Gagal</string>
+    <string name="successUpdate">Data berhasil diperbarui</string>
 
     <string-array name="obat_apa">
         <item>Titipan</item>
@@ -73,5 +86,15 @@
         <item>Meter Persegi(M2)</item>
     </string-array>
     <string name="title_dynamicfeature">Antrian Portable</string>
+    <string name="title_activity_pelanggan_restoran">Pelanggan_Restoran_</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_laporan_jasa_klinik">Laporan_Jasa_Klinik_</string>
 
 </resources>

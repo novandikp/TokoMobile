@@ -7,11 +7,47 @@
     android:background="#F3F3F3"
     tools:context=".Aplikasi_Salon_Menu_Laporan">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar68"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView482"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laporan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView482"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
@@ -19,9 +55,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanJasaSalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -35,7 +72,7 @@
                     android:id="@+id/textView292"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/teal_200"
+                    android:background="@color/hijau_gojek"
                     android:fontFamily="sans-serif-medium"
                     android:padding="8dp"
                     android:paddingStart="16dp"
@@ -61,6 +98,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanPelangganSalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -71,10 +109,10 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView292"
+                    android:id="@+id/textView300"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/teal_200"
+                    android:background="@color/hijau_gojek"
                     android:fontFamily="sans-serif-medium"
                     android:padding="8dp"
                     android:paddingStart="16dp"
@@ -85,7 +123,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView293"
+                    android:id="@+id/textView301"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -95,11 +133,12 @@
                     android:textColor="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView292" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView300" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanBookingSalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -110,10 +149,10 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView292"
+                    android:id="@+id/textView302"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/teal_200"
+                    android:background="@color/hijau_gojek"
                     android:fontFamily="sans-serif-medium"
                     android:padding="8dp"
                     android:paddingStart="16dp"
@@ -124,7 +163,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView293"
+                    android:id="@+id/textView303"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -134,11 +173,12 @@
                     android:textColor="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView292" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView302" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanTransaksiSalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -149,10 +189,10 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView292"
+                    android:id="@+id/textView304"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/teal_200"
+                    android:background="@color/hijau_gojek"
                     android:fontFamily="sans-serif-medium"
                     android:padding="8dp"
                     android:paddingStart="16dp"
@@ -163,7 +203,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView293"
+                    android:id="@+id/textView305"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -173,11 +213,12 @@
                     android:textColor="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView292" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView304" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="LaporanPendapatanSalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -188,10 +229,10 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView292"
+                    android:id="@+id/textView306"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/teal_200"
+                    android:background="@color/hijau_gojek"
                     android:fontFamily="sans-serif-medium"
                     android:padding="8dp"
                     android:paddingStart="16dp"
@@ -202,7 +243,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView293"
+                    android:id="@+id/textView307"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -212,7 +253,7 @@
                     android:textColor="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView292" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView306" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

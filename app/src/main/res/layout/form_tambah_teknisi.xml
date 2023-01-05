@@ -6,89 +6,137 @@
     android:layout_height="match_parent"
     tools:context=".FormTambahTeknisi">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar34"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView386"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Tambah Teknisi"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar34"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView386"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView386"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
     <Button
+        android:onClick="simpan"
         android:id="@+id/btn5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/agakhitam"
-        android:text="tambah"
+        android:backgroundTint="@color/hijau_gojek"
+        android:text="simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:boxBackgroundColor="@color/white"
-        app:boxBackgroundMode="filled"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar34">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtNamaTeknisi"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama Teknisi" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="filled"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Teknisi"
+                android:inputType="text" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:boxBackgroundColor="@color/white"
-        app:boxBackgroundMode="filled"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtAlamat"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Alamat" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="filled"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat Teknisi"
+                android:inputType="text" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:boxBackgroundColor="@color/white"
-        app:boxBackgroundMode="filled"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtNoTelp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextTextPersonName4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="No Telp" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="filled"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNoTelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. Telp Teknisi"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

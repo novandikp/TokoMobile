@@ -1,49 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@android:color/white">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvNamaMakanan"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginBottom="603dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView541"
+        app:layout_constraintStart_toEndOf="@+id/textView541"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHargaMakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView543"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaMakanan" />
+
+    <TextView
+        android:id="@+id/tvOpt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="&#8942;"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvKategoriMakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Text View"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="11dp">
+    <TextView
+        android:id="@+id/textView541"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="-"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvKategoriMakanan"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tvKategoriMakanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kategori Makanan"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView543"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="Harga :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKategoriMakanan" />
 
-            <TextView
-                android:id="@+id/tvNamaMakanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Nama Makanan"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tvHargaMakanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="HargaMakanan"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

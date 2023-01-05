@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView52"
+                android:id="@+id/tvNama_Pelanggan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
                 android:layout_marginTop="13dp"
                 android:text="Herdi"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNama_Pelanggan" />
 
             <TextView
                 android:id="@+id/textView54"
@@ -51,7 +51,7 @@
                 android:layout_marginTop="13dp"
                 android:text="S 2542 NM"
                 app:layout_constraintStart_toEndOf="@+id/textView53"
-                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNama_Pelanggan" />
 
             <TextView
                 android:id="@+id/textView55"
@@ -96,7 +96,7 @@
                 android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView52"
+                app:layout_constraintStart_toEndOf="@+id/tvNama_Pelanggan"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_print_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>

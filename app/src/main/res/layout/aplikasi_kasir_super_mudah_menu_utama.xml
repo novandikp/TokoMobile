@@ -10,8 +10,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#5C00FF"
+        android:layout_height="150dp"
+        android:background="@color/hijau_gojek"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView494"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Mojokerto"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView495" />
+
+    <TextView
+        android:id="@+id/textView495"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="KomputerKit.com"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
+        android:onClick="PindahUtilitas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="20dp"
@@ -75,10 +100,10 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="125dp"
         app:alignmentMode="alignMargins"
@@ -87,13 +112,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView494"
         app:rowCount="3">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="PindahMaster"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -145,6 +171,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="PindahTransaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -195,6 +222,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="PindahLaporan"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -245,6 +273,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="PindahUtilitas"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">

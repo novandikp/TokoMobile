@@ -123,17 +123,17 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:id="@+id/view16"
+                    android:id="@+id/view18"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton25"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton26"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/imageButton25"
+                    android:id="@+id/imageButton26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -144,7 +144,7 @@
                     app:srcCompat="@drawable/ic_baseline_search_24" />
 
                 <TextView
-                    android:id="@+id/textView267"
+                    android:id="@+id/textView300"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -155,7 +155,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView266"
+                    android:id="@+id/textView301"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -165,7 +165,7 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView267" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView300" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -173,17 +173,17 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:id="@+id/view16"
+                    android:id="@+id/view19"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton25"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton27"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/imageButton25"
+                    android:id="@+id/imageButton27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -194,7 +194,7 @@
                     app:srcCompat="@drawable/ic_baseline_search_24" />
 
                 <TextView
-                    android:id="@+id/textView266"
+                    android:id="@+id/textView302"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -220,17 +220,17 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:id="@+id/view16"
+                    android:id="@+id/view20"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/agakhitam"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton25"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton28"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/imageButton25"
+                    android:id="@+id/imageButton28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
@@ -241,7 +241,7 @@
                     app:srcCompat="@drawable/ic_baseline_calendar_today_50" />
 
                 <TextView
-                    android:id="@+id/textView267"
+                    android:id="@+id/textView303"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -252,7 +252,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView266"
+                    android:id="@+id/textView304"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -262,7 +262,7 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView267" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView303" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -309,7 +309,7 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:id="@+id/view17"
+                    android:id="@+id/view21"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:background="@color/agakhitam"
@@ -318,7 +318,7 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView269"
+                    android:id="@+id/textView305"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -329,7 +329,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView268"
+                    android:id="@+id/textView306"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -339,7 +339,7 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView269" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView305" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

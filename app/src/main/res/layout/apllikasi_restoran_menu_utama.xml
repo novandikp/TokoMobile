@@ -7,7 +7,44 @@
     android:background="#F4F4F4"
     tools:context=".ApllikasiRestoran_Menu_Utama">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar6"
+        android:layout_width="393dp"
+        android:layout_height="200dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAlamatToko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Sidoarjo"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaToko" />
+
+    <TextView
+        android:id="@+id/tvNamaToko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="KomputerKit.com"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView37" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView37"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="20dp"
@@ -17,6 +54,7 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:onClick="PindahUtilitas"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -60,17 +98,6 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar6"
-        android:layout_width="393dp"
-        android:layout_height="120dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout3"
         android:layout_width="0dp"
@@ -92,6 +119,7 @@
             app:layout_rowWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:onClick="PindahMaster"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -144,35 +172,36 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="PindahTransaksi">
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/imageView100"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView150"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/transaction" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView150"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Transaksi"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView200"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/textView200"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="55dp"
@@ -194,36 +223,37 @@
             app:layout_rowWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:onClick="PindahLaporan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/imageView101"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView201"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/checklist" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView151"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Laporan"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView201"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/textView201"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="55dp"
@@ -245,36 +275,37 @@
             app:layout_rowWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:onClick="PindahUtilitas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/imageView102"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView202"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/cog" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView152"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Utilitas"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/textView202"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/textView202"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="55dp"

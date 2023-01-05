@@ -7,35 +7,61 @@
     android:background="#F4F4F4"
     tools:context=".Aplikasi_TokoKain_Menu_Utama">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar10"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="Hi, User"
-        android:textColor="@color/agakhitam"
+        android:text="Hi, "
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView530"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Herdijaya.com"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView36"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toTopOf="@+id/textView36" />
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout4"
-        android:layout_width="405dp"
-        android:layout_height="520dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="130dp"
         android:padding="15dp"
         app:alignmentMode="alignMargins"
         app:columnCount="2"
         app:columnOrderPreserved="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="3">
+        app:layout_constraintTop_toBottomOf="@+id/textView36"
+        app:rowCount="2">
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahMaster"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
@@ -89,6 +115,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahLaporan"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
@@ -98,7 +125,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="PindahLaporan">
 
                 <TextView
                     android:id="@+id/textView25"
@@ -140,10 +168,10 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/category" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahTransaksi"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
@@ -197,6 +225,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahUtilitas"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
@@ -253,13 +282,12 @@
     </androidx.gridlayout.widget.GridLayout>
 
     <androidx.cardview.widget.CardView
+        android:onClick="PindahUtilitas"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="90dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="90dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout4">

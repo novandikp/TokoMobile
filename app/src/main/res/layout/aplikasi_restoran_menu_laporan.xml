@@ -4,18 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     tools:context=".Aplikasi_Restoran_Menu_Laporan">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar57"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView438"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <TextView
+        android:id="@+id/textView438"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laporan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar57"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         android:overScrollMode="never"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="15dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar57">
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahKeuangan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -28,8 +72,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Keuangan"
                     android:textColor="@color/white"
@@ -52,6 +95,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -64,8 +108,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Pelanggan"
                     android:textColor="@color/white"
@@ -89,6 +132,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahMeja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -101,8 +145,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Meja"
                     android:textColor="@color/white"
@@ -125,6 +168,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahKategori"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -137,8 +181,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Kategori"
                     android:textColor="@color/white"
@@ -161,6 +204,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahMakanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -173,8 +217,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Makanan"
                     android:textColor="@color/white"
@@ -197,6 +240,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahPenjualanMakanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -209,8 +253,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Penjualan Makanan"
                     android:textColor="@color/white"
@@ -233,6 +276,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahLaporanPenjualanFaktur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -245,8 +289,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000"
-                    android:backgroundTint="#000000"
+                    android:background="@color/hijau_gojek"
                     android:padding="10dp"
                     android:text="Laporan Penjualan per Faktur"
                     android:textColor="@color/white"

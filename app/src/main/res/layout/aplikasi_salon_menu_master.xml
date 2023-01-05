@@ -8,7 +8,7 @@
     tools:context=".Aplikasi_Salon_Menu_Master">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar13"
+        android:id="@+id/toolbar68"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -18,11 +18,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="24dp"
+    <TextView
+        android:id="@+id/textView482"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Master"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView482"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
@@ -30,9 +56,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahIdentitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -83,6 +110,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahJasa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -93,7 +121,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView38"
+                    android:id="@+id/imageView300"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
@@ -101,13 +129,13 @@
                     android:layout_marginEnd="45dp"
                     android:layout_marginBottom="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView291"
+                    app:layout_constraintEnd_toStartOf="@+id/textView250"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/barber_shop" />
 
                 <TextView
-                    android:id="@+id/textView290"
+                    android:id="@+id/textView200"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -115,13 +143,13 @@
                     android:text="Jasa"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView291"
-                    app:layout_constraintEnd_toEndOf="@+id/textView291"
-                    app:layout_constraintStart_toStartOf="@+id/textView291"
+                    app:layout_constraintBottom_toTopOf="@+id/textView250"
+                    app:layout_constraintEnd_toEndOf="@+id/textView250"
+                    app:layout_constraintStart_toStartOf="@+id/textView250"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView291"
+                    android:id="@+id/textView250"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="65dp"
@@ -133,6 +161,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="PindahPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -143,7 +172,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView38"
+                    android:id="@+id/imageView301"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="32dp"
@@ -151,13 +180,13 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView291"
+                    app:layout_constraintEnd_toStartOf="@+id/textView251"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/man" />
 
                 <TextView
-                    android:id="@+id/textView290"
+                    android:id="@+id/textView201"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -165,13 +194,13 @@
                     android:text="Identitas"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView291"
-                    app:layout_constraintEnd_toEndOf="@+id/textView291"
-                    app:layout_constraintStart_toStartOf="@+id/textView291"
+                    app:layout_constraintBottom_toTopOf="@+id/textView251"
+                    app:layout_constraintEnd_toEndOf="@+id/textView251"
+                    app:layout_constraintStart_toStartOf="@+id/textView251"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView291"
+                    android:id="@+id/textView251"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"

@@ -6,13 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".Form_Keuangan">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar53"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView415"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Keuangan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar53"
+        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/textView415"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView415"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/tambahKeuangan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="@color/agakhitam"
+        android:backgroundTint="@color/hijau_gojek"
         android:text="tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,26 +59,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView4"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView4"
+        app:layout_constraintBottom_toTopOf="@+id/tambahKeuangan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        tools:listitem="@layout/item_pemasukan" />
+        tools:listitem="@layout/item_pengeluaran" />
 
     <TextView
         android:id="@+id/textView156"
@@ -53,14 +80,14 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate2">
+        app:layout_constraintTop_toBottomOf="@+id/txTanggalAkhir">
 
         <RadioButton
             android:id="@+id/radioButton5"
@@ -91,13 +118,15 @@
         android:text="Saldo :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar53" />
 
     <EditText
         android:id="@+id/editTextTextPersonName16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -109,13 +138,14 @@
         android:id="@+id/imageView29"
         android:layout_width="25dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName16"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/txTanggalAwal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -124,13 +154,12 @@
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="date"
-        android:text="19/07/2022"
         app:layout_constraintEnd_toStartOf="@+id/textView158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/txTanggalAkhir"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -139,7 +168,6 @@
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="date"
-        android:text="19/07/2022"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView158"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
