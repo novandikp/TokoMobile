@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.TokoKain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.TokoKain.FormTambahKain;
+import com.itbrain.aplikasitoko.R;
 
 public class TambahKain extends AppCompatActivity {
 

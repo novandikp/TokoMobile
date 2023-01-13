@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Tabugan.TabunganItemJenisSimpanan"
+    tools:context=".restoran.Tabugan.TabunganItemJenisSimpanan"
     tools:ignore="ExtraText">
 
     <androidx.cardview.widget.CardView

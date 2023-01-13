@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko.Tabugan;
+package com.itbrain.aplikasitoko.restoran.Tabugan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.itbrain.aplikasitoko.R;
 
-public class MenuDetailKeuanganTabungan extends AppCompatActivity {
+public class MenuProsesAmbilTabungan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menudetailkeuangantabungan);
+        setContentView(R.layout.menuprosesambiltabungan);
     }
 }

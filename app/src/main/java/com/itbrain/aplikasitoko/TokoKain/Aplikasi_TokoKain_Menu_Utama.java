@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.Transaksi_Kain;
 
 public class Aplikasi_TokoKain_Menu_Utama extends AppCompatActivity {
 

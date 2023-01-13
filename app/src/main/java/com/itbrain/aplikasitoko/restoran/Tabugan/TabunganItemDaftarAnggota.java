@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko.Tabugan;
+package com.itbrain.aplikasitoko.restoran.Tabugan;
 
 import androidx.appcompat.app.AppCompatActivity;
 

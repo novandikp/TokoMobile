@@ -8,7 +8,7 @@
     android:layout_row="3"
     android:background="#E4E4E4"
     android:paddingBottom="50dp"
-    tools:context=".Tabugan.TabunganMenuTransaksi">
+    tools:context=".restoran.Tabugan.TabunganMenuTransaksi">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

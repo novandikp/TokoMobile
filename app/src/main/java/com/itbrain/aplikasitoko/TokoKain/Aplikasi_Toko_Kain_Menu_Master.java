@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.TambahKain;
 
 public class Aplikasi_Toko_Kain_Menu_Master extends AppCompatActivity {
 

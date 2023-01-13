@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.Form_Tambah_Kategori_Kain_;
 import com.itbrain.aplikasitoko.R;
 
 public class Kategori_Toko_Kain_ extends AppCompatActivity {
