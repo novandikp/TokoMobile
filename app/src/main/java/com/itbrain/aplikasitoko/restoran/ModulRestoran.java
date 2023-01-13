@@ -31,7 +31,7 @@ import java.util.Locale;
 //import se.simbio.encryption.Encryption;
 
 public class ModulRestoran {
-    static String slct = "SELECT * FROM " ;
+    public static String slct = "SELECT * FROM " ;
     public static String addSlashes(String s) {
         s = s.replaceAll("\\\\", "\\\\\\\\");
         s = s.replaceAll("\\n", "\\\\n");

@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import com.itbrain.aplikasitoko.MenuPenjualan;
 import com.itbrain.aplikasitoko.MenuPenjualanJasa;
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.apotek.Menu_Pembayaran_Hutang_Bengkel_;
+import com.itbrain.aplikasitoko.bengkel.Menu_Pembayaran_Hutang_Bengkel_;
 
 public class AplikasiBengkel_MenuTransaksi extends AppCompatActivity {
     public static boolean status = false;

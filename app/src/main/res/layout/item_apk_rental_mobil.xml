@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rental_mobil" />
+        app:srcCompat="@drawable/star" />
 
     <TextView
         android:id="@+id/textView346"
