@@ -432,7 +432,7 @@
             android:name=".restoran.Tambah_Kategori_Menu_Restoran_"
             android:exported="false" />
         <activity
-            android:name=".TambahMeja"
+            android:name=".restoran.TambahMeja"
             android:exported="false" />
         <activity
             android:name=".restoran.Form_Tambah_Meja_Restoran_"

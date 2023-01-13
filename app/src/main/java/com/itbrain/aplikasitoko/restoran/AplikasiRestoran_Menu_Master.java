@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.TambahMeja;
 
 public class AplikasiRestoran_Menu_Master extends AppCompatActivity {
 
