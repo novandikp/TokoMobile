@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDEDED"
-    tools:context=".AplikasiKlinik_Menu_Transaksi">
+    tools:context=".klinik.AplikasiKlinik_Menu_Transaksi">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"

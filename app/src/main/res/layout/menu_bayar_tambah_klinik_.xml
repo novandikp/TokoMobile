@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_Bayar_Tambah_Klinik_">
+    tools:context=".klinik.Menu_Bayar_Tambah_Klinik_">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar62"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".Daftar_Hutang_Toko_Sepatu">
+    tools:context=".tokosepatu.Daftar_Hutang_Toko_Sepatu">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"

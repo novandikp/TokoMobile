@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.itbrain.aplikasitoko.apotek.Aplikasi_Apotek_Plus_Keuangan_Menu_Utama;
+import com.itbrain.aplikasitoko.kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama;
+import com.itbrain.aplikasitoko.klinik.AplikasiKlinikDokter_Menu_Utama;
+import com.itbrain.aplikasitoko.restoran.ApllikasiRestoran_Menu_Utama;
+
 //import com.itbrain.aplikasitoko.databinding.AplikasiApotekPlusKeuanganMenuUtamaBinding;
 //import com.itbrain.aplikasitoko.databinding.AplikasiSalonMenuUtamaBinding;
 

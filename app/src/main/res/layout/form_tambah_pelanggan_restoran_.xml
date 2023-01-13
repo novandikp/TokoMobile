@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Form_Tambah_Pelanggan_Restoran">
+    tools:context=".restoran.Form_Tambah_Pelanggan_Restoran">
 
     <Button
         android:id="@+id/button50"

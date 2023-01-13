@@ -3,11 +3,12 @@ package com.itbrain.aplikasitoko;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.itbrain.aplikasitoko.apotek.Form_Tambah_kategori_Apotek_;
 
 public class Kategori_Apotek_ extends AppCompatActivity {
 

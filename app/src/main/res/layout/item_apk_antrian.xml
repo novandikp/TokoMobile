@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Item_Apk_Apotek">
+    tools:context=".apotek.Item_Apk_Apotek">
 
     <Button
         android:id="@+id/button39"

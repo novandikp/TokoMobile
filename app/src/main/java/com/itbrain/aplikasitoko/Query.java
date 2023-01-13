@@ -1,5 +1,7 @@
 package com.itbrain.aplikasitoko;
 
+import com.itbrain.aplikasitoko.restoran.ModulRestoran;
+
 public class Query {
     static String slct="SELECT * FROM ";
     public static String select(String table){
