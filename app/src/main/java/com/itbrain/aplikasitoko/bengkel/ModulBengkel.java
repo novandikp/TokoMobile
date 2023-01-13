@@ -29,7 +29,7 @@ public class ModulBengkel {
     static int version = 1;
 
 
-    ModulBengkel(SharedPreferences sharedPreferences) {
+    public ModulBengkel(SharedPreferences sharedPreferences) {
         this.sharedPreferences = sharedPreferences;
         editor = sharedPreferences.edit();
     }

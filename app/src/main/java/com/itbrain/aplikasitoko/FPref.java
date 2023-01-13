@@ -4,12 +4,12 @@ import android.content.SharedPreferences;
 import android.os.Environment;
 
 public class FPref {
-    static String type = "sqlite";
-    static String host = "";
-    static String user = "";
-    static String pass = "";
-    static String db   = "db_restaurant" ;
-    static String dirBackup = "POS Restaurant" ;
+    public static String type = "sqlite";
+    public  static String host = "";
+    public   static String user = "";
+    public  static String pass = "";
+    public static String db   = "db_restaurant" ;
+    public    static String dirBackup = "POS Restaurant" ;
     static String licenseKey="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoNrkRcDe/5cwfdVDT4vcdvPSl1FExbD9x5MSot43zpwHi4Kfcql6vfi9ru2F/CzDWewge2ON0Laf8buScfXg8HdE06AGojfolMvjUFvlcZ9j9TbSZqveo8MTkCUvjzf4YUfMirrwuf03++urTWmNUl/8IR9K6xjH++3Oy9Misc3CEPlZSG73UvjlaXs+JLQUZ0P+dXagIicvSdakgeJ52EkBYVD8P/VBGpC+QfNe3h4riUT5j+HdC3Mxdqa0p3jKcdAbfpo5MKuEoWB1Tf/mEd6mxA/z2cliEAHA/SWhsYi4nen5cbJ9iraQYBE7Xg0ptkgxyByw0KnNzGU+4w+IvQIDAQAB";
     static String productID="versipro_posrestaurant";
     //    static String productID="android.test.purchased";
@@ -17,11 +17,11 @@ public class FPref {
 //
 
 
-    static int version = 1 ;
+    public static int version = 1 ;
     SharedPreferences sharedPreferences ;
     SharedPreferences.Editor editor ;
 
-    FPref(SharedPreferences sharedPreferences){
+    public FPref(SharedPreferences sharedPreferences){
         this.sharedPreferences = sharedPreferences ;
         editor = sharedPreferences.edit() ;
     }
