@@ -1,8 +1,10 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.tokosepatu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.itbrain.aplikasitoko.R;
 
 public class MenuCetakTokoSepatu extends AppCompatActivity {
 
