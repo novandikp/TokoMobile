@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E8E8E8"
-    tools:context=".AplikasiKlinikDokter_Menu_Utama">
+    tools:context=".klinik.AplikasiKlinikDokter_Menu_Utama">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

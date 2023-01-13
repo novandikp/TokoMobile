@@ -11,6 +11,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.itbrain.aplikasitoko.restoran.Database_Restoran;
+import com.itbrain.aplikasitoko.restoran.ModulRestoran;
+
 
 public class DialogPelanggan {
     Database_Restoran db;
