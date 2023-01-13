@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.itbrain.aplikasitoko.klinik.FormTambahDokter;
+
 public class TambahDokter extends AppCompatActivity {
 
     @Override

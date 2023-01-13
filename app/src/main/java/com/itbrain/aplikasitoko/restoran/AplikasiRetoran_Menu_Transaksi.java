@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.restoran;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.restoran.Pilih_Meja_Restoran_;
+import com.itbrain.aplikasitoko.Form_Keuangan;
+import com.itbrain.aplikasitoko.R;
 
 public class AplikasiRetoran_Menu_Transaksi extends AppCompatActivity {
 

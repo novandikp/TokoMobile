@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.apotek;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,17 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.apotek.Form_Tambah_kategori_Apotek_;
+import com.itbrain.aplikasitoko.R;
 
-public class Kategori_Apotek_ extends AppCompatActivity {
+public class Satuan_Apotek_ extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kategori_apotek_);
+        setContentView(R.layout.satuan_apotek_);
 
         ImageButton imageButton = findViewById(R.id.Kembali);
-        Button button = findViewById(R.id.TambahKategori);
+        Button button = findViewById(R.id.TambahSatuan);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +30,7 @@ public class Kategori_Apotek_ extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Kategori_Apotek_.this, Form_Tambah_kategori_Apotek_.class);
+                Intent intent = new Intent(Satuan_Apotek_.this, Form_Tambah_Satuan_Apotek_.class);
                 startActivity(intent);
             }
         });

@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.itbrain.aplikasitoko.AplikasiRetoran_Menu_Transaksi;
 import com.itbrain.aplikasitoko.R;
 
 public class ApllikasiRestoran_Menu_Utama extends AppCompatActivity {

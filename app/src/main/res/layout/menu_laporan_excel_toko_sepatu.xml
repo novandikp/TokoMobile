@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".MenuLaporanExcelTokoSepatu">
+    tools:context=".tokosepatu.MenuLaporanExcelTokoSepatu">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout21"
