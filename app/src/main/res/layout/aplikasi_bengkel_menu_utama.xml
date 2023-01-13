@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EAEAEA"
     android:backgroundTint="#EAEAEA"
-    tools:context=".Aplikasi_Bengkel_Menu_Utama_">
+    tools:context=".bengkel.Aplikasi_Bengkel_Menu_Utama_">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

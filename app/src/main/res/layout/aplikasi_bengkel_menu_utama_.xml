@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Aplikasi_Bengkel_Menu_Utama">
+    tools:context=".bengkel.Aplikasi_Bengkel_Menu_Utama">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

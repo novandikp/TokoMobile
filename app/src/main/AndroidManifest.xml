@@ -49,58 +49,58 @@
             android:name=".MenuPilih"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Jasa_Bengkel_"
+            android:name=".bengkel.Form_Tambah_Jasa_Bengkel_"
             android:exported="false" />
         <activity
             android:name=".Coba_Recycle_View_Coding_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Pendapatan_Salon_"
+            android:name=".Salon.Laporan_Pendapatan_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Transaksi_Salon_"
+            android:name=".Salon.Laporan_Transaksi_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Booking_Salon_"
+            android:name=".Salon.Laporan_Booking_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Pelanggan_Salon_"
+            android:name=".Salon.Laporan_Pelanggan_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Jasa_Salon_"
+            android:name=".Salon.Laporan_Jasa_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Form_Pembayaran_Booking_Salon_"
+            android:name=".Salon.Form_Pembayaran_Booking_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Form_Booking_Salon"
+            android:name=".Salon.Form_Booking_Salon"
             android:exported="false" />
         <activity
-            android:name=".Form_Pembayaran_Langsung_Salon_"
+            android:name=".Salon.Form_Pembayaran_Langsung_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Pembayaran_Salon_"
+            android:name=".Salon.Menu_Pembayaran_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Form_Pembayaran_Salon_"
+            android:name=".Salon.Form_Pembayaran_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Booking_Salon_"
+            android:name=".Salon.Menu_Booking_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Pelanggan_Salon_"
+            android:name=".Salon.Form_Tambah_Pelanggan_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Jasa_Salon_"
+            android:name=".Salon.Form_Tambah_Jasa_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Pelanggan_Salon_"
+            android:name=".Salon.Menu_Pelanggan_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Jasa_Salon_"
+            android:name=".Salon.Menu_Jasa_Salon_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Identitas_Salon_"
+            android:name=".Salon.Menu_Identitas_Salon_"
             android:exported="false" />
         <activity
             android:name=".Laporan_Obat_Expired_Apotek_"
@@ -217,25 +217,25 @@
             android:name=".Identitas_Kasir_Super_Mudah"
             android:exported="false" />
         <activity
-            android:name=".Restore_Data_Toko_Kain_"
+            android:name=".TokoKain.Restore_Data_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Backup_Data_Toko_Kain_"
+            android:name=".TokoKain.Backup_Data_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Order_Toko_Kain_"
+            android:name=".TokoKain.Laporan_Order_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Pendapatan_Toko_Kain_"
+            android:name=".TokoKain.Laporan_Pendapatan_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Barang_Toko_Kain_"
+            android:name=".TokoKain.Laporan_Barang_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Pelanggan_Toko_Kain"
+            android:name=".TokoKain.Laporan_Pelanggan_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Pelanggan_Toko_Kain_"
+            android:name=".TokoKain.Form_Tambah_Pelanggan_Toko_Kain_"
             android:exported="false" />
         <activity
             android:name=".FormTambahKain"
@@ -247,13 +247,13 @@
             android:name=".Form_Tambah_Kategori_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Identitas_Toko_Kain"
+            android:name=".TokoKain.Identitas_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".Pelanggan_Toko_Kain_"
+            android:name=".TokoKain.Pelanggan_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".Kategori_Toko_Kain_"
+            android:name=".TokoKain.Kategori_Toko_Kain_"
             android:exported="false" />
         <activity
             android:name=".Aplikasi_Apotek_Plus_Keuangan_Menu_Utilitas"
@@ -286,16 +286,16 @@
             android:name=".Transaksi_Kain"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Toko_Kain_Menu_Utilitas"
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Utilitas"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Toko_Kain_Menu_Laporan"
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Laporan"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Toko_Kain_Menu_Master"
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Master"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_TokoKain_Menu_Utama"
+            android:name=".TokoKain.Aplikasi_TokoKain_Menu_Utama"
             android:exported="false" />
         <activity
             android:name=".Restore_Data_Klinik_"
@@ -459,70 +459,70 @@
             android:name=".Aplikasi_Restoran_Menu_Utilitas"
             android:exported="false" />
         <activity
-            android:name=".Pilih_Jasa_Barang_Bengkel_"
+            android:name=".bengkel.Pilih_Jasa_Barang_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Pilih_Pelanggan_Bengkel_Servis_"
+            android:name=".bengkel.Pilih_Pelanggan_Bengkel_Servis_"
             android:exported="false" />
         <activity
-            android:name=".Pilih_Teknisi_Bengkel_"
+            android:name=".bengkel.Pilih_Teknisi_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Pilih_Barang_Bengkel_"
+            android:name=".bengkel.Pilih_Barang_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Pilih_Pelanggan_Bengkel_"
+            android:name=".bengkel.Pilih_Pelanggan_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Pelanggan_Bengkel_"
+            android:name=".bengkel.Form_Tambah_Pelanggan_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Bengkel_Menu_Master_"
+            android:name=".bengkel.Aplikasi_Bengkel_Menu_Master_"
             android:exported="true" />
         <activity
-            android:name=".Laporan_Hutang_Bengkel_"
+            android:name=".bengkel.Laporan_Hutang_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Laba_Bengkel_"
+            android:name=".bengkel.Laporan_Laba_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Servis_Teknisi_Bengkel_"
+            android:name=".bengkel.Laporan_Servis_Teknisi_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Pendapatan_Bengkel_"
+            android:name=".bengkel.Laporan_Pendapatan_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Servis_Bengkel_"
+            android:name=".bengkel.Laporan_Servis_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Penjualan_Bengkel_"
+            android:name=".bengkel.Laporan_Penjualan_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Teknisi_Bengkel_"
+            android:name=".bengkel.Laporan_Teknisi_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Pelanggan_Bengkel_"
+            android:name=".bengkel.Laporan_Pelanggan_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Bayar_Bengkel_"
+            android:name=".bengkel.Laporan_Bayar_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Pembayaran_Servis_Bengkel_"
+            android:name=".bengkel.Pembayaran_Servis_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Pembayaran_Jual_Oederdil_Bengkel_"
+            android:name=".bengkel.Pembayaran_Jual_Oederdil_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Bengkel_Pendapatan_Teknisi"
+            android:name=".bengkel.Laporan_Bengkel_Pendapatan_Teknisi"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Bengkel_Laporan_Pendapatan"
+            android:name=".bengkel.Laporan_Bengkel_Laporan_Pendapatan"
             android:exported="false" />
         <activity
             android:name=".Laporan_Teknisi"
             android:exported="false" />
         <activity
-            android:name=".Laporan_Bengkel_Laporan_Pelanggan"
+            android:name=".bengkel.Laporan_Bengkel_Laporan_Pelanggan"
             android:exported="false" />
         <activity
             android:name=".Laporan_Transaksi"
@@ -534,67 +534,67 @@
             android:name=".Backup_Data"
             android:exported="false" />
         <activity
-            android:name=".AplikasiBengkel_Menu_Utilitas"
+            android:name=".bengkel.AplikasiBengkel_Menu_Utilitas"
             android:exported="false" />
         <activity
-            android:name=".AplikasiBengkel_Menu_Laporan"
+            android:name=".bengkel.AplikasiBengkel_Menu_Laporan"
             android:exported="false" />
         <activity
-            android:name=".Menu_Pembayaran_Hutang_Bengkel_"
+            android:name=".bengkel.Menu_Pembayaran_Hutang_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Bayar_Bengkel_"
+            android:name=".bengkel.Menu_Bayar_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Menu_Servis_Bengkel_"
+            android:name=".bengkel.Menu_Servis_Bengkel_"
             android:exported="false" />
         <activity
             android:name=".Pembayaran_Periksa"
             android:exported="false" />
         <activity
-            android:name=".Menu_Transaksi_Bengkel_"
+            android:name=".bengkel.Menu_Transaksi_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".AplikasiBengkel_MenuTransaksi"
+            android:name=".bengkel.AplikasiBengkel_MenuTransaksi"
             android:exported="false" />
         <activity
             android:name=".FormTambahTeknisi"
             android:exported="false" />
         <activity
-            android:name=".Tambah_Teknisi_Bengkel_"
+            android:name=".bengkel.Tambah_Teknisi_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Tambah_Pelanggan_Bengkel_"
+            android:name=".bengkel.Tambah_Pelanggan_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Tambah_Jasa_Bengkel_"
+            android:name=".bengkel.Tambah_Jasa_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Barang_Bengkel_"
+            android:name=".bengkel.Form_Tambah_Barang_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Tambah_Barang_Bengkel_"
+            android:name=".bengkel.Tambah_Barang_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Tambah_Kategori_Bengkel_"
+            android:name=".bengkel.Tambah_Kategori_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Kategori_Bengkel_"
+            android:name=".bengkel.Kategori_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Identitas_Bengkel_"
+            android:name=".bengkel.Identitas_Bengkel_"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Bengkel_Menu_Utama_"
+            android:name=".bengkel.Aplikasi_Bengkel_Menu_Utama_"
             android:exported="true" />
         <activity
-            android:name=".Aplikasi_Bengkel_Menu_Utama"
+            android:name=".bengkel.Aplikasi_Bengkel_Menu_Utama"
             android:exported="false" />
         <activity
             android:name=".Super_App2"
             android:exported="false" />
         <activity
-            android:name=".Item_Apk_Laundry"
+            android:name=".Laundry.Item_Apk_Laundry"
             android:exported="false" />
         <activity
             android:name=".Item_Apk_Toko_Sepatu"
@@ -606,7 +606,7 @@
             android:name=".Item_Apk_Antrian"
             android:exported="false" />
         <activity
-            android:name=".Item_Apk_Salon"
+            android:name=".Salon.Item_Apk_Salon"
             android:exported="false" />
         <activity
             android:name=".Item_Apk_Apotek"
@@ -615,19 +615,19 @@
             android:name=".Item_Apk_Kasir"
             android:exported="false" />
         <activity
-            android:name=".Item_Apk_Toko_Kain"
+            android:name=".TokoKain.Item_Apk_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".Item_Apk_Toko_Kredit"
+            android:name=".TokoKredit.Item_Apk_Toko_Kredit"
             android:exported="false" />
         <activity
             android:name=".Item_Apk_Klinik_Dokter"
             android:exported="false" />
         <activity
-            android:name=".Item_Apk_Bengkel_Mobil"
+            android:name=".bengkel.Item_Apk_Bengkel_Mobil"
             android:exported="false" />
         <activity
-            android:name=".Item_Apk_Tabungan"
+            android:name=".Tabugan.Item_Apk_Tabungan"
             android:exported="false" />
         <activity android:name=".ItemSuperAppRevisi" />
         <activity
@@ -646,19 +646,19 @@
             android:name=".Aplikasi_Toko_Sepatu_Menu_Utama"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Salon_Menu_Utillitas"
+            android:name=".Salon.Aplikasi_Salon_Menu_Utillitas"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Salon_Menu_Laporan"
+            android:name=".Salon.Aplikasi_Salon_Menu_Laporan"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Salon_Menu_Transaksi"
+            android:name=".Salon.Aplikasi_Salon_Menu_Transaksi"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Salon_Menu_Master"
+            android:name=".Salon.Aplikasi_Salon_Menu_Master"
             android:exported="false" />
         <activity
-            android:name=".Aplikasi_Salon_Menu_Utama"
+            android:name=".Salon.Aplikasi_Salon_Menu_Utama"
             android:exported="false" />
         <activity
             android:name=".Menu_Bayar_Hutang_Kasir"

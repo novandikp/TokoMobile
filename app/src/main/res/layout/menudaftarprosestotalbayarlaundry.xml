@@ -7,7 +7,7 @@
     android:paddingLeft="10dp"
     android:paddingTop="10dp"
     android:paddingRight="10dp"
-    tools:context=".MenuDaftarProsesTotalBayarLaundry">
+    tools:context=".Laundry.MenuDaftarProsesTotalBayarLaundry">
 
     <ImageView
         android:id="@+id/imageView63"

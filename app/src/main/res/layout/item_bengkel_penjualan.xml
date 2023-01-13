@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#F3F3F3"
-    tools:context=".Item_Bengkel_Penjualan">
+    tools:context=".bengkel.Item_Bengkel_Penjualan">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

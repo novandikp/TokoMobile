@@ -27,16 +27,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.itbrain.aplikasitoko.Model.Barang;
 import com.itbrain.aplikasitoko.Model.MenuRestoran;
-import com.itbrain.aplikasitoko.Model.Teknisi;
+import com.itbrain.aplikasitoko.bengkel.ModulBengkel;
 
-import java.security.PrivateKey;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.List;
-
-import kotlin.collections.unsigned.UArraysKt;
 
 public class Tambah_Isi_Menu_Restoran_ extends AppCompatActivity {
 
@@ -114,7 +109,7 @@ public class Tambah_Isi_Menu_Restoran_ extends AppCompatActivity {
         if (c.getCount()>0){
             labels.add("0");
             while (c.moveToNext()){
-                String data=ModulBengkel.getString(c,"idkategori");
+                String data= ModulBengkel.getString(c,"idkategori");
                 labels.add(data);
             }
         }else {
