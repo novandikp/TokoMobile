@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".Form_Cari_Obat">
+    tools:context=".apotek.Form_Cari_Obat">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"

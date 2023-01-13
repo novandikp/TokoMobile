@@ -9,7 +9,7 @@
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
     android:background="@color/white"
-    tools:context=".Item_Bengkel_Teknisi">
+    tools:context=".bengkel.Item_Bengkel_Teknisi">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

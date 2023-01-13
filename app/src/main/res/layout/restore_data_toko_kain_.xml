@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".Restore_Data_Toko_Kain_">
+    tools:context=".TokoKain.Restore_Data_Toko_Kain_">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar39"

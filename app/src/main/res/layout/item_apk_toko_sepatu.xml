@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Item_Apk_Toko_Sepatu">
+    tools:context=".tokosepatu.Item_Apk_Toko_Sepatu">
 
     <Button
         android:id="@+id/button39"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/apk_toko_sepatu" />
+        app:srcCompat="@drawable/star" />
 
     <TextView
         android:id="@+id/textView346"

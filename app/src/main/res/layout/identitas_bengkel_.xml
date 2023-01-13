@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Identitas_Bengkel_">
+    tools:context=".bengkel.Identitas_Bengkel_">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar24"

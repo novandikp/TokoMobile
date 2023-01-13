@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F3F3F3"
     android:padding="0dp"
-    tools:context=".Laporan_Bengkel_Laporan_Pelanggan">
+    tools:context=".bengkel.Laporan_Bengkel_Laporan_Pelanggan">
 
     <Spinner
         android:id="@+id/spinner5"

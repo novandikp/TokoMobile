@@ -24,6 +24,9 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.itbrain.aplikasitoko.Util.Penjualan;
+import com.itbrain.aplikasitoko.bengkel.Database_Bengkel_;
+import com.itbrain.aplikasitoko.bengkel.ModulBengkel;
+import com.itbrain.aplikasitoko.bengkel.Pembayaran_Jual_Oederdil_Bengkel_;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -211,7 +214,7 @@ public class MenuPenjualanJasa extends AppCompatActivity implements Penjualan {
             ModulBengkel.showToast(this,"Keranjang Masih Kosong");
         }else{
             finish();
-            Intent i = new Intent(MenuPenjualanJasa.this,Pembayaran_Jual_Oederdil_Bengkel_.class);
+            Intent i = new Intent(MenuPenjualanJasa.this, Pembayaran_Jual_Oederdil_Bengkel_.class);
             i.putExtra("idorder",idjual);
             startActivity(i);
         }

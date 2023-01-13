@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    tools:context=".PosTokoKreditMenuMaster">
+    tools:context=".TokoKredit.PosTokoKreditMenuMaster">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".CetakKwitansiItemLaporanBagJasa">
+    tools:context=".CetakKwitansi.CetakKwitansiItemLaporanBagJasa">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"

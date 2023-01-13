@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Identitas_Toko_Kain">
+    tools:context=".TokoKain.Identitas_Toko_Kain">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"

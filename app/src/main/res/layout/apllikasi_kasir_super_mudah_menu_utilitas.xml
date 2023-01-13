@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EDEDED"
     android:paddingBottom="170dp"
-    tools:context=".Apllikasi_Kasir_Super_Mudah_Menu_Utilitas">
+    tools:context=".kasir.Apllikasi_Kasir_Super_Mudah_Menu_Utilitas">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pembayaran_Jual_Oederdil_Bengkel_">
+    tools:context=".bengkel.Pembayaran_Jual_Oederdil_Bengkel_">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

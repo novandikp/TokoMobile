@@ -23,6 +23,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.itbrain.aplikasitoko.bengkel.Database_Bengkel_;
+import com.itbrain.aplikasitoko.bengkel.Menu_Transaksi_Bengkel_;
+import com.itbrain.aplikasitoko.bengkel.ModulBengkel;
+
 import java.util.ArrayList;
 
 public class MenuPilih extends AppCompatActivity {
@@ -237,7 +241,7 @@ class AdapterPilihPelanggan extends RecyclerView.Adapter<AdapterPilihPelanggan.V
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(c,Menu_Transaksi_Bengkel_.class);
+                Intent i =new Intent(c, Menu_Transaksi_Bengkel_.class);
                 i.putExtra("idpelanggan",holder.tvOpt.getTag().toString());
                 ((MenuPilih)c).setResult(100,i);
                 ((MenuPilih)c).finish();
