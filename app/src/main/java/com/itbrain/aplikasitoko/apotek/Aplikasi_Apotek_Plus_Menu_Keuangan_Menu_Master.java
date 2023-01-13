@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.Kategori_Apotek_;
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.Satuan_Apotek_;
 
 public class Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master extends AppCompatActivity {
 

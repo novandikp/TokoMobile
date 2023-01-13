@@ -1,14 +1,16 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Item_Apk_Kwitansi extends AppCompatActivity {
+import com.itbrain.aplikasitoko.R;
+
+public class FormTambahJasaPasien extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_apk_kwitansi);
+        setContentView(R.layout.form_tambah_jasa_pasien);
     }
 }

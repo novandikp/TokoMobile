@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Backup_Data_Kasir_ extends AppCompatActivity {
+import com.itbrain.aplikasitoko.R;
+
+public class FormTambahDokter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.backup_data_kasir_);
+        setContentView(R.layout.form_tambah_dokter);
 
         ImageButton imageButton = findViewById(R.id.Kembali);
 

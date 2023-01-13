@@ -142,13 +142,13 @@
             android:name=".apotek.Form_Tambah_Satuan_Apotek_"
             android:exported="false" />
         <activity
-            android:name=".Satuan_Apotek_"
+            android:name=".apotek.Satuan_Apotek_"
             android:exported="false" />
         <activity
             android:name=".apotek.Form_Tambah_kategori_Apotek_"
             android:exported="false" />
         <activity
-            android:name=".Kategori_Apotek_"
+            android:name=".apotek.Kategori_Apotek_"
             android:exported="false" />
         <activity
             android:name=".apotek.Identitas_Apotek"
@@ -157,7 +157,7 @@
             android:name=".kasir.Restore_Data_Kasir_"
             android:exported="false" />
         <activity
-            android:name=".Backup_Data_Kasir_"
+            android:name=".kasir.Backup_Data_Kasir_"
             android:exported="false" />
         <activity
             android:name=".kasir.Laporan_Hutang_Kasir_"
@@ -238,7 +238,7 @@
             android:name=".TokoKain.Form_Tambah_Pelanggan_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".FormTambahKain"
+            android:name=".TokoKain.FormTambahKain"
             android:exported="false" />
         <activity
             android:name=".TambahKain"
@@ -334,10 +334,10 @@
             android:name=".Menu_pemeriksaan"
             android:exported="false" />
         <activity
-            android:name=".FormTambahDokter"
+            android:name=".klinik.FormTambahDokter"
             android:exported="false" />
         <activity
-            android:name=".FormTambahPasien"
+            android:name=".klinik.FormTambahPasien"
             android:exported="false" />
         <activity
             android:name=".FormTambahJasa"
@@ -432,7 +432,7 @@
             android:name=".restoran.Tambah_Kategori_Menu_Restoran_"
             android:exported="false" />
         <activity
-            android:name=".TambahMeja"
+            android:name=".restoran.TambahMeja"
             android:exported="false" />
         <activity
             android:name=".restoran.Form_Tambah_Meja_Restoran_"
@@ -444,7 +444,7 @@
             android:name=".restoran.ApllikasiRestoran_Menu_Utama"
             android:exported="false" />
         <activity
-            android:name=".AplikasiRetoran_Menu_Transaksi"
+            android:name=".restoran.AplikasiRetoran_Menu_Transaksi"
             android:exported="false" />
         <activity
             android:name=".restoran.Aplikasi_Restoran_Menu_Laporan"

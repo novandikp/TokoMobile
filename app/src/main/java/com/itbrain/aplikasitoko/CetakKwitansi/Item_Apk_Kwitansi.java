@@ -1,14 +1,16 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.CetakKwitansi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MenuPelangganTokoSepatu extends AppCompatActivity {
+import com.itbrain.aplikasitoko.R;
+
+public class Item_Apk_Kwitansi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_pelanggan_toko_sepatu);
+        setContentView(R.layout.item_apk_kwitansi);
     }
 }

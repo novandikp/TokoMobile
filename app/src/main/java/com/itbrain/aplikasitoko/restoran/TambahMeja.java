@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.restoran;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -25,8 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.itbrain.aplikasitoko.Model.Kategori;
-import com.itbrain.aplikasitoko.restoran.Database_Restoran;
-import com.itbrain.aplikasitoko.restoran.Form_Tambah_Meja_Restoran_;
+import com.itbrain.aplikasitoko.R;
 
 import java.util.ArrayList;
 
