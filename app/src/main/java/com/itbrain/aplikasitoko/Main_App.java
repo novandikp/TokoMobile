@@ -12,6 +12,7 @@ import com.itbrain.aplikasitoko.bengkel.Aplikasi_Bengkel_Menu_Utama_;
 import com.itbrain.aplikasitoko.apotek.Aplikasi_Apotek_Plus_Keuangan_Menu_Utama;
 import com.itbrain.aplikasitoko.kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama;
 import com.itbrain.aplikasitoko.klinik.AplikasiKlinikDokter_Menu_Utama;
+import com.itbrain.aplikasitoko.rentalmobil.MenuUtamaMobil;
 import com.itbrain.aplikasitoko.restoran.ApllikasiRestoran_Menu_Utama;
 
 //import com.itbrain.aplikasitoko.databinding.AplikasiApotekPlusKeuanganMenuUtamaBinding;
@@ -57,6 +58,11 @@ public class Main_App extends AppCompatActivity {
 
     public void PindahSalon(View view) {
         Intent intent = new Intent(Main_App.this, Aplikasi_Salon_Menu_Utama.class);
+        startActivity(intent);
+    }
+
+    public void PindahRental(View view){
+        Intent intent = new Intent(Main_App.this, MenuUtamaMobil.class);
         startActivity(intent);
     }
 }

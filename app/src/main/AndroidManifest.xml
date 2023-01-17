@@ -18,6 +18,13 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
+
+
+        <activity android:name=".rentalmobil.MenuUtamaMobil"/>
+
+
+
+
         <activity
             android:name=".MenuExportExcel"
             android:exported="false" />
