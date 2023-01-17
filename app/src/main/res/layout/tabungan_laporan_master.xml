@@ -9,7 +9,7 @@
     android:paddingTop="1dp"
     android:paddingEnd="8dp"
     android:paddingRight="8dp"
-    tools:context=".Tabugan.TabunganMenuLaporan">
+    tools:context=".restoran.Tabugan.TabunganMenuLaporan">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView10"

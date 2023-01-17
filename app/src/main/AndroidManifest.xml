@@ -248,10 +248,10 @@
             android:name=".TokoKain.FormTambahKain"
             android:exported="false" />
         <activity
-            android:name=".TambahKain"
+            android:name=".TokoKain.TambahKain"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Kategori_Kain_"
+            android:name=".TokoKain.Form_Tambah_Kategori_Kain_"
             android:exported="false" />
         <activity
             android:name=".TokoKain.Identitas_Toko_Kain"
@@ -290,7 +290,7 @@
             android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama"
             android:exported="false" />
         <activity
-            android:name=".Transaksi_Kain"
+            android:name=".TokoKain.Transaksi_Kain"
             android:exported="false" />
         <activity
             android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Utilitas"
@@ -634,7 +634,7 @@
             android:name=".bengkel.Item_Apk_Bengkel_Mobil"
             android:exported="false" />
         <activity
-            android:name=".Tabugan.Item_Apk_Tabungan"
+            android:name=".restoran.Tabugan.Item_Apk_Tabungan"
             android:exported="false" />
         <activity android:name=".ItemSuperAppRevisi" />
         <activity
