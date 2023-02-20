@@ -383,7 +383,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Laporan Pembayaran Piutanga"
+                        android:text="Laporan Pembayaran Piutang"
                         android:textColor="@color/hijau_gojek"
                         android:textSize="16dp"
                         app:layout_constraintStart_toStartOf="parent"

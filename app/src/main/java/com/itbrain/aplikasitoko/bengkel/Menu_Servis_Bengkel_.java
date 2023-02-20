@@ -69,7 +69,7 @@ public class Menu_Servis_Bengkel_ extends AppCompatActivity implements Penjualan
         year=calendar.get(Calendar.YEAR);
         month=calendar.get(Calendar.MONTH);
         day=calendar.get(Calendar.DAY_OF_MONTH);
-        final Button btnSimpan = findViewById(R.id.btnSimpan);
+        final Button btnSimpan = findViewById(R.id.simpan);
 
         eHarga = findViewById(R.id.eHarga);
 
@@ -540,8 +540,8 @@ class MasterPenjualanServis extends RecyclerView.Adapter<MasterPenjualanServis.V
     @NonNull
     @Override
     public MasterPenjualanServis.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view_penjualan_, parent, false);
-        return new ViewHolder(view);
+//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view_penjualan_, parent, false);
+        return null;
     }
 
     @Override

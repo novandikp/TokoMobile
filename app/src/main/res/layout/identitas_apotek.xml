@@ -60,20 +60,22 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#FF0000"
+            android:onClick="reset"
             android:text="x"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/simpan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/simpan"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="90dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#4CAF50"
+            android:onClick="simpan"
             android:text="Simpan"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -104,6 +106,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNamaToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Apotek"
@@ -122,6 +125,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat"
@@ -140,6 +144,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNotoko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="No. Telp"
@@ -158,6 +163,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eCaption1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Pertama"
@@ -176,6 +182,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eCaption2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Kedua"
@@ -194,6 +201,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eCaption3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Ketiga"
@@ -212,6 +220,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expired"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Jangkauan Hari Expired"

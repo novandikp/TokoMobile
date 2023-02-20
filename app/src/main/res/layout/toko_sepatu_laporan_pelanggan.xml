@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <EditText
-            android:id="@+id/editTextTextPersonName17"
+            android:id="@+id/eCari"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#00FFFFFF"

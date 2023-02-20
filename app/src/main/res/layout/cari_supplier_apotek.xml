@@ -54,9 +54,10 @@
         app:layout_constraintBottom_toTopOf="@+id/TambahSupplier"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView12">
+        app:layout_constraintTop_toBottomOf="@+id/eCari">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcSupp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/item_supplier_apotek" />
@@ -76,7 +77,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView12"
+        android:id="@+id/eCari"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -100,12 +101,12 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName17"
+                app:layout_constraintStart_toEndOf="@+id/etCari"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_search_24" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName17"
+                android:id="@+id/etCari"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

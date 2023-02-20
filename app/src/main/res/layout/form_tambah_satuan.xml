@@ -7,7 +7,7 @@
     tools:context=".Form_Tambah_Satuan">
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/simpan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_700"
@@ -33,6 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/eNIlai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
@@ -58,6 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout9">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/eSatuanKecil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
@@ -83,6 +85,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/eSatuanBesar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"

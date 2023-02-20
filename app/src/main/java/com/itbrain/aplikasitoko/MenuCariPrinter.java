@@ -57,7 +57,7 @@ public class MenuCariPrinter extends AppCompatActivity {
         list = (ListView) findViewById(R.id.listView) ;
         adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         list.setAdapter(adapter);
-        faktur = getIntent().getStringExtra("idorder") ;
+        faktur = getIntent().getStringExtra("idjual") ;
         type=getIntent().getStringExtra("type");
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -66,8 +66,8 @@ public class MenuCariPrinter extends AppCompatActivity {
                 temp.setCustom("Printer", deviceName);
 
 
-                Intent in = new Intent(MenuCariPrinter.this,MenuCetak.class) ;
-                in.putExtra("idorder",faktur) ;
+                Intent in = new Intent(MenuCariPrinter.this, MenuCetak.class) ;
+                in.putExtra("idjual",faktur) ;
                 in.putExtra("type",type) ;
                 in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
                 startActivity(in);

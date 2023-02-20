@@ -42,7 +42,7 @@ public class Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master extends AppCompatAct
     }
 
     public void PindahObat(View view) {
-        Intent intent = new Intent(Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master.this, Form_Cari_Obat.class);
+        Intent intent = new Intent(Aplikasi_Apotek_Plus_Menu_Keuangan_Menu_Master.this, Form_Cari_Obat_Apotek_.class);
         startActivity(intent);
     }
 
