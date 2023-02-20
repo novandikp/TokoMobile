@@ -161,7 +161,7 @@ class AdapterListPelanggan extends RecyclerView.Adapter<AdapterListPelanggan.Pel
             @Override
             public void onClick(View v) {
                 PopupMenu popupMenu = new PopupMenu(ctxAdapter,holder.opt);
-                popupMenu.inflate(R.menu.menu_option);
+                popupMenu.inflate(R.menu.menu_option_toko_kain);
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
