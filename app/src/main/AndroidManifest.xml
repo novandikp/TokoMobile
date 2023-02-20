@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.itbrain.aplikasitoko">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -19,8 +20,17 @@
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
 
+        <activity android:name=".TokoKain.Activity_Bayar_Toko_Kain"/>
+
 
         <activity android:name=".rentalmobil.MenuUtamaMobil"/>
+
+        <activity android:name=".TokoKain.Activity_Penjualan_Cari_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Bayar_Cetak_Laporan_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Cari_Printer_Laporan_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Bayar_Cetak_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Cari_Printer_Toko_Kain"/>
+        <activity android:name=".MainActivity"/>
 
 
 
@@ -227,16 +237,10 @@
             android:name=".TokoKain.Restore_Data_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Backup_Data_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Laporan_Order_Toko_Kain_"
+            android:name=".TokoKain.Backup_Data_Toko_Kain"
             android:exported="false" />
         <activity
             android:name=".TokoKain.Laporan_Pendapatan_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Laporan_Barang_Toko_Kain_"
             android:exported="false" />
         <activity
             android:name=".TokoKain.Laporan_Pelanggan_Toko_Kain"
@@ -245,13 +249,13 @@
             android:name=".TokoKain.Form_Tambah_Pelanggan_Toko_Kain_"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.FormTambahKain"
+            android:name=".TokoKain.FormTambah_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.TambahKain"
+            android:name=".TokoKain.TambahKain_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Form_Tambah_Kategori_Kain_"
+            android:name=".TokoKain.Form_Tambah_Kategori_Toko_Kain"
             android:exported="false" />
         <activity
             android:name=".TokoKain.Identitas_Toko_Kain"
@@ -290,19 +294,19 @@
             android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Transaksi_Kain"
+            android:name=".TokoKain.Transaksi_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Utilitas"
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Utilitas_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Laporan"
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Laporan_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Master"
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Master_Toko_Kain"
             android:exported="false" />
         <activity
-            android:name=".TokoKain.Aplikasi_TokoKain_Menu_Utama"
+            android:name=".TokoKain.Aplikasi_TokoKain_Menu_Utama_Toko_Kain"
             android:exported="false" />
         <activity
             android:name=".klinik.Restore_Data_Klinik_"
@@ -736,6 +740,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TokoKain.ActivityExportExcel_Toko_Kain" />
     </application>
 
 </manifest>
