@@ -27,23 +27,24 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar68"
-        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintStart_toEndOf="@+id/KembaliBarang"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button67"
+        android:id="@+id/mbohSimpan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="simpanBarang"
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/Kembali"
+        android:id="@+id/KembaliBarang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -61,13 +62,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button67"
+        app:layout_constraintBottom_toTopOf="@+id/mbohSimpan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <Spinner
-            android:id="@+id/spinner15"
+            android:id="@+id/inputBarang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -76,6 +77,7 @@
             android:minHeight="48dp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvnamaBarang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -85,6 +87,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNamaBarang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -93,6 +96,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvHargaBeli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -102,6 +106,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eHargaBeli"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -110,6 +115,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvHargaJual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -119,6 +125,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eHargaJual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -127,6 +134,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvStok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -136,6 +144,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eStok"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -144,12 +153,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Spinner
-            android:id="@+id/spinner16"
+            android:id="@+id/input23"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
+            android:entries="@array/obat_apa"
             android:minHeight="48dp" />
 
     </LinearLayout>

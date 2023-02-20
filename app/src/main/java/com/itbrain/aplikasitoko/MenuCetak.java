@@ -71,7 +71,7 @@ public class MenuCetak extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_cetak);
+//        setContentView(R.layout.activity_menu_cetak);
 //        getSupportActionBar().setTitle("Cetak Struk");
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 

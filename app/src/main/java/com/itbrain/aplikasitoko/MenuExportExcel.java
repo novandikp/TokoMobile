@@ -47,7 +47,7 @@ public class MenuExportExcel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_export_excel);
+        setContentView(R.layout.activity_menu_export_excel_kasir);
 
         getWindow().setSoftInputMode(3);
         this.config = new ModulBengkel(getSharedPreferences("config", 0));

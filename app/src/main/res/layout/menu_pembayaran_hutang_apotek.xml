@@ -47,13 +47,14 @@
         android:id="@+id/imageView35"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName19"
+        app:layout_constraintBottom_toBottomOf="@+id/carikan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName19"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName19"
+        app:layout_constraintStart_toEndOf="@+id/carikan"
+        app:layout_constraintTop_toTopOf="@+id/carikan"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcHutang"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -63,10 +64,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName19" />
+        app:layout_constraintTop_toBottomOf="@+id/carikan" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName19"
+        android:id="@+id/carikan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

@@ -54,26 +54,30 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/BtnCancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#FF0000"
-            android:text="x"
+            android:onClick="btnCancel"
+            android:text="X"
+            android:textStyle="bold"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/BtnSimpan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/BtnSimpan"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="90dp"
+            android:layout_marginStart="100dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#4CAF50"
+            android:onClick="BtnSimpan"
+
             android:text="Simpan"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -97,6 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
@@ -104,6 +109,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Toko"
@@ -113,6 +119,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
@@ -120,6 +127,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat Toko"
@@ -129,6 +137,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
@@ -136,6 +145,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelepon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nomor Telepon Toko"
@@ -146,6 +156,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
@@ -153,15 +164,18 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:hint="Caption Pertama"
                 android:paddingTop="30dp"
-                android:text="Terima Kasih"
+                android:text="Terimakasih"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
@@ -169,6 +183,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Kedua"
@@ -178,6 +193,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
@@ -185,6 +201,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Ketiga"

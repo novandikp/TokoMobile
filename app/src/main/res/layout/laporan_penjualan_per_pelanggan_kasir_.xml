@@ -23,9 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Laporan Penjualan"
+        android:text="Laporan Penjualan per Pelanggan"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar68"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,13 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName61"
+        app:layout_constraintBottom_toBottomOf="@+id/eCariLaporanPerPelanggan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName61"
+        app:layout_constraintTop_toTopOf="@+id/eCariLaporanPerPelanggan"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <Spinner
-        android:id="@+id/spinner17"
+        android:id="@+id/spinnerPerPelanggan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView504" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName61"
+        android:id="@+id/eCariLaporanPerPelanggan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -88,10 +88,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName61" />
+        app:layout_constraintTop_toBottomOf="@+id/eCariLaporanPerPelanggan" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName64"
+        android:id="@+id/eKePerKat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -103,10 +103,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView504"
-        app:layout_constraintTop_toTopOf="@+id/textView504" />
+        app:layout_constraintTop_toTopOf="@+id/textView504"
+        android:onClick="kepel"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName63"
+        android:id="@+id/eDariPerKat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -117,7 +118,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView504"
         app:layout_constraintEnd_toStartOf="@+id/textView504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView504" />
+        app:layout_constraintTop_toTopOf="@+id/textView504"
+        android:onClick="dapel"/>
 
     <ScrollView
         android:layout_width="0dp"
@@ -127,7 +129,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button71"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner17">
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPerPelanggan">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,12 +137,14 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvPerPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
     <Button
+        android:onClick="exportLaporanPerPelanggan"
         android:id="@+id/button71"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -179,22 +183,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView501">
 
                 <TextView
-                    android:id="@+id/textView502"
+                    android:id="@+id/tot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:text="0"
-                    android:textColor="@color/agakhitam"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView503"
-                    app:layout_constraintStart_toEndOf="@+id/textView503"
-                    app:layout_constraintTop_toTopOf="@+id/textView503" />
-
-                <TextView
-                    android:id="@+id/textView503"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp."
+                    android:text="Rp. 0"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -203,11 +195,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView499"
+                android:id="@+id/jed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Jumlah Data :"
+                android:text="Jumlah Data : 0"
                 android:textColor="@color/agakhitam"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -220,18 +212,8 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView499" />
+                app:layout_constraintTop_toBottomOf="@+id/jed" />
 
-            <TextView
-                android:id="@+id/textView500"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="2"
-                android:textColor="@color/agakhitam"
-                app:layout_constraintBottom_toBottomOf="@+id/textView499"
-                app:layout_constraintStart_toEndOf="@+id/textView499"
-                app:layout_constraintTop_toTopOf="@+id/textView499" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

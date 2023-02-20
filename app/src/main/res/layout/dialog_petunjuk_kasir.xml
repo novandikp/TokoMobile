@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:adjustViewBounds="true"
+        android:src="@drawable/petunjuk_aplikasi_kasir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingin melihat petunjuk penggunaan ?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#555"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kunjungi channel YouTube kami.\nVersi trial hanya bisa 5 data. Silahkan lakukan pembelian untuk penggunaan data tanpa batas. Sekali beli buat seumur hidup. Ganti logo terdapat di menu identitas" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

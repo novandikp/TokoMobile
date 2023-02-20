@@ -14,8 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.android.billingclient.api.Purchase;
-import com.android.billingclient.api.SkuDetails;
+
+
 import com.itbrain.aplikasitoko.MainActivity;
 import com.itbrain.aplikasitoko.R;
 
@@ -30,7 +30,6 @@ public class AplikasiKlinik_Menu_Utilitas extends AppCompatActivity {
     String produkid2 = "com.itbrain.aplikasitoko.full";
     String belisku =produkid;
     private List<String> skuList = Arrays.asList(produkid,produkid2);
-    HashMap<String, SkuDetails> skuDetailsHashMap = new HashMap<>();
 
     boolean stat;
     View v;
@@ -82,7 +81,7 @@ public class AplikasiKlinik_Menu_Utilitas extends AppCompatActivity {
     }
 
     private void setText(){
-        if(MainActivity.status){
+        if(true){
            ModulKlinik.setText(v,R.id.textView8,"Terima kasih");
            ModulKlinik.setText(v,R.id.textView9,"telah membeli aplikasi kami");
         }else{

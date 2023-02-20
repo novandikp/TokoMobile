@@ -48,13 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName61"
+        app:layout_constraintBottom_toBottomOf="@+id/eCariLaporanPelanggan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName61"
+        app:layout_constraintTop_toTopOf="@+id/eCariLaporanPelanggan"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName61"
+        android:id="@+id/eCariLaporanPelanggan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -75,7 +75,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button71"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName61">
+        app:layout_constraintTop_toBottomOf="@+id/eCariLaporanPelanggan">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,6 +83,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvLaporanPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -95,6 +96,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="exportLaporanPelanggan"
         android:text="export exel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,27 +120,17 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView499"
+                android:id="@+id/jede"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Jumlah Data :"
+                android:text="Jumlah Data : 0"
                 android:textColor="@color/agakhitam"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView500"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="2"
-                android:textColor="@color/agakhitam"
-                app:layout_constraintBottom_toBottomOf="@+id/textView499"
-                app:layout_constraintStart_toEndOf="@+id/textView499"
-                app:layout_constraintTop_toTopOf="@+id/textView499" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

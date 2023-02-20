@@ -4,10 +4,10 @@
     package="com.itbrain.aplikasitoko">
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,39 +20,130 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
-
-
-        <activity android:name=".klinik.MenuUbahJasaKlinik"/>
-        <activity android:name=".klinik.MenuTambahJasaKlinik"/>
-
-
-        <activity android:name=".klinik.MenuTambahPasienKlinik"/>
-        <activity android:name=".klinik.Tambah_Pasien_Klinik"/>
-        <activity android:name=".klinik.MenuUbahPasienKlinik"/>
-
-        <activity android:name=".klinik.Tambah_Dokter_Klinik_"/>
-        <activity android:name=".klinik.MenuTambahDokterKLinik"/>
-        <activity android:name=".klinik.MenuUbahDokterKlinik"/>
-
-        <activity android:name=".klinik.Menu_pemeriksaan_klinik"/>
-        <activity android:name=".klinik.MenuPilihKlinik"/>
-        <activity android:name=".klinik.MenuBayarKLinik"/>
-        <activity android:name=".klinik.MenuCetakKLinik"/>
-        <activity android:name=".klinik.MenuCariPrinterKlinik"/>
-
-        <activity android:name=".klinik.Tambah_Janji_Klinik"/>
-        <activity android:name=".klinik.MenuTambahJanjiKlinik"/>
-        <activity android:name=".klinik.MenuPilihDuaKlinik"/>
-
-        <activity android:name=".klinik.MenuExportExcelKlinik"/>
-        <activity android:name=".rentalmobil.MenuUtamaMobil"/>
-
-
-
-
+        <activity android:name=".apotek.MenuCetakapotek2"/>
+<activity android:name=".apotek.Menu_Bayar_Piutang_Apotek"/>
+    <activity android:name=".apotek.Menu_Cari_Priter_Apotek"/>
+        <activity android:name=".apotek.Menu_Cetak_Apotek"/>
+    <activity android:name=".apotek.Menu_Restore_Apotek"/>
+        <activity android:name=".apotek.Menu_Backup_Apotek"/>
+        <activity android:name=".apotek.Menu_Export_Exel_Apotek"/>
+        <activity android:name=".apotek.Form_Ubah_Kategori_Apotek_" />
+        <activity android:name=".apotek.Form_Ubah_Satuan_Apotek" />
+        <activity android:name=".apotek.Form_Ubah_Obat_Apotek_" />
+        <activity android:name=".apotek.Form_Ubah_Pelanggan_Apotek_" />
+        <activity android:name=".apotek.Form_Ubah_Supplier_Apotek" />
+        <activity android:name=".apotek.Menu_Bayar_Apotek" />
+        <activity android:name=".apotek.Menu_Pilih_Apotek" />
+        <activity android:name=".apotek.Menu_Bayar_Hutang_Apotek" />
         <activity
             android:name=".MenuExportExcel"
             android:exported="false" />
+            <activity android:name=".kasir.ActivityCetakKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityCetakCariKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityCetakUtangKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityCetak2Kasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityUbahBarangKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.Laporan_Penjualan_per_Kategori_Kasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.Laporan_Penjualan_per_Barang_Kasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityUbahPelangganKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityUbahKategoriKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityExportExcelKasir"
+                android:exported="false"/>
+            <activity
+                android:name=".kasir.ActivityPenjualanCariKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityBayarKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityUtangBayarKasir"
+                android:exported="false"/>
+            <activity android:name=".kasir.ActivityReturnProsesKasir"
+                android:exported="false"/>
+            <activity
+                android:name=".kasir.Restore_Data_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Backup_Data_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Hutang_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Laba_Rugi_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Return_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Pendapatan_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Penjualan_per_Jenis_Kasir"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Penjualan_per_Pelanggan_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Barang_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Laporan_Pelanggan_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Menu_Return_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Form_Penjualan_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Form_Tambah_Pelanggan_Toko_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Tambah_Pelanggan_Toko_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Form_Tambah_Barang_Kasir_"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Form_Tambah_Kategori_Kasir_"
+                android:exported="false" />
+            <activity android:name=".kasir.Tambah_Kategori_Kasir"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Tambah_Barang_Kasir"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Identitas_Kasir_Super_Mudah"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Master"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Transaksi"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Laporan"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Apllikasi_Kasir_Super_Mudah_Menu_Utilitas"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Item_Apk_Kasir"
+                android:exported="false" />
+            <activity
+                android:name=".kasir.Menu_Bayar_Hutang_Kasir"
+                android:exported="false" />
         <activity
             android:name=".MenuPenjualan"
             android:exported="false" />
@@ -140,8 +231,9 @@
         <activity
             android:name=".apotek.Laporan_Piutang_Apotek_"
             android:exported="false" />
+        <activity android:name=".apotek.Identitas_Apotek" />
         <activity
-            android:name=".apotek.Laporan_Pembayaran_Apotek_"
+            android:name=".apotek.Laporan_Pembayaran_Hutang_Apotek_"
             android:exported="false" />
         <activity
             android:name=".apotek.Laporan_Pendapatan_Apotek_"
@@ -183,109 +275,10 @@
             android:name=".apotek.Kategori_Apotek_"
             android:exported="false" />
         <activity
-            android:name=".apotek.Identitas_Apotek"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Restore_Data_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Backup_Data_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Hutang_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Laba_Rugi_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Return_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Pendapatan_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".Laporan_Penjualan_per_Jenis_"
-            android:exported="false" />
-        <activity
             android:name=".Laporan_Penjualan_per_Kategori_"
             android:exported="false" />
         <activity
             android:name=".Laporan_Penjualan_per_Barang_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Penjualan_per_Pelanggan_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Barang_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Laporan_Pelanggan_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Menu_Return_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Form_Penjualan_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Form_Tambah_Pelanggan_Toko_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Tambah_Pelanggan_Toko_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Form_Tambah_Barang_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Form_Tambah_Kategori_Kasir_"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Tambah_Barang_Kasir"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Tambah_Kategori_Kasir"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Identitas_Kasir_Super_Mudah"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Restore_Data_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Backup_Data_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Laporan_Order_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Laporan_Pendapatan_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Laporan_Barang_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Laporan_Pelanggan_Toko_Kain"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Form_Tambah_Pelanggan_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.FormTambahKain"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.TambahKain"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Form_Tambah_Kategori_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Identitas_Toko_Kain"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Pelanggan_Toko_Kain_"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Kategori_Toko_Kain_"
             android:exported="false" />
         <activity
             android:name=".apotek.Aplikasi_Apotek_Plus_Keuangan_Menu_Utilitas"
@@ -299,86 +292,15 @@
         <activity
             android:name=".apotek.Aplikasi_Apotek_Plus_Keuangan_Menu_Utama"
             android:exported="false" />
+
         <activity
-            android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Master"
+            android:name=".Form_Tambah_Janji"
             android:exported="false" />
         <activity
-            android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Transaksi"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Laporan"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Apllikasi_Kasir_Super_Mudah_Menu_Utilitas"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Transaksi_Kain"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Utilitas"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Laporan"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Master"
-            android:exported="false" />
-        <activity
-            android:name=".TokoKain.Aplikasi_TokoKain_Menu_Utama"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Restore_Data_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Backup_Data_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Laporan_Bagi_Hasil_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Laporan_Pendapatan_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Laporan_Periksa_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Laporan_Jasa_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Laporan_Dokter_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Laporan_Pasien_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Menu_Bayar_Tambah_Klinik_"
+            android:name=".Tambah_Janji"
             android:exported="false" />
         <activity
             android:name=".FormTambahJasa"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Identitas_Klinik"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Tambah_Jasa_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.AplikasiKlinik_Menu_Utilitas"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.AplikasiKlinik_Menu_Laporan"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.AplikasiKlinik_Menu_Transaksi"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.AplikasiKlinik_Menu_Master"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.AplikasiKlinikDokter_Menu_Utama"
             android:exported="false" />
         <activity
             android:name=".restoran.Backup_Data_Restoran_"
@@ -623,21 +545,77 @@
             android:name=".apotek.Item_Apk_Apotek"
             android:exported="false" />
         <activity
-            android:name=".kasir.Item_Apk_Kasir"
+            android:name=".TokoKredit.Item_Apk_Toko_Kredit"
+            android:exported="false" />
+        <activity android:name=".TokoKain.Activity_Bayar_Toko_Kain"/>
+
+
+        <activity android:name=".TokoKain.Activity_Penjualan_Cari_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Bayar_Cetak_Laporan_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Cari_Printer_Laporan_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Bayar_Cetak_Toko_Kain"/>
+        <activity android:name=".TokoKain.Activity_Cari_Printer_Toko_Kain"/>
+        <activity android:name=".MainActivity"/>
+
+
+        <activity
+            android:name=".TokoKain.Restore_Data_Toko_Kain_"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Backup_Data_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Laporan_Pendapatan_Toko_Kain_"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Laporan_Pelanggan_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Form_Tambah_Pelanggan_Toko_Kain_"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.FormTambah_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.TambahKain_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Form_Tambah_Kategori_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Identitas_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Pelanggan_Toko_Kain_"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Kategori_Toko_Kain_"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".TokoKain.Transaksi_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Utilitas_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Laporan_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Aplikasi_Toko_Kain_Menu_Master_Toko_Kain"
+            android:exported="false" />
+        <activity
+            android:name=".TokoKain.Aplikasi_TokoKain_Menu_Utama_Toko_Kain"
             android:exported="false" />
         <activity
             android:name=".TokoKain.Item_Apk_Toko_Kain"
             android:exported="false" />
-        <activity
-            android:name=".TokoKredit.Item_Apk_Toko_Kredit"
-            android:exported="false" />
+
+        <activity android:name=".TokoKain.ActivityExportExcel_Toko_Kain" />
         <activity
             android:name=".bengkel.Item_Apk_Bengkel_Mobil"
             android:exported="false" />
-        <activity
-            android:name=".restoran.Tabugan.Item_Apk_Tabungan"
-            android:exported="false" />
-        <activity android:name=".ItemSuperAppRevisi" />
         <activity
             android:name=".tokosepatu.Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="false" />
@@ -669,12 +647,6 @@
             android:name=".Salon.Aplikasi_Salon_Menu_Utama"
             android:exported="false" />
         <activity
-            android:name=".kasir.Menu_Bayar_Hutang_Kasir"
-            android:exported="false" />
-        <activity
-            android:name=".kasir.Tambah_Pelangggan_Kasir"
-            android:exported="false" />
-        <activity
             android:name=".apotek.Menu_Pengeluaran_Apotek"
             android:exported="false" />
         <activity
@@ -702,7 +674,80 @@
             android:name=".apotek.Cari_Pelangan_Apotek"
             android:exported="false" />
         <activity
-            android:name=".apotek.Form_Cari_Obat"
+            android:name=".apotek.Form_Cari_Obat_Apotek_"
+            android:exported="false" />
+
+
+        <activity android:name=".klinik.MenuUbahJasaKlinik"/>
+        <activity android:name=".klinik.MenuTambahJasaKlinik"/>
+
+
+        <activity android:name=".klinik.MenuTambahPasienKlinik"/>
+        <activity android:name=".klinik.Tambah_Pasien_Klinik"/>
+        <activity android:name=".klinik.MenuUbahPasienKlinik"/>
+
+        <activity android:name=".klinik.Tambah_Dokter_Klinik_"/>
+        <activity android:name=".klinik.MenuTambahDokterKLinik"/>
+        <activity android:name=".klinik.MenuUbahDokterKlinik"/>
+
+        <activity android:name=".klinik.Menu_pemeriksaan_klinik"/>
+        <activity android:name=".klinik.MenuPilihKlinik"/>
+        <activity android:name=".klinik.MenuBayarKLinik"/>
+        <activity android:name=".klinik.MenuCetakKLinik"/>
+        <activity android:name=".klinik.MenuCariPrinterKlinik"/>
+
+        <activity android:name=".klinik.Tambah_Janji_Klinik"/>
+        <activity android:name=".klinik.MenuTambahJanjiKlinik"/>
+        <activity android:name=".klinik.MenuPilihDuaKlinik"/>
+
+        <activity android:name=".klinik.MenuExportExcelKlinik"/>
+        <activity
+            android:name=".klinik.Restore_Data_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Backup_Data_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Laporan_Bagi_Hasil_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Laporan_Pendapatan_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Laporan_Periksa_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Laporan_Jasa_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Laporan_Dokter_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Laporan_Pasien_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Menu_Bayar_Tambah_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Identitas_Klinik"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.Tambah_Jasa_Klinik_"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.AplikasiKlinik_Menu_Utilitas"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.AplikasiKlinik_Menu_Laporan"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.AplikasiKlinik_Menu_Transaksi"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.AplikasiKlinik_Menu_Master"
+            android:exported="false" />
+        <activity
+            android:name=".klinik.AplikasiKlinikDokter_Menu_Utama"
             android:exported="false" />
         <activity
             android:name=".Form_Cari_Kategori"

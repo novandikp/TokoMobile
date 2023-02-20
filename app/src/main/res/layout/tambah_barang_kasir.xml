@@ -49,11 +49,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/hijau_gojek"
+        android:onClick="mbohBarang"
         android:text="Tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -63,13 +65,13 @@
         android:layout_marginEnd="16dp"
         android:background="#00292929"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName20"
+        app:layout_constraintBottom_toBottomOf="@+id/sPencarianBarang"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName20"
+        app:layout_constraintTop_toTopOf="@+id/sPencarianBarang"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <Spinner
-        android:id="@+id/spinner14"
+        android:id="@+id/sBabi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -80,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout33" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName20"
+        android:id="@+id/sPencarianBarang"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -91,7 +93,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/imageView37"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner14" />
+        app:layout_constraintTop_toBottomOf="@+id/sBabi" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -101,7 +103,7 @@
         app:layout_constraintBottom_toTopOf="@+id/TambahBarang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20">
+        app:layout_constraintTop_toBottomOf="@+id/sPencarianBarang">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,6 +111,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBarang"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -130,7 +133,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView287"
+                android:id="@+id/tJumlahBarang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -146,10 +149,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="0"
                 android:textColor="@color/agakhitam"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView287"
+                app:layout_constraintStart_toEndOf="@+id/tJumlahBarang"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

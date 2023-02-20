@@ -48,12 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName65"
+        app:layout_constraintBottom_toBottomOf="@+id/lapPen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName65"
+        app:layout_constraintTop_toTopOf="@+id/lapPen"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <Button
+        android:onClick="exportLaporanPendapatan"
         android:id="@+id/button72"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -81,13 +82,15 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvLaporanPendapatan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName66"
+        android:onClick="mumu"
+        android:id="@+id/mumu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -110,10 +113,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName65" />
+        app:layout_constraintTop_toBottomOf="@+id/lapPen" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName67"
+        android:onClick="abu"
+        android:id="@+id/abu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -127,7 +131,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView516" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName65"
+        android:id="@+id/lapPen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -150,17 +154,17 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <TextView
-            android:id="@+id/textView506"
+            android:id="@+id/bali"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
             android:text="Kembali :"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView505" />
+            app:layout_constraintTop_toBottomOf="@+id/penda" />
 
         <TextView
-            android:id="@+id/textView507"
+            android:id="@+id/juda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
@@ -174,7 +178,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
-            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/textView510"
             app:layout_constraintStart_toEndOf="@+id/textView510"
             app:layout_constraintTop_toTopOf="@+id/textView510" />
@@ -184,7 +187,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
-            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/textView511"
             app:layout_constraintStart_toEndOf="@+id/textView511"
             app:layout_constraintTop_toTopOf="@+id/textView511" />
@@ -194,27 +196,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Rp."
-            app:layout_constraintBottom_toBottomOf="@+id/textView515"
-            app:layout_constraintStart_toEndOf="@+id/textView515"
-            app:layout_constraintTop_toTopOf="@+id/textView515" />
+            app:layout_constraintBottom_toBottomOf="@+id/bayarr"
+            app:layout_constraintStart_toEndOf="@+id/bayarr"
+            app:layout_constraintTop_toTopOf="@+id/bayarr" />
 
         <TextView
             android:id="@+id/textView511"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Rp."
-            app:layout_constraintBottom_toBottomOf="@+id/textView506"
-            app:layout_constraintStart_toEndOf="@+id/textView506"
-            app:layout_constraintTop_toTopOf="@+id/textView506" />
+            app:layout_constraintBottom_toBottomOf="@+id/bali"
+            app:layout_constraintStart_toEndOf="@+id/bali"
+            app:layout_constraintTop_toTopOf="@+id/bali" />
 
         <TextView
             android:id="@+id/textView512"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
-            android:text="0"
             app:layout_constraintBottom_toBottomOf="@+id/textView513"
             app:layout_constraintStart_toEndOf="@+id/textView513"
             app:layout_constraintTop_toTopOf="@+id/textView513" />
@@ -224,10 +223,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Rp."
-            app:layout_constraintBottom_toBottomOf="@+id/textView505"
-            app:layout_constraintStart_toEndOf="@+id/textView505"
-            app:layout_constraintTop_toTopOf="@+id/textView505" />
+            app:layout_constraintBottom_toBottomOf="@+id/penda"
+            app:layout_constraintStart_toEndOf="@+id/penda"
+            app:layout_constraintTop_toTopOf="@+id/penda" />
 
         <TextView
             android:id="@+id/textView514"
@@ -235,12 +233,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView515"
+            android:id="@+id/bayarr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -249,10 +246,10 @@
             android:text="Pembayaran :"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView506" />
+            app:layout_constraintTop_toBottomOf="@+id/bali" />
 
         <TextView
-            android:id="@+id/textView505"
+            android:id="@+id/penda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

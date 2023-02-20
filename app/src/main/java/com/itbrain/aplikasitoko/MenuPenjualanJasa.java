@@ -45,7 +45,7 @@ public class MenuPenjualanJasa extends AppCompatActivity implements Penjualan {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_penjualan_jasa);
+//        setContentView(R.layout.activity_menu_penjualan_jasa);
 
         calendar=Calendar.getInstance();
         year=calendar.get(Calendar.YEAR);
