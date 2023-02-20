@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.itbrain.aplikasitoko">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,6 +22,29 @@
         tools:targetApi="31">
 
 
+        <activity android:name=".klinik.MenuUbahJasaKlinik"/>
+        <activity android:name=".klinik.MenuTambahJasaKlinik"/>
+
+
+        <activity android:name=".klinik.MenuTambahPasienKlinik"/>
+        <activity android:name=".klinik.Tambah_Pasien_Klinik"/>
+        <activity android:name=".klinik.MenuUbahPasienKlinik"/>
+
+        <activity android:name=".klinik.Tambah_Dokter_Klinik_"/>
+        <activity android:name=".klinik.MenuTambahDokterKLinik"/>
+        <activity android:name=".klinik.MenuUbahDokterKlinik"/>
+
+        <activity android:name=".klinik.Menu_pemeriksaan_klinik"/>
+        <activity android:name=".klinik.MenuPilihKlinik"/>
+        <activity android:name=".klinik.MenuBayarKLinik"/>
+        <activity android:name=".klinik.MenuCetakKLinik"/>
+        <activity android:name=".klinik.MenuCariPrinterKlinik"/>
+
+        <activity android:name=".klinik.Tambah_Janji_Klinik"/>
+        <activity android:name=".klinik.MenuTambahJanjiKlinik"/>
+        <activity android:name=".klinik.MenuPilihDuaKlinik"/>
+
+        <activity android:name=".klinik.MenuExportExcelKlinik"/>
         <activity android:name=".rentalmobil.MenuUtamaMobil"/>
 
 
@@ -329,34 +354,13 @@
             android:name=".klinik.Laporan_Pasien_Klinik_"
             android:exported="false" />
         <activity
-            android:name=".Form_Tambah_Janji"
-            android:exported="false" />
-        <activity
-            android:name=".Tambah_Janji"
-            android:exported="false" />
-        <activity
             android:name=".klinik.Menu_Bayar_Tambah_Klinik_"
-            android:exported="false" />
-        <activity
-            android:name=".Menu_pemeriksaan"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.FormTambahDokter"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.FormTambahPasien"
             android:exported="false" />
         <activity
             android:name=".FormTambahJasa"
             android:exported="false" />
         <activity
             android:name=".klinik.Identitas_Klinik"
-            android:exported="false" />
-        <activity
-            android:name=".TambahDokter"
-            android:exported="false" />
-        <activity
-            android:name=".TambahPasien"
             android:exported="false" />
         <activity
             android:name=".klinik.Tambah_Jasa_Klinik_"
@@ -626,9 +630,6 @@
             android:exported="false" />
         <activity
             android:name=".TokoKredit.Item_Apk_Toko_Kredit"
-            android:exported="false" />
-        <activity
-            android:name=".klinik.Item_Apk_Klinik_Dokter"
             android:exported="false" />
         <activity
             android:name=".bengkel.Item_Apk_Bengkel_Mobil"

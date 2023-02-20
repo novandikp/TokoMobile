@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.TambahDokter;
-import com.itbrain.aplikasitoko.TambahPasien;
 
 public class AplikasiKlinik_Menu_Master extends AppCompatActivity {
 
@@ -28,6 +27,14 @@ public class AplikasiKlinik_Menu_Master extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void PindahIdentitas(View view) {
         Intent intent = new Intent(AplikasiKlinik_Menu_Master.this, Identitas_Klinik.class);
         startActivity(intent);
@@ -39,12 +46,12 @@ public class AplikasiKlinik_Menu_Master extends AppCompatActivity {
     }
 
     public void PindahPasien(View view) {
-        Intent intent = new Intent(AplikasiKlinik_Menu_Master.this, TambahPasien.class);
+        Intent intent = new Intent(AplikasiKlinik_Menu_Master.this, Tambah_Pasien_Klinik.class);
         startActivity(intent);
     }
 
     public void PindahDokter(View view) {
-        Intent intent = new Intent(AplikasiKlinik_Menu_Master.this, TambahDokter.class);
+        Intent intent = new Intent(AplikasiKlinik_Menu_Master.this, Tambah_Dokter_Klinik_.class);
         startActivity(intent);
     }
 }

@@ -44,7 +44,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName46"
+        android:id="@+id/eCari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -62,9 +62,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName46"
+        app:layout_constraintBottom_toBottomOf="@+id/eCari"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName46"
+        app:layout_constraintTop_toTopOf="@+id/eCari"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <ScrollView
@@ -75,7 +75,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName46">
+        app:layout_constraintTop_toBottomOf="@+id/eCari">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,6 +83,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recbayar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

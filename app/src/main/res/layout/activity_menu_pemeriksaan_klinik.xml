@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPenjualanJasa">
+    tools:context=".klinik.Menu_pemeriksaan_klinik">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar70"
+        android:id="@+id/toolbar60"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -18,20 +18,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView361"
+        android:id="@+id/textView467"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Servis"
+        android:text="Menu Pemeriksaan"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/kembali"
-        app:layout_constraintStart_toEndOf="@+id/kembali"
-        app:layout_constraintTop_toTopOf="@+id/kembali" />
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar60"
+        app:layout_constraintStart_toEndOf="@+id/Keluar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/kembali"
+        android:id="@+id/Keluar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,35 +39,33 @@
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:onClick="kembali"
-        android:rotation="90"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar70"
+        app:layout_constraintBottom_toBottomOf="@+id/textView467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar70"
-        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+        app:layout_constraintTop_toTopOf="@+id/textView467"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.6666" />
+        app:layout_constraintGuide_percent="0.6666667" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="137dp" />
+        app:layout_constraintGuide_percent="0.33333334" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_red_dark"
+        android:background="#82B1ff"
         android:onClick="ganti"
         android:text="ganti"
         android:textColor="#fff"
-        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toStartOf="parent" />
@@ -76,10 +74,10 @@
         android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#90caf9"
         android:onClick="bayar"
         android:text="Bayar"
         android:textColor="#fff"
-        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline16" />
@@ -88,14 +86,14 @@
         android:id="@+id/button6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_200"
+        android:background="#80deea"
         android:onClick="simpan"
         android:text="SIMPAN"
         android:textColor="#fff"
-        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintStart_toEndOf="@+id/guideline14" />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -105,14 +103,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar70">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar60">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout8"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:background="#e0e0e0"
@@ -150,12 +147,9 @@
                     android:id="@+id/eTeknisi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:editable="false"
                     android:enabled="false"
-                    android:hint="Nama Teknisi"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp" />
+                    android:hint="Nama Dokter" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -163,22 +157,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+                app:layout_constraintTop_toBottomOf="@+id/guideline5">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/eFaktur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:editable="false"
                     android:enabled="false"
-                    android:hint="Faktur"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp" />
+                    android:hint="Faktur" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -196,12 +187,9 @@
                     android:id="@+id/eTanggal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:editable="false"
                     android:enabled="false"
-                    android:hint="Tanggal"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp" />
+                    android:hint="Tanggal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.Guideline
@@ -226,11 +214,8 @@
                     android:id="@+id/eHarga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="Harga Jual"
+                    android:hint="Biaya"
                     android:inputType="number"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -250,11 +235,8 @@
                     android:id="@+id/eStok"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:hint="Stok barang"
                     android:inputType="number"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp"
                     android:singleLine="true" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -271,7 +253,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txl12" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout14"
@@ -288,12 +270,9 @@
                     android:id="@+id/ePelanggan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:editable="false"
                     android:enabled="false"
-                    android:hint="Nama Pelanggan"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp" />
+                    android:hint="Nama Pasien" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
@@ -305,7 +284,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout14"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
+                app:srcCompat="@drawable/cari" />
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -316,7 +295,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout10"
-                app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+                app:srcCompat="@drawable/ic_date_range_black_24dp" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -327,50 +306,26 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout12"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout12"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout15"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout12">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/eNopol"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="No Polisi"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                app:srcCompat="@drawable/cari" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout16"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/imageView6"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout15">
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout12">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/eBarang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:editable="false"
                     android:enabled="false"
-                    android:hint="Nama Barang/Jasa"
-                    android:paddingStart="0dp"
-                    android:paddingLeft="10dp" />
+                    android:hint="Nama Jasa" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
@@ -382,32 +337,51 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout16"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textInputLayout16"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
+                app:srcCompat="@drawable/cari" />
 
             <ImageView
                 android:id="@+id/imageView14"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="8dp"
-                android:onClick="kurangstok"
+                android:onClick="tambahstok"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/txl12"
                 app:layout_constraintEnd_toStartOf="@+id/imageView15"
                 app:layout_constraintTop_toTopOf="@+id/txl12"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/ic_baseline_remove_circle_24" />
+                app:srcCompat="@drawable/ic_add_circle_black_24dp" />
 
             <ImageView
                 android:id="@+id/imageView15"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="8dp"
-                android:onClick="tambahstok"
+                android:onClick="kurangstok"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView14"
-                app:srcCompat="@drawable/ic_baseline_add_circle_24" />
+                app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout11">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eKet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Keterangan"
+                    android:maxLength="30" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

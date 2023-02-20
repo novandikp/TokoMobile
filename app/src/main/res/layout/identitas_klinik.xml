@@ -60,6 +60,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#FF0000"
+            android:onClick="reset"
             android:text="x"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,6 +75,7 @@
             android:layout_marginStart="90dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#4CAF50"
+            android:onClick="simpan"
             android:text="Simpan"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -96,6 +98,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar60">
 
+        <ImageView
+            android:id="@+id/logoToko"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:onClick="gantiFoto"
+            android:src="@android:drawable/ic_menu_search"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/logoToko"
+            app:layout_constraintEnd_toEndOf="@+id/logoToko" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pastikan gambar hitam putih"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoToko" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,6 +143,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNamaToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Klinik"
@@ -120,6 +160,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eAlamatToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat Klinik"
@@ -136,6 +177,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNoToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="No Telp"
@@ -153,6 +195,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eCaption1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Pertama"
@@ -169,6 +212,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eCaption2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Kedua"
@@ -185,6 +229,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eCaption3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Caption Ketiga"
