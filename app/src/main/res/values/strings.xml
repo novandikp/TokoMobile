@@ -19,6 +19,11 @@
         <item>Kulakan</item>
     </string-array>
 
+    <string-array name="type_bayar">
+        <item>Tunai</item>
+        <item>Hutang</item>
+    </string-array>
+
     <string-array name="sp_satuan_obat">
         <item>Pilih Satuan</item>
     </string-array>
