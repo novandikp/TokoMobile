@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName61" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName64"
+        android:id="@+id/tgl2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -106,7 +106,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView504" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName63"
+        android:id="@+id/tgl1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

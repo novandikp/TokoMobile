@@ -69,7 +69,7 @@
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner10">
+        app:layout_constraintTop_toBottomOf="@+id/sKet_barang">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -100,7 +100,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spinner10"
+        android:id="@+id/sKet_barang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout40" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/simpan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"

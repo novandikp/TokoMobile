@@ -62,7 +62,7 @@ public class Aplikasi_Apotek_Plus_Keuangan_Menu_Laporan extends AppCompatActivit
     }
 
     public void PindahPembayaranHutang(View view) {
-        Intent intent = new Intent(Aplikasi_Apotek_Plus_Keuangan_Menu_Laporan.this, Laporan_Pembayaran_Apotek_.class);
+        Intent intent = new Intent(Aplikasi_Apotek_Plus_Keuangan_Menu_Laporan.this, Laporan_Pembayaran_Hutang_Apotek_.class);
         startActivity(intent);
     }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".apotek.Form_Cari_Obat">
+    tools:context=".apotek.Form_Cari_Obat_Apotek_">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"
@@ -60,6 +60,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcObat"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/item_apotek_obat">
@@ -76,6 +77,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/hijau_gojek"
+        android:onClick="tambah"
         android:text="Tambah Nama Obat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,10 +93,10 @@
         android:entries="@array/obat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView12" />
+        app:layout_constraintTop_toBottomOf="@+id/eCari" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView12"
+        android:id="@+id/eCari"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -118,12 +120,12 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName17"
+                app:layout_constraintStart_toEndOf="@+id/eCarii"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_search_24" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName17"
+                android:id="@+id/eCarii"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

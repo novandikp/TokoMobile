@@ -46,7 +46,7 @@ public class MenuLaporanDua extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_laporan_dua);
+        setContentView(R.layout.activity_menu_laporan_tiga);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         tvHead = findViewById(R.id.tvHead);
         db = new Database_Bengkel_(this);
@@ -162,7 +162,7 @@ public class MenuLaporanDua extends AppCompatActivity {
 
     public void getServis(String cari) {
         arrayList.clear();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvDua) ;
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvdua) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         RecyclerView.Adapter adapter = new AdapterLapServis(this,arrayList) ;
@@ -179,7 +179,7 @@ public class MenuLaporanDua extends AppCompatActivity {
 
     public void getBayar(String cari) {
         arrayList.clear();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvDua) ;
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvdua) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         RecyclerView.Adapter adapter = new AdapterLapBayar(this,arrayList) ;
@@ -197,7 +197,7 @@ public class MenuLaporanDua extends AppCompatActivity {
 
     public void getHutang(String cari) {
         arrayList.clear();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvDua) ;
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvdua) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         RecyclerView.Adapter adapter = new AdapterLapHutang(this,arrayList) ;
@@ -214,7 +214,7 @@ public class MenuLaporanDua extends AppCompatActivity {
 
     public void getJual(String cari) {
         arrayList.clear();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvDua) ;
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvdua) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         RecyclerView.Adapter adapter = new AdapterLapJual(this,arrayList) ;

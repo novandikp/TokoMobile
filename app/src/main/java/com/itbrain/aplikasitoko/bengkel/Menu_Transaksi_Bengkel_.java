@@ -70,7 +70,7 @@ public class Menu_Transaksi_Bengkel_ extends AppCompatActivity implements Penjua
         tvNamaBarang = findViewById(R.id.tvNamaBarang);
         ibKurang = findViewById(R.id.ibKurang);
         ibTambah = findViewById(R.id.ibTambah);
-        btnSimpan = findViewById(R.id.btnSimpan);
+        btnSimpan = findViewById(R.id.simpan);
 
         tvTanggal.setText(getDayToday());
 

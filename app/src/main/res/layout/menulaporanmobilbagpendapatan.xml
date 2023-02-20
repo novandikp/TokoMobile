@@ -7,7 +7,7 @@
     tools:context=".rentalmobil.MenuLaporanMobilBagPendapatan">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView12"
+        android:id="@+id/eCari"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -150,7 +150,7 @@
         app:cardCornerRadius="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView12">
+        app:layout_constraintTop_toBottomOf="@+id/eCari">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout2"
