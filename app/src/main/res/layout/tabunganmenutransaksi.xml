@@ -10,12 +10,12 @@
     android:paddingBottom="50dp"
     tools:context=".restoran.Tabugan.TabunganMenuTransaksi">
 
-    <androidx.appcompat.widget.Toolbar
+      <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#5C00FF"
-        android:backgroundTint="#000000"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
