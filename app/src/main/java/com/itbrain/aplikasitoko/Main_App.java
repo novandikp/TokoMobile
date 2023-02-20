@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.itbrain.aplikasitoko.Salon.Aplikasi_Salon_Menu_Utama;
-import com.itbrain.aplikasitoko.TokoKain.Aplikasi_TokoKain_Menu_Utama;
+import com.itbrain.aplikasitoko.TokoKain.Aplikasi_TokoKain_Menu_Utama_Toko_Kain;
 import com.itbrain.aplikasitoko.bengkel.Aplikasi_Bengkel_Menu_Utama_;
 import com.itbrain.aplikasitoko.apotek.Aplikasi_Apotek_Plus_Keuangan_Menu_Utama;
 import com.itbrain.aplikasitoko.kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama;
@@ -42,7 +42,7 @@ public class Main_App extends AppCompatActivity {
     }
 
     public void PindahTokoKain(View view) {
-        Intent intent = new Intent(Main_App.this, Aplikasi_TokoKain_Menu_Utama.class);
+        Intent intent = new Intent(Main_App.this, Aplikasi_TokoKain_Menu_Utama_Toko_Kain.class);
         startActivity(intent);
     }
 
