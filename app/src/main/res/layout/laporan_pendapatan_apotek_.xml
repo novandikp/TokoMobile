@@ -17,32 +17,36 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName69" />
+        app:layout_constraintTop_toBottomOf="@+id/dicari" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName64"
+    <TextView
+        android:id="@+id/tgl2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:focusable="false"
+        android:gravity="center"
         android:inputType="date"
+        android:onClick="tgl2"
         app:layout_constraintBottom_toBottomOf="@+id/textView504"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView504"
         app:layout_constraintTop_toTopOf="@+id/textView504" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName63"
+    <TextView
+        android:id="@+id/tgl1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:focusable="false"
+        android:gravity="center"
         android:inputType="date"
+        android:onClick="tgl1"
         app:layout_constraintBottom_toBottomOf="@+id/textView504"
         app:layout_constraintEnd_toStartOf="@+id/textView504"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,13 +94,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName69"
+        app:layout_constraintBottom_toBottomOf="@+id/dicari"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName69"
+        app:layout_constraintTop_toTopOf="@+id/dicari"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName69"
+        android:id="@+id/dicari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,6 +120,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="export"
         android:text="export"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +129,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout38"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
@@ -141,31 +146,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/textView519"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="1.000.000"
-                android:textColor="@color/agakhitam"
-                app:layout_constraintBottom_toBottomOf="@+id/textView520"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView520"
-                app:layout_constraintTop_toTopOf="@+id/textView520" />
 
             <TextView
-                android:id="@+id/textView520"
+                android:id="@+id/saldoo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Total: Rp."
+                android:text="Total: Rp.0"
                 android:textColor="@color/agakhitam"
+                app:layout_constraintBaseline_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -185,6 +179,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recLapPen"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

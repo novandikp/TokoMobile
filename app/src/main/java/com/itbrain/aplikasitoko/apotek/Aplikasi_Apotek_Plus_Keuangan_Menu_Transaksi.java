@@ -43,6 +43,7 @@ public class Aplikasi_Apotek_Plus_Keuangan_Menu_Transaksi extends AppCompatActiv
 
     public void PindahHutang(View view) {
         Intent intent = new Intent(Aplikasi_Apotek_Plus_Keuangan_Menu_Transaksi.this, Menu_Pembayaran_Hutang_Apotek.class);
+       intent.putExtra("type","pelanggan");
         startActivity(intent);
     }
 

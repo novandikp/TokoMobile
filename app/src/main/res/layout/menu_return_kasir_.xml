@@ -59,13 +59,14 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvReturn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName21"
+        android:id="@+id/eDari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -75,13 +76,14 @@
         android:focusable="false"
         android:gravity="center"
         android:inputType="date"
+        android:onClick="dateDari"
         android:text="25/07/2022"
         app:layout_constraintEnd_toStartOf="@+id/textView289"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20" />
+        app:layout_constraintTop_toBottomOf="@+id/sPencarianReturn" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName22"
+        android:id="@+id/eKeReturn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -91,10 +93,11 @@
         android:focusable="false"
         android:gravity="center"
         android:inputType="date"
+        android:onClick="dateKe"
         android:text="25/07/2022"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView289"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20" />
+        app:layout_constraintTop_toBottomOf="@+id/sPencarianReturn" />
 
     <TextView
         android:id="@+id/textView289"
@@ -104,7 +107,7 @@
         android:text="---"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20" />
+        app:layout_constraintTop_toBottomOf="@+id/sPencarianReturn" />
 
     <ImageView
         android:id="@+id/imageView37"
@@ -113,9 +116,9 @@
         android:layout_marginEnd="16dp"
         android:background="#00292929"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName20"
+        app:layout_constraintBottom_toBottomOf="@+id/sPencarianReturn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName20"
+        app:layout_constraintTop_toTopOf="@+id/sPencarianReturn"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,36 +139,20 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView496"
+                android:id="@+id/tJumlahReturn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="1.000"
+                android:text="Jumlah Data : 0"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView497"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView497"
-                app:layout_constraintTop_toTopOf="@+id/textView497" />
+                tools:layout_editor_absoluteY="8dp" />
 
-            <TextView
-                android:id="@+id/textView497"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Rp."
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/editTextTextPersonName20"
+        android:id="@+id/sPencarianReturn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

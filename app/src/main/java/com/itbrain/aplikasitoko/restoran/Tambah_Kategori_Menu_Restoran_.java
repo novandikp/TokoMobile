@@ -124,7 +124,7 @@ public class Tambah_Kategori_Menu_Restoran_ extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         ArrayList arrayList=new ArrayList();
-        RecyclerView.Adapter adapter=new AdapterListKategori(this,arrayList);
+        RecyclerView.Adapter adapter=new AdapterListKategoriRestoran(this,arrayList);
         recyclerView.setAdapter(adapter);
         String q="";
         if (keyword.isEmpty()){
@@ -145,11 +145,11 @@ public class Tambah_Kategori_Menu_Restoran_ extends AppCompatActivity {
     }
 }
 
-class AdapterListKategori extends RecyclerView.Adapter<AdapterListKategori.KategoriViewHolder>{
+class AdapterListKategoriRestoran extends RecyclerView.Adapter<AdapterListKategoriRestoran.KategoriViewHolder>{
     Context ctx;
     ArrayList<String> data;
 
-    public AdapterListKategori(Context ctx, ArrayList<String> data) {
+    public AdapterListKategoriRestoran(Context ctx, ArrayList<String> data) {
         this.ctx = ctx;
         this.data = data;
     }

@@ -29,8 +29,9 @@ public class MasterPenjualan extends RecyclerView.Adapter<MasterPenjualan.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_view_penjualan_, viewGroup, false);
-        return new ViewHolder(view);
+//        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_view_penjualan_, viewGroup, false);
+//        return new ViewHolder(view);
+        return null;
     }
 
     @Override

@@ -45,30 +45,33 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <Button
-        android:id="@+id/button75"
-        android:layout_width="430px"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="simpan"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button76"
+        android:id="@+id/buttonKeranjang"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/teal_700"
+        android:onClick="simpanPembelian"
         android:text="taruh keranjang"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button75" />
+        app:layout_constraintStart_toEndOf="@+id/simpanGanti" />
+
+    <Button
+        android:id="@+id/simpanGanti"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="ganti"
+        android:text="simpan"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -76,7 +79,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:scrollbarSize="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button76"
+        app:layout_constraintBottom_toTopOf="@+id/buttonKeranjang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout37">
@@ -92,11 +95,13 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eFaktur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="Faktur"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,6 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
+                    android:onClick="kalendar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -123,16 +129,18 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/eTanggal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
+                        android:enabled="false"
                         android:hint="Tanggal"
-                        android:inputType="date"
-                        android:text="10/08/2022" />
+                        android:inputType="date" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstainLAyout939"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -140,6 +148,7 @@
                     android:id="@+id/imageView145"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="pelanggan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -155,12 +164,13 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ePelanggan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
+                        android:enabled="false"
                         android:hint="Nama Supplier"
-                        android:inputType="text"
-                        android:text="Kosong" />
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -172,6 +182,7 @@
                     android:id="@+id/imageView146"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="barang"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -187,12 +198,13 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/eBarang"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
+                        android:enabled="false"
                         android:hint="Nama Obat"
-                        android:inputType="text"
-                        android:text="Paracetamol" />
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -210,6 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
+                    android:onClick="expired"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -225,12 +238,13 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/eTglExpired"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
+                        android:enabled="false"
                         android:hint="Tanggal Expired"
-                        android:inputType="date"
-                        android:text="10/08/2022" />
+                        android:inputType="date" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -240,11 +254,13 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eBatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="Batch Number"
-                    android:inputType="number|text" />
+                    android:inputType="number|text"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -253,11 +269,13 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eHarga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="Harga Beli"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -266,11 +284,13 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eStok"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="Jumlah"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -279,9 +299,11 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hpp1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:hint="HPP Pertama"
                     android:inputType="number"
                     android:text="0" />
@@ -293,9 +315,11 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hpp2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:hint="HPP Kedua"
                     android:inputType="number"
                     android:text="0" />
@@ -307,11 +331,13 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hb1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="Harga Jual Pertama"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -320,17 +346,20 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hb2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="Harga Jual Kedua"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="8dp"
+                android:id="@+id/keranjang"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp" />
         </LinearLayout>
     </ScrollView>
 
@@ -355,19 +384,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView517"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="0"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView518"
-                app:layout_constraintStart_toEndOf="@+id/textView518"
-                app:layout_constraintTop_toTopOf="@+id/textView518" />
-
-            <TextView
-                android:id="@+id/textView518"
+                android:id="@+id/eTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
