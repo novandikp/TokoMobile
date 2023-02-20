@@ -26,7 +26,7 @@
             android:editable="false"
             android:enabled="false"
             android:hint="Path"
-            android:text="Internal Storage/Download"
+            android:text="Internal Storage/Android/data/com.itbrain.aplikasitoko/files/backup"
             android:textColor="#8F8F8F"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +70,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listViewRestore"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

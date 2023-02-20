@@ -26,11 +26,11 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar68"
-        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintStart_toEndOf="@+id/KembaliPelanggan"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/Kembali"
+        android:id="@+id/KembaliPelanggan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,12 +43,13 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <Button
-        android:id="@+id/button68"
+        android:id="@+id/simpanPelanggan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="simpanPelanggan"
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,12 +63,13 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button68"
+        app:layout_constraintBottom_toTopOf="@+id/simpanPelanggan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvNamaPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -75,6 +77,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/namaPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -83,6 +86,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvALamatPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -90,6 +94,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/alamatPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -98,6 +103,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvTelpPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -105,6 +111,7 @@
             app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/telpPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
