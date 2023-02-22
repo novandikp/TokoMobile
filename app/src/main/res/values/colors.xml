@@ -8,6 +8,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tombol2">#ff8a80</color>
+    <color name="colorPrimary">#5469a1</color>
+    <color name="colorAccent">#1a237e</color>
     <color name="agakhitam">#2C2C2C</color>
-
+    <color name="colorSecondary">#e7e7e7</color>
+    <item name="note_foreground" type="color">#de000000</item>
+    <color name="tombol1">#82b1ff</color>
+    <color name="off">#FBBFD4F5</color>
+    <color name="bg">#f1f1f1</color>
 </resources>

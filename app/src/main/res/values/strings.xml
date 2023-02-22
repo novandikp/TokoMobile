@@ -7,6 +7,36 @@
     <string name="datapelanggan">Data Pelanggan</string>
     <string name="tambah">Tambah</string>
     <string name="batal">Batal</string>
+    <string name="simpan">SIMPAN</string>
+    <string name="gagal_simpan">Gagal menyimpan data</string>
+    <string name="toast_simpan">Berhasil disimpan</string>
+    <string name="tambah_kendaraan">Menu Tambah Kendaraan</string>
+    <string name="menu_merk">Menu Merk</string>
+    <string name="menu_pelanggan">Menu Pelanggan</string>
+    <string name="tidak">Tidak</string>
+    <string name="judul_konfirmasi">Konfimasi Pembayaran Uang Muka</string>
+    <string name="belum_kembali">Masih terdapat kendaraan yang belum dikembalikan</string>
+    <string name="menu_pegawai">Menu Pegawai</string>
+    <string name="menu_kendaraan">Menu Kendaraan</string>
+    <string name="lebih_dp">Uang Muka Melebih total</string>
+    <string name="subjudul_konfirmasi">Apakah anda yakin simpan pembayaran ini ?</string>
+    <string name="iya">Iya</string>
+    <string name="judul_cetak">Cetak Struk</string>
+    <string name="subjudul_cetak">Apakah anda ingin mencetak struk ?</string>
+    <string name="judul_batalcetak">Batalkan Cetak Struk</string>
+    <string name="subjudul_batalcetak">Apakah anda yakin batalkan cetak struk ?</string>
+    <string name="gagal_hapus">Gagal menghapus data</string>
+    <string name="kurang_lengkap">Isi data dengan benar dan lengkap</string>
+    <string name="sub_lappendapatan">Digunakan untuk melihat laporan pendapatan</string>
+    <string name="lappendapatan">Laporan Pendapatan</string>
+    <string name="laprental">Laporan Rental</string>
+    <string name="sub_laprental">Digunakan untuk melihat laporan rental</string>
+    <string name="lappegawai">Laporan Pegawai</string>
+    <string name="sub_lappegawai">Digunakan untuk melihat laporan pegawai</string>
+    <string name="lappelanggan">Laporan Pelanggan</string>
+    <string name="sub_lappelanggan">Digunakan untuk melihat laporan pelanggan</string>
+    <string name="lapkendaraan">Laporan Kendaraan</string>
+    <string name="sub_lapkendaraan">Digunakan untuk melihat laporan kendaraan</string>
     <string name="formnull">Isi semua form terlebih dahulu</string>
     <string name="successAdd">Data berhasil ditambahkan</string>
     <string name="semuakategori">Semua Kategori</string>
@@ -30,6 +60,11 @@
 
     <string-array name="sp_kategori_obat">
         <item>Pilih Kategori</item>
+    </string-array>
+    <string-array name="laporan">
+        <item>Semua</item>
+        <item>Sudah</item>
+        <item>Belum</item>
     </string-array>
 
     <string-array name="obat">

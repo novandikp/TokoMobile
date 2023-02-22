@@ -24,7 +24,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Menu Laporan"
+        android:text="Menu Identitas"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
@@ -44,19 +44,20 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <Button
-        android:id="@+id/button79"
+        android:id="@+id/btnSimpan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="simpan"
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button78" />
+        app:layout_constraintStart_toEndOf="@+id/btnClear" />
 
     <Button
-        android:id="@+id/button78"
+        android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -75,7 +76,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button79"
+        app:layout_constraintBottom_toTopOf="@+id/btnSimpan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar68">
@@ -90,6 +91,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -108,6 +110,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -126,6 +129,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eTelp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -144,6 +148,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -162,6 +167,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -180,6 +186,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"

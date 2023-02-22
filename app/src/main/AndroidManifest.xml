@@ -178,6 +178,12 @@
             android:name=".Coba_Recycle_View_Coding_"
             android:exported="false" />
         <activity
+            android:name=".Salon.MenuCariPrinterSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.MenuCetakSalon"
+            android:exported="false"/>
+        <activity
             android:name=".Salon.Laporan_Pendapatan_Salon_"
             android:exported="false" />
         <activity
@@ -225,6 +231,44 @@
         <activity
             android:name=".Salon.Menu_Identitas_Salon_"
             android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityPembayaranCariSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityPembayaranProsesSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityBackupSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityRestoreSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityExportExcelSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityCetakCariSalon"
+            android:exported="false"/>
+        <activity
+            android:name=".Salon.Item_Apk_Salon"
+            android:exported="false"/><activity
+        android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Utama"
+        android:exported="false" />
+        <activity
+            android:name=".Salon.Aplikasi_Salon_Menu_Utillitas"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.Aplikasi_Salon_Menu_Laporan"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.Aplikasi_Salon_Menu_Transaksi"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.Aplikasi_Salon_Menu_Master"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.Aplikasi_Salon_Menu_Utama"
+            android:exported="false"/>
         <activity
             android:name=".apotek.Laporan_Obat_Expired_Apotek_"
             android:exported="false" />
@@ -532,15 +576,110 @@
         <activity
             android:name=".tokosepatu.Item_Apk_Toko_Sepatu"
             android:exported="false" />
+
         <activity
-            android:name=".rentalmobil.Item_Apk_Rental_Mobil"
-            android:exported="false" />
+            android:name=".rentalmobil.MenuUtama_Mobil"
+            android:exported="false"/>
+
+        <activity
+            android:name=".rentalmobil.MobilMenuMaster"
+            android:exported="false"/>
+
+        <activity
+            android:name=".rentalmobil.MenuIdentitas_Mobil"
+            android:exported="false"/>
+
+        <activity
+            android:name=".rentalmobil.MobilMenuMerk"
+            android:exported="false"/>
+
+        <activity
+            android:name=".rentalmobil.ItemMerk_Mobil"
+            android:exported="false"/>
+
+        <activity
+            android:name=".rentalmobil.MenuPelanggan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.Item_Kendaraan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuTransaksi_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuKendaraan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.ItemPelanggan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.ItemPegawai_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPegawai_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuRental_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuDP_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPilih_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPengembalianKendaraan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuCetak_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MobilMenuLaporan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuDetailPengembalian_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MobilMenuBayar"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuLaporanBagRental_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuLaporanBagPendapatan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuLaporanBagPegawai_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuCariPrinter_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuExportExcel_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuUtilitas_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuBackup_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuRestore_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuCetak2_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.LaporanKendaraan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuLaporanPelanggan_Mobil"
+            android:exported="false"/>
+
         <activity
             android:name=".Item_Apk_Antrian"
             android:exported="false" />
-        <activity
-            android:name=".Salon.Item_Apk_Salon"
-            android:exported="false" />
+
         <activity
             android:name=".apotek.Item_Apk_Apotek"
             android:exported="false" />
@@ -632,24 +771,6 @@
             android:exported="false" />
         <activity
             android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Master"
-            android:exported="false" />
-        <activity
-            android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Utama"
-            android:exported="false" />
-        <activity
-            android:name=".Salon.Aplikasi_Salon_Menu_Utillitas"
-            android:exported="false" />
-        <activity
-            android:name=".Salon.Aplikasi_Salon_Menu_Laporan"
-            android:exported="false" />
-        <activity
-            android:name=".Salon.Aplikasi_Salon_Menu_Transaksi"
-            android:exported="false" />
-        <activity
-            android:name=".Salon.Aplikasi_Salon_Menu_Master"
-            android:exported="false" />
-        <activity
-            android:name=".Salon.Aplikasi_Salon_Menu_Utama"
             android:exported="false" />
         <activity
             android:name=".apotek.Menu_Pengeluaran_Apotek"
