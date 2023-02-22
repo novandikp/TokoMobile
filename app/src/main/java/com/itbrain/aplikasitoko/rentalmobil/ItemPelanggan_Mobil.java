@@ -187,7 +187,7 @@ class AdapterPelangganMobil extends RecyclerView.Adapter<AdapterPelangganMobil.V
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()){
                             case R.id.menu_edit:
-                                Intent intent = new Intent(c, MenuPelanggan_Mobil.class);
+                                Intent intent = new Intent(c, MenuEditPelangganMobil.class);
                                 intent.putExtra("id",holder.tvOpt.getTag().toString());
                                 c.startActivity(intent);
                                 break;

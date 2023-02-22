@@ -676,6 +676,18 @@
         <activity android:name=".rentalmobil.MenuLaporanPelanggan_Mobil"
             android:exported="false"/>
 
+        <activity android:name=".rentalmobil.MenuEditMerkMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditKendaraanMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditPelangganMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditPegawaiMobil"
+            android:exported="false"/>
+
         <activity
             android:name=".Item_Apk_Antrian"
             android:exported="false" />
