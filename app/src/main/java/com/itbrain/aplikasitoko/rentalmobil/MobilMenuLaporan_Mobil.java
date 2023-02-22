@@ -10,12 +10,12 @@ import android.widget.ImageView;
 
 import com.itbrain.aplikasitoko.R;
 
-public class MobilMenuMaster extends AppCompatActivity {
+public class MobilMenuLaporan_Mobil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menumaster_mobil);
+        setContentView(R.layout.activity_menu_laporan_mobil);
 
         ImageView imageView = findViewById(R.id.imageView28);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -34,33 +34,36 @@ public class MobilMenuMaster extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void Identitas(View view) {
-        Intent i = new Intent(this, MenuIdentitas_Mobil.class);
-        i.putExtra("type","identitas");
-        startActivity(i);
-    }
-
-    public void Merk(View view) {
-        Intent i = new Intent(this, ItemMerk_Mobil.class);
-        i.putExtra("type","merk");
-        startActivity(i);
-    }
-
     public void Kendaraan(View view) {
-        Intent i = new Intent(this, Item_Kendaraan_Mobil.class);
+        Intent i = new Intent(this,LaporanKendaraan_Mobil.class);
         i.putExtra("type","kendaraan");
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 
     public void Pelanggan(View view) {
-        Intent i = new Intent(this, ItemPelanggan_Mobil.class);
+        Intent i = new Intent(this,MenuLaporanPelanggan_Mobil.class);
         i.putExtra("type","pelanggan");
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 
     public void Pegawai(View view) {
-        Intent i = new Intent(this, ItemPegawai_Mobil.class);
+        Intent i = new Intent(this, MenuLaporanBagPegawai_Mobil.class);
         i.putExtra("type","pegawai");
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+    }
+
+    public void Rental(View view) {
+        Intent i = new Intent(this, MenuLaporanBagRental_Mobil.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+    }
+
+    public void Pendapatan(View view) {
+        Intent i = new Intent(this, MenuLaporanBagPendapatan_Mobil.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 }
