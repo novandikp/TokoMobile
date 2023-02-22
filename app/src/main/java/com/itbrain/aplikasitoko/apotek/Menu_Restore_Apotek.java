@@ -35,7 +35,6 @@ public class Menu_Restore_Apotek extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_restore_apotek);
-        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         v = this.findViewById(android.R.id.content);
         ImageButton imageButton = findViewById(R.id.kembali2);
