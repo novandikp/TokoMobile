@@ -33,6 +33,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -84,6 +85,15 @@ public class MenuCetakKLinik extends AppCompatActivity {
 
         id=getIntent().getStringExtra("idorder");
         type=getIntent().getStringExtra("type");
+
+        ImageButton imageButton = findViewById(R.id.Kembali1);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
 
         config = new ModulKlinik(getSharedPreferences("config", this.MODE_PRIVATE));

@@ -38,7 +38,7 @@ public class Menu_pemeriksaan_klinik extends AppCompatActivity {
     int year, day, month;
     Calendar calendar;
     boolean stat = false;
-    String idpelanggan, idbarang, idkategori = "default", iddokter = "default";
+    String idpelanggan, idbarang, idkategori = "default", iddokter = "1";
     String umur;
 
     @Override

@@ -194,7 +194,7 @@ class AdapterKendaraanMobil extends RecyclerView.Adapter<AdapterKendaraanMobil.V
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_edit:
-                                Intent intent = new Intent(c, MenuKendaraan_Mobil.class);
+                                Intent intent = new Intent(c, MenuEditKendaraanMobil.class);
                                 intent.putExtra("id", holder.tvOpt.getTag().toString());
                                 c.startActivity(intent);
                                 break;
