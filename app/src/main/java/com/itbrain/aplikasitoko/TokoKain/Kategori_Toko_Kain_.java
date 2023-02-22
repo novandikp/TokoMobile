@@ -158,7 +158,7 @@ class AdapterListKategori extends RecyclerView.Adapter<AdapterListKategori.Kateg
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()){
                             case R.id.menu_update:
-                                Intent intent = new Intent(ctxAdapter, Form_Tambah_Kategori_Toko_Kain.class);
+                                Intent intent = new Intent(ctxAdapter, edit_kategori_kain.class);
                                 intent.putExtra("idkategori",getter.getIdKategori());
                                 intent.putExtra("kategori",getter.getNamaKategori());
                                 ctxAdapter.startActivity(intent);

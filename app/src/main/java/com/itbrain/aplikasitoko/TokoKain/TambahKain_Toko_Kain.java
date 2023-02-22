@@ -214,7 +214,7 @@ class AdapterListKain extends RecyclerView.Adapter<AdapterListKain.KainViewHolde
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()){
                             case R.id.menu_update:
-                                Intent intent = new Intent(ctxAdapter, FormTambah_Toko_Kain.class);
+                                Intent intent = new Intent(ctxAdapter, Edit_Toko_Kain.class);
                                 intent.putExtra("idkain",getter.getIdKain());
                                 intent.putExtra("idkategori",getter.getIdKategori());
                                 intent.putExtra("kain",getter.getKain());
