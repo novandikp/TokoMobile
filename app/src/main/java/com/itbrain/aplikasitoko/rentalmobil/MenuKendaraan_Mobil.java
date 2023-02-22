@@ -45,7 +45,7 @@ public class MenuKendaraan_Mobil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menukendaraan_mobil);
+        setContentView(R.layout.menukendaraanduamobil);
         textInputLayout4
                 = (TextInputLayout) findViewById(R.id.textInputLayout4);
         textInputLayout5

@@ -53,7 +53,7 @@ public class MenuDetailPengembalian_Mobil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menudetailpengembalian_mobil);
+        setContentView(R.layout.menudetailpengembalianduamobil);
 
         tanggal = ModulRentalMobil.getDate("dd/MM/yyyy HH:mm");
         calendar = Calendar.getInstance();

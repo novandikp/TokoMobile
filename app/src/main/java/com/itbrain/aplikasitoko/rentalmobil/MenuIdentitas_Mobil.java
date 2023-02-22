@@ -40,7 +40,7 @@ public class MenuIdentitas_Mobil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menuidentitas_mobil);
+        setContentView(R.layout.menuidentitasduamobil);
 
         ImageView imageView = findViewById(R.id.imageView28);
         imageView.setOnClickListener(new View.OnClickListener() {

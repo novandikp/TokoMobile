@@ -24,7 +24,7 @@ public class MobilMenuMerk extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menumerk_mobil);
+        setContentView(R.layout.menumerkduamobil);
         eMerk
                 = (TextInputEditText) findViewById(R.id.eMerk);
         button2

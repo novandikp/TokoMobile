@@ -49,7 +49,7 @@ public class MenuPengembalianKendaraan_Mobil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menupengembaliankendaraan_mobil);
+        setContentView(R.layout.menupengembaliankendaraanduamobil);
         guideline23
                 = (Guideline) findViewById(R.id.guideline23);
         eCari

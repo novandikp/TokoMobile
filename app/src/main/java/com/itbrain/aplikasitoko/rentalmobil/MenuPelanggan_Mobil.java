@@ -30,7 +30,7 @@ public class MenuPelanggan_Mobil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menupelanggan_mobil);
+        setContentView(R.layout.menupelangganmobil);
 
         eNama
                 = (TextInputEditText) findViewById(R.id.eNama);
