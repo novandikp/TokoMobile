@@ -30,7 +30,7 @@ public class Form_Tambah_Pelanggan_Toko_Kain_ extends AppCompatActivity {
 
         }
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        ImageButton imageButton = findViewById(R.id.kembalii6);
+        ImageButton imageButton = findViewById(R.id.kembaliiop);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

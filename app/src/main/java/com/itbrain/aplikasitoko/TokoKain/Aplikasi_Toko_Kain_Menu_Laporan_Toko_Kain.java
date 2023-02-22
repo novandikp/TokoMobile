@@ -63,6 +63,17 @@ public class Aplikasi_Toko_Kain_Menu_Laporan_Toko_Kain extends AppCompatActivity
         i.putExtra("tab",value);
         startActivity(i);
     }
+    private void iLaporanbarang(String value){
+        Intent i=new Intent(this, Laporan_Barang_Toko_Kain.class);
+        i.putExtra("tab",value);
+        startActivity(i);
+    }
+
+    private void iLaporanorder(String value){
+        Intent i=new Intent(this,Laporan_Order_Toko_Kain.class);
+        i.putExtra("tab",value);
+        startActivity(i);
+    }
     @Override
     public void onBackPressed() {
 //        Intent i = new Intent(this,MainActivity.class);
@@ -76,7 +87,7 @@ public class Aplikasi_Toko_Kain_Menu_Laporan_Toko_Kain extends AppCompatActivity
     }
 
     public void cvLaporanBarang(View view) {
-        iLaporan("kain");
+        iLaporanbarang("kain");
     }
 
     public void cvLaporanPelanggan(View view) {
@@ -84,6 +95,6 @@ public class Aplikasi_Toko_Kain_Menu_Laporan_Toko_Kain extends AppCompatActivity
     }
 
     public void cvLaporanOrder(View view) {
-        iLaporanTanggal("order");
+        iLaporanorder("order");
     }
 }

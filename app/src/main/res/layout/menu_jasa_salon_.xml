@@ -24,7 +24,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Jasa"
+        android:text="Menu Jasa Salon"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/Kembali"
@@ -95,6 +95,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listjasa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

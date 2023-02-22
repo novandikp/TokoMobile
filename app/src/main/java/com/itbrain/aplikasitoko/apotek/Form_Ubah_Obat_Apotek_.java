@@ -103,7 +103,7 @@ public class Form_Ubah_Obat_Apotek_ extends AppCompatActivity {
 
 
     private void tambahBarang(){
-        String barang = ModulApotek.getText(v,R.id.eBarang);
+        String barang = ModulApotek.getText(v,R.id.NamaObat);
         String satuan = getSatuan();
         String kategori = getKategori();
         String ketbarang = getKet();

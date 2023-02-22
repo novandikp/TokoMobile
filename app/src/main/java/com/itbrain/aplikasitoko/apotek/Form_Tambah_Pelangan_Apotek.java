@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.itbrain.aplikasitoko.R;
@@ -23,7 +24,13 @@ public class Form_Tambah_Pelangan_Apotek extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_tambah_pelanggan_apotek);
-
+        ImageButton imageButton = findViewById(R.id.Kembali);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         config = new ModulApotek(getSharedPreferences("config", this.MODE_PRIVATE));
         temp = new ModulApotek(getSharedPreferences("temp", this.MODE_PRIVATE));
         db = new DatabaseApotek(this);

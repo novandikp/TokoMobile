@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,13 @@ public class Form_Ubah_Supplier_Apotek extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_ubah_supplier_apotek);
 
+        ImageButton imageButton = findViewById(R.id.Kembali);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         config = new ModulApotek(getSharedPreferences("config",this.MODE_PRIVATE));
         temp = new ModulApotek(getSharedPreferences("temp",this.MODE_PRIVATE));
         db = new DatabaseApotek(this) ;

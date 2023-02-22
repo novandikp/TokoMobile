@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Identitas"
+                    android:text="Pelanggan"
                     android:textColor="@color/agakhitam"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/textView251"
