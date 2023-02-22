@@ -40,7 +40,7 @@ public class Laporan_Pelanggan_Toko_Kain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laporan_barang_kain);
+        setContentView(R.layout.activity_laporan_list_kain);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         ImageButton imageButton = findViewById(R.id.kembalicoi);
