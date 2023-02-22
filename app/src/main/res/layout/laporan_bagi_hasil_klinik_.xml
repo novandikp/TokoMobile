@@ -44,7 +44,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
-        android:id="@+id/textView475"
+        android:id="@+id/tTotal"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:background="#E1E1E1"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar67" />
 
     <Spinner
-        android:id="@+id/spLaporanBagiHasilKlinik"
+        android:id="@+id/sTeknisi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -66,7 +66,7 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView475" />
+        app:layout_constraintTop_toBottomOf="@+id/tTotal" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -84,13 +84,14 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recPel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName50"
+    <TextView
+        android:id="@+id/tglawal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -98,6 +99,7 @@
         android:ems="10"
         android:focusable="false"
         android:inputType="date"
+        android:onClick="tglawal"
         app:layout_constraintBottom_toBottomOf="@+id/textView476"
         app:layout_constraintEnd_toStartOf="@+id/textView476"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,10 +115,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spLaporanBagiHasilKlinik" />
+        app:layout_constraintTop_toBottomOf="@+id/sTeknisi" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName51"
+    <TextView
+        android:id="@+id/tglakhir"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -124,6 +126,7 @@
         android:ems="10"
         android:focusable="false"
         android:inputType="date"
+        android:onClick="tglakhir"
         app:layout_constraintBottom_toBottomOf="@+id/textView476"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView476"
@@ -136,6 +139,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="export"
         android:text="export"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

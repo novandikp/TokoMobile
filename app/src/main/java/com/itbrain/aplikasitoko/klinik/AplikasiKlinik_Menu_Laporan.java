@@ -39,6 +39,7 @@ public class AplikasiKlinik_Menu_Laporan extends AppCompatActivity {
 
     public void LaporanPendapatan(View view) {
         Intent intent = new Intent(AplikasiKlinik_Menu_Laporan.this, Laporan_Pendapatan_Klinik_.class);
+        intent.putExtra("type", "pendapatan");
         startActivity(intent);
     }
 

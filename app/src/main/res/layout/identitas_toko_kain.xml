@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/un_toko_kain"
     tools:context=".TokoKain.Identitas_Toko_Kain">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#03A9F4"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,26 +55,28 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnHapus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#FF0000"
+            android:onClick="hapus"
             android:text="x"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/btnClear"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnClear"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="90dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="#03A9F4"
+            android:onClick="simpan"
             android:text="Simpan"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -103,6 +106,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNamaToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Toko"
@@ -119,6 +123,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlamatToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat Toko"
@@ -135,6 +140,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNomerToko"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nomor Telepon Toko"
@@ -152,6 +158,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCap1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Bawah Baris 1 (untuk struk)"
@@ -168,6 +175,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCap2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Bawah Baris 2 (untuk struk)"
@@ -184,6 +192,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCap3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Keterangan Bawah Baris 3  (untuk struk)"

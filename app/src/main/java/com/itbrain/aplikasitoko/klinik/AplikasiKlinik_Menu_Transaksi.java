@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.Menu_pemeriksaan;
 import com.itbrain.aplikasitoko.R;
-import com.itbrain.aplikasitoko.Tambah_Janji;
 
 public class AplikasiKlinik_Menu_Transaksi extends AppCompatActivity {
 
@@ -30,7 +28,8 @@ public class AplikasiKlinik_Menu_Transaksi extends AppCompatActivity {
     }
 
     public void PeriksaPasien(View view) {
-        Intent intent = new Intent(AplikasiKlinik_Menu_Transaksi.this, Menu_pemeriksaan.class);
+        Intent intent = new Intent(AplikasiKlinik_Menu_Transaksi.this, Menu_pemeriksaan_klinik.class);
+        intent.putExtra("type","transaksi");
         startActivity(intent);
     }
 
@@ -40,7 +39,7 @@ public class AplikasiKlinik_Menu_Transaksi extends AppCompatActivity {
     }
 
     public void BuatJanji(View view) {
-        Intent intent = new Intent(AplikasiKlinik_Menu_Transaksi.this, Tambah_Janji.class);
+        Intent intent = new Intent(AplikasiKlinik_Menu_Transaksi.this, Tambah_Janji_Klinik.class);
         startActivity(intent);
     }
 }

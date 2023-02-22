@@ -32,12 +32,14 @@ public class Aplikasi_Kasir_Super_Mudah_Menu_Master extends AppCompatActivity {
     }
 
     public void PindahKategori(View view) {
-        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Master.this, Tambah_Kategori_Kasir.class);
+        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Master.this, Form_Tambah_Kategori_Kasir_.class);
+        intent.putExtra("type","kategori");
         startActivity(intent);
     }
 
     public void PindahBarang(View view) {
         Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Master.this, Tambah_Barang_Kasir.class);
+        intent.putExtra("type","kategori");
         startActivity(intent);
     }
 

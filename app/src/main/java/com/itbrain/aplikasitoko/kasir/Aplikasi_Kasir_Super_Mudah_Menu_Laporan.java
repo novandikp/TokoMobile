@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.itbrain.aplikasitoko.Laporan_Penjualan_per_Barang_;
-import com.itbrain.aplikasitoko.Laporan_Penjualan_per_Jenis_;
-import com.itbrain.aplikasitoko.Laporan_Penjualan_per_Kategori_;
 import com.itbrain.aplikasitoko.R;
 
 public class Aplikasi_Kasir_Super_Mudah_Menu_Laporan extends AppCompatActivity {
@@ -45,17 +42,17 @@ public class Aplikasi_Kasir_Super_Mudah_Menu_Laporan extends AppCompatActivity {
     }
 
     public void LaporanPenjualanperBarang(View view) {
-        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Laporan.this, Laporan_Penjualan_per_Barang_.class);
+        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Laporan.this, Laporan_Penjualan_per_Barang_Kasir.class);
         startActivity(intent);
     }
 
     public void LaporanPenjualanperKategori(View view) {
-        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Laporan.this, Laporan_Penjualan_per_Kategori_.class);
+        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Laporan.this, Laporan_Penjualan_per_Kategori_Kasir.class);
         startActivity(intent);
     }
 
     public void LaporanPenjualanperJenis(View view) {
-        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Laporan.this, Laporan_Penjualan_per_Jenis_.class);
+        Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Laporan.this, Laporan_Penjualan_per_Jenis_Kasir.class);
         startActivity(intent);
     }
 

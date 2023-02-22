@@ -126,8 +126,8 @@
         android:text="Total Pembayaran"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button25"
-        app:layout_constraintStart_toStartOf="@+id/button25" />
+        app:layout_constraintBottom_toTopOf="@+id/simpann"
+        app:layout_constraintStart_toStartOf="@+id/simpann" />
 
     <TextView
         android:id="@+id/textView163"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView162" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/simpann"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

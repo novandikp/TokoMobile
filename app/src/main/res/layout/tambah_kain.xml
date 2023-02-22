@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/un_toko_kain"
     tools:context=".TokoKain.TambahKain">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#03A9F4"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +45,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spKategoriKain"
         android:layout_width="0dp"
         android:layout_height="33dp"
         android:layout_marginLeft="15dp"
@@ -56,20 +57,21 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar68" />
 
     <Button
-        android:id="@+id/TambahKain"
+        android:id="@+id/btTambah"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/hijau_gojek"
+        android:backgroundTint="#03A9F4"
+        android:onClick="tambahData"
         android:text="tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName53"
+        android:id="@+id/etCari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -78,18 +80,18 @@
         android:ems="10"
         android:hint="Pencarian"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/imageView131"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnCari"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spKategoriKain" />
 
     <ImageView
-        android:id="@+id/imageView131"
+        android:id="@+id/ibtnCari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName53"
+        app:layout_constraintBottom_toBottomOf="@+id/etCari"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName53"
+        app:layout_constraintTop_toTopOf="@+id/etCari"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <ScrollView
@@ -97,10 +99,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/TambahKain"
+        app:layout_constraintBottom_toTopOf="@+id/btTambah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName53">
+        app:layout_constraintTop_toBottomOf="@+id/etCari">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,6 +110,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvListKain"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

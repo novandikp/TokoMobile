@@ -105,7 +105,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/simpan"
         android:layout_width="403dp"
         android:layout_height="0dp"
         android:layout_marginBottom="1dp"
