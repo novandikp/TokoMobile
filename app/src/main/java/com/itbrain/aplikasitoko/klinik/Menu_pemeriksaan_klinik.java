@@ -106,13 +106,13 @@ public class Menu_pemeriksaan_klinik extends AppCompatActivity {
             umur = ModulKlinik.getUmur(ModulKlinik.getString(c, "umur"));
 
         }
-        if (iddokter != null) {
+        if (iddokter == null) {
             Cursor c = db.sq(ModulKlinik.selectwhere("tbldokter") + ModulKlinik.sWhere("iddokter", "1"));
             c.moveToNext();
             ModulKlinik.setText(v, R.id.eTeknisi, ModulKlinik.getString(c, "dokter"));
             iddokter = "1";
         } else {
-            Cursor c = db.sq(ModulKlinik.selectwhere("tbldokter") + ModulKlinik.sWhere("iddokter", iddokter));
+            Cursor c =  db.sq(ModulKlinik.selectwhere("tbldokter") + ModulKlinik.sWhere("iddokter", iddokter));
             c.moveToNext();
             ModulKlinik.setText(v, R.id.eTeknisi, ModulKlinik.getString(c, "dokter"));
         }

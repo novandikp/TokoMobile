@@ -291,7 +291,7 @@ public class Laporan_Penjualan_per_Pelanggan_Kasir_ extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener edit1 = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker arg0, int thn, int bln, int day) {
-            FFunctionKasir.setText(v, R.id.eDari, FFunctionKasir.setDatePickerNormal(thn, bln + 1, day));
+            FFunctionKasir.setText(v, R.id.eDariPerKat, FFunctionKasir.setDatePickerNormal(thn, bln + 1, day));
             dari = FFunctionKasir.setDatePicker(thn, bln + 1, day);
             submit();
         }
@@ -300,7 +300,7 @@ public class Laporan_Penjualan_per_Pelanggan_Kasir_ extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener edit2 = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker arg0, int thn, int bln, int day) {
-            FFunctionKasir.setText(v, R.id.eKe, FFunctionKasir.setDatePickerNormal(thn, bln + 1, day));
+            FFunctionKasir.setText(v, R.id.eKePerKat, FFunctionKasir.setDatePickerNormal(thn, bln + 1, day));
             ke = FFunctionKasir.setDatePicker(thn, bln + 1, day);
             submit();
         }
