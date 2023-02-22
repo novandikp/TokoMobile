@@ -19,7 +19,7 @@ public class MenuUbahJasaKlinik extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_tambah_jasa_klinik);
+        setContentView(R.layout.activity_menu_ubah_jasa_klinik);
         db= new DatabaseKlinik(this);
         v = this.findViewById(android.R.id.content);
         id = getIntent().getStringExtra("id");

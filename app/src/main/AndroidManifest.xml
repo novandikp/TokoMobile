@@ -680,7 +680,7 @@
 
         <activity android:name=".klinik.MenuUbahJasaKlinik"/>
         <activity android:name=".klinik.MenuTambahJasaKlinik"/>
-
+        <activity android:name=".klinik.MenuUbahJanjiKlinik"/>
 
         <activity android:name=".klinik.MenuTambahPasienKlinik"/>
         <activity android:name=".klinik.Tambah_Pasien_Klinik"/>

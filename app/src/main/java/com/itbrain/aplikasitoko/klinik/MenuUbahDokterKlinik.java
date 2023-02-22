@@ -21,7 +21,7 @@ public class MenuUbahDokterKlinik extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         db= new DatabaseKlinik(this);
         v= this.findViewById(android.R.id.content);
-        setContentView(R.layout.activity_menu_tambah_dokter_klinik);
+        setContentView(R.layout.activity_menu_ubah_dokter_klinik);
         id = getIntent().getStringExtra("id");
 
         ImageButton imageButton = findViewById(R.id.Kembali);
