@@ -19,12 +19,22 @@
         <item>Kulakan</item>
     </string-array>
 
+    <string-array name="type_bayar">
+        <item>Tunai</item>
+        <item>Hutang</item>
+    </string-array>
+
     <string-array name="sp_satuan_obat">
         <item>Pilih Satuan</item>
     </string-array>
 
     <string-array name="sp_kategori_obat">
         <item>Pilih Kategori</item>
+    </string-array>
+    <string-array name="laporan">
+        <item>Semua</item>
+        <item>Sudah</item>
+        <item>Belum</item>
     </string-array>
 
     <string-array name="obat">

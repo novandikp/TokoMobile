@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView494"
+        android:id="@+id/alamatAplikasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -28,10 +28,10 @@
         android:text="Mojokerto"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView495" />
+        app:layout_constraintTop_toBottomOf="@+id/namaAplikasi" />
 
     <TextView
-        android:id="@+id/textView495"
+        android:id="@+id/namaAplikasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -112,7 +112,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView494"
+        app:layout_constraintTop_toBottomOf="@+id/alamatAplikasi"
         app:rowCount="3">
 
         <androidx.cardview.widget.CardView

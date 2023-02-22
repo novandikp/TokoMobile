@@ -11,7 +11,7 @@ public class Laporan_Penjualan_per_Kategori_ extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.laporan_penjualan_per_kategori_);
+//        setContentView(R.layout.laporan_penjualan_per_kategori_);
 
         ImageButton imageButton = findViewById(R.id.Kembali);
 

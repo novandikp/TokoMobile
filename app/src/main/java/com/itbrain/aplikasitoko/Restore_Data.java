@@ -34,7 +34,7 @@ public class Restore_Data extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.restore_data);
+//        setContentView(R.layout.restore_data);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         v = this.findViewById(android.R.id.content);
         if(Build.VERSION.SDK_INT >= 29) {

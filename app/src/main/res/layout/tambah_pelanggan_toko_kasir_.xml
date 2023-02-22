@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kasir.Tambah_Pelanggan_Toko_Kasir_">
+    tools:context=".kasir.Tambah_Barang_Kasir">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"
@@ -44,16 +44,18 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <Button
-        android:id="@+id/TambahPelanggan"
+        android:id="@+id/tambahPelanggan2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/hijau_gojek"
+
         android:text="Tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -63,24 +65,13 @@
         android:layout_marginEnd="16dp"
         android:background="#00292929"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName20"
+        app:layout_constraintBottom_toBottomOf="@+id/sPencarianPelanggan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName20"
+        app:layout_constraintTop_toTopOf="@+id/sPencarianPelanggan"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
-    <Spinner
-        android:id="@+id/spinner14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout33" />
-
     <EditText
-        android:id="@+id/editTextTextPersonName20"
+        android:id="@+id/sPencarianPelanggan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -91,17 +82,17 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/imageView37"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner14" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout33" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/TambahPelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/tambahPelanggan2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20">
+        app:layout_constraintTop_toBottomOf="@+id/sPencarianPelanggan">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,6 +100,7 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvPelanggan2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -130,7 +122,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView287"
+                android:id="@+id/tJumlahPelanggan2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -146,10 +138,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="0"
                 android:textColor="@color/agakhitam"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView287"
+                app:layout_constraintStart_toEndOf="@+id/tJumlahBarang"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,12 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName65"
+        app:layout_constraintBottom_toBottomOf="@+id/carik"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName65"
+        app:layout_constraintTop_toTopOf="@+id/carik"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <Button
+        android:onClick="exportLaporanReturn"
         android:id="@+id/button72"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -81,13 +82,15 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/erece"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName66"
+        android:onClick="nang"
+        android:id="@+id/nang"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -110,10 +113,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName65" />
+        app:layout_constraintTop_toBottomOf="@+id/carik" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName67"
+        android:onClick="prom"
+        android:id="@+id/prom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -127,7 +131,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView516" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName65"
+        android:id="@+id/carik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -150,7 +154,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
         <TextView
-            android:id="@+id/textView506"
+            android:id="@+id/t100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -162,7 +166,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView505" />
 
         <TextView
-            android:id="@+id/textView507"
+            android:id="@+id/judat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
@@ -172,14 +176,14 @@
             app:layout_constraintTop_toTopOf="@+id/textView514" />
 
         <TextView
-            android:id="@+id/textView511"
+            android:id="@+id/t200"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="Barang"
-            app:layout_constraintBottom_toBottomOf="@+id/textView506"
-            app:layout_constraintStart_toEndOf="@+id/textView506"
-            app:layout_constraintTop_toTopOf="@+id/textView506" />
+            app:layout_constraintBottom_toBottomOf="@+id/t100"
+            app:layout_constraintStart_toEndOf="@+id/t100"
+            app:layout_constraintTop_toTopOf="@+id/t100" />
 
         <TextView
             android:id="@+id/textView514"
@@ -187,7 +191,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="100"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

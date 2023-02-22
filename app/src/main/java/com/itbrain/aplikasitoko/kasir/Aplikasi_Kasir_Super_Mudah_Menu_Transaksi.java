@@ -28,7 +28,9 @@ public class Aplikasi_Kasir_Super_Mudah_Menu_Transaksi extends AppCompatActivity
 
     public void PindahPenjualan(View view) {
         Intent intent = new Intent(Aplikasi_Kasir_Super_Mudah_Menu_Transaksi.this, Form_Penjualan_Kasir_.class);
+        intent.putExtra("type","faktur");
         startActivity(intent);
+
     }
 
     public void BayarHutang(View view) {

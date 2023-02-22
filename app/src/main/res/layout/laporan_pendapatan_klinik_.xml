@@ -44,7 +44,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
-        android:id="@+id/textView475"
+        android:id="@+id/tTotal"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:background="#E1E1E1"
@@ -72,13 +72,14 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recPel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
     <EditText
-        android:id="@+id/editTextTextPersonName49"
+        android:id="@+id/eCari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -89,20 +90,20 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/imageView129"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView475" />
+        app:layout_constraintTop_toBottomOf="@+id/tTotal" />
 
     <ImageView
         android:id="@+id/imageView129"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName49"
+        app:layout_constraintBottom_toBottomOf="@+id/eCari"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName49"
+        app:layout_constraintTop_toTopOf="@+id/eCari"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName50"
+    <TextView
+        android:id="@+id/tglawal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -110,6 +111,7 @@
         android:ems="10"
         android:focusable="false"
         android:inputType="date"
+        android:onClick="tglawal"
         app:layout_constraintBottom_toBottomOf="@+id/textView476"
         app:layout_constraintEnd_toStartOf="@+id/textView476"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,10 +127,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName49" />
+        app:layout_constraintTop_toBottomOf="@+id/eCari" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName51"
+    <TextView
+        android:id="@+id/tglakhir"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -136,6 +138,7 @@
         android:ems="10"
         android:focusable="false"
         android:inputType="date"
+        android:onClick="tglawal"
         app:layout_constraintBottom_toBottomOf="@+id/textView476"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView476"
@@ -148,6 +151,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="export"
         android:text="export"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

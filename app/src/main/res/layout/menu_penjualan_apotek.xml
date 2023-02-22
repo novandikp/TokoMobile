@@ -52,6 +52,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/teal_700"
+        android:onClick="simpan"
         android:text="Taruh Keranjang"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,6 +66,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/hijau_gojek"
+        android:onClick="ganti"
         android:text="Simpan"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,7 +94,6 @@
                 android:layout_height="match_parent">
 
                 <View
-                    android:id="@+id/view16"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:background="@color/agakhitam"
@@ -112,7 +113,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView266"
+                    android:id="@+id/fakkur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -130,7 +131,7 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:id="@+id/view17"
+                    android:id="@+id/etanggal"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginEnd="8dp"
@@ -145,13 +146,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:background="#00FFFFFF"
+                    android:onClick="kalendar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
 
                 <TextView
-                    android:id="@+id/textView270"
+                    android:id="@+id/saldo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -162,7 +164,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView260"
+                    android:id="@+id/etgl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -172,7 +174,8 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView270" />
+                    app:layout_constraintTop_toBottomOf="@+id/saldo" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -180,7 +183,7 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:id="@+id/view18"
+                    android:id="@+id/epelanggan"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginEnd="8dp"
@@ -194,13 +197,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
+                    android:onClick="pelanggan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_baseline_search_24" />
 
                 <TextView
-                    android:id="@+id/textView272"
+                    android:id="@+id/t2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -211,7 +215,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView261"
+                    android:id="@+id/epelangggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -221,7 +225,7 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView272" />
+                    app:layout_constraintTop_toBottomOf="@+id/t2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -239,10 +243,12 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ebarang"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/transparent"
                         android:hint="Nama Obat"
+                        android:enabled="false"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -251,6 +257,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
+                    android:onClick="barang"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -259,7 +266,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Spinner
-                android:id="@+id/spinner8"
+                android:id="@+id/sp_satuan_penjualan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -272,6 +279,7 @@
                 android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ebatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
@@ -285,6 +293,7 @@
                 android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eharga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
@@ -299,6 +308,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ejumlah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
@@ -307,6 +317,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/keranjangg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp" />
@@ -338,7 +349,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textView264"
+                    android:id="@+id/etotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -351,17 +362,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView265"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:text="1.000"
-                    android:textColor="@color/agakhitam"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView264"
-                    app:layout_constraintStart_toEndOf="@+id/textView264"
-                    app:layout_constraintTop_toTopOf="@+id/textView264" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
