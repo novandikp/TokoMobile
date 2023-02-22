@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.itbrain.aplikasitoko">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -47,10 +49,10 @@
             android:name=".MenuLaporanSatu"
             android:exported="false" />
         <activity
-            android:name=".MenuCariPrinter"
+            android:name=".Salon.MenuCariPrinterSalon"
             android:exported="false" />
         <activity
-            android:name=".MenuCetak"
+            android:name=".Salon.MenuCetakSalon"
             android:exported="false" />
         <activity
             android:name=".MenuPilih"
@@ -108,6 +110,24 @@
             android:exported="false" />
         <activity
             android:name=".Salon.Menu_Identitas_Salon_"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityPembayaranCariSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityPembayaranProsesSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityBackupSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityRestoreSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityExportExcelSalon"
+            android:exported="false" />
+        <activity
+            android:name=".Salon.ActivityCetakCariSalon"
             android:exported="false" />
         <activity
             android:name=".apotek.Laporan_Obat_Expired_Apotek_"

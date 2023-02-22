@@ -9,5 +9,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="agakhitam">#2C2C2C</color>
+    <color name="colorSecondary">#e7e7e7</color>
+    <item name="note_foreground" type="color">#de000000</item>
 
 </resources>

@@ -11,6 +11,8 @@ import com.itbrain.aplikasitoko.R;
 
 public class Aplikasi_Salon_Menu_Transaksi extends AppCompatActivity {
 
+    public static boolean status;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
