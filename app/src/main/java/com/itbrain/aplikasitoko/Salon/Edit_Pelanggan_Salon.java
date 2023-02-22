@@ -27,7 +27,7 @@ public class Edit_Pelanggan_Salon extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.form_tambah_pelanggan_salon_);
+        setContentView(R.layout.edit_pelanggan_salon);
 
         ImageButton imageButton = findViewById(R.id.Kembali);
 
