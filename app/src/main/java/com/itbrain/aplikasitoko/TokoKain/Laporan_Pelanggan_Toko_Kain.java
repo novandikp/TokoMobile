@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -39,7 +40,7 @@ public class Laporan_Pelanggan_Toko_Kain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laporan_list_kain);
+        setContentView(R.layout.activity_laporan_barang_kain);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         ImageButton imageButton = findViewById(R.id.kembalicoi);
@@ -174,10 +175,11 @@ public class Laporan_Pelanggan_Toko_Kain extends AppCompatActivity {
         if (TextUtils.isEmpty(keyword)){
             q="SELECT * FROM tblpelanggan WHERE idpelanggan>0";
         }else {
-            q="SELECT * FROM tblpelanggan WHERE namapelanggan LIKE '%"+keyword+"%' AND idpelanggan>0 "+FQueryTokoKain.sOrderASC("pelanggan");
+            q="SELECT * FROM tblpelanggan WHERE namapelanggan LIKE '%"+keyword+"%' AND idpelanggan>0 "+FQueryTokoKain.sOrderASC("namapelanggan");
         }
 
         Cursor c = db.sq(q);
+        Log.d("sqlrun", "getpelanggan: "+q);
         if (c.getCount()>0){
             etjumlah.setText("Jumlah Pelanggan Terdaftar : "+String.valueOf(c.getCount()));
             while(c.moveToNext()){

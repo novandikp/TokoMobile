@@ -1,9 +1,5 @@
 package com.itbrain.aplikasitoko.TokoKain;
 
-import com.google.android.material.textfield.TextInputEditText;
-import com.itbrain.aplikasitoko.R;
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +8,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class Form_Tambah_Pelanggan_Toko_Kain_ extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.itbrain.aplikasitoko.R;
+
+public class Edit_Pelaggan_Kain extends AppCompatActivity {
 
     Button btnSimpan;
     TextInputEditText edtNama,edtAlamat,edtNotelp;
@@ -22,7 +23,7 @@ public class Form_Tambah_Pelanggan_Toko_Kain_ extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_master_pelanggan_toko_kain);
+        setContentView(R.layout.edit_toko_kain);
         Bundle extra = getIntent().getExtras();
         if (extra==null) {
 
@@ -63,25 +64,25 @@ public class Form_Tambah_Pelanggan_Toko_Kain_ extends AppCompatActivity {
                     NoTelp=edtNotelp.getText().toString();
 
                     if (Nama.equals("")||Alamat.equals("")||NoTelp.equals("")){
-                        Toast.makeText(Form_Tambah_Pelanggan_Toko_Kain_.this, "Isi semua data terlebih dahulu!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Edit_Pelaggan_Kain.this, "Isi semua data terlebih dahulu!", Toast.LENGTH_SHORT).show();
                     }else {
                         if (!NoTelp.matches("[0-9]+")){
-                            Toast.makeText(Form_Tambah_Pelanggan_Toko_Kain_.this, "Isi nomor telepon dengan benar", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Edit_Pelaggan_Kain.this, "Isi nomor telepon dengan benar", Toast.LENGTH_SHORT).show();
                         }else {
-                            DatabaseTokoKain db=new DatabaseTokoKain(Form_Tambah_Pelanggan_Toko_Kain_.this);
+                            DatabaseTokoKain db=new DatabaseTokoKain(Edit_Pelaggan_Kain.this);
                             if (idPelanggan==null){
                                 if (db.insertToPelanggan(Nama,Alamat,NoTelp)){
-                                    Toast.makeText(Form_Tambah_Pelanggan_Toko_Kain_.this, "Berhasil menyimpan data", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Edit_Pelaggan_Kain.this, "Berhasil menyimpan data", Toast.LENGTH_SHORT).show();
                                     finish();
                                 }else {
-                                    Toast.makeText(Form_Tambah_Pelanggan_Toko_Kain_.this, "Gagal menyimpan data", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Edit_Pelaggan_Kain.this, "Gagal menyimpan data", Toast.LENGTH_SHORT).show();
                                 }
                             }else {
                                 if (db.updatePelanggan(idPelanggan,Nama,Alamat,NoTelp)){
-                                    Toast.makeText(Form_Tambah_Pelanggan_Toko_Kain_.this, "Berhasil memperbaharui data", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Edit_Pelaggan_Kain.this, "Berhasil memperbaharui data", Toast.LENGTH_SHORT).show();
                                     finish();
                                 }else {
-                                    Toast.makeText(Form_Tambah_Pelanggan_Toko_Kain_.this, "Gagal memperbaharui data", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Edit_Pelaggan_Kain.this, "Gagal memperbaharui data", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }

@@ -1,10 +1,5 @@
 package com.itbrain.aplikasitoko.TokoKain;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -27,12 +22,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.itbrain.aplikasitoko.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Laporan_Pendapatan_Toko_Kain_ extends AppCompatActivity {
+public class Laporan_Order_Toko_Kain extends AppCompatActivity {
 
 
 
@@ -48,7 +48,7 @@ public class Laporan_Pendapatan_Toko_Kain_ extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laporan_tanggal_kain);
+        setContentView(R.layout.activity_laporan_order_kain);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
@@ -290,7 +290,7 @@ public class Laporan_Pendapatan_Toko_Kain_ extends AppCompatActivity {
 
     public void exportExcel(View view) {
         String tanggal = dateawal+"__"+datesampai;
-        Intent i=new Intent(Laporan_Pendapatan_Toko_Kain_.this, ActivityExportExcel_Toko_Kain.class);
+        Intent i=new Intent(Laporan_Order_Toko_Kain.this, ActivityExportExcel_Toko_Kain.class);
         i.putExtra("tab",tab);
         i.putExtra("tgl",tanggal);
         startActivity(i);
@@ -304,34 +304,37 @@ public class Laporan_Pendapatan_Toko_Kain_ extends AppCompatActivity {
         showDialog(2);
     }
 }
-class AdapterLaporanPendapatan extends RecyclerView.Adapter<AdapterLaporanPendapatan.LaporanPendapatanViewHolder> {
+class AdapterLaporanOrder extends RecyclerView.Adapter<AdapterLaporanOrder.LaporanOrderViewHolder>{
     private Context ctx;
     private ArrayList<String> data;
 
-    public AdapterLaporanPendapatan(Context ctx, ArrayList<String> data) {
+    public AdapterLaporanOrder(Context ctx, ArrayList<String> data) {
         this.ctx = ctx;
         this.data = data;
     }
 
     @NonNull
     @Override
-    public LaporanPendapatanViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_laporan_pendapatan_kain, viewGroup, false);
-        return new LaporanPendapatanViewHolder(view);
+    public LaporanOrderViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_laporan_order_kain,viewGroup,false);
+        return new LaporanOrderViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LaporanPendapatanViewHolder holder, int i) {
-        String[] row = data.get(i).split("__");
-
-        holder.pelanggan.setText(row[2]);
-        holder.total.setText("Total : Rp. " + KumFunTokoKain.removeE(row[3]));
-        holder.bayar.setText("Bayar : Rp. " + KumFunTokoKain.removeE(row[4]));
-        holder.kembali.setText("Kembali : Rp. " + KumFunTokoKain.removeE(row[5]));
-        holder.tanggal.setText(KumFunTokoKain.dateToNormal(row[6]));
-
-        holder.tanggal.setText(KumFunTokoKain.dateToNormal(row[6]));
-
+    public void onBindViewHolder(@NonNull LaporanOrderViewHolder holder, int i) {
+        final String[] row=data.get(i).split("__");
+        holder.faktur.setText(row[0]+" - "+row[1]);
+        holder.tanggal.setText(KumFunTokoKain.dateToNormal(row[2]));
+        holder.kain.setText(row[3]+" - "+row[4]);
+        holder.harga.setText("Rp. "+KumFunTokoKain.removeE(row[5])+" x (Panjang "+row[6].replace(".",",")+" x Lebar " + row[7]+" x Jumlah "+ row[9]+")");
+        holder.print.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(ctx, Activity_Bayar_Cetak_Laporan_Toko_Kain.class);
+                i.putExtra("faktur",row[0]);
+                ctx.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -339,16 +342,17 @@ class AdapterLaporanPendapatan extends RecyclerView.Adapter<AdapterLaporanPendap
         return data.size();
     }
 
-    class LaporanPendapatanViewHolder extends RecyclerView.ViewHolder {
-        TextView pelanggan, total, bayar, kembali, tanggal;
-
-        public LaporanPendapatanViewHolder(@NonNull View itemView) {
+    class LaporanOrderViewHolder extends RecyclerView.ViewHolder{
+        private TextView faktur,tanggal,kain,harga;
+        private ImageView print;
+        public LaporanOrderViewHolder(@NonNull View itemView) {
             super(itemView);
-            pelanggan = (TextView) itemView.findViewById(R.id.tvPelanggan);
-            total = (TextView) itemView.findViewById(R.id.tvNominal);
-            bayar = (TextView) itemView.findViewById(R.id.tvBayar);
-            kembali = (TextView) itemView.findViewById(R.id.tvKembali);
-            tanggal = (TextView) itemView.findViewById(R.id.tvTanggal);
+            faktur=(TextView)itemView.findViewById(R.id.tvFaktur);
+            tanggal=(TextView)itemView.findViewById(R.id.tvTanggal);
+            kain=(TextView)itemView.findViewById(R.id.tvKain);
+            harga=(TextView)itemView.findViewById(R.id.tvHarga);
+            print=(ImageView)itemView.findViewById(R.id.ibtnPrint);
         }
     }
 }
+

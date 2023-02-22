@@ -167,7 +167,7 @@ class AdapterListPelanggan extends RecyclerView.Adapter<AdapterListPelanggan.Pel
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()){
                             case R.id.menu_update:
-                                Intent intent = new Intent(ctxAdapter,Form_Tambah_Pelanggan_Toko_Kain_.class);
+                                Intent intent = new Intent(ctxAdapter,Edit_Pelaggan_Kain.class);
                                 intent.putExtra("idpelanggan",getter.getIdPelanggan());
                                 intent.putExtra("namapelanggan",getter.getNamaPelanggan());
                                 intent.putExtra("alamatpelanggan",getter.getAlamatPelanggan());

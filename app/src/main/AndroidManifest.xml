@@ -548,6 +548,11 @@
             android:name=".TokoKredit.Item_Apk_Toko_Kredit"
             android:exported="false" />
         <activity android:name=".TokoKain.Activity_Bayar_Toko_Kain"/>
+        <activity android:name=".TokoKain.Laporan_Order_Toko_Kain"/>
+        <activity android:name=".TokoKain.Laporan_Barang_Toko_Kain"/>
+        <activity android:name=".TokoKain.edit_kategori_kain"/>
+        <activity android:name=".TokoKain.Edit_Toko_Kain"/>
+        <activity android:name=".TokoKain.Edit_Pelaggan_Kain"/>
 
 
         <activity android:name=".TokoKain.Activity_Penjualan_Cari_Toko_Kain"/>
