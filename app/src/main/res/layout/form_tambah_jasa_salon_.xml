@@ -25,7 +25,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Jasa Salon"
+        android:text="Form Tambah Jasa"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/Kembali"

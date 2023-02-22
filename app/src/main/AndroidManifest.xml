@@ -251,7 +251,8 @@
             android:exported="false"/>
         <activity
             android:name=".Salon.Item_Apk_Salon"
-            android:exported="false"/><activity
+            android:exported="false"/>
+        <activity
         android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Utama"
         android:exported="false" />
         <activity
@@ -268,6 +269,12 @@
             android:exported="false" />
         <activity
             android:name=".Salon.Aplikasi_Salon_Menu_Utama"
+            android:exported="false"/>
+        <activity
+            android:name=".Salon.Edit_Jasa_Salon"
+            android:exported="false"/>
+        <activity
+            android:name=".Salon.Edit_Pelanggan_Salon"
             android:exported="false"/>
         <activity
             android:name=".apotek.Laporan_Obat_Expired_Apotek_"

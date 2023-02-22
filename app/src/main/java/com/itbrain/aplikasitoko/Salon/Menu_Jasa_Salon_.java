@@ -204,7 +204,7 @@ public class Menu_Jasa_Salon_ extends AppCompatActivity {
                         public boolean onMenuItemClick(MenuItem item) {
                             switch (item.getItemId()){
                                 case R.id.menu_edit:
-                                    Intent intent = new Intent(ctxAdapter, Form_Tambah_Jasa_Salon_.class);
+                                    Intent intent = new Intent(ctxAdapter, Edit_Jasa_Salon.class);
                                     intent.putExtra("idjasa", getter.getIdjasa());
                                     intent.putExtra("jasa", getter.getJasa());
                                     intent.putExtra("harga", String.valueOf(getter.getHarga()));
