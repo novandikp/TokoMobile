@@ -67,7 +67,7 @@
         android:id="@+id/button7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/material_dynamic_primary60"
+        android:background="@color/hijau_gojek"
         android:onClick="export"
         android:text="Export"
         android:textColor="#fff"

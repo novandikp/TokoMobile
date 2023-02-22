@@ -304,57 +304,6 @@ public class Laporan_Pendapatan_Toko_Kain_ extends AppCompatActivity {
         showDialog(2);
     }
 }
-class AdapterLaporanOrder extends RecyclerView.Adapter<AdapterLaporanOrder.LaporanOrderViewHolder>{
-    private Context ctx;
-    private ArrayList<String> data;
-
-    public AdapterLaporanOrder(Context ctx, ArrayList<String> data) {
-        this.ctx = ctx;
-        this.data = data;
-    }
-
-    @NonNull
-    @Override
-    public LaporanOrderViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_laporan_order_kain,viewGroup,false);
-        return new LaporanOrderViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull LaporanOrderViewHolder holder, int i) {
-        final String[] row=data.get(i).split("__");
-        holder.faktur.setText(row[0]+" - "+row[1]);
-        holder.tanggal.setText(KumFunTokoKain.dateToNormal(row[2]));
-        holder.kain.setText(row[3]+" - "+row[4]);
-        holder.harga.setText("Rp. "+KumFunTokoKain.removeE(row[5])+" x (Panjang "+row[6].replace(".",",")+" x Lebar " + row[7]+" x Jumlah "+ row[9]+")");
-        holder.print.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(ctx, Activity_Bayar_Cetak_Laporan_Toko_Kain.class);
-                i.putExtra("faktur",row[0]);
-                ctx.startActivity(i);
-            }
-        });
-    }
-
-    @Override
-    public int getItemCount() {
-        return data.size();
-    }
-
-    class LaporanOrderViewHolder extends RecyclerView.ViewHolder{
-        private TextView faktur,tanggal,kain,harga;
-        private ImageView print;
-        public LaporanOrderViewHolder(@NonNull View itemView) {
-            super(itemView);
-            faktur=(TextView)itemView.findViewById(R.id.tvFaktur);
-            tanggal=(TextView)itemView.findViewById(R.id.tvTanggal);
-            kain=(TextView)itemView.findViewById(R.id.tvKain);
-            harga=(TextView)itemView.findViewById(R.id.tvHarga);
-            print=(ImageView)itemView.findViewById(R.id.ibtnPrint);
-        }
-    }
-}
 class AdapterLaporanPendapatan extends RecyclerView.Adapter<AdapterLaporanPendapatan.LaporanPendapatanViewHolder> {
     private Context ctx;
     private ArrayList<String> data;

@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/kembalii6"
+        android:id="@+id/kembaliiop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtCari"
-        app:layout_constraintStart_toEndOf="@+id/kembalii6"
+        app:layout_constraintStart_toEndOf="@+id/kembaliiop"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
