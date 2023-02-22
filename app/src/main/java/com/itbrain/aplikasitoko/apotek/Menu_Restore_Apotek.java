@@ -181,8 +181,8 @@ class AdapterBackup extends ArrayAdapter<String> {
         String[] row_items = records.get(position).split("__");
 
         TextView nama= (TextView) itemView.findViewById(R.id.text);
-        Button b = (Button) itemView.findViewById(R.id.hapus) ;
-        ConstraintLayout wadah = (ConstraintLayout) itemView.findViewById(R.id.wadah) ;
+        Button b = (Button) itemView.findViewById(R.id.hapusRestore) ;
+        ConstraintLayout wadah = (ConstraintLayout) itemView.findViewById(R.id.wadahRestore) ;
 
         nama.setText(row_items[0]);
         b.setTag(row_items[1]);
