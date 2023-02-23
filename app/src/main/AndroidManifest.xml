@@ -610,7 +610,7 @@
         <activity android:name=".rentalmobil.MenuKendaraan_Mobil"
             android:exported="false"/>
 
-        <activity android:name=".rentalmobil.ItemPelanggan_Mobil"
+        <activity android:name=".rentalmobil.ItemPelangganMobil"
             android:exported="false"/>
 
         <activity android:name=".rentalmobil.ItemPegawai_Mobil"
