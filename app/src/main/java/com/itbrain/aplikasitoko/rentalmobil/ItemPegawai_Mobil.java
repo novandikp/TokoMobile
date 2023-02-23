@@ -179,7 +179,7 @@ class AdapterPegawaiMobil extends RecyclerView.Adapter<AdapterPegawaiMobil.ViewH
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()){
                             case R.id.menu_edit:
-                                Intent intent = new Intent(c, MenuPegawai_Mobil.class);
+                                Intent intent = new Intent(c, MenuEditPegawaiMobil.class);
                                 intent.putExtra("type","ubah");
                                 intent.putExtra("id",holder.tvOpt.getTag().toString());
                                 c.startActivity(intent);

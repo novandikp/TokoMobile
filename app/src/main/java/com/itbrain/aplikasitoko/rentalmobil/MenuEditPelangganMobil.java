@@ -1,5 +1,4 @@
 package com.itbrain.aplikasitoko.rentalmobil;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -9,11 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.itbrain.aplikasitoko.R;
 
-public class MenuPelanggan_Mobil extends AppCompatActivity {
+public class MenuEditPelangganMobil extends AppCompatActivity {
 
     private TextInputEditText eNama;
     private TextInputLayout textInputLayout;
@@ -30,7 +31,7 @@ public class MenuPelanggan_Mobil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menupelangganduamobil);
+        setContentView(R.layout.menueditpelangganmobil);
 
         eNama
                 = (TextInputEditText) findViewById(R.id.eNama);
@@ -53,19 +54,19 @@ public class MenuPelanggan_Mobil extends AppCompatActivity {
         db = new DatabaseRentalMobil(this);
         type = getIntent().getStringExtra("type");
         idpelanggan=getIntent().getStringExtra("id");
-         if(idpelanggan!=null){
-             setText();
-         }
+        if(idpelanggan!=null){
+            setText();
+        }
 
 
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if (idpelanggan!=null){
+                if (idpelanggan!=null){
                     edit();
                 }else{
-                    simpan();
+                    edit();
                 }
             }
         });
@@ -98,26 +99,7 @@ public class MenuPelanggan_Mobil extends AppCompatActivity {
         eKTP.setText(ModulRentalMobil.getString(c, "noktp"));
     }
 
-    private void simpan() {
-        String nama = eNama.getText().toString();
-        String alamat = eAlamat.getText().toString();
-        String notelp = eNoTelp.getText().toString();
-        String ktp = eKTP.getText().toString();
-        if (!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(alamat) && !TextUtils.isEmpty(notelp) && !TextUtils.isEmpty(ktp)) {
-            String[] isi = {nama, alamat, notelp, ktp};
-            String q = ModulRentalMobil.splitParam("INSERT INTO tblpelanggan (pelanggan,alamat,notelp,noktp) VALUES (?,?,?,?)", isi);
-            if (db.exc(q)) {
-                ModulRentalMobil.showToast(this, getString(R.string.toast_simpan));
-                finish();
-            } else {
-                ModulRentalMobil.showToast(this, getString(R.string.gagal_simpan));
-            }
-        } else {
-            ModulRentalMobil.showToast(this, getString(R.string.kurang_lengkap));
-        }
 
-
-    }
 
     private void edit() {
         String nama = eNama.getText().toString();
@@ -128,7 +110,7 @@ public class MenuPelanggan_Mobil extends AppCompatActivity {
             String[] isi = {nama, alamat, notelp, ktp, idpelanggan};
             String q = ModulRentalMobil.splitParam("UPDATE tblpelanggan SET pelanggan=?,alamat=?,notelp=?,noktp=? WHERE idpelanggan=?   ", isi);
             if (db.exc(q)) {
-                ModulRentalMobil.showToast(this, getString(R.string.toast_simpan));
+                ModulRentalMobil.showToast(this, getString(R.string.toast_edit));
                 finish();
             } else {
                 ModulRentalMobil.showToast(this, getString(R.string.gagal_simpan));
@@ -138,3 +120,4 @@ public class MenuPelanggan_Mobil extends AppCompatActivity {
         }
     }
 }
+
