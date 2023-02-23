@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/un_toko_kain"
-    tools:context=".TokoKain.Laporan_Pendapatan_Toko_Kain_">
+    tools:context=".TokoKain.Laporan_Pelanggan_Toko_Kain">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar77"
+        android:id="@+id/toolbar78"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/kembalitod"
+        android:id="@+id/kembalicoi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -32,16 +32,16 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
-        android:id="@+id/textView545"
+        android:id="@+id/textView546"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Laporan Pendapatan"
+        android:text="Laporan Barang"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtCari"
-        app:layout_constraintStart_toEndOf="@+id/kembalitod"
+        app:layout_constraintStart_toEndOf="@+id/kembalicoi"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -54,7 +54,7 @@
         android:hint="Cari"
         app:layout_constraintEnd_toStartOf="@+id/ibtnCari"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar77" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar78" />
 
     <ImageButton
         android:id="@+id/ibtnCari"
@@ -72,61 +72,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Jumlah Pegawai : 0"
-        android:textColor="@color/hijau_gojek"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cTanggal" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cTanggal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCari">
-
-        <Button
-            android:id="@+id/btnTglAwal"
-            android:layout_width="0dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/black"
-            android:onClick="tgl1"
-            android:text="0/0/0"
-            app:layout_constraintBottom_toBottomOf="@+id/view"
-            app:layout_constraintEnd_toStartOf="@+id/view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view" />
-
-        <Button
-            android:id="@+id/btnTglSampai"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/black"
-            android:onClick="tgl2"
-            android:text="0/0/0"
-            app:layout_constraintBottom_toBottomOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/view"
-            app:layout_constraintTop_toTopOf="@+id/view" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="30dp"
-            android:layout_height="2dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/hijau_gojek"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/edtCari" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recListLaporan"
@@ -136,7 +84,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnExport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPendapatan">
+        app:layout_constraintTop_toBottomOf="@+id/spKat">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -153,13 +101,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <TextView
-        android:id="@+id/tvPendapatan"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spKat"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/tvJumlahData"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvJumlahData" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

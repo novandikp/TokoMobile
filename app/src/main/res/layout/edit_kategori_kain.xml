@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Salon.Menu_Jasa_Salon_">
+    tools:context=".TokoKain.Form_Tambah_Kategori_Toko_Kain">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar68"
@@ -21,17 +21,16 @@
         android:id="@+id/textView482"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Menu Jasa Salon"
+        android:text="Edit Kategori"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/Kembali"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar68"
+        app:layout_constraintStart_toEndOf="@+id/Kembaliokkkk"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/Kembali"
+        android:id="@+id/Kembaliokkkk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,63 +42,39 @@
         app:layout_constraintTop_toTopOf="@+id/textView482"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
-    <ImageView
-        android:id="@+id/imageView149"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName70"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName70"
-        app:srcCompat="@drawable/ic_baseline_search_24" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName70"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Pencarian"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/imageView149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar68" />
-
     <Button
-        android:id="@+id/TambahJasaSalon"
+        android:id="@+id/btnTambahh"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Tambah"
+        android:onClick="simpannn"
+        android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/TambahJasaSalon"
+        android:layout_marginEnd="16dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName70">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar68">
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtKategori"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/listjasa"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </ScrollView>
-
+            android:background="@android:color/transparent"
+            android:hint="Kategori Kain"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

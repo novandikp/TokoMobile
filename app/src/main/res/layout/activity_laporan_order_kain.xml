@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Laporan Pendapatan"
+        android:text="Laporan Order"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtCari"

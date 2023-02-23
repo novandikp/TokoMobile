@@ -153,7 +153,7 @@ public class Laporan_Pendapatan_Apotek_ extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener date1 = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker arg0, int thn, int bln, int day) {
-            ModulApotek.setText(v, R.id.tgl1, ModulApotek.setDatePickerNormal(thn, bln + 1, day));
+            ModulApotek.setText(v, R.id.tgl2, ModulApotek.setDatePickerNormal(thn, bln + 1, day));
             getlaba("");
         }
 

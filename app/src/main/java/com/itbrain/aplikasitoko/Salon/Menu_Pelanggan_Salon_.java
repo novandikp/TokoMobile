@@ -230,7 +230,7 @@ public class Menu_Pelanggan_Salon_ extends AppCompatActivity {
                         public boolean onMenuItemClick(MenuItem item) {
                             switch (item.getItemId()){
                                 case R.id.menu_edit:
-                                    Intent intent = new Intent(ctxAdapter,Form_Tambah_Pelanggan_Salon_.class);
+                                    Intent intent = new Intent(ctxAdapter,Edit_Pelanggan_Salon.class);
                                     intent.putExtra("idpelanggan",getter.getIdPelanggan());
                                     intent.putExtra("pelanggan",getter.getPelanggan());
                                     intent.putExtra("alamatpel",getter.getAlamat());
