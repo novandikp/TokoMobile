@@ -15,6 +15,7 @@ import com.itbrain.aplikasitoko.klinik.AplikasiKlinikDokter_Menu_Utama;
 import com.itbrain.aplikasitoko.rentalmobil.MenuUtamaMobil;
 import com.itbrain.aplikasitoko.rentalmobil.MenuUtama_Mobil;
 import com.itbrain.aplikasitoko.restoran.ApllikasiRestoran_Menu_Utama;
+import com.itbrain.aplikasitoko.tokosepatu.Aplikasi_Menu_Utama_Toko_Sepatu;
 
 //import com.itbrain.aplikasitoko.databinding.AplikasiApotekPlusKeuanganMenuUtamaBinding;
 //import com.itbrain.aplikasitoko.databinding.AplikasiSalonMenuUtamaBinding;
@@ -64,6 +65,10 @@ public class Main_App extends AppCompatActivity {
 
     public void PindahRental(View view){
         Intent intent = new Intent(Main_App.this, MenuUtama_Mobil.class);
+        startActivity(intent);
+    }
+    public void PindahSepatu(View view) {
+        Intent intent = new Intent(Main_App.this, Aplikasi_Menu_Utama_Toko_Sepatu.class);
         startActivity(intent);
     }
 }
