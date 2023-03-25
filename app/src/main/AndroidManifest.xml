@@ -617,7 +617,7 @@
         <activity android:name=".rentalmobil.MenuKendaraan_Mobil"
             android:exported="false"/>
 
-        <activity android:name=".rentalmobil.ItemPelanggan_Mobil"
+        <activity android:name=".rentalmobil.ItemPelangganMobil"
             android:exported="false"/>
 
         <activity android:name=".rentalmobil.ItemPegawai_Mobil"
@@ -681,6 +681,24 @@
             android:exported="false"/>
 
         <activity android:name=".rentalmobil.MenuLaporanPelanggan_Mobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditMerkMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditKendaraanMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditPelangganMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuEditPegawaiMobil"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPilihPegawaiMobill"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPilihPelangganMobil"
             android:exported="false"/>
 
         <activity
@@ -848,7 +866,7 @@
 
         <activity android:name=".klinik.MenuUbahJasaKlinik"/>
         <activity android:name=".klinik.MenuTambahJasaKlinik"/>
-
+        <activity android:name=".klinik.MenuUbahJanjiKlinik"/>
 
         <activity android:name=".klinik.MenuTambahPasienKlinik"/>
         <activity android:name=".klinik.Tambah_Pasien_Klinik"/>

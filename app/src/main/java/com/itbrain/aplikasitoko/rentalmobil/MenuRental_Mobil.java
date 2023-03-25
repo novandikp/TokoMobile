@@ -280,7 +280,7 @@ public class MenuRental_Mobil extends AppCompatActivity {
     };
 
     public void pelanggan(View view) {
-        Intent i = new Intent(this, MenuPilih_Mobil.class);
+        Intent i = new Intent(this, MenuPilihPelangganMobil.class);
         i.putExtra("type", "pelanggan");
         startActivityForResult(i, 100);
     }
@@ -407,7 +407,7 @@ public class MenuRental_Mobil extends AppCompatActivity {
     }
 
     public void teknisi(View view) {
-        Intent i = new Intent(this, MenuPilih_Mobil.class);
+        Intent i = new Intent(this, MenuPilihPegawaiMobill.class);
         i.putExtra("type", "teknisi");
         startActivityForResult(i, 300);
     }

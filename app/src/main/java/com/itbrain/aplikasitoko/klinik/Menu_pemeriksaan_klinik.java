@@ -38,7 +38,7 @@ public class Menu_pemeriksaan_klinik extends AppCompatActivity {
     int year, day, month;
     Calendar calendar;
     boolean stat = false;
-    String idpelanggan, idbarang, idkategori = "default", iddokter = "default";
+    String idpelanggan, idbarang, idkategori = "default", iddokter = "1";
     String umur;
 
     @Override
@@ -106,7 +106,7 @@ public class Menu_pemeriksaan_klinik extends AppCompatActivity {
             umur = ModulKlinik.getUmur(ModulKlinik.getString(c, "umur"));
 
         }
-        if (iddokter != null) {
+        if (iddokter == null) {
             Cursor c = db.sq(ModulKlinik.selectwhere("tbldokter") + ModulKlinik.sWhere("iddokter", "1"));
             c.moveToNext();
             ModulKlinik.setText(v, R.id.eTeknisi, ModulKlinik.getString(c, "dokter"));
