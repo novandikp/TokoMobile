@@ -7,9 +7,9 @@
     android:layout_height="match_parent"
     android:layout_row="3"
     android:background="#E4E4E4"
-    tools:context=".CetakKwitansi.MenuUtilititasCetakKwitansi">
+    tools:context=".CetakKwitansi.MenuUtama_Kwitansi">
 
-      <androidx.appcompat.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -22,36 +22,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView13"
+    <TextView
+        android:id="@+id/textView478"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="KomputerKit.com"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView479"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="11dp"
-        android:text="Menu Utilitas"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="Sidoarjo"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/textView478"
+        app:layout_constraintTop_toBottomOf="@+id/textView478" />
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="50dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="60dp"
         app:alignmentMode="alignMargins"
         app:columnCount="2"
         app:columnOrderPreserved="false"
@@ -64,10 +65,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:onClick="cvMaster"
             app:cardCornerRadius="10dp"
-            app:layout_columnSpan="2"
+            app:layout_columnSpan="1"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
 
@@ -76,34 +78,34 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView60"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
+                    android:id="@+id/imageView20"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toTopOf="@id/tvidentitas"
+                    app:layout_constraintBottom_toTopOf="@+id/tvidentitas"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/hadiah" />
+                    app:srcCompat="@drawable/master" />
 
                 <TextView
                     android:id="@+id/tvidentitas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tingkatkan Versi"
+                    android:layout_marginBottom="8dp"
+                    android:text="Master"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/tvidentitasmobil"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintEnd_toEndOf="@+id/tvidentitasmobil"
+                    app:layout_constraintStart_toEndOf="@+id/tvidentitasmobil"
+                    app:layout_constraintStart_toStartOf="@+id/tvidentitasmobil" />
 
                 <TextView
                     android:id="@+id/tvidentitasmobil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Tingkatkan Versi Untuk Fasilitas Lengkap"
+                    android:layout_marginBottom="16dp"
+                    android:text="Kelola Data"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -115,7 +117,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_margin="8dp"
+            android:onClick="cvTransaksi"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -124,12 +127,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvMerk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/uang" />
+
                 <TextView
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Backup Data"
+                    android:layout_marginBottom="16dp"
+                    android:text="Masukkan Transaksi"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -138,24 +152,13 @@
                     android:id="@+id/tvMerk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Backup Data"
+                    android:layout_marginBottom="8dp"
+                    android:text="Transaksi"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/textView22"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvMerk"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/backupdata" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -163,7 +166,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_margin="8dp"
+            android:onClick="cvLaporan"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -176,8 +180,8 @@
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Restore Data"
+                    android:layout_marginBottom="16dp"
+                    android:text="Amati Laporan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -186,7 +190,8 @@
                     android:id="@+id/tvTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Restore"
+                    android:layout_marginBottom="8dp"
+                    android:text="Laporan"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/textView25"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -194,17 +199,14 @@
 
                 <ImageView
                     android:id="@+id/imageView14"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="32dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
                     app:layout_constraintBottom_toTopOf="@+id/tvTransaksi"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/restor" />
+                    app:srcCompat="@drawable/laporan" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -212,7 +214,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_margin="8dp"
+            android:onClick="cvUtilitas"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -223,22 +226,21 @@
 
                 <ImageView
                     android:id="@+id/imageView16"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="32dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
                     app:layout_constraintBottom_toTopOf="@+id/tvPelanggan"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/reset" />
+                    app:srcCompat="@drawable/utilitas" />
 
                 <TextView
                     android:id="@+id/tvPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reset Data"
+                    android:layout_marginBottom="8dp"
+                    android:text="Utilitas"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/tvDataPelanggan"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -248,8 +250,8 @@
                     android:id="@+id/tvDataPelanggan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Reset Semua Data"
+                    android:layout_marginBottom="16dp"
+                    android:text="Alur Data Aplikasi"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -258,12 +260,12 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/pro"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="10dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+            app:layout_columnSpan="2"
+            app:layout_columnWeight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -271,54 +273,43 @@
 
                 <ImageView
                     android:id="@+id/imageView17"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tvPegawai"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cara" />
+                    app:srcCompat="@drawable/medal" />
 
                 <TextView
                     android:id="@+id/tvPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cara Penggunaan"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Pegawai"
                     android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/tvDataPegawai"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView17"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvDataPegawai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Cara Penggunaan"
+                    android:text="Kelola Data Pegawai"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView17"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPegawai" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
     </androidx.gridlayout.widget.GridLayout>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="25dp"
-        android:text="Versi 2.0"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
