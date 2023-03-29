@@ -253,7 +253,7 @@
             android:name=".Salon.Item_Apk_Salon"
             android:exported="false"/>
         <activity
-        android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Utama"
+        android:name=".tokosepatu.Aplikasi_Menu_Utama_Toko_Sepatu"
         android:exported="false" />
         <activity
             android:name=".Salon.Aplikasi_Salon_Menu_Utillitas"
@@ -769,6 +769,12 @@
         <activity android:name=".rentalmobil.MenuEditPegawaiMobil"
             android:exported="false"/>
 
+        <activity android:name=".rentalmobil.MenuPilihPegawaiMobill"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPilihPelangganMobil"
+            android:exported="false"/>
+
         <activity
             android:name=".Item_Apk_Antrian"
             android:exported="false" />
@@ -856,14 +862,49 @@
         <activity
             android:name=".tokosepatu.Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="false" />
+        <activity android:name=".tokosepatu.Menu_Kategori_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Kategori_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_kategori_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Identitas_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Barang_Master_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Ukuran_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Barang_Transaksi_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_Barang_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Ukuran_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Barang_Sepatu"/>
+        <activity android:name=".tokosepatu.Aplikasi_Menu_Laporan_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Laporan_List_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Laporan_List_Kedua_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Dompet_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Export_Excel_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Laporan_Per_Barang_Sepatu"/>
+        <activity android:name=".tokosepatu.ActivityTransaksiBayarCetak_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Restrore_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Backup_Tokosepatu"/>
+        <activity android:name=".tokosepatu.Aplikas_Menu_Utilitasi_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Cari_Printer_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Sepatu"/>
+        <activity android:name=".tokosepatu.Pembayaran_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Kategori_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Bayar_Hutang_Sepatu"/>
+        <activity android:name=".tokosepatu.Aktivasi_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Daftar_Retur_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Retur_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Pemasukan_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Pengeluaran_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_Ukuran_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Pelanggan_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Pelanggan_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_Pelanggan_Toko_Sepatu"/>
+
         <activity
             android:name=".tokosepatu.Daftar_Hutang_Toko_Sepatu"
             android:exported="false" />
         <activity
-            android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Transaksi"
+            android:name=".tokosepatu.Aplikasi_Menu_Transaksi_Toko_Sepatu"
             android:exported="false" />
         <activity
-            android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Master"
+            android:name=".tokosepatu.Aplikasi_Menu_Master_Toko_Sepatu"
             android:exported="false" />
         <activity
             android:name=".apotek.Menu_Pengeluaran_Apotek"

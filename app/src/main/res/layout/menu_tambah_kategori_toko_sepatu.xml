@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tokosepatu.MenuTambahkategoriTokoSepatu">
+    tools:context=".tokosepatu.Menu_Tambah_kategori_Toko_Sepatu">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Kendaraan"
