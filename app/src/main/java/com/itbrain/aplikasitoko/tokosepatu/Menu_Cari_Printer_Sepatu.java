@@ -1,11 +1,14 @@
 package com.itbrain.aplikasitoko.tokosepatu;
 
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -51,6 +54,7 @@ public class Menu_Cari_Printer_Sepatu extends AppCompatActivity {
         setContentView(R.layout.activity_menu_cari_printer_sepatu);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Cari Printer ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -91,6 +95,36 @@ public class Menu_Cari_Printer_Sepatu extends AppCompatActivity {
         }catch (Exception e){
             Toast.makeText(this, "Bluetooth Error", Toast.LENGTH_SHORT).show();
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed(){keluar();
+    }
+    public void keluar(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.create();
+        builder.setTitle("Anda yakin ingin keluar?");
+        builder.setMessage("Setelah keluar, anda bisa cetak struk dilaporan order");
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i = new Intent(Menu_Cari_Printer_Sepatu.this, Aplikasi_Menu_Utama_Toko_Sepatu.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+            }
+        }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        }).show();
+
     }
 
     void findBT() {

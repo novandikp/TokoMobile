@@ -798,6 +798,7 @@
         <activity android:name=".tokosepatu.Menu_Tambah_Barang_Toko_Sepatu"/>
         <activity android:name=".tokosepatu.Ukuran_Toko_Sepatu"/>
         <activity android:name=".tokosepatu.Menu_Ubah_Barang_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Ukuran_Sepatu"/>
         <activity android:name=".tokosepatu.Aplikasi_Menu_Laporan_Toko_Sepatu"/>
         <activity android:name=".tokosepatu.Menu_Laporan_List_Sepatu"/>
         <activity android:name=".tokosepatu.Menu_Laporan_List_Kedua_Sepatu"/>
