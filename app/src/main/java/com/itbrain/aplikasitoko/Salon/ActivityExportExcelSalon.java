@@ -113,13 +113,13 @@ public class ActivityExportExcelSalon extends AppCompatActivity {
 
     public void export(View view) throws IOException, WriteException {
       if (type.equals("jasa")){
-            nama="Laporan Jasa";
+            nama="Laporan Jasa Salon";
             exJasa();
         } else if (type.equals("pelanggan")){
-            nama="Laporan Pelanggan";
+            nama="Laporan Pelanggan Salon";
             exPelanggan();
         }else if(type.equals("janji")){
-            nama="Laporan Booking";
+            nama="Laporan Booking Salon";
             exJanji();
         }else if(type.equals("transaksi")){
             nama="Laporan Transaksi";

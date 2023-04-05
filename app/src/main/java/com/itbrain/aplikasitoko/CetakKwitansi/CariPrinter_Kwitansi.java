@@ -1,4 +1,4 @@
-package com.itbrain.aplikasitoko;
+package com.itbrain.aplikasitoko.CetakKwitansi;
 
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
@@ -8,13 +8,15 @@ import android.content.Intent;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.itbrain.aplikasitoko.bengkel.ModulBengkel;
+import com.itbrain.aplikasitoko.R;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
 
-public class MenuCariPrinter extends AppCompatActivity {
+public class CariPrinter_Kwitansi extends AppCompatActivity {
 
     BluetoothAdapter mBluetoothAdapter;
     BluetoothSocket mmSocket;
@@ -47,32 +49,34 @@ public class MenuCariPrinter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_cari_printer);
+        setContentView(R.layout.cariprinter_kwitansi);
 
+        ImageButton imageButton = findViewById(R.id.Kembali);
 
-//        getSupportActionBar().setTitle("Cari Printer ");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
-        final ModulBengkel temp = new ModulBengkel(getSharedPreferences("config",this.MODE_PRIVATE));
+        final ConfigKwitansi temp = new ConfigKwitansi(getSharedPreferences("config",this.MODE_PRIVATE));
         list = (ListView) findViewById(R.id.listView) ;
         adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         list.setAdapter(adapter);
-        faktur = getIntent().getStringExtra("idjual") ;
-        type=getIntent().getStringExtra("type");
+        faktur = getIntent().getStringExtra("faktur") ;
+        type = getIntent().getStringExtra("type") ;
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 deviceName = arrayList.get(i).toString() ;
                 temp.setCustom("Printer", deviceName);
 
-
-                Intent in = new Intent(MenuCariPrinter.this, MenuCetak.class) ;
-                in.putExtra("idjual",faktur) ;
-                in.putExtra("type",type) ;
+                Intent in = new Intent(CariPrinter_Kwitansi.this,MenuCetak_Kwitansi.class) ;
+                in.putExtra("faktur",faktur) ;
                 in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
                 startActivity(in);
-
             }
         });
 
@@ -82,6 +86,14 @@ public class MenuCariPrinter extends AppCompatActivity {
         }catch (Exception e){
             Toast.makeText(this, "Bluetooth Error", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @SuppressLint("MissingPermission")
@@ -176,7 +188,7 @@ public class MenuCariPrinter extends AppCompatActivity {
 
                                         handler.post(new Runnable() {
                                             public void run() {
-                                                Toast.makeText(MenuCariPrinter.this, data, Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(CariPrinter_Kwitansi.this, data, Toast.LENGTH_SHORT).show();
                                             }
                                         });
                                     } else {

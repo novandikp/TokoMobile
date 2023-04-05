@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+import com.itbrain.aplikasitoko.CetakKwitansi.MenuUtama_Kwitansi;
 import com.itbrain.aplikasitoko.Salon.Aplikasi_Salon_Menu_Utama;
 import com.itbrain.aplikasitoko.TokoKain.Aplikasi_TokoKain_Menu_Utama_Toko_Kain;
 import com.itbrain.aplikasitoko.bengkel.Aplikasi_Bengkel_Menu_Utama_;
@@ -68,6 +68,10 @@ public class Main_App extends AppCompatActivity {
     }
     public void PindahSepatu(View view) {
         Intent intent = new Intent(Main_App.this, Aplikasi_Menu_Utama_Toko_Sepatu.class);
+        startActivity(intent);
+    }
+    public void PindahKwitansi(View view){
+        Intent intent = new Intent(Main_App.this, MenuUtama_Kwitansi.class);
         startActivity(intent);
     }
 }

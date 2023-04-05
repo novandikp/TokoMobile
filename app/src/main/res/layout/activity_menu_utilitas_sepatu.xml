@@ -76,7 +76,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/premium_sepatu" />
+                    app:srcCompat="@drawable/premium_toko_kain" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline9"

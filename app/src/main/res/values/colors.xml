@@ -17,4 +17,5 @@
     <color name="tombol1">#82b1ff</color>
     <color name="off">#FBBFD4F5</color>
     <color name="bg">#f1f1f1</color>
+    <color name="colorAccentDark">#176FB4</color>
 </resources>
