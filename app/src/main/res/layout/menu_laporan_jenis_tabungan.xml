@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tabungan.MenuLaporanAnggotaTabungan">
+    tools:context=".tabungan.MenuLaporanJenisSimpananTabungan">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout45"
+        android:id="@+id/constraintLayout53"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,87 +15,97 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar100"
+            android:id="@+id/toolbar107"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/kembaliMenuAnggotaLaporan"
+            android:id="@+id/kembaliLaporanJenis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:background="@android:color/transparent"
             android:minWidth="48dp"
             android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar107"
             app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
         <TextView
-            android:id="@+id/textView262"
+            android:id="@+id/textView273"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menu Laporan Anggota"
+            android:text="Laporan Jenis Simpanan"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/kembaliMenuAnggotaLaporan"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar107"
+            app:layout_constraintStart_toEndOf="@+id/kembaliLaporanJenis"
+            app:layout_constraintTop_toTopOf="@+id/toolbar107" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tvLapAnggota"
+        android:id="@+id/tvJumlahData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Jumlah Data : 0"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cariLaporanAnggota" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCariJenisTabungan" />
 
     <ImageView
         android:id="@+id/imageView43"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cariLaporanAnggota"
+        app:layout_constraintBottom_toBottomOf="@+id/edtCariJenisTabungan"
+        app:layout_constraintEnd_toStartOf="@+id/edtCariJenisTabungan"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cariLaporanAnggota"
+        app:layout_constraintTop_toTopOf="@+id/edtCariJenisTabungan"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <EditText
-        android:id="@+id/cariLaporanAnggota"
-        android:layout_width="0dp"
+        android:id="@+id/edtCariJenisTabungan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Cari"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView43"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout45" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout53" />
 
     <Button
-        android:id="@+id/exportExcelAnggota"
+        android:id="@+id/exportExcelJenis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#249C42"
-        android:onClick="exportAnggota"
+        android:backgroundTint="#25A144"
+        android:onClick="exportExcelJenis"
         android:text="Ekspor Ke Excel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recLapAnggotaTabungan"
+        android:id="@+id/recListJenisTabungan"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/exportExcelAnggota"
+        app:layout_constraintBottom_toTopOf="@+id/exportExcelJenis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLapAnggota"
-        tools:listitem="@layout/tabunganitemdaftaranggota" />
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlahData" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

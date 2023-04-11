@@ -14,6 +14,7 @@ import com.itbrain.aplikasitoko.kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama;
 import com.itbrain.aplikasitoko.klinik.AplikasiKlinikDokter_Menu_Utama;
 import com.itbrain.aplikasitoko.rentalmobil.MenuUtama_Mobil;
 import com.itbrain.aplikasitoko.restoran.ApllikasiRestoran_Menu_Utama;
+import com.itbrain.aplikasitoko.tabungan.MainActivityTabungan;
 
 //import com.itbrain.aplikasitoko.databinding.AplikasiApotekPlusKeuanganMenuUtamaBinding;
 //import com.itbrain.aplikasitoko.databinding.AplikasiSalonMenuUtamaBinding;
@@ -24,6 +25,11 @@ public class Main_App extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_app);
+    }
+
+    public void pindahTabungan(View view) {
+        Intent intent = new Intent(Main_App.this, MainActivityTabungan.class);
+        startActivity(intent);
     }
 
     public void PindahBengkel(View view) {
