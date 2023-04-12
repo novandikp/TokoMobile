@@ -93,6 +93,20 @@
     <string-array name="nama_barang">
         <item>Semua</item>
     </string-array>
+    <string-array name="satuan">
+        <item>Piece (Pc)</item>
+        <item>Kilo Gram(Kg)</item>
+        <item>Meter Persegi(M²)</item>
+    </string-array>
+    <string-array name="metodeBayar">
+        <item>Tunai</item>
+        <item>Hutang</item>
+    </string-array>
+    <string-array name="menuKeuangan">
+        <item>Semua</item>
+        <item>Pemasukan</item>
+        <item>Pengeluaran</item>
+    </string-array>
 
     <string-array name="jenis_kelamin">
         <item>Laki-Laki</item>

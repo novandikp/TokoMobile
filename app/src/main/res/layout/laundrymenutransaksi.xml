@@ -10,10 +10,22 @@
     android:paddingBottom="50dp"
     tools:context=".Laundry.LaundryMenuTransaksi">
 
-      <androidx.appcompat.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar95"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:backgroundTint="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
@@ -46,26 +58,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
-    <androidx.gridlayout.widget.GridLayout
+    <View
+        android:id="@+id/view16"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:paddingTop="30dp"
-        android:paddingBottom="100dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout8" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#E4E4E4"
+        android:elevation="0dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Menu Keuangan"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout8" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         app:alignmentMode="alignMargins"
         app:columnCount="2"
         app:columnOrderPreserved="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="3">
+        app:layout_constraintTop_toTopOf="@+id/toolbar95"
+        app:rowCount="2">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="20dp"
             android:layout_margin="8dp"
             android:layout_marginTop="30dp"
+            android:onClick="clickTerima"
             app:cardCornerRadius="10dp"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1"
@@ -85,13 +125,13 @@
                     android:layout_marginBottom="32dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tvSimpanan"
+                    app:layout_constraintStart_toEndOf="@+id/tvSimpanann"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/laundry" />
 
                 <TextView
-                    android:id="@+id/tvSimpanan"
+                    android:id="@+id/tvSimpanann"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_marginStart="55dp"
@@ -102,7 +142,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tvDataSimpanan"
+                    android:id="@+id/tvDataSimpanann"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -114,7 +154,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView20"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSimpanan" />
+                    app:layout_constraintTop_toBottomOf="@+id/tvSimpanann" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -125,6 +165,7 @@
             android:layout_height="0dp"
             android:layout_margin="8dp"
             android:layout_marginTop="8dp"
+            android:onClick="clickProses"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -180,6 +221,7 @@
             android:layout_height="0dp"
             android:layout_margin="8dp"
             android:layout_marginTop="8dp"
+            android:onClick="clickHutang"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -227,6 +269,71 @@
         </androidx.cardview.widget.CardView>
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="0dp"
+        android:layout_height="166dp"
+        android:layout_margin="8dp"
+        android:onClick="keuangan"
+        app:cardCornerRadius="10dp"
+        app:layout_columnSpan="2"
+        app:layout_columnWeight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view16"
+        app:layout_rowWeight="1"
+        tools:ignore="DuplicateClickableBoundsCheck,DuplicateClickableBoundsCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="keuangan">
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvSimpanan"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/wallet" />
+
+            <TextView
+                android:id="@+id/tvSimpanan"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="50dp"
+                android:text="Keuangan"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDataSimpanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="50dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text=" Atur dan tambah data keuangan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSimpanan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

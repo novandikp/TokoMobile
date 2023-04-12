@@ -6,7 +6,8 @@ import android.os.Bundle;
 
 import com.itbrain.aplikasitoko.R;
 
-public class MenuUbahJasaLaundry extends AppCompatActivity {
+public class
+MenuUbahJasaLaundry extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

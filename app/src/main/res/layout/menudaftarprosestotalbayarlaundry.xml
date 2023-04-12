@@ -4,15 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingTop="10dp"
-    android:paddingRight="10dp"
     tools:context=".Laundry.MenuDaftarProsesTotalBayarLaundry">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/hijau_gojek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Total Bayar"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTotalBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Rp. 0"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView63"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:onClick="copyTelp"
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout22"
@@ -23,10 +61,23 @@
         android:id="@+id/imageView64"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout22"
+        android:onClick="copyAlamat"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout20"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout19"
+        app:srcCompat="@drawable/copy" />
+
+    <ImageView
+        android:id="@+id/imageView62"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:onClick="copyNama"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout20"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout20"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/copy" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -41,6 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout20">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/telpFelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nomer Telepon"
@@ -59,17 +111,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout19">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/alamatFelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Alamat Pelanggan"
             android:text="Jokodono" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout19"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="55dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,6 +131,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout18">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/namPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Pelanggan"
@@ -94,6 +149,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout17">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/namaFegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Pegawai"
@@ -111,6 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout15">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tglSelesai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal Selesai"
@@ -121,12 +178,14 @@
         android:id="@+id/textInputLayout14"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:boxBackgroundColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nopaktur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nomor Faktur"
@@ -144,6 +203,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout14">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tglTerima"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal Terima"
@@ -169,28 +229,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView62"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout19"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout19"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout19"
-        app:srcCompat="@drawable/copy" />
-
     <TextView
         android:id="@+id/textView98"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Isi Keranjang :"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout22" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcpro"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button13"
