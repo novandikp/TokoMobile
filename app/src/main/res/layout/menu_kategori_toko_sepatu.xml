@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tokosepatu.MenuKategoriTokoSepatu">
+    tools:context=".tokosepatu.Menu_Kategori_Toko_Sepatu">
 
     <ScrollView
         android:layout_width="match_parent"

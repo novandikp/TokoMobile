@@ -8,8 +8,10 @@
     <string name="tambah">Tambah</string>
     <string name="batal">Batal</string>
     <string name="simpan">SIMPAN</string>
+    <string name="edit">EDIT</string>
     <string name="gagal_simpan">Gagal menyimpan data</string>
     <string name="toast_simpan">Berhasil disimpan</string>
+    <string name="toast_edit">Berhasil Di edit</string>
     <string name="tambah_kendaraan">Menu Tambah Kendaraan</string>
     <string name="menu_merk">Menu Merk</string>
     <string name="menu_pelanggan">Menu Pelanggan</string>

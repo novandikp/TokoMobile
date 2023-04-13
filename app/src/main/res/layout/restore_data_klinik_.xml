@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view4"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_restore_data" />
+        tools:listitem="@layout/item_view_restore" />
 
     <View
         android:id="@+id/view4"

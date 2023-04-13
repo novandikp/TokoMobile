@@ -202,7 +202,7 @@ class AdapterJanji extends RecyclerView.Adapter<AdapterJanji.ViewHolder> {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_edit:
-                                Intent intent = new Intent(c, MenuTambahJanjiKlinik.class);
+                                Intent intent = new Intent(c, MenuUbahJanjiKlinik.class);
                                 intent.putExtra("type","ubah");
                                 intent.putExtra("idjanji",holder.tvOpt.getTag().toString());
                                 c.startActivity(intent);

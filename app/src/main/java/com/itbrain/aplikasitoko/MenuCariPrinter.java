@@ -1,5 +1,6 @@
 package com.itbrain.aplikasitoko;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -83,6 +84,7 @@ public class MenuCariPrinter extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("MissingPermission")
     void findBT() {
 
         try {
@@ -118,6 +120,7 @@ public class MenuCariPrinter extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    @SuppressLint("MissingPermission")
     void openBT() throws IOException {
         try {
             // Standard SerialPortService ID

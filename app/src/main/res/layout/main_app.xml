@@ -616,7 +616,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="25dp">
+                        android:layout_marginRight="25dp"
+                        android:onClick="PindahKwitansi">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout103"
@@ -665,7 +666,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="25dp">
+                        android:layout_marginRight="25dp"
+                        android:onClick="PindahSepatu">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout104"

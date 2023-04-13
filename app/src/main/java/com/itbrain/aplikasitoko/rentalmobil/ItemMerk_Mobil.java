@@ -180,7 +180,7 @@ public class ItemMerk_Mobil extends AppCompatActivity {
                         public boolean onMenuItemClick(MenuItem item) {
                             switch (item.getItemId()) {
                                 case R.id.menu_edit:
-                                    Intent intent = new Intent(c, MobilMenuMerk.class);
+                                    Intent intent = new Intent(c, MenuEditMerkMobil.class);
                                     intent.putExtra("id", holder.tvOpt.getTag().toString());
                                     c.startActivity(intent);
                                     break;

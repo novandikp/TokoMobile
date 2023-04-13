@@ -53,7 +53,7 @@ public class MobilMenuMaster extends AppCompatActivity {
     }
 
     public void Pelanggan(View view) {
-        Intent i = new Intent(this, ItemPelanggan_Mobil.class);
+        Intent i = new Intent(this, ItemPelangganMobil.class);
         i.putExtra("type","pelanggan");
         startActivity(i);
     }

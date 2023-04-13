@@ -83,7 +83,7 @@ public class Laporan_Pendapatan_Klinik_ extends AppCompatActivity {
                     String a = eCari.getText().toString();
                     arrayList.clear();
                     getPendapatan(a);
-
+                    setText();
                 }
             });
 //        }
@@ -95,7 +95,7 @@ public class Laporan_Pendapatan_Klinik_ extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recPel);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        RecyclerView.Adapter adapter = new AdapterBagiHasil(this,arrayList) ;
+        RecyclerView.Adapter adapter = new AdapterPendapatan(this,arrayList) ;
         recyclerView.setAdapter(adapter);
         String q = ModulKlinik.selectwhere("view_detailperiksa")+ " flagperiksa=2 AND "+ModulKlinik.sBetween("tglperiksa",ModulKlinik.getText(v,R.id.tglawal),ModulKlinik.getText(v,R.id.tglakhir))+" AND "+ModulKlinik.sLike("pasien",cari)+ModulKlinik.sOrderASC("fakturperiksa");
         Cursor c = db.sq(q) ;
