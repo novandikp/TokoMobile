@@ -717,7 +717,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="25dp">
+                        android:layout_marginRight="25dp"
+                        android:onClick="PindahLaundry">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout105"
@@ -729,8 +730,8 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
                                 android:backgroundTint="#80C7FF"
                                 app:cardCornerRadius="16dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
