@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tokosepatu.MenuTambahPelangganTokoSepatu">
+    tools:context=".tokosepatu.Menu_Tambah_Pelanggan_Toko_Sepatu">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -116,6 +116,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
+            android:onClick="backup"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -164,6 +165,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
+            android:onClick="restore"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -213,6 +215,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
+            android:onClick="reset"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -261,6 +264,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="10dp"
+            android:onClick="petunjuk"
             app:cardCornerRadius="10dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
@@ -308,12 +312,13 @@
     </androidx.gridlayout.widget.GridLayout>
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tvVersionName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
         android:layout_marginEnd="175dp"
         android:layout_marginBottom="25dp"
+        android:onClick="tvVersion"
         android:text="Versi 2.0"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"

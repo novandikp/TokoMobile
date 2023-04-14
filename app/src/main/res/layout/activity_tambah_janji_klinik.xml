@@ -47,6 +47,8 @@
         android:id="@+id/cari"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,12 +109,12 @@
 
     <TextView
         android:id="@+id/tglawal"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="14dp"
-        android:text="TextView"
         android:onClick="tglawal"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cari" />
 

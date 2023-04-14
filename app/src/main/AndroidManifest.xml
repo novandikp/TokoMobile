@@ -31,6 +31,43 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
+        <activity android:name=".Laundry.ActivityKeuanganKeluar_laundry"/>
+        <activity android:name=".Laundry.MenuPilihAktivitasKeuanganLaundry"/>
+        <activity android:name=".Laundry.Cari_Perangkat_Cetak_Laundry"/>
+        <activity android:name=".Laundry.MenuCetaklaundry"/>
+        <activity android:name=".Laundry.ActivityUtilitasRestoreLaundry"/>
+        <activity android:name=".Laundry.Laporan_Keuangan_Laundry"/>
+        <activity android:name=".Laundry.Export_Exel_Laundry_2"/>
+        <activity android:name=".Laundry.Export_Exel_Laundry"/>
+        <activity android:name=".Laundry.Laundry_Laporan_Hutang"/>
+        <activity android:name=".Laundry.LaundryItemLaporanPendapatan"/>
+        <activity android:name=".Laundry.LaundryItemLaporanProsesLaundry"/>
+        <activity android:name=".Laundry.ActivityKeuanganTambah_laundry"/>
+        <activity android:name=".Laundry.ActivityTransaksiKeuanganLaundry"/>
+        <activity android:name=".Laundry.LaundryItemLaporanLaundry"/>
+        <activity android:name=".Laundry.Laundry_Laporan_Pegawao"/>
+        <activity android:name=".Laundry.Laundry_Laporan_Pelangan"/>
+        <activity android:name=".Laundry.Laundry_Laporan_Jasa"/>
+        <activity android:name=".Laundry.LaundryMenuLaporan"/>
+        <activity android:name=".Laundry.ActivityTransaksiHutangBayarLaundry"/>
+        <activity android:name=".Laundry.ActivityTransaksiHutangLaundry"/>
+        <activity android:name=".Laundry.MenuUtilitasLaundry"/>
+        <activity android:name=".Laundry.ActivityUtilitasBackupLaundry"/>
+        <activity android:name=".Laundry.Menu_Master_Jasa_Laundry"/>
+        <activity android:name=".Laundry.MenuPelangganLaundry"/>
+        <activity android:name=".Laundry.Menu_Master_Kategori_Laundry"/>
+            <activity android:name=".Laundry.Menu_Master_Pegawai_Laundry"/>
+        <activity android:name=".Laundry.ActivityTransaksiProsesLaundry"/>
+        <activity android:name=".Laundry.MenuDaftarProsesTotalBayarLaundry"/>
+        <activity android:name=".Laundry.Cari_Jasa_Laundry"/>
+        <activity android:name=".Laundry.Cari_Pelanggan_Laundry"/>
+        <activity android:name=".Laundry.Transaksi_Cari_Pegawai"/>
+        <activity android:name=".Laundry.ActivityTransaksiCari_Laundry"/>
+        <activity android:name=".Laundry.ActivityTransaksiTerimaLaundry"/>
+        <activity android:name=".Laundry.LaundryMenuTransaksi"/>
+        <activity android:name=".Laundry.MenuIdentitasLaundry"/>
+        <activity android:name=".Laundry.LaundryMenuMaster"/>
+        <activity android:name=".Laundry.LaundryMenuUtamaMaster"/>
         <activity android:name=".apotek.MenuCetakapotek2"/>
         <activity android:name=".apotek.Menu_Bayar_Piutang_Apotek"/>
         <activity android:name=".apotek.Menu_Cari_Priter_Apotek"/>
@@ -330,7 +367,7 @@
             android:name=".Salon.Item_Apk_Salon"
             android:exported="false"/>
         <activity
-        android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Utama"
+        android:name=".tokosepatu.Aplikasi_Menu_Utama_Toko_Sepatu"
         android:exported="false" />
         <activity
             android:name=".Salon.Aplikasi_Salon_Menu_Utillitas"
@@ -352,6 +389,80 @@
             android:exported="false"/>
         <activity
             android:name=".Salon.Edit_Pelanggan_Salon"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuUtama_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuMaster_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuLaporan_Kwitansi"
+            android:exported="false"/>
+        <activity android:name=".CetakKwitansi.MenuTransaksi_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.LaporanJasa_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuUtilitas_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuJasa_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.UpdateJasa_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.TambahJasa_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.ExportExcel_Kwitansi"
+            android:exported="false"/>
+        <activity
+        android:name=".CetakKwitansi.MenuPelanggan_Kwitansi"
+        android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.TambahPelanggan_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.UpdatePelanggan_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuCetakTransaksi_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.CariPelanggan_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.CariJasa_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.CariPrinter_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.CetakUlang_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuIdentitas_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.LaporanPelanggan_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.LaporanTransaksi_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.MenuCetak_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.ProsesCari_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.Backup_Kwitansi"
+            android:exported="false"/>
+        <activity
+            android:name=".CetakKwitansi.Restore_Kwitansi"
             android:exported="false"/>
         <activity
             android:name=".apotek.Laporan_Obat_Expired_Apotek_"
@@ -772,6 +883,12 @@
         <activity android:name=".rentalmobil.MenuEditPegawaiMobil"
             android:exported="false"/>
 
+        <activity android:name=".rentalmobil.MenuPilihPegawaiMobill"
+            android:exported="false"/>
+
+        <activity android:name=".rentalmobil.MenuPilihPelangganMobil"
+            android:exported="false"/>
+
         <activity
             android:name=".Item_Apk_Antrian"
             android:exported="false" />
@@ -859,14 +976,50 @@
         <activity
             android:name=".tokosepatu.Form_Bayar_Hutang_Toko_Sepatu"
             android:exported="false" />
+        <activity android:name=".tokosepatu.Menu_Kategori_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Kategori_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_kategori_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Identitas_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Barang_Master_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Ukuran_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Barang_Transaksi_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_Barang_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Ukuran_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Barang_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Ukuran_Sepatu"/>
+        <activity android:name=".tokosepatu.Aplikasi_Menu_Laporan_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Laporan_List_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Laporan_List_Kedua_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Dompet_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Export_Excel_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Laporan_Per_Barang_Sepatu"/>
+        <activity android:name=".tokosepatu.ActivityTransaksiBayarCetak_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Restrore_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Backup_Tokosepatu"/>
+        <activity android:name=".tokosepatu.Aplikas_Menu_Utilitasi_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Cari_Printer_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Sepatu"/>
+        <activity android:name=".tokosepatu.Pembayaran_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Penjualan_Kategori_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Bayar_Hutang_Sepatu"/>
+        <activity android:name=".tokosepatu.Aktivasi_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Daftar_Retur_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Retur_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Pemasukan_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Pengeluaran_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_Ukuran_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Pelanggan_Toko_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Ubah_Pelanggan_Sepatu"/>
+        <activity android:name=".tokosepatu.Menu_Tambah_Pelanggan_Toko_Sepatu"/>
+
         <activity
             android:name=".tokosepatu.Daftar_Hutang_Toko_Sepatu"
             android:exported="false" />
         <activity
-            android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Transaksi"
+            android:name=".tokosepatu.Aplikasi_Menu_Transaksi_Toko_Sepatu"
             android:exported="false" />
         <activity
-            android:name=".tokosepatu.Aplikasi_Toko_Sepatu_Menu_Master"
+            android:name=".tokosepatu.Aplikasi_Menu_Master_Toko_Sepatu"
             android:exported="false" />
         <activity
             android:name=".apotek.Menu_Pengeluaran_Apotek"

@@ -617,7 +617,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="25dp">
+                        android:layout_marginRight="25dp"
+                        android:onClick="PindahKwitansi">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout103"
@@ -666,7 +667,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="25dp">
+                        android:layout_marginRight="25dp"
+                        android:onClick="PindahSepatu">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout104"
@@ -716,7 +718,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="25dp">
+                        android:layout_marginRight="25dp"
+                        android:onClick="PindahLaundry">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/constraintLayout105"
@@ -728,8 +731,8 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <androidx.cardview.widget.CardView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
                                 android:backgroundTint="#80C7FF"
                                 app:cardCornerRadius="16dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -756,6 +759,7 @@
                             android:layout_height="50dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
+                            android:onClick="PindahLaundry"
                             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout105"
                             app:layout_constraintEnd_toEndOf="@+id/constraintLayout105"
                             app:layout_constraintStart_toStartOf="@+id/constraintLayout105"

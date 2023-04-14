@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
-    tools:context=".CetakKwitansi.CetakKwitansiMenuCetakKwitansi">
+    tools:context=".CetakKwitansi.MenuCetakTransaksi_Kwitansi">
 
     <ImageView
         android:id="@+id/imageView65"
@@ -21,6 +21,7 @@
         android:id="@+id/textInputLayout24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="60dp"
         app:boxBackgroundColor="@color/white"
         app:counterEnabled="false"
@@ -86,7 +87,7 @@
         app:counterEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteY="65dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
