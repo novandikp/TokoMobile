@@ -611,7 +611,6 @@ public class MenuCetakKLinik extends AppCompatActivity {
             e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-
     }
     public void download(View view) {
         setPreview();

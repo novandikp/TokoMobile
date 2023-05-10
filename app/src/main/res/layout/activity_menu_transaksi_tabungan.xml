@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tabungan"
+    tools:context=".tabungan.MenuTransaksiTabungan">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout44"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/kembaliTransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar101"
+            app:layout_constraintStart_toStartOf="@+id/toolbar101"
+            app:layout_constraintTop_toTopOf="@+id/toolbar101"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/textView261"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaksi"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar101"
+            app:layout_constraintStart_toEndOf="@+id/kembaliTransaksi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout44">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:columnCount="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rowCount="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvBuatSimpanan"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:onClick="buatSimpanan"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_columnSpan="2"
+                        app:layout_columnWeight="2"
+                        app:layout_rowWeight="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/iv1"
+                                android:layout_width="100dp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="24dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/notebook1_tabungan" />
+
+                            <TextView
+                                android:id="@+id/judul1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/menutransaksi_box1"
+                                android:textColor="@color/secondaryTextColor"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/v1"
+                                app:layout_constraintStart_toStartOf="@+id/v1"
+                                app:layout_constraintTop_toTopOf="@+id/iv1" />
+
+                            <View
+                                android:id="@+id/v1"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@color/lightGrey"
+                                app:layout_constraintEnd_toStartOf="@+id/iv1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/judul1" />
+
+                            <TextView
+                                android:id="@+id/sjudul1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/menutransaksi_box1_desc"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/iv1"
+                                app:layout_constraintEnd_toEndOf="@+id/v1"
+                                app:layout_constraintStart_toStartOf="@+id/v1"
+                                app:layout_constraintTop_toBottomOf="@+id/v1" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvProsesSimpan"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:onClick="prosesSimpan"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/gl3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.4" />
+
+                            <ImageView
+                                android:id="@+id/iv3"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toTopOf="@+id/gl3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/notebook3_tabungan" />
+
+                            <TextView
+                                android:id="@+id/judul3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/menutransaksi_box2"
+                                android:textColor="@color/secondaryTextColor"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/v3"
+                                app:layout_constraintStart_toStartOf="@+id/v3"
+                                app:layout_constraintTop_toBottomOf="@+id/iv3" />
+
+                            <View
+                                android:id="@+id/v3"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@color/lightGrey"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/judul3" />
+
+                            <TextView
+                                android:id="@+id/sjudul3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="@string/menutransaksi_box2desc"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/v3"
+                                app:layout_constraintStart_toStartOf="@+id/v3"
+                                app:layout_constraintTop_toBottomOf="@+id/v3" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvProsesAmbil"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:onClick="prosesAmbil"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/gl4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.4" />
+
+                            <ImageView
+                                android:id="@+id/iv4"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toTopOf="@+id/gl4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/notebook2_tabungan" />
+
+                            <TextView
+                                android:id="@+id/judul4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/menutransaksi_box3"
+                                android:textColor="@color/secondaryTextColor"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/v4"
+                                app:layout_constraintStart_toStartOf="@+id/v4"
+                                app:layout_constraintTop_toBottomOf="@+id/iv4" />
+
+                            <View
+                                android:id="@+id/v4"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@color/lightGrey"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/judul4" />
+
+                            <TextView
+                                android:id="@+id/sjudul4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="@string/menutransaksi_box3desc"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/v4"
+                                app:layout_constraintStart_toStartOf="@+id/v4"
+                                app:layout_constraintTop_toBottomOf="@+id/v4" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvKeuangan"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:onClick="menuKeuangan"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:layout_columnSpan="2"
+                        app:layout_columnWeight="2"
+                        app:layout_rowWeight="1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/gl5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.4" />
+
+                            <ImageView
+                                android:id="@+id/iv5"
+                                android:layout_width="100dp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="26dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/wallet_tabungan" />
+
+                            <TextView
+                                android:id="@+id/judul5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/menutransaksi_box4"
+                                android:textColor="@color/secondaryTextColor"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/v5"
+                                app:layout_constraintStart_toStartOf="@+id/v5"
+                                app:layout_constraintTop_toTopOf="@+id/iv5" />
+
+                            <View
+                                android:id="@+id/v5"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@color/lightGrey"
+                                app:layout_constraintEnd_toStartOf="@+id/iv5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/judul5" />
+
+                            <TextView
+                                android:id="@+id/sjudul5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/menutransaksi_box4desc"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/iv5"
+                                app:layout_constraintEnd_toEndOf="@+id/v5"
+                                app:layout_constraintStart_toStartOf="@+id/v5"
+                                app:layout_constraintTop_toBottomOf="@+id/v5" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.gridlayout.widget.GridLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -112,7 +112,7 @@ public class Menu_pemeriksaan_klinik extends AppCompatActivity {
             ModulKlinik.setText(v, R.id.eTeknisi, ModulKlinik.getString(c, "dokter"));
             iddokter = "1";
         } else {
-            Cursor c = db.sq(ModulKlinik.selectwhere("tbldokter") + ModulKlinik.sWhere("iddokter", iddokter));
+            Cursor c =  db.sq(ModulKlinik.selectwhere("tbldokter") + ModulKlinik.sWhere("iddokter", iddokter));
             c.moveToNext();
             ModulKlinik.setText(v, R.id.eTeknisi, ModulKlinik.getString(c, "dokter"));
         }

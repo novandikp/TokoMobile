@@ -17,6 +17,7 @@ import com.itbrain.aplikasitoko.klinik.AplikasiKlinikDokter_Menu_Utama;
 import com.itbrain.aplikasitoko.rentalmobil.MenuUtama_Mobil;
 import com.itbrain.aplikasitoko.restoran.ApllikasiRestoran_Menu_Utama;
 import com.itbrain.aplikasitoko.tokosepatu.Aplikasi_Menu_Utama_Toko_Sepatu;
+import com.itbrain.aplikasitoko.tabungan.MainActivityTabungan;
 
 //import com.itbrain.aplikasitoko.databinding.AplikasiApotekPlusKeuanganMenuUtamaBinding;
 //import com.itbrain.aplikasitoko.databinding.AplikasiSalonMenuUtamaBinding;
@@ -27,6 +28,11 @@ public class Main_App extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_app);
+    }
+
+    public void pindahTabungan(View view) {
+        Intent intent = new Intent(Main_App.this, MainActivityTabungan.class);
+        startActivity(intent);
     }
 
     public void PindahBengkel(View view) {
@@ -73,4 +79,15 @@ public class Main_App extends AppCompatActivity {
         Intent intent = new Intent(Main_App.this, LaundryMenuUtamaMaster.class);
         startActivity(intent);
     }
+
+    public void PindahKwitansi(View view){
+        Intent intent = new Intent(Main_App.this, MenuUtama_Kwitansi.class);
+        startActivity(intent);
+    }
+
+    public void PindahSepatu(View view){
+        Intent i = new Intent(Main_App.this, Aplikasi_Menu_Utama_Toko_Sepatu.class);
+        startActivity(i);
+    }
+
 }

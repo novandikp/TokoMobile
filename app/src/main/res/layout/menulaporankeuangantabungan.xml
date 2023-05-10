@@ -4,29 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".restoran.Tabugan.MenuLaporanKeuanganTabungan">
+    tools:context=".tabungan.MenuLaporanKeuanganTabungan">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar98"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageButton
+        android:id="@+id/kembaliLapKeuangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar98"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/tvJumlahData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Jumlah Data : 0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spKeuangan" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spKeuangan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSpSort" />
 
     <TextView
-        android:id="@+id/textView41"
+        android:id="@+id/tvSpSort"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -40,13 +60,13 @@
         android:id="@+id/cardView13"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="130dp"
-        app:cardBackgroundColor="#5C5C5C"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#DDDDDD"
         app:cardCornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tvTglAwal">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -66,7 +86,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/tvPendapatanTabungan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -82,49 +102,50 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/tvTanggalAkhir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="64dp"
+        android:onClick="tvTanggalAkhir\"
         android:text="15/07/2022"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCariKeuanganTabungan" />
 
     <ImageView
         android:id="@+id/imageView43"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/edtCariKeuanganTabungan"
+        app:layout_constraintEnd_toStartOf="@+id/edtCariKeuanganTabungan"
+        app:layout_constraintTop_toTopOf="@+id/edtCariKeuanganTabungan"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/tvTglAwal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
+        android:onClick="tvTglAwal"
         android:text="15/07/2022"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCariKeuanganTabungan" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/edtCariKeuanganTabungan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Faktur"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar98" />
 
     <Button
         android:id="@+id/button8"
@@ -138,5 +159,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView259"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laporan Keuangan"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar98"
+        app:layout_constraintStart_toEndOf="@+id/kembaliLapKeuangan"
+        app:layout_constraintTop_toTopOf="@+id/toolbar98" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recLapKeuanganTabungan"
+        android:layout_width="409dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlahData" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
