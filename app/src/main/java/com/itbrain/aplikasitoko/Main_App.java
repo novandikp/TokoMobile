@@ -85,4 +85,9 @@ public class Main_App extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void PindahSepatu(View view){
+        Intent i = new Intent(Main_App.this, Aplikasi_Menu_Utama_Toko_Sepatu.class);
+        startActivity(i);
+    }
+
 }
