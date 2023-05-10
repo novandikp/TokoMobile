@@ -38,12 +38,6 @@ public class DialogPetunjukKasir extends AppCompatDialogFragment {
     }
 
     void watchYoutubeVideo(Context ctx, String id) {
-        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/9m9KNhk6zaQ" + id));
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/9m9KNhk6zaQ" + id));
-        try {
-            ctx.startActivity(appIntent);
-        } catch (ActivityNotFoundException ex) {
-            ctx.startActivity(webIntent);
-        }
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/playlist?list=PLfTB96jbjODxxZ-cyh1YHeUxabnpZ_aHe")));
     }
 }

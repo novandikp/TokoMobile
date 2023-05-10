@@ -19,9 +19,7 @@
     <color name="bg">#f1f1f1</color>
     <color name="secondaryTextColor">#3F3F3F</color>
     <color name="lightGrey">#efefef</color>
-    <color name="colorAccentDark">#2e8800</color>
     <color name="transparan">@android:color/transparent</color>
     <color name="colorPrimaryDark"></color>
     <color name="colorAccentDark">#176FB4</color>
-    <color name="colorPrimaryDark">#00559f</color>
 </resources>

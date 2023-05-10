@@ -97,7 +97,8 @@ public class DialogPanggil {
         WindowManager.LayoutParams wlp = window.getAttributes();
         wlp.width = WindowManager.LayoutParams.MATCH_PARENT;
         wlp.gravity = Gravity.BOTTOM;
-        wlp.height = WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        wlp.height = (int) 370.0;
+       // wlp.height = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         window.setAttributes(wlp);
         dialog.show();
     }

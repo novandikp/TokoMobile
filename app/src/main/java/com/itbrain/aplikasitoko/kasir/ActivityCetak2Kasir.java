@@ -33,6 +33,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
 
 import com.itbrain.aplikasitoko.R;
 import com.itbrain.aplikasitoko.Utils;
@@ -589,22 +590,24 @@ public class ActivityCetak2Kasir extends AppCompatActivity {
         Struk = findViewById(R.id.wTeks);
         Bitmap bitmap = getBitmapFromView(Struk);
         try {
-            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-            StrictMode.setVmPolicy(builder.build());
-            File file = new File(this.getExternalCacheDir(), "Struk.png");
+            String filename = System.currentTimeMillis() + ".jpg";
+            File file = new File(this.getCacheDir(), filename + ".png");
             FileOutputStream fOut = new FileOutputStream(file);
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
             fOut.flush();
             fOut.close();
-            file.setReadable(true, false);
-            final Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-            intent.setType("image/png");
-            startActivity(Intent.createChooser(intent, "Share image via"));
+            Uri contentUri = FileProvider.getUriForFile(this, "com.itbrain.aplikasitoko.fileprovider", file);
+            if (contentUri != null) {
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); // temp permission for receiving app to read this file
+                shareIntent.setDataAndType(contentUri, getContentResolver().getType(contentUri));
+                shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
+                startActivity(Intent.createChooser(shareIntent, "Choose an app"));
+            }
         } catch (Exception e) {
-            e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
 
     }
