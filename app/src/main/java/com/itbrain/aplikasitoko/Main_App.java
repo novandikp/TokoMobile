@@ -79,4 +79,10 @@ public class Main_App extends AppCompatActivity {
         Intent intent = new Intent(Main_App.this, LaundryMenuUtamaMaster.class);
         startActivity(intent);
     }
+
+    public void PindahKwitansi(View view){
+        Intent intent = new Intent(Main_App.this, MenuUtama_Kwitansi.class);
+        startActivity(intent);
+    }
+
 }
