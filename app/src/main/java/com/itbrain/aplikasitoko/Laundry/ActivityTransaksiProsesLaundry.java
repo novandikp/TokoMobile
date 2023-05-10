@@ -1,5 +1,6 @@
 package com.itbrain.aplikasitoko.Laundry;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -206,30 +207,29 @@ class AdapterListProses extends RecyclerView.Adapter<AdapterListProses.ProsesVie
         holder.btnWa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+                try {
 ////
-//                    Intent sendIntent =new Intent("android.intent.action.MAIN");
-//                    sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
-//                    sendIntent.setPackage("com.whatsapp");
-//                    sendIntent.setAction(Intent.ACTION_SEND);
-//                    sendIntent.putExtra("jid", "62"+String.valueOf(finalNotelp) +"@s.whatsapp.net");
-//                    sendIntent.setType("text/plain");
-//                    sendIntent.putExtra(Intent.EXTRA_TEXT,receiptBuilder.getFaktur());
-//                    ctx.startActivity(sendIntent);
-                    PackageManager packageManager = ctx.getPackageManager();
-                    Intent i = new Intent(Intent.ACTION_VIEW);
+                   Intent sendIntent =new Intent("android.intent.action.MAIN");
+                    sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
+                sendIntent.setPackage("com.whatsapp");
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra("jid", "62"+String.valueOf(finalNotelp) +"@s.whatsapp.net");
+                    sendIntent.setType("text/plain");
+                    sendIntent.putExtra(Intent.EXTRA_TEXT,receiptBuilder.getFaktur());
+                    ctx.startActivity(sendIntent);
+                        PackageManager packageManager = ctx.getPackageManager();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
 
-                    String url = "https://api.whatsapp.com/send?phone="+  "62"+String.valueOf(finalNotelp) +"&text=" + URLEncoder.encode(receiptBuilder.getFaktur(), "UTF-8");
-            
-                    i.setData(Uri.parse(url));
-                    if (i.resolveActivity(packageManager) != null) {
-                        ctx.startActivity(i);
+                        String url = "https://api.whatsapp.com/send?phone=" + "62" + String.valueOf(finalNotelp) + "&text=" + URLEncoder.encode(receiptBuilder.getFaktur(), "UTF-8");
+
+                        i.setData(Uri.parse(url));
+                        if (i.resolveActivity(packageManager) != null) {
+                            ctx.startActivity(i);
+                        }
+
+                    } catch (Exception e) {
+                        Toast.makeText(ctx, "Whatsapp not installed", Toast.LENGTH_SHORT).show();
                     }
-
-                }
-                catch(Exception e) {
-                    Toast.makeText(ctx,"Whatsapp not installed",Toast.LENGTH_SHORT).show();
-                }
             }
         });
         holder.btnSms.setOnClickListener(new View.OnClickListener() {

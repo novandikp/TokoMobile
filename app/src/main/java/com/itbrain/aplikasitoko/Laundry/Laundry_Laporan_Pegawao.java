@@ -66,7 +66,8 @@ public class Laundry_Laporan_Pegawao extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-              getpegawai(cari);
+                cari = s.toString();
+                getpegawai(cari);
             }
         });
     }

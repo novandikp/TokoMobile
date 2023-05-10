@@ -219,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Kelola Data Mobil"
+                    android:text="Kelola Data Pegawai"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvPelanggan2" />
@@ -274,7 +274,7 @@
                     android:id="@+id/tvlakukanrentalmobil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lakukan Rental Mobil"
+                    android:text="Kelola Kategori"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />

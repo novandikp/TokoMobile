@@ -20,6 +20,15 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.AplikasiToko"
         tools:targetApi="31">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.itbrain.aplikasitoko.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
         <activity android:name=".Laundry.ActivityKeuanganKeluar_laundry"/>
         <activity android:name=".Laundry.MenuPilihAktivitasKeuanganLaundry"/>
         <activity android:name=".Laundry.Cari_Perangkat_Cetak_Laundry"/>
