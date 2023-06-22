@@ -30,7 +30,20 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
-
+        <activity android:name=".bengkel.MenuExportExcelBengkel"/>
+        <activity android:name=".bengkel.Restore_Data_Bengkel"/>
+        <activity android:name=".bengkel.Backup_Data_bengkel_"/>
+        <activity android:name=".bengkel.Menu_Servis_Bengkel"/>
+        <activity android:name=".bengkel.MenuCariPrinterBengkel"/>
+        <activity android:name=".bengkel.MenuCetakBengkel"/>
+        <activity android:name=".bengkel.MenuPilihBengkel"/>
+        <activity android:name=".bengkel.MenuPenjualanBengkel"/>
+        <activity android:name=".bengkel.FormTambahTeknisibengkel"/>
+        <activity android:name=".bengkel.Form_Ubah_Jasa_Bengkel_"/>
+        <activity android:name=".bengkel.Form_Ubah_Pelanggan_Bengkel_"/>
+        <activity android:name=".bengkel.FormUbahTeknisibengkel"/>
+        <activity android:name=".bengkel.Form_Ubah_Barang_Bengkel_"/>
+        <activity android:name=".bengkel.Ubah_Kategori_Bengkel_"/>
         <activity android:name=".Laundry.ActivityKeuanganKeluar_laundry"/>
         <activity android:name=".Laundry.MenuPilihAktivitasKeuanganLaundry"/>
         <activity android:name=".Laundry.Cari_Perangkat_Cetak_Laundry"/>

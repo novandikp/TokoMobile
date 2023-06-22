@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -74,6 +75,7 @@ public class Pilih_Teknisi_Bengkel_ extends AppCompatActivity {
         selectData();
     }
 
+    @SuppressLint("Range")
     public void selectData() {
         String sql = "SELECT * FROM tblteknisi WHERE idteknisi !=1 AND teknisi LIKE '%"+cari.getText().toString()+"%' ";
 

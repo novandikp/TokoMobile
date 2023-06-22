@@ -39,20 +39,20 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     }
 
     public void LaporanBayar(View view) {
-//        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Bayar_Bengkel_.class);
-//        intent.putExtra("type", "bayar");
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanDua.class);
-        i.putExtra("type", "bayar");
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
+        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Bayar_Bengkel_.class);
+        intent.putExtra("type", "bayar");
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+//        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanDua.class);
+//        i.putExtra("type", "bayar");
+//        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(i);
     }
 
     public void LaporanPelanggan(View view) {
 //        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Pelanggan_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanSatu.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Pelanggan_Bengkel_.class);
         i.putExtra("type", "pelanggan");
         startActivity(i);
     }
@@ -60,7 +60,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanTeknisi(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Teknisi_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanSatu.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Teknisi_Bengkel_.class);
         i.putExtra("type", "teknisi");
         startActivity(i);
     }
@@ -68,7 +68,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanPenjualan(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Penjualan_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanDua.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Penjualan_Bengkel_.class);
         i.putExtra("type", "jual");
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
@@ -77,7 +77,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanServis(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Servis_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanDua.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Servis_Bengkel_.class);
         i.putExtra("type", "servis");
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
@@ -86,7 +86,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanPendapatan(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Pendapatan_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanTiga.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Pendapatan_Bengkel_.class);
         i.putExtra("type", "pendapatan");
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
@@ -95,7 +95,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanServisTeknisi(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Servis_Teknisi_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanTiga.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Servis_Teknisi_Bengkel_.class);
         i.putExtra("type", "servisteknisi");
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
@@ -104,7 +104,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanLaba(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Laba_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanTiga.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Laba_Bengkel_.class);
         i.putExtra("type", "laba");
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
@@ -114,7 +114,7 @@ public class AplikasiBengkel_Menu_Laporan extends AppCompatActivity {
     public void LaporanHutang(View view) {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Hutang_Bengkel_.class);
 //        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, MenuLaporanDua.class);
+        Intent i = new Intent(AplikasiBengkel_Menu_Laporan.this, Laporan_Hutang_Bengkel_.class);
         i.putExtra("type", "hutang");
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);

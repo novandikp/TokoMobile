@@ -12,23 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/hijau_gojek"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/kembali29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar44"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <TextView
         android:id="@+id/textView397"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:fontFamily="sans-serif-medium"
         android:text="Laporan Laba"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar44"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kembali29"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -41,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar44" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName31"
+        android:id="@+id/etlab"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -59,9 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName31"
+        app:layout_constraintBottom_toBottomOf="@+id/etlab"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName31"
+        app:layout_constraintTop_toTopOf="@+id/etlab"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <ScrollView
@@ -71,7 +82,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txTanggalAwal">
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,19 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar44">
 
         <TextView
-            android:id="@+id/textView407"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="Rp."
-            android:textColor="@color/agakhitam"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView406"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView406"
+            android:id="@+id/tTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
@@ -121,45 +120,42 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/txTanggalAwal"
-        android:layout_width="132dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:focusable="false"
-        android:gravity="center"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
+    <TextView
+        android:id="@+id/tglawal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:onClick="tglawal"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/etlab" />
 
-    <EditText
-        android:id="@+id/txTanggalAkhir"
-        android:layout_width="132dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:focusable="false"
-        android:gravity="center"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+    <TextView
+        android:id="@+id/tglakhir3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:onClick="tglakhir"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toTopOf="@+id/textView17" />
+        app:layout_constraintTop_toTopOf="@+id/tglawal3" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="---"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31" />
+        app:layout_constraintEnd_toStartOf="@+id/tglakhir3"
+        app:layout_constraintStart_toEndOf="@+id/tglawal3"
+        app:layout_constraintTop_toTopOf="@+id/tglawal3" />
 
     <Button
         android:id="@+id/button4"
@@ -169,6 +165,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/hijau_gojek"
+        android:onClick="export"
         android:text="Export"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"

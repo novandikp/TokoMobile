@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,7 +25,6 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.itbrain.aplikasitoko.FormTambahTeknisi;
 import com.itbrain.aplikasitoko.Model.Teknisi;
 import com.itbrain.aplikasitoko.R;
 
@@ -77,7 +77,7 @@ public class Tambah_Teknisi_Bengkel_ extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Tambah_Teknisi_Bengkel_.this, FormTambahTeknisi.class);
+                Intent intent = new Intent(Tambah_Teknisi_Bengkel_.this, FormTambahTeknisibengkel.class);
                 startActivity(intent);
             }
         });
@@ -101,6 +101,7 @@ public class Tambah_Teknisi_Bengkel_ extends AppCompatActivity {
         selectData();
     }
 
+    @SuppressLint("Range")
     public void selectData() {
         String sql = "SELECT * FROM tblteknisi WHERE idteknisi !=1 AND teknisi LIKE '%"+cari.getText().toString()+"%'";
 
@@ -156,7 +157,7 @@ class Teknisi_Bengkel_Adapter extends RecyclerView.Adapter<Teknisi_Bengkel_Adapt
                         switch (menuItem.getItemId()) {
 
                             case R.id.menu_edit:
-                                Intent intent = new Intent(context, FormTambahTeknisi.class);
+                                Intent intent = new Intent(context, FormUbahTeknisibengkel.class);
 
                                 intent.putExtra("idteknisi", item.getIdteknisi());
                                 intent.putExtra("teknisi", item.getTeknisi());

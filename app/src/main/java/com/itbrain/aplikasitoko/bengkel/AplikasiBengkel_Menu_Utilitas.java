@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.itbrain.aplikasitoko.Backup_Data;
 import com.itbrain.aplikasitoko.R;
@@ -34,19 +37,47 @@ public class AplikasiBengkel_Menu_Utilitas extends AppCompatActivity {
 //        Intent intent = new Intent(AplikasiBengkel_Menu_Utilitas.this, Backup_Data.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //        startActivity(intent);
-            Intent i = new Intent(AplikasiBengkel_Menu_Utilitas.this, Backup_Data.class);
+            Intent i = new Intent(AplikasiBengkel_Menu_Utilitas.this, Backup_Data_bengkel_.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
 
     }
 
     public void Restore(View view) {
-        Intent intent = new Intent(AplikasiBengkel_Menu_Utilitas.this, Restore_Data.class);
+        Intent intent = new Intent(AplikasiBengkel_Menu_Utilitas.this, Restore_Data_Bengkel.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
-    public void CaraPenggunaan(View view) {
+    private void DialogForm() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_video, null);
+        dialog.setView(dialogView);
+        dialog.setCancelable(true);
+        TextView iya = dialogView.findViewById(R.id.iya);
+        TextView tidak = dialogView.findViewById(R.id.tidak);
+
+        final AlertDialog dialogi = dialog.create();
+
+
+        iya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/playlist?list=PLfTB96jbjODxxZ-cyh1YHeUxabnpZ_aHe"));
+                startActivity(i);
+                dialogi.cancel();
+            }
+        });
+
+        tidak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogi.cancel();
+            }
+        });
+
+        dialogi.show();
     }
 
     public void Reset(View view) {
@@ -96,10 +127,11 @@ public class AplikasiBengkel_Menu_Utilitas extends AppCompatActivity {
         alertDialog.show();
     }
 
-//    public void petunjuk(View view){
-//        DialogForm();
-//    }
-//
+    public void CaraPenggunaan(View view) {
+
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/playlist?list=PLfTB96jbjODxxZ-cyh1YHeUxabnpZ_aHe")));
+    }
+    //
 //    @Override
 //    public void onProductPurchased(@NonNull String productId, @Nullable TransactionDetails details) {
 //        MenuUtama.status=true;

@@ -17,9 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.itbrain.aplikasitoko.MenuPenjualanJasa;
 import com.itbrain.aplikasitoko.R;
 
 import java.util.ArrayList;
@@ -41,6 +41,15 @@ public class Menu_Bayar_Bengkel_ extends AppCompatActivity {
         v = this.findViewById(android.R.id.content);
 
         getbayar("");
+
+        ImageButton imageButton = findViewById(R.id.kembali24);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         final EditText eCari = (EditText) findViewById(R.id.eCari);
         eCari.addTextChangedListener(new TextWatcher() {
             @Override
@@ -93,7 +102,7 @@ class AdapterBayar extends RecyclerView.Adapter<AdapterBayar.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_jasa, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view_pembayaran_bengkel, parent, false);
         return new ViewHolder(view);
     }
 
@@ -101,16 +110,16 @@ class AdapterBayar extends RecyclerView.Adapter<AdapterBayar.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String[] row = data.get(position).split("__");
         holder.cv.setTag(row[0]);
-        holder.nama.setText(row[1]);
-        holder.alamat.setText(row[2]);
-        holder.notelp.setText(row[3]);
-        holder.tvOpt.setText(ModulBengkel.removeE(row[4]));
+        holder.Nomor.setText(row[1]);
+        holder.Nama.setText(row[2]);
+        holder.Total.setText(row[3]);
+        holder.Tanggal.setText(ModulBengkel.removeE(row[4]));
 
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String id = holder.cv.getTag().toString();
-                Intent i = new Intent(context, MenuPenjualanJasa.class);
+                Intent i = new Intent(context, Menu_Servis_Bengkel_.class);
                 i.putExtra("idorder",id);
                 i.putExtra("type","bayar");
                 context.startActivity(i);
@@ -125,15 +134,15 @@ class AdapterBayar extends RecyclerView.Adapter<AdapterBayar.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nama,alamat,notelp,tvOpt;
+        TextView Nomor,Nama,Total,Tanggal;
         CardView cv;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             cv = itemView.findViewById(R.id.cv);
-            nama= (TextView) itemView.findViewById(R.id.tNamaPel);
-            alamat = (TextView) itemView.findViewById(R.id.tAlamatPel);
-            notelp=(TextView) itemView.findViewById(R.id.tNo);
-            tvOpt=(TextView) itemView.findViewById(R.id.tgl);
+            Nomor= (TextView) itemView.findViewById(R.id.tvNomer);
+            Nama = (TextView) itemView.findViewById(R.id.tvNama);
+            Total=(TextView) itemView.findViewById(R.id.tvTotal);
+            Tanggal=(TextView) itemView.findViewById(R.id.tgl);
         }
     }
 }

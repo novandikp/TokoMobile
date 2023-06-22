@@ -21,14 +21,26 @@
         android:id="@+id/textView369"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="Pembayaran Hutang"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar72"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kembali33"
         app:layout_constraintTop_toTopOf="@+id/toolbar72" />
+
+    <ImageButton
+        android:id="@+id/kembali33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar72"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

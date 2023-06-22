@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -77,6 +78,7 @@ public class Pilih_Pelanggan_Bengkel_ extends AppCompatActivity {
         selectData();
     }
 
+    @SuppressLint("Range")
     public void selectData() {
         String sql = "SELECT * FROM tblpelanggan WHERE idpelanggan !=1 AND pelanggan LIKE '%"+cari.getText().toString()+"%' ";
 
@@ -120,13 +122,13 @@ class Pilih_Pelanggan_Adapter extends RecyclerView.Adapter<Pilih_Pelanggan_Adapt
 
     @NonNull
     @Override
-    public Pilih_Pelanggan_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pilih_pelanggan_bengkel_, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Pilih_Pelanggan_Adapter.ViewHolder holder, int position) {
-        Pelanggan item = pelanggan.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
+        Pelanggan item = pelanggan.get(i);
 
         holder.tvPelanggan.setText(item.getPelanggan());
         holder.tvAlamat.setText(item.getAlamat());

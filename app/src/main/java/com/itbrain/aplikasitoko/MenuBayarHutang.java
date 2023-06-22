@@ -13,6 +13,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.itbrain.aplikasitoko.bengkel.AplikasiBengkel_MenuTransaksi;
@@ -41,6 +42,13 @@ public class MenuBayarHutang extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
         ModulBengkel.setText(v,R.id.eTanggal,ModulBengkel.getDate("dd/MM/yyyy"));
+        ImageButton i = findViewById(R.id.kembali33);
+        i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         setText();
         EditText bayar = findViewById(R.id.eBayar);

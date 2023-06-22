@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.itbrain.aplikasitoko.MenuBayarHutang;
@@ -41,6 +42,15 @@ public class Menu_Pembayaran_Hutang_Bengkel_ extends AppCompatActivity {
         view = this.findViewById(android.R.id.content);
 
         getBayar("");
+        ImageButton imageButton = findViewById(R.id.kembali25);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         final EditText eCari = (EditText) findViewById(R.id.eCari);
         eCari.addTextChangedListener(new TextWatcher() {
             @Override

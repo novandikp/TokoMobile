@@ -29,7 +29,7 @@ public class Laporan_Bengkel_Laporan_Pendapatan extends AppCompatActivity {
         setContentView(R.layout.laporan_pendapatan);
 
 
-        TxTanggal = findViewById(R.id.txTanggalAwal);
+        TxTanggal = findViewById(R.id.tglawal);
         TxAkhir = findViewById(R.id.txTanggalAkhir);
 
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy");

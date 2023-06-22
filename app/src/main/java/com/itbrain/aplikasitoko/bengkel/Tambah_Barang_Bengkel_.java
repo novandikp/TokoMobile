@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -130,6 +131,7 @@ public class Tambah_Barang_Bengkel_ extends AppCompatActivity {
       selectData();
   }
 
+  @SuppressLint("Range")
   public void selectSpinner() {
         String sqll = "SELECT * FROM tblkategori WHERE idkategori !=1";
 
@@ -150,6 +152,7 @@ public class Tambah_Barang_Bengkel_ extends AppCompatActivity {
 
   }
 
+    @SuppressLint("Range")
     public void selectData() {
 
         String sql;
@@ -218,7 +221,7 @@ class Barang_Bengkel_Adapter extends RecyclerView.Adapter<Barang_Bengkel_Adapter
                         switch (menuItem.getItemId()) {
 
                             case R.id.menu_edit:
-                                Intent intent = new Intent(context, Form_Tambah_Barang_Bengkel_.class);
+                                Intent intent = new Intent(context, Form_Ubah_Barang_Bengkel_.class);
 
                                 intent.putExtra("idbarang", item.getIdbarang());
                                 intent.putExtra("barang", item.getBarang());

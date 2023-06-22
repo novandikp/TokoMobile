@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class Database_Bengkel_ extends SQLiteOpenHelper {
     Context a;
@@ -36,6 +37,7 @@ public class Database_Bengkel_ extends SQLiteOpenHelper {
             db.execSQL(query);
             return true;
         } catch (Exception e) {
+            Log.d("SQL RUN",e.getMessage());
             return false;
         }
     }

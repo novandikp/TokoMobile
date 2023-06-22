@@ -63,7 +63,7 @@ public class Pembayaran_Jual_Oederdil_Bengkel_ extends AppCompatActivity {
                 .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent i = new Intent(Pembayaran_Jual_Oederdil_Bengkel_.this, MenuCetak.class);
+                        Intent i = new Intent(Pembayaran_Jual_Oederdil_Bengkel_.this, MenuCetakBengkel.class);
                         i.putExtra("idorder",idorder);
                         i.putExtra("type","bayar");
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
