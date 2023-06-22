@@ -54,9 +54,9 @@ public class Menu_Identitas_Salon_ extends AppCompatActivity {
         v = this.findViewById(android.R.id.content);
 
         btnClear = findViewById(R.id.btnClear);
-        edt1 = (TextInputEditText) findViewById(R.id.eNama);
-        edt2 = (TextInputEditText) findViewById(R.id.eAlamat);
-        edt3 = (TextInputEditText) findViewById(R.id.eTelp);
+        edt1 = (TextInputEditText) findViewById(R.id.tNama);
+        edt2 = (TextInputEditText) findViewById(R.id.tAlamat);
+        edt3 = (TextInputEditText) findViewById(R.id.tTelp);
         edt4 = (TextInputEditText) findViewById(R.id.cap1);
         edt5 = (TextInputEditText) findViewById(R.id.cap2);
         edt6 = (TextInputEditText) findViewById(R.id.cap3);
@@ -94,9 +94,9 @@ public class Menu_Identitas_Salon_ extends AppCompatActivity {
         Cursor c = db.sq(Query.selectwhere("tblidentitas") + Query.sWhere("ididentitas", "1"));
         if (FunctionSalon.getCount(c) == 1) {
             c.moveToNext();
-            FunctionSalon.setText(v, R.id.eNama, FunctionSalon.getString(c, "nama"));
-            FunctionSalon.setText(v, R.id.eAlamat, FunctionSalon.getString(c, "alamat"));
-            FunctionSalon.setText(v, R.id.eTelp, FunctionSalon.getString(c, "telp"));
+            FunctionSalon.setText(v, R.id.tNama, FunctionSalon.getString(c, "nama"));
+            FunctionSalon.setText(v, R.id.tAlamat, FunctionSalon.getString(c, "alamat"));
+            FunctionSalon.setText(v, R.id.tTelp, FunctionSalon.getString(c, "telp"));
             FunctionSalon.setText(v, R.id.cap1, FunctionSalon.getString(c, "cap1"));
             FunctionSalon.setText(v, R.id.cap2, FunctionSalon.getString(c, "cap2"));
             FunctionSalon.setText(v, R.id.cap3, FunctionSalon.getString(c, "cap3"));
@@ -106,24 +106,24 @@ public class Menu_Identitas_Salon_ extends AppCompatActivity {
 
     public void simpan(View view) {
         Cursor c = db.sq(Query.select("tblidentitas"));
-        String[] p = {"1", FunctionSalon.getText(v, R.id.eNama),
-                FunctionSalon.getText(v, R.id.eAlamat),
-                FunctionSalon.getText(v, R.id.eTelp),
+        String[] p = {"1", FunctionSalon.getText(v, R.id.tNama),
+                FunctionSalon.getText(v, R.id.tAlamat),
+                FunctionSalon.getText(v, R.id.tTelp),
                 FunctionSalon.getText(v, R.id.cap1),
                 FunctionSalon.getText(v, R.id.cap2),
                 FunctionSalon.getText(v, R.id.cap3)
         };
-        String[] p1 = {FunctionSalon.getText(v, R.id.eNama),
-                FunctionSalon.getText(v, R.id.eAlamat),
-                FunctionSalon.getText(v, R.id.eTelp),
+        String[] p1 = {FunctionSalon.getText(v, R.id.tNama),
+                FunctionSalon.getText(v, R.id.tAlamat),
+                FunctionSalon.getText(v, R.id.tTelp),
                 FunctionSalon.getText(v, R.id.cap1),
                 FunctionSalon.getText(v, R.id.cap2),
                 FunctionSalon.getText(v, R.id.cap3),
                 "1"
         };
-        String nama = FunctionSalon.getText(v, R.id.eNama);
-        String alamat = FunctionSalon.getText(v, R.id.eAlamat);
-        String telepon = FunctionSalon.getText(v, R.id.eTelp);
+        String nama = FunctionSalon.getText(v, R.id.tNama);
+        String alamat = FunctionSalon.getText(v, R.id.tAlamat);
+        String telepon = FunctionSalon.getText(v, R.id.tTelp);
         String cap1 = FunctionSalon.getText(v, R.id.cap1);
         String cap2 = FunctionSalon.getText(v, R.id.cap2);
         String cap3 = FunctionSalon.getText(v, R.id.cap3);

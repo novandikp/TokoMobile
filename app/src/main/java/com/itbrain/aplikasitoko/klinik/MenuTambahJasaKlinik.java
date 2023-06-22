@@ -2,7 +2,6 @@ package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -56,7 +55,7 @@ public class MenuTambahJasaKlinik extends AppCompatActivity {
 
 
     private void simpan(){
-        String jasa = ModulKlinik.getText(v,R.id.eNama);
+        String jasa = ModulKlinik.getText(v,R.id.tNama);
         String harga = ModulKlinik.getText(v,R.id.eBiaya);
         String bagihasil= ModulKlinik.getText(v,R.id.eBagiHasil);
         if (!TextUtils.isEmpty(jasa) && !TextUtils.isEmpty(harga) && !TextUtils.isEmpty(bagihasil) && ModulKlinik.strToInt(bagihasil)<101){

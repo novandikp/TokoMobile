@@ -10,6 +10,7 @@ import com.itbrain.aplikasitoko.Laundry.LaundryMenuUtamaMaster;
 import com.itbrain.aplikasitoko.CetakKwitansi.MenuUtama_Kwitansi;
 import com.itbrain.aplikasitoko.Salon.Aplikasi_Salon_Menu_Utama;
 import com.itbrain.aplikasitoko.TokoKain.Aplikasi_TokoKain_Menu_Utama_Toko_Kain;
+import com.itbrain.aplikasitoko.TokoKredit.PosTokoKreditMenuUtama;
 import com.itbrain.aplikasitoko.bengkel.Aplikasi_Bengkel_Menu_Utama_;
 import com.itbrain.aplikasitoko.apotek.Aplikasi_Apotek_Plus_Keuangan_Menu_Utama;
 import com.itbrain.aplikasitoko.kasir.Aplikasi_Kasir_Super_Mudah_Menu_Utama;
@@ -88,6 +89,11 @@ public class Main_App extends AppCompatActivity {
     public void PindahSepatu(View view){
         Intent i = new Intent(Main_App.this, Aplikasi_Menu_Utama_Toko_Sepatu.class);
         startActivity(i);
+    }
+
+    public void Pindahtokokredit(View view) {
+        Intent intent = new Intent(Main_App.this, PosTokoKreditMenuUtama.class);
+        startActivity(intent);
     }
 
 }

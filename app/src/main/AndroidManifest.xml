@@ -896,9 +896,182 @@
         <activity
             android:name=".apotek.Item_Apk_Apotek"
             android:exported="false" />
+
+        <activity android:name=".TokoKredit.PosTokoKreditMenuUtama"
+            android:exported="false"/>
+
         <activity
-            android:name=".TokoKredit.Item_Apk_Toko_Kredit"
+            android:name=".TokoKredit.PosTokoKreditMenuMaster"
             android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityIdentitasKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityMasterListKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityTambahKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityUbahKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityBayarKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityPenjualanTunaiKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.MenuCariPelangganKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityTransaksiKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityPenjualanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityBayarTagihanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityReturnKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityReturnProsesKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityCetakSatuKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanPendapatanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityCetakCariKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityCetakKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanMenuKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityCetakTagihanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityExportExcelKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityPemasukanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityPengeluaranKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.MenuCariBarangKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityUtangKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityUtangBayarKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityCetakUtangKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanReturnKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanMasterKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanBarangKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanLabaRugiKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityCetak2Kredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanPenjualanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanPerBarangKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanPerJenisKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanPerKategoriKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanTagihanKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityDaftarKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityLaporanKeuanganKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityUtilitasKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityTentangKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityBackupKredit"
+            android:exported="false" />
+
+        <activity
+            android:name=".TokoKredit.ActivityRestoreKredit"
+            android:exported="false" />
+
         <activity android:name=".TokoKain.Activity_Bayar_Toko_Kain"/>
         <activity android:name=".TokoKain.Laporan_Order_Toko_Kain"/>
         <activity android:name=".TokoKain.Laporan_Barang_Toko_Kain"/>

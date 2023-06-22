@@ -80,8 +80,8 @@ public class MenuUbahPasienKlinik extends AppCompatActivity {
     private void setDefault(){
         Cursor c = db.sq(ModulKlinik.selectwhere("tblpasien")+ModulKlinik.sWhere("idpasien",id));
         c.moveToNext();
-        ModulKlinik.setText(v,R.id.eNama,ModulKlinik.getString(c,"pasien"));
-        ModulKlinik.setText(v,R.id.eAlamat,ModulKlinik.getString(c,"alamat"));
+        ModulKlinik.setText(v,R.id.tNama,ModulKlinik.getString(c,"pasien"));
+        ModulKlinik.setText(v,R.id.tAlamat,ModulKlinik.getString(c,"alamat"));
         ModulKlinik.setText(v,R.id.eNo,ModulKlinik.getString(c,"notelp"));
         ModulKlinik.setText(v,R.id.eGoldar,ModulKlinik.getString(c,"goldarah"));
         ModulKlinik.setText(v,R.id.eNobpjs,ModulKlinik.getString(c,"nobpjs"));
@@ -106,7 +106,7 @@ public class MenuUbahPasienKlinik extends AppCompatActivity {
     }
 
     private void simpan(){
-        String nama = ModulKlinik.getText(v,R.id.eNama);
+        String nama = ModulKlinik.getText(v,R.id.tNama);
         Spinner spinner = (Spinner) findViewById(R.id.sKelamin) ;
         String kelamin ;
         if (spinner.getSelectedItemPosition()==0){
@@ -116,7 +116,7 @@ public class MenuUbahPasienKlinik extends AppCompatActivity {
         }
         int tahun = ModulKlinik.strToInt(ModulKlinik.getText(v,R.id.eThn));
         int bulan = ModulKlinik.strToInt(ModulKlinik.getText(v,R.id.eBln));
-        String alamat = ModulKlinik.getText(v,R.id.eAlamat);
+        String alamat = ModulKlinik.getText(v,R.id.tAlamat);
         String no = ModulKlinik.getText(v,R.id.eNo);
         String goldar = ModulKlinik.getText(v,R.id.eGoldar);
         String nik = ModulKlinik.getText(v,R.id.eNIK);

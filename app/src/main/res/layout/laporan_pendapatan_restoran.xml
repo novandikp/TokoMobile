@@ -62,7 +62,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView118">
+        app:layout_constraintTop_toBottomOf="@+id/tJumlah">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -107,17 +107,17 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView119"
+        android:id="@+id/tJumlah3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="1"
         android:textColor="@color/agakhitam"
-        app:layout_constraintStart_toEndOf="@+id/textView118"
-        app:layout_constraintTop_toTopOf="@+id/textView118" />
+        app:layout_constraintStart_toEndOf="@+id/tJumlah"
+        app:layout_constraintTop_toTopOf="@+id/tJumlah" />
 
     <TextView
-        android:id="@+id/textView118"
+        android:id="@+id/tJumlah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

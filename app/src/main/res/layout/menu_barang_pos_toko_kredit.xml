@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView118"
+        android:id="@+id/tJumlah2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -26,20 +26,21 @@
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
 
     <TextView
-        android:id="@+id/textView119"
+        android:id="@+id/tJumlah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="1"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView118"
-        app:layout_constraintTop_toTopOf="@+id/textView118" />
+        app:layout_constraintStart_toEndOf="@+id/tjumlah2"
+        app:layout_constraintTop_toTopOf="@+id/tJumlah2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/eCari"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -55,10 +56,10 @@
         android:id="@+id/imageView67"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintBottom_toBottomOf="@+id/eCari"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3"
+        app:layout_constraintStart_toEndOf="@+id/eCari"
+        app:layout_constraintTop_toTopOf="@+id/eCari"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -67,7 +68,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/eCari"
         tools:listitem="@layout/pos_toko_kredit_item_barang" />
 
     <Button

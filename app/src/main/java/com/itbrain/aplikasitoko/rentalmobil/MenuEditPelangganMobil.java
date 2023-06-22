@@ -34,11 +34,11 @@ public class MenuEditPelangganMobil extends AppCompatActivity {
         setContentView(R.layout.menueditpelangganmobil);
 
         eNama
-                = (TextInputEditText) findViewById(R.id.eNama);
+                = (TextInputEditText) findViewById(R.id.tNama);
         textInputLayout
                 = (TextInputLayout) findViewById(R.id.textInputLayout);
         eAlamat
-                = (TextInputEditText) findViewById(R.id.eAlamat);
+                = (TextInputEditText) findViewById(R.id.tAlamat);
         textInputLayout2
                 = (TextInputLayout) findViewById(R.id.textInputLayout2);
         eNoTelp

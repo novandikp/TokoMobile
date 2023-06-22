@@ -91,7 +91,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/eNama"
+                android:id="@+id/tNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -110,7 +110,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/eAlamat"
+                android:id="@+id/tAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
@@ -129,7 +129,7 @@
             app:counterMaxLength="25">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/eTelp"
+                android:id="@+id/tTelp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"

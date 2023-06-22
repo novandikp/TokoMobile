@@ -127,6 +127,7 @@
     <string name="konfirmasitransaksi">Konfirmasi Transaksi?</string>
     <string name="konfirmasitransaksi_desc">Data yang telah disimpan tidak dapat diubah, pastikan data yang anda inputkan sudah benar.</string>
     <string name="yes">Ya</string>
+
     <string name="printconfirmation">Apakah anda ingin mencetak struk?</string>
     <string name="no">Tidak</string>
     <string name="fakturproses">TABUNGAN-</string>
@@ -247,6 +248,29 @@
     <string-array name="pendapatan_teknisi">
         <item>Kosong</item>
     </string-array>
+
+    <string-array name="tipe_keuangan">
+        <item>Semua</item>
+        <item>Pemasukan</item>
+        <item>Pengeluaran</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Belum Lunas</item>
+        <item>Lunas</item>
+    </string-array>
+
+    <string-array name="laporanpenjualan">
+        <item>Semua</item>
+        <item>Tunai</item>
+        <item>Hutang</item>
+    </string-array>
+
+    <string-array name="titipan">
+        <item>Kulakan</item>
+        <item>Titipan</item>
+    </string-array>
+
 
     <string-array name="nama_pasien">
         <item>Kosong</item>

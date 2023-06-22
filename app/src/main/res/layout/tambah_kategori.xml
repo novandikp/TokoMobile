@@ -7,7 +7,7 @@
     tools:context=".TambahKategori">
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/eCari"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"

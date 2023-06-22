@@ -2,7 +2,6 @@ package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -46,13 +45,13 @@ public class MenuUbahJasaKlinik extends AppCompatActivity {
     private void setText(){
         Cursor c = db.sq(ModulKlinik.selectwhere("tbljasa")+ModulKlinik.sWhere("idjasa",id));
         c.moveToNext();
-        ModulKlinik.setText(v,R.id.eNama,ModulKlinik.getString(c,"jasa"));
+        ModulKlinik.setText(v,R.id.tNama,ModulKlinik.getString(c,"jasa"));
         ModulKlinik.setText(v,R.id.eBiaya,ModulKlinik.unNumberFormat(ModulKlinik.removeE(ModulKlinik.getString(c,"harga"))));
         ModulKlinik.setText(v,R.id.eBagiHasil,ModulKlinik.getString(c,"bagihasil"));
     }
 
     private void simpan(){
-        String jasa = ModulKlinik.getText(v,R.id.eNama);
+        String jasa = ModulKlinik.getText(v,R.id.tNama);
         String harga = ModulKlinik.getText(v,R.id.eBiaya);
         String bagihasil= ModulKlinik.getText(v,R.id.eBagiHasil);
         if (!TextUtils.isEmpty(jasa) && !TextUtils.isEmpty(harga) && !TextUtils.isEmpty(bagihasil) && ModulKlinik.strToInt(bagihasil)<101){

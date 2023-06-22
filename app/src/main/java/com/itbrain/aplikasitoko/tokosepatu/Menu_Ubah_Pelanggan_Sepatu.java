@@ -54,14 +54,14 @@ public class Menu_Ubah_Pelanggan_Sepatu extends AppCompatActivity {
         if(c.getCount() > 0){
             c.moveToNext() ;
             ModulTokoSepatu.setText(v,R.id.ePelanggan,ModulTokoSepatu.getString(c,"pelanggan")) ;
-            ModulTokoSepatu.setText(v,R.id.eAlamat,ModulTokoSepatu.getString(c,"alamat")) ;
+            ModulTokoSepatu.setText(v,R.id.tAlamat,ModulTokoSepatu.getString(c,"alamat")) ;
             ModulTokoSepatu.setText(v,R.id.eNoTelp,ModulTokoSepatu.getString(c,"notelp")) ;
         }
     }
 
     private void tambahPelanggan(){
         String nama = ModulTokoSepatu.getText(v,R.id.ePelanggan) ;
-        String alamat = ModulTokoSepatu.getText(v,R.id.eAlamat) ;
+        String alamat = ModulTokoSepatu.getText(v,R.id.tAlamat) ;
         String notelp = ModulTokoSepatu.getText(v,R.id.eNoTelp) ;
 
 

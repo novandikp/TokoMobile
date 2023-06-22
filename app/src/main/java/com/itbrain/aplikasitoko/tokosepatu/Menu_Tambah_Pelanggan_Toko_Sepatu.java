@@ -39,7 +39,7 @@ public class Menu_Tambah_Pelanggan_Toko_Sepatu extends AppCompatActivity {
 
     private void tambahpelanggan() {
         String nama = ModulTokoSepatu.getText(v, R.id.ePelanggan);
-        String alamat = ModulTokoSepatu.getText(v, R.id.eAlamat);
+        String alamat = ModulTokoSepatu.getText(v, R.id.tAlamat);
         String notelp = ModulTokoSepatu.getText(v, R.id.eNoTelp);
 
 

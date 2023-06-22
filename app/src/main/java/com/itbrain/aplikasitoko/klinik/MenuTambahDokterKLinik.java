@@ -1,7 +1,6 @@
 package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.arch.core.util.Function;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,8 +57,8 @@ public class MenuTambahDokterKLinik extends AppCompatActivity {
 
 
     private void simpan(){
-        String nama = ModulKlinik.getText(v,R.id.eNama);
-        String alamat = ModulKlinik.getText(v,R.id.eAlamat);
+        String nama = ModulKlinik.getText(v,R.id.tNama);
+        String alamat = ModulKlinik.getText(v,R.id.tAlamat);
         String no = ModulKlinik.getText(v,R.id.eNo);
         if (!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(alamat) && !TextUtils.isEmpty(no)){
             String [] isi = {nama,alamat,no};

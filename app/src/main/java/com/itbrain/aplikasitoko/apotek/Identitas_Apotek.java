@@ -4,23 +4,17 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.text.TextUtils;
-import android.util.Base64;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -28,7 +22,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.itbrain.aplikasitoko.R;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -74,7 +67,7 @@ public class Identitas_Apotek extends AppCompatActivity {
         if(c.getCount() > 0){
             c.moveToNext() ;
             ModulApotek.setText(v, R.id.eNamaToko, ModulApotek.getString(c,"namatoko")) ;
-            ModulApotek.setText(v,R.id.eAlamat, ModulApotek.getString(c,"alamattoko")) ;
+            ModulApotek.setText(v,R.id.tAlamat, ModulApotek.getString(c,"alamattoko")) ;
             ModulApotek.setText(v,R.id.eNotoko, ModulApotek.getString(c,"notoko")) ;
             ModulApotek.setText(v,R.id.eCaption1, ModulApotek.getString(c,"caption1")) ;
             ModulApotek.setText(v,R.id.eCaption2, ModulApotek.getString(c,"caption2")) ;
@@ -88,7 +81,7 @@ public class Identitas_Apotek extends AppCompatActivity {
 
     private void tambahidentitas() {
         String nama = ModulApotek.getText(v,R.id.eNamaToko) ;
-        String alamat = ModulApotek.getText(v,R.id.eAlamat) ;
+        String alamat = ModulApotek.getText(v,R.id.tAlamat) ;
         String notelp = ModulApotek.getText(v,R.id.eNotoko) ;
         String caption1 = ModulApotek.getText(v,R.id.eCaption1);
         String caption2 = ModulApotek.getText(v,R.id.eCaption2);
@@ -126,7 +119,7 @@ public class Identitas_Apotek extends AppCompatActivity {
 
     public void reset(View view) {
         ModulApotek.setText(v,R.id.eNamaToko,"") ;
-        ModulApotek.setText(v,R.id.eAlamat,"") ;
+        ModulApotek.setText(v,R.id.tAlamat,"") ;
         ModulApotek.setText(v,R.id.eNotoko,"") ;
         ModulApotek.setText(v,R.id.eCaption1,"") ;
         ModulApotek.setText(v,R.id.eCaption2,"") ;

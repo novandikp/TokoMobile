@@ -2,7 +2,6 @@ package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.itbrain.aplikasitoko.R;
 
 import java.util.ArrayList;
@@ -88,7 +86,7 @@ public class MenuTambahPasienKlinik extends AppCompatActivity {
     }
 
     private void simpan(){
-        String nama = ModulKlinik.getText(v,R.id.eNama);
+        String nama = ModulKlinik.getText(v,R.id.tNama);
         Spinner spinner = (Spinner) findViewById(R.id.sKelamin) ;
         String kelamin ;
         if (spinner.getSelectedItemPosition()==0){
@@ -98,7 +96,7 @@ public class MenuTambahPasienKlinik extends AppCompatActivity {
         }
         int tahun = ModulKlinik.strToInt(ModulKlinik.getText(v,R.id.eThn));
         int bulan = ModulKlinik.strToInt(ModulKlinik.getText(v,R.id.eBln));
-        String alamat = ModulKlinik.getText(v,R.id.eAlamat);
+        String alamat = ModulKlinik.getText(v,R.id.tAlamat);
         String no = ModulKlinik.getText(v,R.id.eNo);
         String goldar = ModulKlinik.getText(v,R.id.eGoldar);
         String nik = ModulKlinik.getText(v,R.id.eNIK);

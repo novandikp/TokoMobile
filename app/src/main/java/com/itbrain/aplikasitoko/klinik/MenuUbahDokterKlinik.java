@@ -1,7 +1,6 @@
 package com.itbrain.aplikasitoko.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.arch.core.util.Function;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -48,14 +47,14 @@ public class MenuUbahDokterKlinik extends AppCompatActivity {
     private void setText(){
         Cursor c = db.sq(ModulKlinik.selectwhere("tbldokter")+ModulKlinik.sWhere("iddokter",id));
         c.moveToNext();
-        ModulKlinik.setText(v,R.id.eNama,ModulKlinik.getString(c,"dokter"));
-        ModulKlinik.setText(v,R.id.eAlamat,ModulKlinik.getString(c,"alamatdokter"));
+        ModulKlinik.setText(v,R.id.tNama,ModulKlinik.getString(c,"dokter"));
+        ModulKlinik.setText(v,R.id.tAlamat,ModulKlinik.getString(c,"alamatdokter"));
         ModulKlinik.setText(v,R.id.eNo,ModulKlinik.getString(c,"nodokter"));
     }
 
     private void simpan(){
-        String nama = ModulKlinik.getText(v,R.id.eNama);
-        String alamat = ModulKlinik.getText(v,R.id.eAlamat);
+        String nama = ModulKlinik.getText(v,R.id.tNama);
+        String alamat = ModulKlinik.getText(v,R.id.tAlamat);
         String no = ModulKlinik.getText(v,R.id.eNo);
         if (!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(alamat) && !TextUtils.isEmpty(no)){
             String [] isi = {nama,alamat,no,id};
