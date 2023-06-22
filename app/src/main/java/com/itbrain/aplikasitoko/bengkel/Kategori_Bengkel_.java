@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -104,6 +105,7 @@ public class Kategori_Bengkel_ extends AppCompatActivity {
         selectData();
     }
 
+    @SuppressLint("Range")
     public void selectData() {
         String sql = "SELECT * FROM tblkategori WHERE idkategori !=1 AND kategori LIKE '%"+cari.getText().toString()+"%' ";
 
@@ -158,7 +160,7 @@ class Kategori_Bengkel_Adapter extends RecyclerView.Adapter<Kategori_Bengkel_Ada
                         switch (menuItem.getItemId()) {
 
                             case R.id.menu_edit:
-                                Intent intent = new Intent(context, Tambah_Kategori_Bengkel_.class);
+                                Intent intent = new Intent(context, Ubah_Kategori_Bengkel_.class);
 
                                 intent.putExtra("idkategori",item.getIdkategori());
                                 intent.putExtra("kategori", item.getKategori());

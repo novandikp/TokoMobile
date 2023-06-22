@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -100,6 +101,7 @@ public class Tambah_Jasa_Bengkel_ extends AppCompatActivity {
         selectData();
     }
 
+    @SuppressLint("Range")
     public void selectData() {
         String sql = "SELECT idbarang, barang, harga, hargabeli FROM tblbarang WHERE idkategori = 1 AND barang LIKE '%"+cari.getText().toString()+"%'";
 
@@ -156,7 +158,7 @@ class Jasa_Bengkel_Adapter extends RecyclerView.Adapter<Jasa_Bengkel_Adapter.Vie
                         switch (menuItem.getItemId()) {
 
                             case R.id.menu_edit:
-                               Intent intent = new Intent(context, Form_Tambah_Jasa_Bengkel_.class);
+                               Intent intent = new Intent(context, Form_Ubah_Jasa_Bengkel_.class);
 
                                intent.putExtra("idbarang", item.getIdbarang());
                                intent.putExtra("barang", item.getBarang());

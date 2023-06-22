@@ -106,6 +106,7 @@ i.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void afterTextChanged(Editable s) {
+                cari = s.toString();
                 getpendapatan(cari, dateawal + "__" + datesampai);
             }
         });

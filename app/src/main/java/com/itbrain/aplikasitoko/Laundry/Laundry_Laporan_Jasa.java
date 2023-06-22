@@ -88,6 +88,7 @@ public class Laundry_Laporan_Jasa extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                cari = s.toString();
                 getjasa(cari, kat[0]);
             }
         });

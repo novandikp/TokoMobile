@@ -31,17 +31,14 @@ public class AplikasiBengkel_MenuTransaksi extends AppCompatActivity {
     }
 
     public void JualOnderdil(View view) {
-//        Intent intent = new Intent(AplikasiBengkel_MenuTransaksi.this, Menu_Transaksi_Bengkel_.class);
-        Intent intent = new Intent(AplikasiBengkel_MenuTransaksi.this, MenuPenjualan.class);
+        Intent intent = new Intent(AplikasiBengkel_MenuTransaksi.this, MenuPenjualanBengkel.class);
         startActivity(intent);
     }
 
     public void Servis(View view) {
-//        Intent intent = new Intent(AplikasiBengkel_MenuTransaksi.this, Menu_Servis_Bengkel_.class);
-//        startActivity(intent);
-        Intent i = new Intent(AplikasiBengkel_MenuTransaksi.this, MenuPenjualanJasa.class);
-        i.putExtra("type","transaksi");
-        startActivity(i);
+        Intent intent = new Intent(AplikasiBengkel_MenuTransaksi.this, Menu_Servis_Bengkel_.class);
+       intent.putExtra("type","transaksi");
+        startActivity(intent);
     }
 
     public void BayarTambah(View view) {

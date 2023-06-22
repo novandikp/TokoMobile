@@ -67,7 +67,8 @@ public class Laundry_Laporan_Pelangan extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-              getpelanggan(cari);
+                cari = s.toString();
+                getpelanggan(cari);
             }
         });
     }

@@ -18,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -36,10 +37,18 @@ public class Laporan_Pelanggan_Bengkel_ extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.laporan_pelanggan_bengkel_);
+        ImageButton imageButton = findViewById(R.id.kembali22);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         db = new Database_Bengkel_(this);
         type = getIntent().getStringExtra("type");
-        if (type.equals("pelanggan")) {
+       if (type.equals("pelanggan")) {
             setStatus();
             getPelanggan("");
             final EditText eCari = (EditText) findViewById(R.id.eCari);
@@ -78,12 +87,12 @@ public class Laporan_Pelanggan_Bengkel_ extends AppCompatActivity {
 
     }
 
-    public void setStatus() {
-        arrayList.clear();
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        arrayList.add("Semua");
-        arrayList.add("Tidak Berhutang");
-        arrayList.add("Berhutang");
+    private void setStatus() {
+        arrayStat.clear();
+        Spinner spinner = (Spinner) findViewById(R.id.spinner) ;
+        arrayStat.add("Semua");
+        arrayStat.add("Tidak Berhutang");
+        arrayStat.add("Berhutang");
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,arrayStat);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -109,7 +118,7 @@ public class Laporan_Pelanggan_Bengkel_ extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcvR) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        RecyclerView.Adapter adapter = new AdapterLaporanPelanggan(this, arrayList);
+        RecyclerView.Adapter adapter = new AdapterLapPelanggan(this, arrayList);
         recyclerView.setAdapter(adapter);
         String q = wherePelanggan(cari);
         Cursor c = db.sq(q);
@@ -121,14 +130,13 @@ public class Laporan_Pelanggan_Bengkel_ extends AppCompatActivity {
     }
 
     public void export(View view) {
-        Intent i= new Intent(Laporan_Pelanggan_Bengkel_.this,Laporan_Pelanggan_Bengkel_.class);
+        Intent i= new Intent(Laporan_Pelanggan_Bengkel_.this,MenuExportExcelBengkel.class);
         i.putExtra("type",type);
         startActivity(i);
     }
 }
 
-class AdapterLaporanPelanggan extends RecyclerView.Adapter<AdapterLaporanPelanggan.ViewHolder> {
-
+class AdapterLapPelanggan extends RecyclerView.Adapter<AdapterLapPelanggan.ViewHolder>{
     private ArrayList<String> data;
     Context c;
 
@@ -136,28 +144,29 @@ class AdapterLaporanPelanggan extends RecyclerView.Adapter<AdapterLaporanPelangg
 
     View v ;
 
-    public AdapterLaporanPelanggan(Context a, ArrayList<String> kota) {
+    public AdapterLapPelanggan(Context a, ArrayList<String> kota) {
         this.data = kota;
         c = a;
     }
 
     @NonNull
     @Override
-    public AdapterLaporanPelanggan.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_hutang, parent, false);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_bengkel_hutang, parent, false);
 
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterLaporanPelanggan.ViewHolder holder, int position) {
-        String[] row = data.get(position).split("__");
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int i) {
+        String[] row = data.get(i).split("__");
         holder.tvOpt.setVisibility(View.GONE);
         holder.nama.setText(row[1]);
         holder.alamat.setText("Alamat : "+row[2]);
         holder.notelp.setText("No HP : "+row[3]);
         holder.hutang.setText("Hutang : Rp "+ModulBengkel.removeE(row[4]));
+
     }
 
     @Override
@@ -167,13 +176,15 @@ class AdapterLaporanPelanggan extends RecyclerView.Adapter<AdapterLaporanPelangg
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama,alamat,notelp,tvOpt,hutang;
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
+
             nama= (TextView) itemView.findViewById(R.id.tNamaPel);
             alamat = (TextView) itemView.findViewById(R.id.tAlamatPel);
             notelp=(TextView) itemView.findViewById(R.id.tNo);
             tvOpt=(TextView) itemView.findViewById(R.id.tvOpt);
-            hutang=(TextView) itemView.findViewById(R.id.tHutang);
+            hutang=itemView.findViewById(R.id.tHutang);
+
         }
     }
 }

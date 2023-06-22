@@ -30,7 +30,20 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
-
+        <activity android:name=".bengkel.MenuExportExcelBengkel"/>
+        <activity android:name=".bengkel.Restore_Data_Bengkel"/>
+        <activity android:name=".bengkel.Backup_Data_bengkel_"/>
+        <activity android:name=".bengkel.Menu_Servis_Bengkel"/>
+        <activity android:name=".bengkel.MenuCariPrinterBengkel"/>
+        <activity android:name=".bengkel.MenuCetakBengkel"/>
+        <activity android:name=".bengkel.MenuPilihBengkel"/>
+        <activity android:name=".bengkel.MenuPenjualanBengkel"/>
+        <activity android:name=".bengkel.FormTambahTeknisibengkel"/>
+        <activity android:name=".bengkel.Form_Ubah_Jasa_Bengkel_"/>
+        <activity android:name=".bengkel.Form_Ubah_Pelanggan_Bengkel_"/>
+        <activity android:name=".bengkel.FormUbahTeknisibengkel"/>
+        <activity android:name=".bengkel.Form_Ubah_Barang_Bengkel_"/>
+        <activity android:name=".bengkel.Ubah_Kategori_Bengkel_"/>
         <activity android:name=".Laundry.ActivityKeuanganKeluar_laundry"/>
         <activity android:name=".Laundry.MenuPilihAktivitasKeuanganLaundry"/>
         <activity android:name=".Laundry.Cari_Perangkat_Cetak_Laundry"/>
@@ -69,10 +82,10 @@
         <activity android:name=".Laundry.LaundryMenuMaster"/>
         <activity android:name=".Laundry.LaundryMenuUtamaMaster"/>
         <activity android:name=".apotek.MenuCetakapotek2"/>
-        <activity android:name=".apotek.Menu_Bayar_Piutang_Apotek"/>
-        <activity android:name=".apotek.Menu_Cari_Priter_Apotek"/>
+<activity android:name=".apotek.Menu_Bayar_Piutang_Apotek"/>
+    <activity android:name=".apotek.Menu_Cari_Priter_Apotek"/>
         <activity android:name=".apotek.Menu_Cetak_Apotek"/>
-        <activity android:name=".apotek.Menu_Restore_Apotek"/>
+    <activity android:name=".apotek.Menu_Restore_Apotek"/>
         <activity android:name=".apotek.Menu_Backup_Apotek"/>
         <activity android:name=".apotek.Menu_Export_Exel_Apotek"/>
         <activity android:name=".apotek.Form_Ubah_Kategori_Apotek_" />
@@ -150,8 +163,7 @@
                 android:exported="false" />
             <activity
                 android:name=".kasir.Form_Penjualan_Kasir_"
-                android:exported="false"
-                android:windowSoftInputMode="adjustResize" />
+                android:exported="false" />
             <activity
                 android:name=".kasir.Form_Tambah_Pelanggan_Toko_Kasir_"
                 android:exported="false" />
@@ -193,71 +205,6 @@
             <activity
                 android:name=".kasir.Menu_Bayar_Hutang_Kasir"
                 android:exported="false" />
-        <!--Start tabungan-->
-        <activity android:name=".tabungan.MenuUtilitasTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.SplashActivityTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MainActivityTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuMasterIdentitasTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuMasterTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuAnggotaTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuJenisTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiCariTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiSimpananTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiBuatSimpananTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiProsesSimpanTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiKeuanganTambahTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiProsesAmbilTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiKeuanganTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuLaporanTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuLaporanKeuanganTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuLaporanAnggotaTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuUtilitasBackupTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuUtilitasRestoreTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuTransaksiKeuanganKeluarTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.CetakActivityTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.CariPerangkatTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuLaporanJenisSimpananTabungan"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".tabungan.MenuExportExcelAnggotaTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuExportExcelJenisTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenulaporanSimpananTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuExportExcelSimpananTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuLaporanTransaksiTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuExportExcelKeuanganTabungan"
-            android:exported="false"/>
-        <activity android:name=".tabungan.MenuExportExcelTransaksiTabungan"
-            android:exported="false"/>
-        <!--End tabungan-->
         <activity
             android:name=".MenuPenjualan"
             android:exported="false" />

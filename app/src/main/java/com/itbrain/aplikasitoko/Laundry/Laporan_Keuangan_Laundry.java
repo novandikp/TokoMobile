@@ -123,7 +123,7 @@ public class Laporan_Keuangan_Laundry extends AppCompatActivity {
     }
     private void tglupdate(){
         String keyword = ModulLaundry.getText(v,R.id.edtCariii);
-        getKeuangan(cari, keuanganOpsi, dateawal + "__" + datesampai);        }
+        getKeuangan(keyword, keuanganOpsi, dateawal + "__" + datesampai);        }
     public void setDate(int i) {
         showDialog(i);
     }

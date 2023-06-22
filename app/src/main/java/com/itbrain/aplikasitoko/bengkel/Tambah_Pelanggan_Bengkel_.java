@@ -155,7 +155,7 @@ class Pelanggan_Bengkel_Adapter extends RecyclerView.Adapter<Pelanggan_Bengkel_A
                         switch (menuItem.getItemId()) {
 
                             case R.id.menu_edit:
-                                Intent intent = new Intent(context, Form_Tambah_Pelanggan_Bengkel_.class);
+                                Intent intent = new Intent(context, Form_Ubah_Pelanggan_Bengkel_.class);
 
                                 intent.putExtra("idpelanggan", item.getIdpelanggan());
                                 intent.putExtra("pelanggan", item.getPelanggan());
